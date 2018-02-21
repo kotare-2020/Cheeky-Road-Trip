@@ -4,12 +4,10 @@ import {Link} from 'react-router-dom'
 import {logoutUser} from '../actions/logout'
 
 function Nav (props) {
+  console.log({props});
   return <nav className="navbar">
     <div className="container">
       <div className="navbar-brand">
-        <Link to='/' className="navbar-item">
-          <h1 className="title is-1">$how Me The Money</h1>
-        </Link>
         <span className="navbar-burger burger" data-target="navbarMenuHeroA">
           <span></span>
           <span></span>
@@ -20,12 +18,13 @@ function Nav (props) {
         <div className="navbar-end">
           {props.auth.isAuthenticated
             ? [
-            <Link className="navbar-item is-large" to='/login'>Login</Link>,
-            <Link className="navbar-item" to='/register'>Register</Link>
+              <Link className="navbar-item" to="/meeting">Start Meeting</Link>,
+              <Link className="navbar-item" to="/history">Meeting History</Link>,
+              <a className="navbar-item" onClick={() => props.logout()}>Logout</a>
             ]
             : [
-              <Link className="navbar-item" to="/meeting">New Meeting</Link>,
-              <Link className="navbar-item" to="/history">History</Link>
+            <Link className="navbar-item is-large" to='/login'>Login</Link>,
+            <Link className="navbar-item" to='/register'>Register</Link>
             ]
           }
         </div>
@@ -45,9 +44,14 @@ function Nav (props) {
 //
 // </div>
 // ) */}
+const mapDispatchToProps = (dispatch) => {
+  return {
+    logout: () => dispatch(logoutUser())
+  }
+}
 
 const mapStateToProps = ({auth}) => {
   return {auth}
 }
 
-export default connect(mapStateToProps)(Nav)
+export default connect(mapStateToProps, mapDispatchToProps)(Nav)

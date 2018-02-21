@@ -28,6 +28,18 @@ class Register extends React.Component {
         <label>Username:
           <input type="text" name="user_name" onChange={this.updateDetails}/>
         </label><br/>
+        <label className="level is-large has-text-centered">Username
+          <input className="input is-large is-fullwidth" placeholder="User Name" type="text" name="user_name" onChange={this.updateDetails}/>
+        </label>
+        <div className="columns">
+          <label className="level is-large has-text-centered">First Name
+            <input className="input is-large is-fullwidth" placeholder="First Name" type="text" name="first_name" onChange={this.updateDetails}/>
+          </label>
+          <label className="level is-large has-text-centered">Last Name
+            <input className="input is-large is-fullwidth" placeholder="Last Name" type="text" name="last_name" onChange={this.updateDetails}/>
+          </label>
+
+        </div>
         <label>Password:
           <input type="password" name="password" onChange={this.updateDetails}/>
         </label><br/>
