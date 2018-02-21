@@ -1,4 +1,4 @@
-# $how, Don't Tell
+# $how Me The Money
 
 # Kahu 2018 Cohort Group Project
 
@@ -26,6 +26,7 @@ As a user:
 
 ### Stretch
   * I want to be able to select existing users of the App as meeting attendees, so that our wages don't have to be shown / inputted manually. If a meeting attendee doesn't have an account, I want to be able to manually add them to the App.
+  * I want to set a Maximum Cost an Maximum Duration for my Meeting, and see colourised progress bar displaying both a these
   * I want to be able to state my yearly salary rather than hourly rate as an option on register
   * I want to be able to view all meetings that I am an attenee for, and I want information about my meetings to not be visible to all users of the app.
   * I want to create a group of regular attendees for my meeting group to make setting up my meeting easier.

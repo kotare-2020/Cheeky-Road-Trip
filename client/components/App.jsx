@@ -7,11 +7,19 @@ import Nav from './Nav'
 
 const App = () => (
   <Router>
-    <div className='app-container'>
-      <h1>Hello World</h1>
-      <Route path="/" component={Nav} />
-      <Route path="/login" component={Login} />
-      <Route path="/Register" component={Register} />
+    <div className="container has-text-centered">
+
+      <div className="hero is-small is-primary">
+        <div className="hero-body">
+          <Nav />
+        </div>
+      </div>
+
+      <div className='app-container'>
+        <Route path="/login" component={Login} />
+        <Route path="/Register" component={Register} />
+      </div>
+
     </div>
   </Router>
 )
