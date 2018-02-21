@@ -31,8 +31,30 @@ As a user:
   * I want to be able to view all meetings that I am an attenee for, and I want information about my meetings to not be visible to all users of the app.
   * I want to create a group of regular attendees for my meeting group to make setting up my meeting easier.
 
+  ---
 
-## API
+## Views (Client Side)
+  | name | purpose |
+  | --- | --- |
+  | Login | View for user to enter their login credentials |
+  | Register | View for user to sign up for the App |
+  | CreateMeeting | View for user to arrange meeting attendees and information before starting the timer |
+  | Meeting | View to display current meeting time, cost and other information while the meeting is in progress |
+  | History | Display a list of past meetings the user has attended with select preview information |
+  | PastMeeting | Display a single meeting from the history list, displaying more information and a list of attendees for the past meeting |
+
+
+## Reducers (Client Side)
+
+  | name | purpose |
+  | --- | --- |
+  | auth | Store information regarding user logins, auth status and auth errors |
+  | currentMeeting | Track meeting progress such as current cost and current duration |
+  | meetings | store the list of meetings the user has attended in the past |
+  | users | store the list of users who can attend meetings |
+
+
+## API (Client - Server)
 
 | Method | Endpoint | Protected | Usage | Response |
 | --- | --- | --- | --- | --- |
@@ -43,7 +65,7 @@ As a user:
 | Get | /api/meetings/:id/users | Yes | Get the attendees of a Meeting | An Array of User objects |
 | Get | /api/users | Yes | Get the users of the app | An Array of User Objects |
 
-## DB
+## DB (Server Side)
   There should be three tables for MVP
 
 ### Users
@@ -72,6 +94,9 @@ As a user:
  | --- | --- |
  | user_id | Integer |
  | meeting_id | Integer |
+
+ ---
+ 
 
 ## Setup
 
