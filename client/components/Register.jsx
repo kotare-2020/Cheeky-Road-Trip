@@ -25,28 +25,28 @@ class Register extends React.Component {
   render() {
     return (
       <form className="Register" onSubmit={this.submit}>
-        <label>Username:
-          <input type="text" name="user_name" onChange={this.updateDetails}/>
-        </label><br/>
-        <label className="level is-large has-text-centered">Username
-          <input className="input is-large is-fullwidth" placeholder="User Name" type="text" name="user_name" onChange={this.updateDetails}/>
+        <h1 className="title is-2">Register</h1>
+        <hr />
+        <label className="label is-large has-text-centered">Username
+          <input required className="input is-large is-fullwidth" placeholder="User Name" type="text" name="user_name" onChange={this.updateDetails}/>
         </label>
         <div className="columns">
-          <label className="level is-large has-text-centered">First Name
-            <input className="input is-large is-fullwidth" placeholder="First Name" type="text" name="first_name" onChange={this.updateDetails}/>
+          <label className="column is-6 label is-large has-text-centered">First Name
+            <input required className="input is-large is-fullwidth" placeholder="First Name" type="text" name="first_name" onChange={this.updateDetails}/>
           </label>
-          <label className="level is-large has-text-centered">Last Name
-            <input className="input is-large is-fullwidth" placeholder="Last Name" type="text" name="last_name" onChange={this.updateDetails}/>
+          <label className="column is-6 label is-large has-text-centered">Last Name
+            <input required className="input is-large is-fullwidth" placeholder="Last Name" type="text" name="last_name" onChange={this.updateDetails}/>
           </label>
-
         </div>
-        <label>Password:
-          <input type="password" name="password" onChange={this.updateDetails}/>
-        </label><br/>
-        <label>Confirm:
-          <input type="password" name="confirm_password" onChange={this.updateDetails}/>
-        </label><br/>
-          <input type="submit" />
+        <div className="columns">
+          <label className="column is-6 label is-large has-text-centered">First Name
+            <input required className="input is-large is-fullwidth" placeholder="Password" type="password" name="password" onChange={this.updateDetails}/>
+          </label>
+          <label className="column is-6 label is-large has-text-centered">Last Name
+            <input required className="input is-large is-fullwidth" placeholder="Confirm Password" type="password" name="confirm_password" onChange={this.updateDetails}/>
+          </label>
+        </div>
+          <input className="button is-success is-large is-fullwidth" disabled="required" value="Register" type="submit" />
       </form>
     )
   }

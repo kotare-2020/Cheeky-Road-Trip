@@ -24,6 +24,8 @@ class Login extends React.Component {
   render() {
     return (
       <form className="form container" onSubmit={this.submit}>
+        <h1 className="title is-2">Login</h1>
+        <hr />
         <label className="label is-large has-text-centered">Username
           <input className="input has-text-centered is-large is-fullwidth" placeholder="User Name" type="text" name="user_name" onChange={this.updateDetails}/>
         </label>
