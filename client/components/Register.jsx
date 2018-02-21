@@ -38,7 +38,7 @@ class Register extends React.Component {
             <input required className="input is-large has-text-centered is-fullwidth" placeholder="Last Name" type="text" name="last_name" onChange={this.updateDetails}/>
           </label>
         </div>
-        <hr />
+        <br />
         <div className="columns">
           <label className="column is-6 label is-large has-text-centered">Password
             <input required className="input is-large has-text-centered is-fullwidth" placeholder="Password" type="password" name="password" onChange={this.updateDetails}/>
