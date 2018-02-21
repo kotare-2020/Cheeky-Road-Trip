@@ -1,42 +1,62 @@
-# A starter webpack project for React, Redux, Express and Knex, Auth
+# $how, Don't Tell
 
-This is a rad base for starting a new full-stack project + Auth, or just as reference for how to do things the Harrison way (which is with absolutely no test folder, I'll leave that one to Alan)
+# Kahu 2018 Cohort Group Project
 
-* Fork this repo to your github
-* Rename your repo according to the app you're building
+Meetings are expensive, but sometimes we forget how expensive they are and feel the need to talk for too long about topics that are unimportant for the meeting purpose.
 
-To start a new project:
-  * Make a new repo on github
-  * `git clone https://github.com/harrison-symes/auth-plates.git <NEW REPO NAME HERE>`
-  * `git remote remove origin`
-  * `git remote add origin <NEW REPO URL HERE`
-  * `git remote -v` to see your remotes
-  * `git push origin master` to push the boilerplate code to your new repo
+This is an app to display the costs of meetings, and track the costs of your meetings over time.
+
+The idea of the App is to be able to display the real-time cost of a meeting as it occurs.
+This cost is calculated based on the hourly wages of the meeting's attendees and the current duration of the meeting.
+
+The intended effect of this App is to make meeting attendees aware of how much this time is costing the business.
+
+
+## User Stories
+
+### MVP
+
+As a user:
+  * I want to register for the App under my name, and state my hourly wage
+  * I want to start a new meeting, and add all the meeting members. (MVP: Add member names and wages manually)
+  * I want to start my created meeting, and see a ($) cost tracker display the current meeting cost every second
+  * I want to be able to save a meeting's cost, attendess, duration and date/time when it is finished for later viewing
+  * I want to be able to view previous meetings in date/time order, and see more information about a past meeting.
+  * I want to see a graph of meeting costs over time
+
+### Stretch
+  * I want to be able to select existing users of the App as meeting attendees, so that our wages don't have to be shown / inputted manually. If a meeting attendee doesn't have an account, I want to be able to manually add them to the App.
+  * I want to be able to state my yearly salary rather than hourly rate as an option on register
+  * I want to be able to view all meetings that I am an attenee for, and I want information about my meetings to not be visible to all users of the app.
+  * I want to create a group of regular attendees for my meeting group to make setting up my meeting easier.
+
+
+## Setup
 
 Run the following commands in your terminal:
 
 ```sh
-npm install
+npm install (or yarn install)
 knex migrate:latest
 knex seed:run
 
 ```
 
-  `npm run dev` for bundling, watch and nodemon
+  `npm run dev` || `yarn dev` for bundling, watch and nodemon
 
   `npm start` only runs server (setup for heroku)
 
 
-# Heroku!!!
+## Heroku!!!
 
-#### Creating your app
+### Creating your app
 
 Create your app with `heroku create [name]`
 
 You can check that this was successful by running `heroku apps` to view a list of your apps
 
 
-#### Adding postgres
+### Adding postgres
 
 Add postgresql (hobby dev) to your app at `https://dashboard.heroku.com/apps/[APP NAME HERE]/resources`
 
@@ -56,7 +76,5 @@ I have created several npm scripts that will be useful for deploying your app to
 If ever you need to rollback, you can also just use `npm run h:rollback`
 
 
-## Ta-Da!
+### Ta-Da!
 Your app should be deployed!
-
-I can add some exercises/comments to this repo if there is desire for such, but for now, hopefully this proves useful :)
