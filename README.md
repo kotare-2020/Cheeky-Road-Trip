@@ -41,7 +41,37 @@ As a user:
 | Get | /api/meetings | Yes | Get a Users Meeting Histroy | An Array of Meetings |
 | Post | /api/meetings | Yes | Save a completed meeting | The Meeting that has been saved in db read format |
 | Get | /api/meetings/:id/users | Yes | Get the attendees of a Meeting | An Array of User objects |
-| Get | /api/users | Yes | Get the users of the app | An Array of User Objects | 
+| Get | /api/users | Yes | Get the users of the app | An Array of User Objects |
+
+## DB
+  There should be three tables for MVP
+
+### Users
+  | Column Name | Data Type |
+  | --- | --- |
+  | id | Integer |
+  | user_name | String |
+  | first_name | String |
+  | last_name | String |
+  | hash | text |
+
+### Meetings
+  | Column Name | Data Type |
+  | --- | --- |
+  | id | Integer |
+  | meeting_name | String |
+  | time | Timestamp |
+  | attendees | integer |
+  | cost | Decimal |
+
+### Attendees (Join Table M2M)
+
+  Many Users attend Many Meetings
+
+ | Column Name | Data Type |
+ | --- | --- |
+ | user_id | Integer |
+ | meeting_id | Integer |
 
 ## Setup
 
