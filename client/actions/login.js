@@ -18,7 +18,7 @@ export function receiveLogin (user) {
   }
 }
 
-function loginError (message) {
+export function loginError (message) {
   return {
     type: 'LOGIN_FAILURE',
     isFetching: false,
@@ -32,17 +32,12 @@ export function loginUser (creds) {
     dispatch(requestLogin(creds))
     return request('post', 'auth/login', creds)
       .then((response) => {
-        if (response.status === 403) {
-          alert("Try Again!")
-          dispatch(loginError(response.body.message))
-          return Promise.reject(response.body.message)
-        } else {
-          const userInfo = saveUserToken(response.body.token)
-          dispatch(receiveLogin(userInfo))
-          document.location = "/#/"
-        }
-      }).catch(err => alert("Try Again!")
-
-      )
+        const userInfo = saveUserToken(response.body.token)
+        dispatch(receiveLogin(userInfo))
+        document.location = "/#/"
+      })
+      .catch(err => {
+        dispatch(loginError(err.response.body.message))
+      })
   }
 }

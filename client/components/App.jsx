@@ -1,5 +1,6 @@
 import React from 'react'
 import {HashRouter as Router, Route, Link} from 'react-router-dom'
+import {connect} from 'react-redux'
 
 import Login from './Login'
 import Register from './Register'
@@ -7,7 +8,7 @@ import Nav from './Nav'
 import Meeting from './Meeting'
 import History from './History'
 
-const App = () => (
+const App = ({auth}) => (
   <Router>
     <div className="container has-text-centered">
 
@@ -21,6 +22,9 @@ const App = () => (
       </div>
 
       <div className=''>
+        {!auth.isAuthenticated &&
+          <Route exact path="/" component={Login} />
+        }
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />
         <Route path="/meeting" component={Meeting} />
@@ -31,4 +35,10 @@ const App = () => (
   </Router>
 )
 
-export default App
+const mapStateToProps = ({auth}) => {
+  return {
+    auth
+  }
+}
+
+export default connect(mapStateToProps)(App)

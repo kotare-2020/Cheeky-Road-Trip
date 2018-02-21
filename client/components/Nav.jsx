@@ -15,7 +15,7 @@ class Nav extends React.Component {
     this.setState({showBurger: !this.state.showBurger})
   }
   render() {
-    const {auth} = this.props
+    const {auth, logout} = this.props
     const {showBurger} = this.state
     return <nav className="navbar">
       <div className="container">
@@ -32,7 +32,7 @@ class Nav extends React.Component {
               ? [
                 <Link onClick={this.toggleBurger} className="navbar-item" to="/meeting">Start Meeting</Link>,
                 <Link onClick={this.toggleBurger} className="navbar-item" to="/history">Meeting History</Link>,
-                <a className="navbar-item" onClick={() => props.logout()}>Logout</a>
+                <a className="navbar-item" onClick={() => logout()}>Logout</a>
               ]
               : [
                 <Link onClick={this.toggleBurger} className="navbar-item is-large" to='/login'>Login</Link>,

@@ -1,23 +1,17 @@
 import request from 'superagent'
 import {saveUserToken} from '../utils/auth'
-import {receiveLogin} from './login'
+import {receiveLogin, loginError} from './login'
 
-export function registerUserRequest ({user_name, password}) {
+export function registerUserRequest (creds) {
   return (dispatch) => {
     request
       .post('/api/auth/register')
-      .send({
-        user_name, password
+      .send(creds)
+      .then(res => {
+        const userInfo = saveUserToken(res.body.token)
+        dispatch(receiveLogin(userInfo))
+        document.location = "/#/"
       })
-      .end((err, res) => {
-        if (err) {
-          alert("didn't work")
-        }
-        else {
-          const userInfo = saveUserToken(res.body.token)
-          dispatch(receiveLogin(userInfo))
-          document.location = "/#/"
-        }
-      })
+      .catch(err => dispatch(loginError(err.response.body.message)))
   }
 }

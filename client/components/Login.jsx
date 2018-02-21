@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {loginUser} from '../actions/login'
+import {loginUser, loginError} from '../actions/login'
 
 class Login extends React.Component {
   constructor(props) {
@@ -12,6 +12,9 @@ class Login extends React.Component {
     this.updateDetails = this.updateDetails.bind(this)
     this.submit = this.submit.bind(this)
   }
+  componentDidMount() {
+    this.props.dispatch(loginError(''))
+  }
   updateDetails(e) {
     this.setState({[e.target.name]: e.target.value})
   }
@@ -19,13 +22,14 @@ class Login extends React.Component {
     e.preventDefault()
     let {user_name, password} = this.state
     this.props.dispatch(loginUser({user_name, password}))
-
   }
   render() {
+    const {auth} = this.props
     return (
       <form className="form box" onSubmit={this.submit}>
         <h1 className="title is-2">Login</h1>
         <hr />
+        {auth.errorMessage && <span className="has-text-danger is-large">{auth.errorMessage}</span>}
         <label className="label is-large has-text-centered">Username
           <input required className="input has-text-centered is-large is-fullwidth" placeholder="User Name" type="text" name="user_name" onChange={this.updateDetails}/>
         </label>
@@ -38,4 +42,10 @@ class Login extends React.Component {
   }
 }
 
-export default connect()(Login)
+const mapStateToProps = ({auth}) => {
+  return {
+    auth
+  }
+}
+
+export default connect(mapStateToProps)(Login)
