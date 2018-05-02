@@ -1,38 +1,39 @@
-# $how Me The Money
+# Lost and Found
 
-# Kahu 2018 Cohort Group Project
+# Kokako 2018 Large Group Project
 
-Meetings are expensive, but sometimes we forget how expensive they are and feel the need to talk for too long about topics that are unimportant for the meeting purpose.
+The focus of this app is to practice using the Full Stack we teach, (with auth) in a large scale app.
 
-This is an app to display the costs of meetings, and track the costs of your meetings over time.
+The idea of the app is to create a "billboard" style site for people to post about their animals that have gone missing, and for people who have found stray animals to post about them on another page.
 
-The idea of the App is to be able to display the real-time cost of a meeting as it occurs.
-This cost is calculated based on the hourly wages of the meeting's attendees and the current duration of the meeting.
-
-The intended effect of this App is to make meeting attendees aware of how much this time is costing the business.
-
+The hope is that within a small community this could be a great go to for making sure those run-away cats make it home safely.
 
 ## User Stories
 
 ### MVP
 
-As a user:
-  * I want to register for the App under my name, and state my hourly wage
-  * I want to start a new meeting, and add all the meeting members. (MVP: Add member names and wages manually)
-  * I want to start my created meeting, and see a ($) cost tracker display the current meeting cost every second
-  * I want to be able to save a meeting's cost, attendess, duration and date/time when it is finished for later viewing
-  * I want to be able to view previous meetings in date/time order, and see more information about a past meeting.
-  * I want to see a graph of meeting costs over time
+As a non-registered user:
+  * I want to register for the App under my name
+  * I want to be able to browse all of the "Found" animals on the site.
+  * I want to be able to sort the "Found" animals by species. (such as Cat / Dog)
+
+As a registered user:
+  * I want to be able to inform a user that their "Found" animal is mine, and provide them with contact information of my own, or to view their contact information.
+  * I want to be able to post about a Lost animal that I have "Found"
+  * I want to be able to post about an animal of my own that has been "Lost"
 
 ### Stretch
-  * I want to be able to select existing users of the App as meeting attendees, so that our wages don't have to be shown / inputted manually. If a meeting attendee doesn't have an account, I want to be able to manually add them to the App.
-  * I want to set a Maximum Cost an Maximum Duration for my Meeting, and see colourised progress bar displaying both a these
-  * I want to be able to state my yearly salary rather than hourly rate as an option on register
-  * I want to be able to view all meetings that I am an attenee for, and I want information about my meetings to not be visible to all users of the app.
-  * I want to create a group of regular attendees for my meeting group to make setting up my meeting easier.
+
+As an unregistered user:
+  * I want to be able to see a list of all the Animals that have been "Found" after being posted as lost within the site, to give me hope <3
+
+As a registered user:
+  * I want to be able to remove a lost animal that I have posted, as it has been "Found"
+  * I want to be able to edit a post I have made about a Lost animal of mine
+  * I want to be able to edit a post I have made about a Found animal of mine
 
   ---
-
+<!--
 ## Views (Client Side)
   | name | purpose |
   | --- | --- |
@@ -96,7 +97,7 @@ As a user:
  | meeting_id | Integer |
 
  ---
- 
+ -->
 
 ## Setup
 
