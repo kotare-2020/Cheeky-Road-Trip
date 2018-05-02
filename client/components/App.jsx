@@ -6,6 +6,7 @@ import Login from './Login'
 import Register from './Register'
 import Nav from './Nav'
 
+
 const App = ({auth}) => (
   <Router>
     <div className="container has-text-centered">
@@ -25,8 +26,6 @@ const App = ({auth}) => (
         }
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />
-        <Route path="/meeting" component={Meeting} />
-        <Route path="/history" component={History} />
       </div>
 
     </div>
