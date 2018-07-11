@@ -1,12 +1,29 @@
 # Lost and Found
 
-# Kokako 2018 Large Group Project
+## Week 7 Large group project
 
 The focus of this app is to practice using the Full Stack we teach, (with auth) in a large scale app.
 
-The idea of the app is to create a "billboard" style site for people to post about their animals that have gone missing, and for people who have found stray animals to post about them on another page.
+The idea of the app is to create a "billboard" style site for people to post about their animals that have gone missing, and for people who have found stray animals to post about them.
 
-The hope is that within a small community this could be a great go to for making sure those run-away cats make it home safely.
+The hope is that within a small community this could be a great go to for making sure those run-away floofs make it home safely.
+
+
+## The Tech
+
+A Boilerplate is already set up for you (Thanks Harrison!) with everything you will need to get started. This boilerplate is set up to use:
+
+* [React](https://reactjs.org/docs/getting-started.html)
+* [Redux](https://redux.js.org/)
+* [Express](https://expressjs.com/en/api.html)
+* [Knex.js (SQL)](https://knexjs.org/)
+* [Bulma (CSS framework)](https://bulma.io/documentation/)
+* [JWT Auth (Local)](https://jwt.io/)
+
+The Migration and seeds for the users table, and all login functionality is already set up!
+
+The mobile responsiveness is also being handled by some neat JS and Bulma classes, be sure to incorporate that view in your project goals!
+
 
 ## User Stories
 
@@ -14,11 +31,13 @@ The hope is that within a small community this could be a great go to for making
 
 As a non-registered user:
   * I want to register for the App under my name
-  * I want to be able to browse all of the "Found" animals on the site.
-  * I want to be able to sort the "Found" animals by species. (such as Cat / Dog)
+  * I want to browse all of the "Found" animals on the site.
+  * I want to to view a list of "Lost" animals posted to the site.
+  * I want to sort the "Lost" or Found" animals by species. (such as Cat / Dog)
 
 As a registered user:
-  * I want to be able to inform a user that their "Found" animal is mine, and provide them with contact information of my own, or to view their contact information.
+  * I want to see the contact information for the user that has found an animal that is mine.
+  * I want to be able to inform a user that their "Found" animal is mine through the app, and provide them with contact information of my own.
   * I want to be able to post about a Lost animal that I have "Found"
   * I want to be able to post about an animal of my own that has been "Lost"
 
@@ -28,21 +47,21 @@ As an unregistered user:
   * I want to be able to see a list of all the Animals that have been "Found" after being posted as lost within the site, to give me hope <3
 
 As a registered user:
-  * I want to be able to remove a lost animal that I have posted, as it has been "Found"
+  * I want to be able to remove a lost animal that I have posted, as it has been "Found" / Mark it as found.
   * I want to be able to edit a post I have made about a Lost animal of mine
   * I want to be able to edit a post I have made about a Found animal of mine
 
   ---
-<!--
+
 ## Views (Client Side)
   | name | purpose |
   | --- | --- |
   | Login | View for user to enter their login credentials |
   | Register | View for user to sign up for the App |
-  | CreateMeeting | View for user to arrange meeting attendees and information before starting the timer |
-  | Meeting | View to display current meeting time, cost and other information while the meeting is in progress |
-  | History | Display a list of past meetings the user has attended with select preview information |
-  | PastMeeting | Display a single meeting from the history list, displaying more information and a list of attendees for the past meeting |
+  | FoundPets | View the pets that users have found |
+  | LostPets | View the pets that users have reported as lost |
+  | LostForm | For a User to add a pet that they have lost |
+  | FoundForm | For a user to add a pet that they have found |
 
 
 ## Reducers (Client Side)
@@ -50,9 +69,18 @@ As a registered user:
   | name | purpose |
   | --- | --- |
   | auth | Store information regarding user logins, auth status and auth errors |
-  | currentMeeting | Track meeting progress such as current cost and current duration |
-  | meetings | store the list of meetings the user has attended in the past |
-  | users | store the list of users who can attend meetings |
+  | foundPets | Store the array of pets that have been found (from db) |
+  | lostPets | Store the array of pets that have been lost (from db) |
+
+
+## Actions (Client Side)
+
+  | type | data | purpose |
+  | --- | --- | --- |
+  | RECEIVE_FOUND_PETS | pets | For retreving the found pets from the server response |
+  | ADD_FOUND_PET | pet | For adding a found pet to the client store after is had been added to the db |
+  | RECEIVE_LOST_PETS | pets | For retreving the lost pets from the server response |
+  | ADD_LOST_PET | pet | For adding lost a pet to the client store after is had been added to the db |
 
 
 ## API (Client - Server)
@@ -61,58 +89,71 @@ As a registered user:
 | --- | --- | --- | --- | --- |
 | Post | /api/auth/login | Yes | Log In a User | The Users JWT Token |
 | Post | /api/auth/register | Yes | Register a User | The Users JWT Token |
-| Get | /api/meetings | Yes | Get a Users Meeting Histroy | An Array of Meetings |
-| Post | /api/meetings | Yes | Save a completed meeting | The Meeting that has been saved in db read format |
-| Get | /api/meetings/:id/users | Yes | Get the attendees of a Meeting | An Array of User objects |
-| Get | /api/users | Yes | Get the users of the app | An Array of User Objects |
+| Get | /api/lost | No | Get the list of lost pets | Array of Objects (object = A Lost Pet) |
+| Get | /api/found | No | Get the list of found pets | Array of Objects (object = A Found Pet) |
+| Post | /api/lost | Yes | Add a Lost pet to the db | The Pet that was added (as an object) |
+| Post | /api/lost | Yes | Add a Found pet to the db | The Pet that was added (as an object) |
 
-## DB (Server Side)
-  There should be three tables for MVP
+## DB (Server Side) -
+  There should be three tables for MVP. You may want/need to add additional columns or tables.
 
-### Users
-  | Column Name | Data Type |
-  | --- | --- |
-  | id | Integer |
-  | user_name | String |
-  | first_name | String |
-  | last_name | String |
-  | hash | text |
+### Lost
+  | Column Name | Data Type | Purpose |
+  | --- | --- | --- |
+  | id | Integer | Unique identifier for each lost animal |
+  | name | String | Name of Lost animal, because names are special <3 |
+  | species | String | What kind of animal is it? |
+  | photo | string | URL of a picture of the lost animal |
+  | user_id | integer | Id of the user who reported the animal as lost |
 
-### Meetings
-  | Column Name | Data Type |
-  | --- | --- |
-  | id | Integer |
-  | meeting_name | String |
-  | time | Timestamp |
-  | attendees | integer |
-  | cost | Decimal |
 
-### Attendees (Join Table M2M)
+### Found
+  | Column Name | Data Type | Purpose |
+  | --- | --- | --- |
+  | id | Integer | Unique identifier for each found animal |
+  | species | String | What kind of animal is it? |
+  | photo | string | URL of a picture of the found animal |
+  | user_id | integer | Id of the user who found the lost animal |
 
-  Many Users attend Many Meetings
+### Users (Join Table M2M)
 
- | Column Name | Data Type |
- | --- | --- |
- | user_id | Integer |
- | meeting_id | Integer |
+  Many Users to Many Pets
 
+ | Column Name | Data Type | Purpose |
+ | --- | --- | --- |
+ | id | Integer | Unique identifier for each user |
+ | user_name | string | Used for login |
+ | contact_details | string | displayed for contact information |
+ | email_address | string | displayed for contact information |
+ | hash | text | hashed login password |
  ---
- -->
+
 
 ## Setup
 
 Run the following commands in your terminal:
 
 ```sh
-npm install (or yarn install)
-knex migrate:latest
-knex seed:run
+yarn install
+yarn knex migrate:latest
+yarn knex seed:run
+mv .env_example .env
+```
+
+To run in development:
+```sh
+yarn dev
+ - or -
+npm run dev
 
 ```
 
-  `npm run dev` || `yarn dev` for bundling, watch and nodemon
-
-  `npm start` only runs server (setup for heroku)
+To run in production:
+```sh
+yarn start
+  - or -
+npm start
+```
 
 
 ## Heroku!!!
@@ -135,13 +176,33 @@ Check that pg has been added by running `heroku addons` to ensure the postgresql
 
 I have created several npm scripts that will be useful for deploying your app to heroku easily.
 
-`npm run h:deploy` will push your local master branch to your heroku app
+To push your local master branch to your heroku app:
+```sh
+yarn h:deploy
+  - or -
+npm run h:deploy
+```
 
-`npm run h:migrate` will run your knex migrations on your deployed heroku app
+Run heroku migrations:
+```sh
+yarn h:migrate
+  - or -
+npm run h:migrate
+```
 
-`npm run h:seed` will run your seeds on your deployed app
+Run heroku seeds:
+```sh
+yarn h:seed
+  - or -
+npm run h:seed
+```
 
-If ever you need to rollback, you can also just use `npm run h:rollback`
+If ever you need to rollback, you can also:
+```sh
+yarn h:rollback
+  - or -
+npm run h:rollback
+```
 
 
 ### Ta-Da!
