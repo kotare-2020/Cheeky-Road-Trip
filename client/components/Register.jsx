@@ -8,8 +8,8 @@ class Register extends React.Component {
     super(props)
     this.state = {
       user_name: '',
-      first_name: '',
-      last_name: '',
+      contact_details: '',
+      email_address: '',
       password: '',
       confirm_password: ''
     }
@@ -25,7 +25,7 @@ class Register extends React.Component {
   submit(e) {
     e.preventDefault()
     e.target.reset()
-    let {user_name, password, confirm_password, first_name, last_name} = this.state
+    let {user_name, password, confirm_password, contact_details, email_address} = this.state
     if (confirm_password != password) return this.props.dispatch(loginError("Passwords don't match"))
     this.props.dispatch(registerUserRequest(this.state))
   }
@@ -40,11 +40,11 @@ class Register extends React.Component {
           <input required className="input is-large has-text-centered is-fullwidth" placeholder="User Name" type="text" name="user_name" onChange={this.updateDetails}/>
         </label>
         <div className="columns">
-          <label className="column is-6 label is-large has-text-centered">First Name
-            <input required className="input is-large has-text-centered is-fullwidth" placeholder="First Name" type="text" name="first_name" onChange={this.updateDetails}/>
+          <label className="column is-6 label is-large has-text-centered">Contact Details
+            <input required className="input is-large has-text-centered is-fullwidth" placeholder="Contact Details" type="text" name="contact_details" onChange={this.updateDetails}/>
           </label>
-          <label className="column is-6 label is-large has-text-centered">Last Name
-            <input required className="input is-large has-text-centered is-fullwidth" placeholder="Last Name" type="text" name="last_name" onChange={this.updateDetails}/>
+          <label className="column is-6 label is-large has-text-centered">Email Address
+            <input required className="input is-large has-text-centered is-fullwidth" placeholder="Email Adress" type="text" name="email_address" onChange={this.updateDetails}/>
           </label>
         </div>
         <br />
