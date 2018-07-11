@@ -7,7 +7,13 @@ exports.seed = function(knex, Promise) {
     .then(function () {
       // Inserts seed entries
       return knex('users').insert([
-        {id: 1, user_name: 'symesharr', first_name: 'Harrison', 'last_name': 'Symes', hash: hashSync('Krang', saltRounds), hourly_wage: 300}
+        {
+          id: 1,
+          user_name: 'symesharr',
+          email_address: 'harrison@devacademy.co.nz',
+          contact_details: 'Ring the bell ;)',
+          hash: hashSync('Krang', saltRounds)
+        }
       ]);
     });
 };
