@@ -13,7 +13,6 @@ function register (req, res, next) {
       createUser(user_name, contact_details, email_address, password)
         .then(() => next())
         .catch(err => {
-          console.log({err});
           res.status(500).send({message: "Server Error"})
         })
     })
