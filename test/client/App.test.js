@@ -1,10 +1,16 @@
 import React from 'react'
-import { shallow, mount } from 'enzyme'
+import { shallow } from 'enzyme'
 
-import App from '../../client/components/App'
-import './setup-dom'
+import {App} from '../../client/components/App'
 
-// test('Hello World renders on App', () => {
-//   const wrapper = shallow(<App />)
-//   expect(wrapper.find('h1').text()).toBe('Hello World')
-// })
+test('Title renders on App', () => {
+  // Arrange
+  const expected = 'Lost and Found'
+
+  // Act
+  const wrapper = shallow(<App auth={{isAuthenticated: false}}/>)
+  const actual = wrapper.find('h1').text()
+
+  // Assert
+  expect(actual).toEqual(expected)
+})

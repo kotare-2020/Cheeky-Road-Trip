@@ -29,7 +29,7 @@ class Nav extends React.Component {
         <div id="navbarMenuHeroA" className={`navbar-menu ${showBurger ? "is-active" : ''}`}>
           <div className="navbar-end">
             {auth.isAuthenticated
-              ? <Link to="/" onClick={this.props.logout} className="navbar-item is-large">Logout</Link>
+              ? <Link to='/' className="navbar-item is-large" onClick={() => logout()}>Logout</Link>
               : [
                 <Link onClick={this.toggleBurger} className="navbar-item is-large" to='/login'>Login</Link>,
                 <Link onClick={this.toggleBurger} className="navbar-item" to='/register'>Register</Link>
@@ -49,9 +49,7 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 const mapStateToProps = ({auth}) => {
-  return {
-    auth
-  }
+  return {auth}
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Nav)
