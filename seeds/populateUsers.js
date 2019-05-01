@@ -9,11 +9,11 @@ exports.seed = function(knex, Promise) {
       return knex('users').insert([
         {
           id: 1,
-          user_name: 'symesharr',
-          email_address: 'harrison@devacademy.co.nz',
+          user_name: 'admin',
+          email_address: 'hello@devacademy.co.nz',
           contact_details: 'Ring the bell ;)',
-          hash: hashSync('Krang', saltRounds)
+          hash: hashSync('admin', saltRounds)
         }
-      ]);
-    });
-};
+      ])
+    })
+}

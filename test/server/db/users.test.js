@@ -24,12 +24,12 @@ test('createUser inserts a single user', () => {
 test('userExists finds existing user', () => {
   let expected = true
 
-  return users.userExists('symesharr', testDb)
-  .then(result => {
-    let actual = result
+  return users.userExists('admin', testDb)
+    .then(result => {
+      let actual = result
 
-    expect(actual).toEqual(expected)
-  })
+      expect(actual).toEqual(expected)
+    })
 })
 
 test('userExists does not find non-existant user', () => {
@@ -46,7 +46,7 @@ test('userExists does not find non-existant user', () => {
 test('getUserByUsername finds existing user', () => {
   let expected = 'Ring the bell ;)'
 
-  return users.getUserByUsername('symesharr', testDb)
+  return users.getUserByUsername('admin', testDb)
   .then(user => {
     let actual = user.contact_details
 
