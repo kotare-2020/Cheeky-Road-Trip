@@ -24,7 +24,6 @@ The Migration and seeds for the users table, and all login functionality is alre
 
 The mobile responsiveness is also being handled by some neat JS and Bulma classes, be sure to incorporate that view in your project goals!
 
-
 ## User Stories
 
 ### MVP
