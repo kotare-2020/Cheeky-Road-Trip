@@ -121,7 +121,7 @@ As a registered user:
  | Column Name | Data Type | Purpose |
  | --- | --- | --- |
  | id | Integer | Unique identifier for each user |
- | user_name | string | Used for login |
+ | username | string | Used for login |
  | contact_details | string | displayed for contact information |
  | email_address | string | displayed for contact information |
  | hash | text | hashed login password |
