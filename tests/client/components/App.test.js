@@ -8,8 +8,11 @@ test('Title renders on App', () => {
   const expected = 'Lost and Found'
 
   // Act
-  const wrapper = shallow(<App auth={{isAuthenticated: false}}/>)
+  const wrapper = shallow(<App auth={{isAuthenticated: false}} dispatch={() => {}}/>)
   const actual = wrapper.find('h1').text()
+
+  // Debug output
+  // console.log(wrapper.debug())
 
   // Assert
   expect(actual).toEqual(expected)
@@ -20,7 +23,7 @@ test('App has some routes when not logged in', () => {
   const expected = 3
 
   // Act
-  const wrapper = shallow(<App auth={{isAuthenticated: false}}/>)
+  const wrapper = shallow(<App auth={{isAuthenticated: false}} dispatch={() => {}}/>)
   const actual = wrapper.find('Route').length
 
   // Assert
@@ -32,7 +35,7 @@ test('App has one less route when logged in', () => {
   const expected = 2
 
   // Act
-  const wrapper = shallow(<App auth={{isAuthenticated: true}}/>)
+  const wrapper = shallow(<App auth={{isAuthenticated: true}} dispatch={() => {}}/>)
   const actual = wrapper.find('Route').length
 
   // Assert

@@ -1,24 +1,27 @@
-const testEnv = require('../setup-db')
+const testDb = require('./connection')
 const users = require('../../../server/db/users')
 
-let testDb = null
-
-beforeEach(() => {
-  testDb = testEnv.getTestDb()
-  return testEnv.initialise(testDb)
+beforeAll(() => {
+  return testDb.migrate.latest()
 })
 
-afterEach(() => testEnv.cleanup(testDb))
+beforeEach(() => {
+  return testDb.seed.run()
+})
+
+afterAll(() => {
+  return testDb.destroy()
+})
 
 test('createUser inserts a single user', () => {
   let expected = 1
 
-  return users.createUser('new_user', 'new@user.com', '123456789', 's3cr3t', testDb)
-  .then(ids => {
-    let actual = ids.length
+  return users.createUser({ username: 'new_user', password: 's3cr3t', email_address: 'new@user.com', contact_details: '123456789' }, testDb)
+    .then(ids => {
+      let actual = ids.length
 
-    expect(actual).toEqual(expected)
-  })
+      expect(actual).toEqual(expected)
+    })
 })
 
 test('userExists finds existing user', () => {
@@ -36,20 +39,20 @@ test('userExists does not find non-existant user', () => {
   let expected = false
 
   return users.userExists('not-a-username', testDb)
-  .then(result => {
-    let actual = result
+    .then(result => {
+      let actual = result
 
-    expect(actual).toEqual(expected)
-  })
+      expect(actual).toEqual(expected)
+    })
 })
 
 test('getUserByUsername finds existing user', () => {
   let expected = 'Ring the bell ;)'
 
   return users.getUserByUsername('admin', testDb)
-  .then(user => {
-    let actual = user.contact_details
+    .then(user => {
+      let actual = user.contact_details
 
-    expect(actual).toEqual(expected)
-  })
+      expect(actual).toEqual(expected)
+    })
 })

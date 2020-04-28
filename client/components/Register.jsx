@@ -1,7 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {registerUserRequest} from '../actions/register'
-import {loginError} from '../actions/login'
+import {loginError, registerUserRequest} from '../actions/auth'
 
 class Register extends React.Component {
   constructor(props) {
@@ -27,7 +26,8 @@ class Register extends React.Component {
     e.target.reset()
     let {username, password, confirm_password, contact_details, email_address} = this.state
     if (confirm_password != password) return this.props.dispatch(loginError("Passwords don't match"))
-    this.props.dispatch(registerUserRequest(this.state))
+    const confirmSuccess = () => { this.props.history.push('/') }
+    this.props.dispatch(registerUserRequest({username, password, contact_details, email_address}, confirmSuccess))
   }
   render() {
     const {auth} = this.props
@@ -37,23 +37,23 @@ class Register extends React.Component {
         <hr />
         {auth.errorMessage && <span className="has-text-danger is-large">{auth.errorMessage}</span>}
         <label className="column is-6 is-offset-one-quarter label is-large has-text-centered">Username
-          <input required className="input is-large has-text-centered is-fullwidth" placeholder="User Name" type="text" name="username" onChange={this.updateDetails}/>
+          <input required className="input is-large has-text-centered is-fullwidth" placeholder="User Name" type="text" name="username" autoComplete="username" onChange={this.updateDetails} value={this.state.username}/>
         </label>
         <div className="columns">
           <label className="column is-6 label is-large has-text-centered">Contact Details
-            <input required className="input is-large has-text-centered is-fullwidth" placeholder="Contact Details" type="text" name="contact_details" onChange={this.updateDetails}/>
+            <input required className="input is-large has-text-centered is-fullwidth" placeholder="Contact Details" type="text" name="contact_details" onChange={this.updateDetails} value={this.state.contact_details}/>
           </label>
           <label className="column is-6 label is-large has-text-centered">Email Address
-            <input required className="input is-large has-text-centered is-fullwidth" placeholder="Email Adress" type="text" name="email_address" onChange={this.updateDetails}/>
+            <input required className="input is-large has-text-centered is-fullwidth" placeholder="Email Adress" type="text" name="email_address" onChange={this.updateDetails} value={this.state.email_address}/>
           </label>
         </div>
         <br />
         <div className="columns">
           <label className="column is-6 label is-large has-text-centered">Password
-            <input required className="input is-large has-text-centered is-fullwidth" placeholder="Password" type="password" name="password" onChange={this.updateDetails}/>
+            <input required className="input is-large has-text-centered is-fullwidth" placeholder="Password" type="password" name="password"  autoComplete="new-password" onChange={this.updateDetails} value={this.state.password}/>
           </label>
           <label className="column is-6 label is-large has-text-centered">Confirm Password
-            <input required className="input is-large has-text-centered is-fullwidth" placeholder="Confirm Password" type="password" name="confirm_password" onChange={this.updateDetails}/>
+            <input required className="input is-large has-text-centered is-fullwidth" placeholder="Confirm Password" type="password" name="confirm_password" autoComplete="new-password" onChange={this.updateDetails} value={this.state.confirm_password}/>
           </label>
         </div>
         <input className="button is-success is-large is-fullwidth" value="Register" type="submit" />
