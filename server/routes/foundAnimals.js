@@ -3,8 +3,8 @@ const db = require('../db/connection')
 const router = express.Router()
 
 
-router.get('/', (req, res) => {
-    db.getAnimals()
+router.get('/found', (req, res) => {
+    db.getFoundAnimals()
         .then(animals => {
             res.send(animals)
         })
