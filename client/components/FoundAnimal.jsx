@@ -7,7 +7,7 @@ class FoundAnimals extends React.Component {
         return this.props.animals.map((animal) => {
             return(
                 <li>
-                    <img>{animal.photo}</img>
+                    <img></img>
                 </li>
             )
         })

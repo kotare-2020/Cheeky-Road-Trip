@@ -3,6 +3,7 @@ const express = require('express')
 const authRoutes = require('./routes/auth')
 const animalsRoutes = require('./routes/foundAnimals')
 
+
 const server = express()
 
 server.use(express.json())
