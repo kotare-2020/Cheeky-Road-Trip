@@ -203,3 +203,9 @@ Your app should be deployed!
 ## Project Lead - Jayden
 ## Git Lead - Marta
 
+#Testing 
+We test the features we create
+
+
+
+
