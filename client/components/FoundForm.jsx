@@ -1,4 +1,5 @@
 import React from 'react'
+import {saveFoundApi} from '../apis/lostpets'
 
 
 class FoundForm extends React.Component {
@@ -6,7 +7,8 @@ class FoundForm extends React.Component {
     state = {
        found: {
         species: '',
-        photo: ''
+        photo: '',
+        user_id: 'TBC'
        } 
     }
     
@@ -22,8 +24,10 @@ class FoundForm extends React.Component {
 
     handleSubmit = (evt) => {
         evt.preventDefault()
-
-
+        saveFoundApi(this.state.found)
+        .then (id => {
+            console.log(id)
+        })
     }
     
     render () {

@@ -1,6 +1,7 @@
 import request from 'superagent'
 
 const lostUrl = '/api/lost/'
+const foundUrl = '/api/found/'
 
 export function saveLost () {
     return request
@@ -11,3 +12,11 @@ export function saveLost () {
         })
 }
 
+export function saveFoundApi (found) {
+    return request
+        .post(foundUrl)
+        .send(found)
+        .then(req => {
+            return req.body
+        })
+}
