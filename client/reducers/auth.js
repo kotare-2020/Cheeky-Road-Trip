@@ -49,6 +49,8 @@ export default function auth (state = initialState, action) {
         isAuthenticated: false,
         errorMessage: action.message
       }
+    case 'GET_ANIMAL':
+      return action.animal
     default:
       return state
   }
