@@ -3,7 +3,7 @@ const config = require('../../knexfile')
 const env = process.env.NODE_ENV || 'development'
 const connection = knex(config[env])
 
-function getAnimals(db = connection) {
+function getFoundAnimals(db = connection) {
     return db('found').select()
 }
 
@@ -18,6 +18,6 @@ function saveLost (lost, db = connection) {
 }
 
 module.exports = {
-    getAnimals,
+    getFoundAnimals,
     saveLost
 }
