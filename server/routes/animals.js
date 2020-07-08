@@ -13,16 +13,7 @@ router.get('/', (req, res) => {
         })
 })
 
-router.post('/lost', (req, res) => {
-    const newLost = req.body
 
-    db.saveLost(newLost)
-        .then(lostId => {
-            res.send(lostId)
-        })
-        .catch(err => {
-            res.status(500).send(err.message)
-        })
-})
+
 
 module.exports = router

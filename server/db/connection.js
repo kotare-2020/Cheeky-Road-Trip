@@ -17,7 +17,12 @@ function saveLost (lost, db = connection) {
         })
 }
 
+function getLostAnimals (db = connection) {
+    return db('lost').select()
+  }
+
 module.exports = {
     getAnimals,
-    saveLost
+    saveLost,
+    getLostAnimals,
 }
