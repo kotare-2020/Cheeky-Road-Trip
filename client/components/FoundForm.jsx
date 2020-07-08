@@ -2,12 +2,20 @@ import React from 'react'
 
 
 class FoundForm extends React.Component {
+
+    state = {
+        species: '',
+        photo: ''
+    }
     
     handleChange = (evt) => {
-        
+        this.setState ({
+            [evt.target.name]: evt.target.value
+        })
     }
     
     handleSubmit = (evt) => {
+        evt.preventDefault()
         
     }
     
