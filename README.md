@@ -197,9 +197,10 @@ Your app should be deployed!
 
 ## Roles
 
-Product Owner - Nick
-Vibes Watcher -
-2 x Tech Leads -
-Project Lead -
-Git Lead -
+# Product Owner - Nick
+# Vibes Watcher - 
+# 2 x Tech Leads -
+Aiysha and Richard
+# Project Lead - 
+# Git Lead -
 
