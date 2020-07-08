@@ -1,5 +1,6 @@
 import { register as authRegister, signIn as authLogin } from 'authenticare/client'
 import { baseApiUrl as baseUrl } from '../config'
+import { request } from 'express'
 
 const errorMessages = {
   "USERNAME_UNAVAILABLE": "Sorry, that username is taken.",
@@ -18,4 +19,10 @@ export function login (creds) {
     .catch(err => {
       throw errorMessages[err.response.body.errorType]
     })
+}
+
+export function getFoundApi() {
+  return request
+    .get('/')
+    .then(response => response.body)
 }
