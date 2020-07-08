@@ -1,6 +1,6 @@
 import request from 'superagent'
 
-const lostUrl = '/api/v1/lost/'
+const lostUrl = '/api/lost/'
 
 export function saveLost () {
     return request
