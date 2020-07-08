@@ -195,12 +195,11 @@ npm run h:rollback
 Your app should be deployed!
 
 
-## Roles
+# Roles
 
-# Product Owner - Nick
-# Vibes Watcher - 
-# 2 x Tech Leads -
-Aiysha and Richard
-# Project Lead - 
-# Git Lead -
+## Product Owner - Nick
+## Vibes Watcher - Derek
+## 2 x Tech Leads - Aiysha and Richard
+## Project Lead - Jayden
+## Git Lead - Marta
 
