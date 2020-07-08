@@ -1,10 +1,10 @@
 
 exports.seed = function(knex) {
   // Deletes ALL existing entries
-  return knex('table_name').del()
+  return knex('lost').del()
     .then(function () {
       // Inserts seed entries
-      return knex('table_name').insert([
+      return knex('lost').insert([
         {id: 1,  
         name: 'Harriet',
         species: 'Bull Terrier',
