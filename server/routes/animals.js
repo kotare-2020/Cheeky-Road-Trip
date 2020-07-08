@@ -1,14 +1,26 @@
-const express = require("express")
-const Router = express.Router()
+const express = require('express')
+const db = require('../db/connection')
+const router = express.Router()
 
-const db = require('../db/users')
 
-Router.get("/", (req, res) => {
+router.get('/', (req, res) => {
     db.getAnimals()
-        .then((animals) => {
+        .then(animals => {
             res.send(animals)
         })
-        .catch((err) => {
+        .catch(err => {
+            res.status(500).send(err.message)
+        })
+})
+
+router.post('/lost', (req, res) => {
+    const newLost = req.body
+
+    db.saveLost(newLost)
+        .then(lostId => {
+            res.send(lostId)
+        })
+        .catch(err => {
             res.status(500).send(err.message)
         })
 })
