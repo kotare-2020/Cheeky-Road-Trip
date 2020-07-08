@@ -1,14 +1,16 @@
 const express = require('express')
 
 const authRoutes = require('./routes/auth')
-const animalsRoutes = require('./routes/animals')
+const lostRoutes = require('./routes/lost')
+const foundRoutes = require('./routes/found')
 
 const server = express()
 
 server.use(express.json())
 server.use(express.static('public'))
 
-server.use('/api/v1', authRoutes)
-server.use('/api', animalsRoutes)
+server.use('/api/auth', authRoutes)
+server.use('/api/lost', lostRoutes)
+server.use('/api/found', foundRoutes)
 
 module.exports = server
