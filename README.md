@@ -197,13 +197,13 @@ Your app should be deployed!
 
 # Roles
 
-## Product Owner - Nick
-## Vibes Watcher - Derek
-## 2 x Tech Leads - Aiysha and Richard
-## Project Lead - Jayden
-## Git Lead - Marta
+## Product Owner ------ Nick
+## Vibes Watcher ------ Derek
+## 2 x Tech Leads ------ Aiysha and Richard
+## Project Lead ------ Jayden
+## Git Lead ------ Marta
 
-#Testing 
+##Testing 
 We test the features we create
 
 
