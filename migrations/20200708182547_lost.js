@@ -5,7 +5,7 @@ exports.up = function(knex) {
     table.string('name')
     table.string('species')
     table.string('photo')
-    table.string('user_id')
+    table.integer('user_id')
   })
 };
 

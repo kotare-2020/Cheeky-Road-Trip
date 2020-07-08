@@ -10,12 +10,11 @@ function getAnimals(db = connection) {
 function saveLost (lost, db = connection) {
     return db('lost')
         .insert({
-            user_id: lost.user_id,
             name: lost.name,
             species: lost.species,
-            photo: lost.photo
+            photo: lost.photo,
+            user_id: lost.user_id
         })
-
 }
 
 module.exports = {

@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
         .then(animals => {
             res.send(animals)
         })
-        .catch((err) => {
+        .catch(err => {
             res.status(500).send(err.message)
         })
 })
