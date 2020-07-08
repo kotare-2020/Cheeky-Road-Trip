@@ -61,6 +61,9 @@ As a registered user:
   | LostPets | View the pets that users have reported as lost |
   | LostForm | For a User to add a pet that they have lost |
   | FoundForm | For a user to add a pet that they have found |
+### New Views
+  | ContactDetails | Show contact details of whoever found my pet |
+  | FoundComment | Add comment with your own contact details to a found pet listing |
 
 
 ## Reducers (Client Side)
@@ -136,7 +139,7 @@ Run the following commands in your terminal:
 npm install
 npx knex migrate:latest
 npx knex seed:run
-mv .env.example .env
+cp .env.example .env
 ```
 
 To run in development:
