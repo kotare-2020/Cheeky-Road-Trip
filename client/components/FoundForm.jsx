@@ -4,19 +4,26 @@ import React from 'react'
 class FoundForm extends React.Component {
 
     state = {
+       found: {
         species: '',
         photo: ''
+       } 
     }
     
-    handleChange = (evt) => {
-        this.setState ({
-            [evt.target.name]: evt.target.value
+
+   handleChange = (evt) => {
+        this.setState({
+            found: {
+                ...this.state.found,
+                [evt.target.name]: evt.target.value
+            }
         })
-    }
-    
+    }  
+
     handleSubmit = (evt) => {
         evt.preventDefault()
-        
+
+
     }
     
     render () {
