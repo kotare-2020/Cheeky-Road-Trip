@@ -5,9 +5,10 @@ import {connect} from 'react-redux'
 import Login from './Login'
 import Register from './Register'
 import Nav from './Nav'
-import { checkAuth} from '../actions/auth'
 import FoundPets from './FoundPets'
 import { fetchAnimals } from '../actions/foundPets'
+import HomePage from './HomePage'
+import { checkAuth } from '../actions/auth'
 
 export class App extends React.Component {
   componentDidMount() {
@@ -35,10 +36,13 @@ export class App extends React.Component {
 
           <div className=''>
             {!auth.isAuthenticated &&
-              <Route exact path="/" component={Login} />
+              <Route exact path="/" component={Login}/> 
             }
+            {/* {auth.isAuthenticated ? <HomePage/> : <></>  } */}
+            <Route path="/home" component={HomePage}/>
             <Route path="/login" component={Login} />
             <Route path="/register" component={Register} />
+
           </div>
             <FoundPets animals={this.props.foundPets}/>
         </div>
