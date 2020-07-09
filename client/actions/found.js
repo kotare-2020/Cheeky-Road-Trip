@@ -1,4 +1,17 @@
-// read readme bro
-// RECEIVE_FOUND_PETS action
-// and 
-// ADD_FOUND_PET actions go in here
+import { getFoundApi } from '../apis/foundPets'
+
+export function foundAnimals(animals) {
+    return {
+      type: 'GET_ANIMALS',
+      animals: animals
+  
+    }
+  }
+  
+  export function fetchAnimals() {
+    return dispatch => {
+      getFoundApi().then((animals) => {
+        dispatch(foundAnimals(animals))
+      })
+    }
+  }

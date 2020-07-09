@@ -5,20 +5,25 @@ import { connect } from 'react-redux'
 import Login from './Login'
 import Register from './Register'
 import Nav from './Nav'
+import FoundPets from './FoundPets'
+import { fetchAnimals } from '../actions/found'
 import HomePage from './HomePage'
 import LostPets from './LostPets'
 import { checkAuth } from '../actions/auth'
+
 
 export class App extends React.Component {
   componentDidMount() {
     const confirmSuccess = () => { }
     this.props.dispatch(checkAuth(confirmSuccess))
+    this.props.dispatch(fetchAnimals())
   }
 
   render() {
     const { auth } = this.props
     return (
       <Router>
+        
         <div className="container has-text-centered">
 
           <div className="hero is-small is-primary">
@@ -43,16 +48,18 @@ export class App extends React.Component {
             <Route path="/register" component={Register} />
 
           </div>
-
+            <FoundPets animals={this.props.foundPets}/>
         </div>
       </Router>
+      
     )
   }
 }
 
-const mapStateToProps = ({ auth }) => {
+const mapStateToProps = ({auth, foundPets}) => {
   return {
-    auth
+    auth,
+    foundPets
   }
 }
 
