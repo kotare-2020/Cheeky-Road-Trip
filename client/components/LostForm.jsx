@@ -8,7 +8,7 @@ class LostForm extends React.Component {
             name: "",
             species: "",
             photo: "",
-            user_id: "TBC"
+            user_id: ""
         }
     }
 
@@ -31,6 +31,7 @@ class LostForm extends React.Component {
     }
 
     render() {
+        console.log(this.state)
         return (
             <>
                 <h3>ADD A LOST PET</h3>
@@ -41,6 +42,8 @@ class LostForm extends React.Component {
                     <input type="text" name="species" onChange={this.handleChange} />
                     <label htmlFor="photo">Photo:</label>
                     <input type="text" name="photo" onChange={this.handleChange} />
+                    <label htmlFor="userId">User ID:</label>
+                    <input type="text" name="user_id" onChange={this.handleChange} />
                     <button onClick={this.handleSubmit}>Add lost pet</button>
                 </form>
             </>

@@ -1,6 +1,6 @@
 import React from 'react'
-import {HashRouter as Router, Route, Link} from 'react-router-dom'
-import {connect} from 'react-redux'
+import { HashRouter as Router, Route, Link } from 'react-router-dom'
+import { connect } from 'react-redux'
 
 import Login from './Login'
 import Register from './Register'
@@ -16,7 +16,7 @@ export class App extends React.Component {
   }
 
   render() {
-    const {auth} = this.props
+    const { auth } = this.props
     return (
       <Router>
         <div className="container has-text-centered">
@@ -32,13 +32,15 @@ export class App extends React.Component {
 
           <div className=''>
             {!auth.isAuthenticated &&
-              <Route exact path="/" component={Login}/> 
+              <>
+                <Route exact path="/" component={Login} />
+                <Route path="/lost" component={LostPets} />
+              </>
             }
-            {auth.isAuthenticated ? <HomePage/> : <></>  }
-            <Route path="/home" component={HomePage}/>
+            {auth.isAuthenticated ? <HomePage /> : <></>}
+            <Route path="/home" component={HomePage} />
             <Route path="/login" component={Login} />
             <Route path="/register" component={Register} />
-            <Route path="/lost" component={LostPets} />
 
           </div>
 
@@ -48,7 +50,7 @@ export class App extends React.Component {
   }
 }
 
-const mapStateToProps = ({auth}) => {
+const mapStateToProps = ({ auth }) => {
   return {
     auth
   }

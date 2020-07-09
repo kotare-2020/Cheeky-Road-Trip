@@ -3,8 +3,9 @@ import { connect } from "react-redux"
 
 import { fetchLostPets } from '../actions/lost'
 
-class LostPets extends React.Component {
+import LostForm from './LostForm'
 
+class LostPets extends React.Component {
 
     componentDidMount() {
         //this is where the initial request for the tasks gets sent from. this one is going to actions
@@ -13,29 +14,49 @@ class LostPets extends React.Component {
     }
 
     render() {
-        // console.log(this.props)
         return (
-        <>
-        <h1>LOST PETS</h1>
-        {this.props.lostPets.map((pet, i) => {
-            return (
-            <div>
-                <img src={pet.photo} key={pet.id} />
-                <p>
-                    {pet.name} </p>
-                <p>{pet.species}</p>
-            </div>
-            )
-        })}
-        </>
-    )}
+            <>
+                <h1 className="title is-1">LOST PETS</h1>
+                {this.props.auth.isAuthenticated ?
+                    <>
+                        <LostForm />
+
+                        {this.props.lostPets.map((pet, i) => {
+                            return (
+                                <div>
+                                    <img src={pet.photo} key={pet.id} />
+                                    <p>{pet.name} </p>
+                                    <p>{pet.species}</p>
+                                </div>
+                            )
+                        })}
+                    </>
+                    :
+                    <>
+                        {this.props.lostPets.map((pet, i) => {
+                            return (
+                                <div>
+                                    <img src={pet.photo} key={pet.id} />
+                                    <p>{pet.name} </p>
+                                    <p>{pet.species}</p>
+                                </div>
+                            )
+                        })}
+
+                    </>
+                }
+            </>
+        )
+    }
 }
-        
+
 
 
 function mapStateToProps(globalState) {
+    // console.log(globalState)
     return {
-        lostPets: globalState.lostPets
+        lostPets: globalState.lostPets,
+        auth: globalState.auth,
     }
 }
 
