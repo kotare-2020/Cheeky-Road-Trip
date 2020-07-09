@@ -1,6 +1,7 @@
 import request from 'superagent'
 
-const foundPetsUrl= 'http://localhost:3000/api/v1/found/'
+const foundPetsUrl = '/api/found/'
+const lostPetsUrl = '/api/lost/'
 
 export function getFound () {
     return request

@@ -1,29 +1,18 @@
-import React from 'react'
+import React from "react"
 import { connect } from "react-redux"
 
-class FoundPet extends React.Component{
+class FoundPets extends React.Component {
 
-state={
-
-}
-
-
-render(){
-
-    const info = this.props.info
-
-    return(
-
-    <div>
-     <h1></h1>
-     <p></p>
-     <p></p>
-    </div>
-
-    )
+    render() {
+        return this.props.animals.map((animal) => {
+            return(
+                <li>
+                    <img></img>
+                </li>
+            )
+        })
+    }
 
 }
 
-}
-
-export default connect() (FoundPet)
+export default connect ()(FoundPets)
