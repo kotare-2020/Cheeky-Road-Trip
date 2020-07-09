@@ -4,7 +4,7 @@ const foundUrl = '/api/found/'
 
 export function getFoundApi() {
     return request
-      .get(foundUrl)
+      .get(foundUrl + "/found")
       .then(response => response.body)
   }
   

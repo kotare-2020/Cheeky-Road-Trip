@@ -6,7 +6,7 @@ import Login from './Login'
 import Register from './Register'
 import Nav from './Nav'
 import FoundPets from './FoundPets'
-import { fetchAnimals } from '../actions/foundPets'
+import { fetchAnimals } from '../actions/found'
 import HomePage from './HomePage'
 import { checkAuth } from '../actions/auth'
 
