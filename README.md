@@ -62,6 +62,8 @@ As a registered user:
   | LostForm | For a User to add a pet that they have lost |
   | FoundForm | For a user to add a pet that they have found |
 ### New Views
+  | name | purpose |
+  | --- | --- |
   | ContactDetails | Show contact details of whoever found my pet |
   | FoundComment | Add comment with your own contact details to a found pet listing |
 
