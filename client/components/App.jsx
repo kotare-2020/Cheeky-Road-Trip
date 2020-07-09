@@ -11,6 +11,7 @@ import HomePage from './HomePage'
 import LostForm from './LostForm'
 import { checkAuth } from '../actions/auth'
 
+
 import FoundForm from './FoundForm'
 
 export class App extends React.Component {
@@ -25,33 +26,34 @@ export class App extends React.Component {
     
     const {auth} = this.props
     return (
-      <Router>
+<FoundForm/> 
+      // <Router>
         
-        <div className="container has-text-centered">
+      //   <div className="container has-text-centered">
 
-          <div className="hero is-small is-primary">
-            <div className="hero-body has-text-centered">
-              <Link to='/' className="">
-                <h1 className="title is-1">Lost and Found</h1>
-              </Link>
-              <Nav />
-            </div>
-          </div>
+      //     <div className="hero is-small is-primary">
+      //       <div className="hero-body has-text-centered">
+      //         <Link to='/' className="">
+      //           <h1 className="title is-1">Lost and Found</h1>
+      //         </Link>
+      //         <Nav />
+      //       </div>
+      //     </div>
 
-          <div className=''>
-            {!auth.isAuthenticated &&
-              <Route exact path="/" component={Login}/> 
-            }
-            {auth.isAuthenticated ? <HomePage/> : <></>  }
-            <Route path="/home" component={HomePage}/>
-            <Route path="/login" component={Login} />
-            <Route path="/register" component={Register} />
-            <Route path="/lost" component={LostForm} />
+      //     <div className=''>
+      //       {!auth.isAuthenticated &&
+      //         <Route exact path="/" component={Login}/> 
+      //       }
+      //       {auth.isAuthenticated ? <HomePage/> : <></>  }
+      //       <Route path="/home" component={HomePage}/>
+      //       <Route path="/login" component={Login} />
+      //       <Route path="/register" component={Register} />
+      //       <Route path="/lost" component={LostForm} />
 
-          </div>
-            <FoundPets animals={this.props.foundPets}/>
-        </div>
-      </Router>
+      //     </div>
+      //       <FoundPets animals={this.props.foundPets}/>
+      //   </div>
+      // </Router>
       
     )
   }
