@@ -1,13 +1,13 @@
 import React from "react"
 import { connect } from "react-redux"
 
-class FoundAnimals extends React.Component {
+class FoundPets extends React.Component {
 
     render() {
         return this.props.animals.map((animal) => {
             return(
                 <li>
-                    <img>{animal.photo}</img>
+                    <img></img>
                 </li>
             )
         })
@@ -15,4 +15,4 @@ class FoundAnimals extends React.Component {
 
 }
 
-export default connect ()(FoundAnimals)
+export default connect ()(FoundPets)

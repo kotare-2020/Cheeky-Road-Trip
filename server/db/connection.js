@@ -17,18 +17,14 @@ function saveLost (lost, db = connection) {
         })
 }
 
-function saveFound (newFound , db = connection) {
-    return db ('found')
-    .insert ({
-        species: newFound.species,
-        photo: newFound.species,
-        user_id: newFound.user_id
-    })
-}
 
+
+function getLostAnimals (db = connection) {
+    return db('lost').select()
+  }
 
 module.exports = {
     getFoundAnimals,
     saveLost,
-    saveFound
+    getLostAnimals,
 }
