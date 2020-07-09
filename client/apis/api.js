@@ -14,8 +14,8 @@ export function addLost(lost) {
         .post(lostPetsUrl)
         .send(lost)
         .then(req => {
-            console.log(req.body)
-            return request.body
+            // console.log(req.body)
+            return req.body
         })
 }
 
