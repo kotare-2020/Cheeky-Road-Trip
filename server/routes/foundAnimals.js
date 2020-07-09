@@ -4,6 +4,8 @@ const router = express.Router()
 
 
 router.get('/found', (req, res) => {
+    console.log("here");
+    
     db.getFoundAnimals()
         .then(animals => {
             res.send(animals)

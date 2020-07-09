@@ -1,6 +1,6 @@
 import { getUserTokenInfo, isAuthenticated, removeUser } from '../utils/auth'
 import { login, register } from '../apis/auth'
-import { getFoundApi } from '../apis/auth'
+
 
 export function requestLogin() {
   return {
@@ -87,18 +87,3 @@ export function checkAuth(confirmSuccess) {
   }
 }
 
-export function foundAnimals(animals) {
-  return {
-    type: 'GET_ANIMALS',
-    animals: animals
-
-  }
-}
-
-export function fetchAnimals() {
-  return dispatch => {
-    getFoundApi().then((animals) => {
-      dispatch(foundAnimals(animals))
-    })
-  }
-}
