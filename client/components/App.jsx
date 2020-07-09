@@ -5,6 +5,8 @@ import {connect} from 'react-redux'
 import Login from './Login'
 import Register from './Register'
 import Nav from './Nav'
+import FoundPets from './FoundPets'
+import { fetchAnimals } from '../actions/found'
 import HomePage from './HomePage'
 import LostForm from './LostForm'
 import { checkAuth } from '../actions/auth'
@@ -13,9 +15,12 @@ export class App extends React.Component {
   componentDidMount() {
     const confirmSuccess = () => { }
     this.props.dispatch(checkAuth(confirmSuccess))
+    this.props.dispatch(fetchAnimals())
   }
 
   render() {
+    // console.log(this.props);
+    
     const {auth} = this.props
     return (
       <Router>
@@ -41,16 +46,17 @@ export class App extends React.Component {
             <Route path="/lost" component={LostForm} />
 
           </div>
-
+            <FoundPets animals={this.props.foundPets}/>
         </div>
       </Router>
     )
   }
 }
 
-const mapStateToProps = ({auth}) => {
+const mapStateToProps = ({auth, foundPets}) => {
   return {
-    auth
+    auth,
+    foundPets
   }
 }
 

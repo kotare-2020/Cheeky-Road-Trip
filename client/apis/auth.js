@@ -20,8 +20,3 @@ export function login(creds) {
     })
 }
 
-export function getFoundApi() {
-  return request
-    .get('/')
-    .then(response => response.body)
-}
