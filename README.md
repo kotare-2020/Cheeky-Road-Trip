@@ -30,15 +30,15 @@ The mobile responsiveness is also being handled by some neat JS and Bulma classe
 
 As a non-registered user:
   * I want to register for the App under my name
-  * I want to browse all of the "Found" animals on the site.
-  * I want to to view a list of "Lost" animals posted to the site.
+  * ~~I want to browse all of the "Found" animals on the site.
+  * ~~I want to to view a list of "Lost" animals posted to the site.
   * I want to sort the "Lost" or Found" animals by species. (such as Cat / Dog)
 
 As a registered user:
   * I want to see the contact information for the user that has found an animal that is mine.
   * I want to be able to inform a user that their "Found" animal is mine through the app, and provide them with contact information of my own.
   * I want to be able to post about a Lost animal that I have "Found"
-  * I want to be able to post about an animal of my own that has been "Lost"
+  * ~~I want to be able to post about an animal of my own that has been "Lost"
 
 ### Stretch
 
