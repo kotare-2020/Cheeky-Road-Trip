@@ -19,7 +19,7 @@ export class App extends React.Component {
     this.props.dispatch(fetchAnimals())
   }
 
-  //george was here
+
 
   render() {
     const { auth } = this.props
