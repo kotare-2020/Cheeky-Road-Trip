@@ -6,6 +6,7 @@ import Login from './Login'
 import Register from './Register'
 import Nav from './Nav'
 import HomePage from './HomePage'
+import LostForm from './LostForm'
 import { checkAuth } from '../actions/auth'
 
 export class App extends React.Component {
@@ -33,10 +34,11 @@ export class App extends React.Component {
             {!auth.isAuthenticated &&
               <Route exact path="/" component={Login}/> 
             }
-            {/* {auth.isAuthenticated ? <HomePage/> : <></>  } */}
+            {auth.isAuthenticated ? <HomePage/> : <></>  }
             <Route path="/home" component={HomePage}/>
             <Route path="/login" component={Login} />
             <Route path="/register" component={Register} />
+            <Route path="/lost" component={LostForm} />
 
           </div>
 
