@@ -8,3 +8,12 @@ export function getFoundApi() {
       .then(response => response.body)
   }
   
+
+  export function saveFoundApi (found) {
+    return request
+        .post(foundUrl)
+        .send(found)
+        .then(req => {
+            return req.body
+        })
+}
