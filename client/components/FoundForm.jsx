@@ -24,6 +24,7 @@ class FoundForm extends React.Component {
 
     handleSubmit = (evt) => {
         evt.preventDefault()
+        console.log('submitting!')
         saveFoundApi(this.state.found)
         .then (id => {
             console.log(id)
@@ -34,8 +35,8 @@ class FoundForm extends React.Component {
         return (
             <>
             <h3>Add A Found Pet</h3>
-            <form>
-                <label onSubmit= {this.handleSubmit}>
+            <form onSubmit= {this.handleSubmit} >
+                <label >
                     Species Of Found Animal:
                     <input type="text" name="species" onChange = {this.handleChange} />
                 </label>
@@ -49,3 +50,5 @@ class FoundForm extends React.Component {
         )
     }
 }
+
+export default FoundForm

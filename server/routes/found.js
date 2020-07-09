@@ -13,7 +13,7 @@ router.get('/found', (req, res) => {
 })
 
 // add a pet to the found animal database
-router.post('/found', (req, res) => {
+router.post('/', (req, res) => {
     const newFound = req.body
 
     db.saveFound(newFound)

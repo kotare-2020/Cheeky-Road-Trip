@@ -9,6 +9,8 @@ import HomePage from './HomePage'
 import LostForm from './LostForm'
 import { checkAuth } from '../actions/auth'
 
+import FoundForm from './FoundForm'
+
 export class App extends React.Component {
   componentDidMount() {
     const confirmSuccess = () => { }
@@ -19,6 +21,7 @@ export class App extends React.Component {
     const {auth} = this.props
     return (
       <Router>
+        
         <div className="container has-text-centered">
 
           <div className="hero is-small is-primary">
@@ -44,6 +47,7 @@ export class App extends React.Component {
 
         </div>
       </Router>
+      
     )
   }
 }
