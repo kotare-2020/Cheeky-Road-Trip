@@ -4,14 +4,14 @@ const env = process.env.NODE_ENV || "development"
 const connection = knex(config[env])
 
 module.exports ={
-  getFound ,
-  saveFound
+  saveFound,
+  getFoundAnimals 
 }
 
 
-function getFound(db = connection) {
-    return db("found").select();
-  }
+function getFoundAnimals(db = connection) {
+  return db('found').select()
+}
 
   function saveFound (newFound , db = connection) {
     return db ('found')

@@ -1,14 +1,14 @@
 import React from 'react'
-import { saveLost } from '../apis/lostpets'
+import { addLost } from '../apis/api'
 
 class LostForm extends React.Component {
 
     state = {
         lost: {
-            user_id: "TBC",
             name: "",
             species: "",
-            photo: ""
+            photo: "",
+            user_id: "TBC"
         }
     }
 
@@ -23,7 +23,7 @@ class LostForm extends React.Component {
 
     handleSubmit = (evt) => {
         evt.preventDefault()
-        saveLost(this.state.lost)
+        addLost(this.state.lost)
             .then(id => {
                 console.log(id)
                 // Need to get all lost pets again and redirect to lost page showing addition
