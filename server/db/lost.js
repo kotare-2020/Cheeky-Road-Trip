@@ -4,6 +4,5 @@ function getLostAnimals (db = connection) {
   return db('lost').select()
 }
 
-module.exports = {
+module.exports = getLostAnimals
 
-}
