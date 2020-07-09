@@ -1,6 +1,6 @@
 import React from 'react'
-import {HashRouter as Router, Route, Link} from 'react-router-dom'
-import {connect} from 'react-redux'
+import { HashRouter as Router, Route, Link } from 'react-router-dom'
+import { connect } from 'react-redux'
 
 import Login from './Login'
 import Register from './Register'
@@ -8,7 +8,7 @@ import Nav from './Nav'
 import FoundPets from './FoundPets'
 import { fetchAnimals } from '../actions/found'
 import HomePage from './HomePage'
-import LostForm from './LostForm'
+import LostPets from './LostPets'
 import { checkAuth } from '../actions/auth'
 
 
@@ -20,9 +20,7 @@ export class App extends React.Component {
   }
 
   render() {
-    // console.log(this.props);
-    
-    const {auth} = this.props
+    const { auth } = this.props
     return (
       <Router>
         
@@ -39,13 +37,15 @@ export class App extends React.Component {
 
           <div className=''>
             {!auth.isAuthenticated &&
-              <Route exact path="/" component={Login}/> 
+              <>
+                <Route exact path="/" component={Login} />
+                <Route path="/lost" component={LostPets} />
+              </>
             }
-            {auth.isAuthenticated ? <HomePage/> : <></>  }
-            <Route path="/home" component={HomePage}/>
+            {auth.isAuthenticated ? <HomePage /> : <></>}
+            <Route path="/home" component={HomePage} />
             <Route path="/login" component={Login} />
             <Route path="/register" component={Register} />
-            <Route path="/lost" component={LostForm} />
 
           </div>
             <FoundPets animals={this.props.foundPets}/>
