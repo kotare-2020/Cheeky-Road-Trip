@@ -3,3 +3,28 @@
     height: 706px;
     float:right;
 }
+
+.landing-page-content-div {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.landing-page-title {
+    font-size: 40px;
+    padding-bottom: 28px;
+}
+
+.landing-page-subtitle {
+    font-size: 23px;
+    padding-bottom: 28px;
+}
+
+#display-block {
+    display: flex;
+    padding-bottom: 10px;
+    align-items: center;
+}

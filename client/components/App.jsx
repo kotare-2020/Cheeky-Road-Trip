@@ -42,6 +42,7 @@ export class App extends React.Component {
 
           </div>
         </Router> */}
+        <HomePage/>
         <Map center={[-39.291890, 174.267720]} zoom={12}>
           <TileLayer
             url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
