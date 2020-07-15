@@ -10,6 +10,11 @@ Run the following commands in your terminal:
 
 ```sh
 npm install
+```
+
+When we have stretch:
+
+```sh
 npx knex migrate:latest
 npx knex seed:run
 ```
