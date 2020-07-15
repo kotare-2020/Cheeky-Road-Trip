@@ -1,6 +1,6 @@
 # Cheeky Roadtrip Readme!
 
-## TEAM DOC BELOW - MVP,  Team Stress Profiles, Roles e.t.c
+## Team Doc Below - MVP,  Team Stress Profiles, Roles e.t.c
 https://docs.google.com/document/d/1G1vxb_tp2uqvVKinbZbWiEapFCZpSqPEerkcmeP-hlw/edit
 
 
