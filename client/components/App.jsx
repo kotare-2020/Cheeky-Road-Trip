@@ -2,11 +2,11 @@ import React from 'react'
 import { HashRouter as Router, Route, Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 
-import Login from './Login'
-import Register from './Register'
-import Nav from './Nav'
-import HomePage from './HomePage'
-import { checkAuth } from '../actions/auth'
+// import Login from './Login'
+// import Register from './Register'
+// import Nav from './Nav'
+// import HomePage from './HomePage'
+// import { checkAuth } from '../actions/auth'
 
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet'
 import { Icon } from 'leaflet'
@@ -16,15 +16,15 @@ import LeafletMap from '../components/Map'
 
 export class App extends React.Component {
   componentDidMount() {
-    const confirmSuccess = () => { }
-    this.props.dispatch(checkAuth(confirmSuccess))
+    // const confirmSuccess = () => { }
+    // this.props.dispatch(checkAuth(confirmSuccess))
 
   }
 
 
 
   render() {
-    const { auth } = this.props
+    // const { auth } = this.props
     return (
       <>
         {/* <Router>
