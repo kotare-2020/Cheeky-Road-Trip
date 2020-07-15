@@ -12,15 +12,15 @@ import Routing from "./RoutingMachine";
 
 export default class LeafletMap extends Component {
   state = {
-    lat: 57.74,
-    lng: 11.94,
+    lat: -40.35, 
+    lng: 175.60,
     zoom: 13,
-    isMapInit: false
+    isMapInit: true
   };
   saveMap = map => {
     this.map = map;
     this.setState({
-      isMapInit: true
+      isMapInit: false
     });
   };
 
