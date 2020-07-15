@@ -5,11 +5,13 @@
 #### Wireframes
 
 ##### Landing Page
-![](readme-images/landing-page.jpg)
+
+<img src="readme-images/landing-page.jpg" width="300">
+
 
 ##### Inital Map Page / Roadtrip Page
-![](readme-images/initial-map-page.jpg)
-❮img src="readme-images/initial-map-page.jpg" width="200" ❯
+
+<img src="readme-images/initial-map-page.jpg" width="300">
 
 
 
