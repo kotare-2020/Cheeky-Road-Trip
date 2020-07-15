@@ -12,7 +12,6 @@ Run the following commands in your terminal:
 npm install
 npx knex migrate:latest
 npx knex seed:run
-cp .env.example .env
 ```
 
 make sure you have in your .env:
@@ -21,7 +20,7 @@ make sure you have in your .env:
 JWT_SECRET="<the special password we put in here ;)>"
 ```
 
-To run in development:
+To run in development: (make sure you have a .env file)
 ```sh
 npm run dev
 ```
