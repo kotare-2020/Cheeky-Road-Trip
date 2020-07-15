@@ -11,6 +11,7 @@ import { checkAuth } from '../actions/auth'
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet'
 import { Icon } from 'leaflet'
 import bathroomData from '../../data/bathroom_data.json'
+import LeafletMap from '../components/Map'
 
 
 export class App extends React.Component {
@@ -42,7 +43,13 @@ export class App extends React.Component {
 
           </div>
         </Router> */}
-        <Map center={[-39.291890, 174.267720]} zoom={12}>
+
+<div>
+      <LeafletMap />
+    </div>
+
+    
+        {/* <Map center={[-39.291890, 174.267720]} zoom={12}>
           <TileLayer
             url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -50,7 +57,7 @@ export class App extends React.Component {
           {bathroomData.features.map((bathroom) => {
             <Marker key={bathroom.properties.OBJECTID} position={[175.611366, -40.355660]} />
           })}
-        </Map>
+        </Map> */}
       </>
     )
   }
