@@ -5,10 +5,8 @@ import { connect } from 'react-redux'
 import Login from './Login'
 import Register from './Register'
 import Nav from './Nav'
-import FoundPets from './FoundPets'
 import { fetchAnimals } from '../actions/found'
 import HomePage from './HomePage'
-import LostPets from './LostPets'
 import { checkAuth } from '../actions/auth'
 
 
@@ -41,7 +39,6 @@ export class App extends React.Component {
             {!auth.isAuthenticated &&
               <>
                 <Route exact path="/" component={Login} />
-                <Route path="/lost" component={LostPets} />
               </>
             }
             {auth.isAuthenticated ? <HomePage /> : <></>}
@@ -50,7 +47,6 @@ export class App extends React.Component {
             <Route path="/register" component={Register} />
 
           </div>
-            <FoundPets animals={this.props.foundPets}/>
         </div>
       </Router>
       

@@ -42,7 +42,15 @@ npm start
 <img src="readme-images/initial-map-page.jpg" width="500">
 
 
+## Useful boilerplate stuff that was removed
 
+* FoundForm
+* LostForm
+
+### to delete
+
+* apis/foundpets
+* /actions/lost
 
 
 ## Heroku!!!
