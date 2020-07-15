@@ -33,7 +33,7 @@ npm start
 
 
 
-#### Wireframes
+## Wireframes
 
 ##### Landing Page
 
