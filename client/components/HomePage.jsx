@@ -20,8 +20,8 @@ class HomePage extends React.Component {
 
     render() {
         return (
-
-            <>
+<>
+            <div className="background-div" >
                 <div className='landing-page-content-div'>
                     <h1 className='landing-page-title'>Cheeky Road Trip </h1>
                     <h3 className='landing-page-subtitle' >Tell us where you're going!</h3>
@@ -38,8 +38,8 @@ class HomePage extends React.Component {
                         <input id="display-block" type="submit" value="Let's go!" />
                     </form>
                 </div>
-            </>
-
+                </div>
+</>
 
         )
     }
