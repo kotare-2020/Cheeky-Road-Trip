@@ -58,7 +58,20 @@ npm start
 
 * apis/foundpets
 * /actions/lost
+#### App 
+Renders Homepage - on button click renders Dashboard
 
+#### Homepage 
+Lets user enter a start point and an end point for roadtrip. 
+On form submit *Homepage* renders *Dashboard* component
+
+#### Dashboard
+
+This component will display the map. With route overlaid. 
+Dashboard will render these components:
+* Map
+* Directions - step by step instructions created by Leaflet
+* Trip Info - Display start and end point + list of bathrooms near route
 
 ## Heroku!!!
 
