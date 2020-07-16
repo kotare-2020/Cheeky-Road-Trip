@@ -1,31 +1,43 @@
-import { ADD_NEW_TRIP } from '../actions/currentTrip'
+import { ADD_NEW_TRIP, ADD_WAYPOINT, SHOW_MAP } from '../actions/currentTrip'
+
 
 const initialState = {
   tripName: '',
-  startPoint: [0, 0],
-  endPoint: [0, 0]
+  startPoint: [-38.992391, 174.395546],
+  //hard coded for testing purposes, this needs to be changed
+  endPoint: [-39.099695, 174.074156],
+  waypoints: {
+    startWaypoint: {},
+    inbetweenWaypoints: [],
+    endWaypoint: {},
+  },
+  haveWaypoints: false
 }
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_NEW_TRIP:
-      return {
+      return {...state,
         tripName: action.tripName,
         startPoint: action.startPoint,
         endPoint: action.endPoint,
-
+      }
+    case ADD_WAYPOINT:
+      return {...state,
+        waypoints: {
+          startWaypoint: action.startWaypoint,
+          inbetweenWaypoints: action.inbetweenWaypoints,
+          endWaypoint: action.endWaypoint,
+        }
+      }
+    case SHOW_MAP:
+      return {...state,
+        haveWaypoints: action.boolean,
       }
     default:
       return state
   }
 }
-
-// {
-//   type: 'ADD_NEW_TRIP',
-//   tripName: 'The big ol trip',
-//   startPoint: [175.599137604434901, -40.344236415121266],
-//   endPoint: [175.615445959880446, -40.371374486782742]
-// }
 
 
 export default reducer

@@ -49,7 +49,8 @@
     "sqlite3": "^5.0.0",
     "supertest": "^4.0.2",
     "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.12"
+    "webpack-cli": "^3.3.12",
+    "dotenv": "^8.2.0"
   },
   "dependencies": {
     "bulma": "^0.9.0",
@@ -59,6 +60,7 @@
     "express": "^4.17.1",
     "knex": "^0.21.1",
     "leaflet": "^1.6.0",
+    "leaflet-control-geocoder": "^1.13.0",
     "leaflet-routing-machine": "^3.2.12",
     "lrm-google": "^1.0.1",
     "mini-css-extract-plugin": "^0.9.0",
