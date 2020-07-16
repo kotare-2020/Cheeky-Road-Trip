@@ -2,8 +2,9 @@ import { ADD_NEW_TRIP } from '../actions/currentTrip'
 
 const initialState = {
   tripName: '',
-  startPoint: [0, 0],
-  endPoint: [0, 0]
+  startPoint: [-38.992391, 174.395546],
+  //hard coded for testing purposes, this needs to be changed
+  endPoint: [-39.099695, 174.074156]
 }
 
 const reducer = (state = initialState, action) => {
@@ -19,13 +20,6 @@ const reducer = (state = initialState, action) => {
       return state
   }
 }
-
-// {
-//   type: 'ADD_NEW_TRIP',
-//   tripName: 'The big ol trip',
-//   startPoint: [175.599137604434901, -40.344236415121266],
-//   endPoint: [175.615445959880446, -40.371374486782742]
-// }
 
 
 export default reducer
