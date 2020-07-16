@@ -1,95 +1,1508 @@
 {
-"type": "FeatureCollection",
-"name": "Public_Toilets",
-"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
-"features": [
-{ "type": "Feature", "properties": { "OBJECTID": 1, "TOILET_NAME": "THE SQUARE TOILET MENS", "CLASS_DESCR": "GENERAL PUBLIC", "USE_RESTRICTIONS": "7am-9pm", "DESCRIPTION": "Shopping Centre Public Toilets" }, "geometry": { "type": "Point", "coordinates": [ 175.611366794810721, -40.355660031809151 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 2, "TOILET_NAME": "THE SQUARE TOILET LADIES REST", "CLASS_DESCR": "GENERAL PUBLIC", "USE_RESTRICTIONS": "7am-9pm", "DESCRIPTION": "Shopping Centre Public Toilets" }, "geometry": { "type": "Point", "coordinates": [ 175.611338021496039, -40.355612570756939 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 3, "TOILET_NAME": "HOKOWHITU SHOPS PUBLIC TOILET", "CLASS_DESCR": "GENERAL PUBLIC", "USE_RESTRICTIONS": "7am-7pm", "DESCRIPTION": "Shopping Centre Public Toilets" }, "geometry": { "type": "Point", "coordinates": [ 175.633304176971308, -40.363021638597097 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 4, "TOILET_NAME": "TERRACE END SHOPPING CENTRE PUBLIC TOILETS", "CLASS_DESCR": "GENERAL PUBLIC", "USE_RESTRICTIONS": "7am-7pm", "DESCRIPTION": "Shopping Centre Public Toilets" }, "geometry": { "type": "Point", "coordinates": [ 175.627097636586257, -40.347821587189848 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 5, "TOILET_NAME": "HIGHBURY SHOPPING CENTRE TOILETS", "CLASS_DESCR": "GENERAL PUBLIC", "USE_RESTRICTIONS": "7am-7pm", "DESCRIPTION": "Shopping Centre Public Toilets" }, "geometry": { "type": "Point", "coordinates": [ 175.586770239752695, -40.36028341668883 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 6, "TOILET_NAME": "CORONATION PARK SOUTH PAVILION ", "CLASS_DESCR": "PARKS RESTRICTED", "USE_RESTRICTIONS": "Event", "DESCRIPTION": "Sports Changing Facility" }, "geometry": { "type": "Point", "coordinates": [ 175.59711039022244, -40.345149676357927 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 7, "TOILET_NAME": "CORONATION PARK NORTH PAVILION", "CLASS_DESCR": "PARKS RESTRICTED", "USE_RESTRICTIONS": "Event", "DESCRIPTION": "Sports Changing Facility" }, "geometry": { "type": "Point", "coordinates": [ 175.599137604434901, -40.344236415121266 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 8, "TOILET_NAME": "AWAPUNI COMMUNITY CENTRE", "CLASS_DESCR": "PARKS RESTRICTED", "USE_RESTRICTIONS": "Event", "DESCRIPTION": "Community Centre" }, "geometry": { "type": "Point", "coordinates": [ 175.592913142592892, -40.370680287983262 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 9, "TOILET_NAME": "SKOGLUND PARK PAVILION", "CLASS_DESCR": "PARKS RESTRICTED", "USE_RESTRICTIONS": "Event", "DESCRIPTION": "Sports Changing Facility" }, "geometry": { "type": "Point", "coordinates": [ 175.628059431501669, -40.335238296349004 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 10, "TOILET_NAME": "VICTORIA ESPLANADE -  RESTROOM AND TOILET", "CLASS_DESCR": "GENERAL PUBLIC", "USE_RESTRICTIONS": "7am-6pm", "DESCRIPTION": "Public Toilets" }, "geometry": { "type": "Point", "coordinates": [ 175.615445959880446, -40.371374486782742 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 11, "TOILET_NAME": "VICTORIA ESPLANADE - PLAYGROUND TOILET", "CLASS_DESCR": "GENERAL PUBLIC", "USE_RESTRICTIONS": "7am-6pm", "DESCRIPTION": "Public Toilets" }, "geometry": { "type": "Point", "coordinates": [ 175.62101000775553, -40.371306966032883 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 12, "TOILET_NAME": "CENTENNIAL LAGOON CHALET TOILETS", "CLASS_DESCR": "GENERAL PUBLIC", "USE_RESTRICTIONS": "7am-7pm", "DESCRIPTION": "Public Toilets" }, "geometry": { "type": "Point", "coordinates": [ 175.629793468471064, -40.36730156564235 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 13, "TOILET_NAME": "WALLACE PARK PAVILION", "CLASS_DESCR": "PARKS RESTRICTED", "USE_RESTRICTIONS": "Event", "DESCRIPTION": "Sports Changing Facility" }, "geometry": { "type": "Point", "coordinates": [ 175.622786824574064, -40.367769128472432 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 14, "TOILET_NAME": "MILVERTON PARK PUBLIC TOILETS", "CLASS_DESCR": "GENERAL PUBLIC", "USE_RESTRICTIONS": "7am-7pm", "DESCRIPTION": "Public Toilets" }, "geometry": { "type": "Point", "coordinates": [ 175.621305302040156, -40.356110232772025 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 15, "TOILET_NAME": "VAUTIER PARK PAVILION PUBLIC TOILETS", "CLASS_DESCR": "GENERAL PUBLIC", "USE_RESTRICTIONS": "7am-6pm", "DESCRIPTION": "Public Toilets" }, "geometry": { "type": "Point", "coordinates": [ 175.623499750117588, -40.335827727265396 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 16, "TOILET_NAME": "HOKOWHITU PARK PAVILION", "CLASS_DESCR": "PARKS RESTRICTED", "USE_RESTRICTIONS": "Event", "DESCRIPTION": "Sports Changing Facility" }, "geometry": { "type": "Point", "coordinates": [ 175.630654898723378, -40.357585543393384 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 17, "TOILET_NAME": "ARENA MANAWATU PASCAL ST", "CLASS_DESCR": "PARKS RESTRICTED", "USE_RESTRICTIONS": "Event", "DESCRIPTION": "Spectator Toilets" }, "geometry": { "type": "Point", "coordinates": [ 175.599918422222657, -40.357021199323214 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 18, "TOILET_NAME": "ARENA MANAWATU CUBA ST", "CLASS_DESCR": "PARKS RESTRICTED", "USE_RESTRICTIONS": "Event", "DESCRIPTION": "Spectator Toilets" }, "geometry": { "type": "Point", "coordinates": [ 175.601739290843824, -40.357279048020978 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 19, "TOILET_NAME": "COLQUHOUN PARK PAVILION", "CLASS_DESCR": "PARKS RESTRICTED", "USE_RESTRICTIONS": "Event", "DESCRIPTION": "Sports Changing Facility" }, "geometry": { "type": "Point", "coordinates": [ 175.603159483367051, -40.336656869992055 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 20, "TOILET_NAME": "MEMORIAL PARK SPORTS CHANGING ROOMS", "CLASS_DESCR": "PARKS RESTRICTED", "USE_RESTRICTIONS": "Event", "DESCRIPTION": "Sports Changing Facility" }, "geometry": { "type": "Point", "coordinates": [ 175.635732141927576, -40.345459946658906 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 21, "TOILET_NAME": "MEMORIAL PARK SPORTS FIELDS TOILET", "CLASS_DESCR": "PARKS RESTRICTED", "USE_RESTRICTIONS": "Event", "DESCRIPTION": "Spectator Toilets" }, "geometry": { "type": "Point", "coordinates": [ 175.634915933456966, -40.345914165892687 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 22, "TOILET_NAME": "KELVIN GROVE CEMETERY PUBLIC TOILET", "CLASS_DESCR": "GENERAL PUBLIC", "USE_RESTRICTIONS": "6am-6pm", "DESCRIPTION": "Public Toilets" }, "geometry": { "type": "Point", "coordinates": [ 175.661576337683528, -40.323473713153881 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 23, "TOILET_NAME": "VICTORIA ESPLANADE - ARBORETUM TOILET", "CLASS_DESCR": "GENERAL PUBLIC", "USE_RESTRICTIONS": "7am-6pm", "DESCRIPTION": "Public Toilets" }, "geometry": { "type": "Point", "coordinates": [ 175.622901293158918, -40.372554012969864 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 24, "TOILET_NAME": "FITZHERBERT PARK GRANDSTAND", "CLASS_DESCR": "PARKS RESTRICTED", "USE_RESTRICTIONS": "Event", "DESCRIPTION": "Sports Changing Facility" }, "geometry": { "type": "Point", "coordinates": [ 175.621220446352822, -40.370015170890461 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 25, "TOILET_NAME": "MANAWAROA ST PUBLIC TOILETS", "CLASS_DESCR": "GENERAL PUBLIC", "USE_RESTRICTIONS": "7am-7pm", "DESCRIPTION": "Public Toilets" }, "geometry": { "type": "Point", "coordinates": [ 175.618108420402592, -40.369645357851574 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 26, "TOILET_NAME": "ONGLEY PARK PAVILION CHANGING ROOMS", "CLASS_DESCR": "PARKS RESTRICTED", "USE_RESTRICTIONS": "Event", "DESCRIPTION": "Sports Changing Facility" }, "geometry": { "type": "Point", "coordinates": [ 175.614134819665651, -40.367229330908295 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 27, "TOILET_NAME": "MONRAD PARK PAVILION TOILETS", "CLASS_DESCR": "PARKS RESTRICTED", "USE_RESTRICTIONS": "Event", "DESCRIPTION": "Sports Changing Facility" }, "geometry": { "type": "Point", "coordinates": [ 175.589197958174537, -40.364851052057787 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 28, "TOILET_NAME": "BILL BROWN PARK PUBLIC TOILETS", "CLASS_DESCR": "PARKS RESTRICTED", "USE_RESTRICTIONS": "Event", "DESCRIPTION": "Public Toilets" }, "geometry": { "type": "Point", "coordinates": [ 175.58090614787838, -40.357169099522508 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 29, "TOILET_NAME": "PANEIRI PARK PAVILION", "CLASS_DESCR": "PARKS RESTRICTED", "USE_RESTRICTIONS": "Event", "DESCRIPTION": "Sports Changing Facility" }, "geometry": { "type": "Point", "coordinates": [ 175.587047453785289, -40.382073396113768 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 30, "TOILET_NAME": "RANGITANE PARK PAVILION", "CLASS_DESCR": "PARKS RESTRICTED", "USE_RESTRICTIONS": "Event", "DESCRIPTION": "Sports Changing Facility" }, "geometry": { "type": "Point", "coordinates": [ 175.580400130762655, -40.37620916311468 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 31, "TOILET_NAME": "PAPOIOEA PARK PUBLIC TOILETS", "CLASS_DESCR": "GENERAL PUBLIC", "USE_RESTRICTIONS": "7am-7pm", "DESCRIPTION": "Public Toilets" }, "geometry": { "type": "Point", "coordinates": [ 175.622699225911674, -40.342751874698031 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 32, "TOILET_NAME": "PAPOIOEA PARK PAVILION", "CLASS_DESCR": "PARKS RESTRICTED", "USE_RESTRICTIONS": "Event", "DESCRIPTION": "Sports Changing Facility" }, "geometry": { "type": "Point", "coordinates": [ 175.623177430580057, -40.343653748716221 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 33, "TOILET_NAME": "ASHHURST VILLAGE VALLEY CENTRE", "CLASS_DESCR": "PARKS RESTRICTED", "USE_RESTRICTIONS": "Event", "DESCRIPTION": "Community Centre" }, "geometry": { "type": "Point", "coordinates": [ 175.753697800107204, -40.290928928523329 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 34, "TOILET_NAME": "ASHHURST LINCOLN PARK CHANGING ROOMS ", "CLASS_DESCR": "PARKS RESTRICTED", "USE_RESTRICTIONS": "Event", "DESCRIPTION": "Sports Changing Facility" }, "geometry": { "type": "Point", "coordinates": [ 175.762075553180921, -40.288105257075891 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 35, "TOILET_NAME": "ASHHURST DOMAIN PAVILION", "CLASS_DESCR": "PARKS RESTRICTED", "USE_RESTRICTIONS": "Event", "DESCRIPTION": "Sports Changing Facility" }, "geometry": { "type": "Point", "coordinates": [ 175.753006111780934, -40.298853801332335 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 36, "TOILET_NAME": "MILSON COMMUNITY CENTRE", "CLASS_DESCR": "PARKS RESTRICTED", "USE_RESTRICTIONS": "Event", "DESCRIPTION": "Community Centre" }, "geometry": { "type": "Point", "coordinates": [ 175.614664262021279, -40.330855088417657 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 37, "TOILET_NAME": "FITZHERBERT PARK HOCKEY PAVILION", "CLASS_DESCR": "PARKS RESTRICTED", "USE_RESTRICTIONS": "Event", "DESCRIPTION": "Sports Changing Facility" }, "geometry": { "type": "Point", "coordinates": [ 175.619263060211807, -40.370314954075006 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 38, "TOILET_NAME": "MEMORIAL PARK PUBLIC TOILET", "CLASS_DESCR": "GENERAL PUBLIC", "USE_RESTRICTIONS": "7am-7pm", "DESCRIPTION": "Public Toilets" }, "geometry": { "type": "Point", "coordinates": [ 175.634281263854291, -40.346314228669719 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 39, "TOILET_NAME": "VICTORIA ESPLANADE - MINIATURE RAILWAY", "CLASS_DESCR": "GENERAL PUBLIC", "USE_RESTRICTIONS": "7am-6pm", "DESCRIPTION": "Public Toilets" }, "geometry": { "type": "Point", "coordinates": [ 175.611149479016916, -40.370866006648363 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 40, "TOILET_NAME": "ASHHURST DOMAIN PUBLIC TOILETS", "CLASS_DESCR": "GENERAL PUBLIC", "USE_RESTRICTIONS": "7am-7pm", "DESCRIPTION": "Public Toilet" }, "geometry": { "type": "Point", "coordinates": [ 175.75296542151591, -40.298696596491318 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 41, "TOILET_NAME": "RAILWAY LAND PUBLIC TOILETS", "CLASS_DESCR": "GENERAL PUBLIC", "USE_RESTRICTIONS": "7am-11.30pm", "DESCRIPTION": "Public Toilets" }, "geometry": { "type": "Point", "coordinates": [ 175.604107979590566, -40.360617463756377 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 43, "TOILET_NAME": "MANAWAROA PAVILION ", "CLASS_DESCR": "PARKS RESTRICTED", "USE_RESTRICTIONS": "Event", "DESCRIPTION": "Sports Changing Facility" }, "geometry": { "type": "Point", "coordinates": [ 175.616144011839594, -40.369919195181296 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 44, "TOILET_NAME": "FITZHERBERT PARK MENS TOILET", "CLASS_DESCR": "PARKS RESTRICTED", "USE_RESTRICTIONS": "Event", "DESCRIPTION": "Spectator Toilets" }, "geometry": { "type": "Point", "coordinates": [ 175.621214055757889, -40.36967785618215 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 45, "TOILET_NAME": "FITZHERBERT PARK LADIES TOILET", "CLASS_DESCR": "PARKS RESTRICTED", "USE_RESTRICTIONS": "Event", "DESCRIPTION": "Spectator Toilets" }, "geometry": { "type": "Point", "coordinates": [ 175.621095853802188, -40.369540220583829 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 46, "TOILET_NAME": "ONGLEY PARK PUBLIC TOILETS", "CLASS_DESCR": "GENERAL PUBLIC", "USE_RESTRICTIONS": "7am-7pm", "DESCRIPTION": "Public Toilets" }, "geometry": { "type": "Point", "coordinates": [ 175.614277593706987, -40.36743330561692 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 47, "TOILET_NAME": "AWAPUNI COMMUNITY CENTRE PUBLIC TOILETS", "CLASS_DESCR": "GENERAL PUBLIC", "USE_RESTRICTIONS": "7am-7pm", "DESCRIPTION": "Public Toilets" }, "geometry": { "type": "Point", "coordinates": [ 175.592880679257661, -40.370786946232897 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 48, "TOILET_NAME": "CORONATION PARK NORTH PUBLIC TOILETS", "CLASS_DESCR": "GENERAL PUBLIC", "USE_RESTRICTIONS": "7am-7pm", "DESCRIPTION": "Public Toilets" }, "geometry": { "type": "Point", "coordinates": [ 175.598938749186431, -40.34433008565324 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 49, "TOILET_NAME": "CORONATION PARK SOUTH PUBLIC TOILETS", "CLASS_DESCR": "GENERAL PUBLIC", "USE_RESTRICTIONS": "7am-7pm", "DESCRIPTION": "Public Toilets" }, "geometry": { "type": "Point", "coordinates": [ 175.596896132747219, -40.345226738686982 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 50, "TOILET_NAME": "MONRAD PARK PAVILION PUBLIC TOILETS", "CLASS_DESCR": "PARKS RESTRICTED", "USE_RESTRICTIONS": "Event", "DESCRIPTION": "Public Toilet" }, "geometry": { "type": "Point", "coordinates": [ 175.589046739772726, -40.364761167236807 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 51, "TOILET_NAME": "WESTBROOK COMMUNITY CENTRE", "CLASS_DESCR": "PARKS RESTRICTED", "USE_RESTRICTIONS": "Event", "DESCRIPTION": "Community Centre" }, "geometry": { "type": "Point", "coordinates": [ 175.580809847502252, -40.35694426344326 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 52, "TOILET_NAME": "HIGHBURY WHANAU CENTRE", "CLASS_DESCR": "PARKS RESTRICTED", "USE_RESTRICTIONS": "Event", "DESCRIPTION": "Community Centre" }, "geometry": { "type": "Point", "coordinates": [ 175.590220359982794, -40.362272387429094 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 53, "TOILET_NAME": "KELVIN GROVE CREMATORIUM", "CLASS_DESCR": "PARKS RESTRICTED", "USE_RESTRICTIONS": "Event", "DESCRIPTION": "Community Events and Operational Staff" }, "geometry": { "type": "Point", "coordinates": [ 175.664006682088996, -40.321855165032574 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 54, "TOILET_NAME": "THE SQUARE ALL GENDER TOILET", "CLASS_DESCR": "GENERAL PUBLIC", "USE_RESTRICTIONS": "7am-9pm", "DESCRIPTION": "Shopping Centre Public Toilets" }, "geometry": { "type": "Point", "coordinates": [ 175.61140521824214, -40.35558298449201 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 55, "TOILET_NAME": "THE SQUARE PUBLIC TOILET AFTER HOURS", "CLASS_DESCR": "GENERAL PUBLIC", "USE_RESTRICTIONS": "9pm-7am", "DESCRIPTION": "Shopping Centre Public Toilets" }, "geometry": { "type": "Point", "coordinates": [ 175.611456744379751, -40.355560444990623 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 56, "TOILET_NAME": "RANGIORA AVENUE COMMUNITY CENTRE", "CLASS_DESCR": "PARKS RESTRICTED", "USE_RESTRICTIONS": "Event", "DESCRIPTION": "Community Centre" }, "geometry": { "type": "Point", "coordinates": [ 175.633876922059983, -40.34133487592171 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 57, "TOILET_NAME": "KELVIN GROVE COMMUNITY CENTRE", "CLASS_DESCR": "PARKS RESTRICTED", "USE_RESTRICTIONS": "Event", "DESCRIPTION": "Community Centre" }, "geometry": { "type": "Point", "coordinates": [ 175.64086589854233, -40.33230511158775 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 58, "TOILET_NAME": "WALLACE PARK PAVILION PUBLIC TOILETS", "CLASS_DESCR": "GENERAL PUBLIC", "USE_RESTRICTIONS": "7am-7pm", "DESCRIPTION": "Public Toilets" }, "geometry": { "type": "Point", "coordinates": [ 175.62267243849027, -40.367715074906016 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 59, "TOILET_NAME": "HOKOWHITU PARK PAVILION PUBLIC TOILETS", "CLASS_DESCR": "GENERAL PUBLIC", "USE_RESTRICTIONS": "7am-7pm", "DESCRIPTION": "Public Toilets" }, "geometry": { "type": "Point", "coordinates": [ 175.630591665935356, -40.357476187946908 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 60, "TOILET_NAME": "SUMMERHILL SHOPPING CENTRE PUBLIC TOILET", "CLASS_DESCR": "GENERAL PUBLIC", "USE_RESTRICTIONS": "7am-7pm", "DESCRIPTION": "Shopping Centre Public Toilets by Private Agreement" }, "geometry": { "type": "Point", "coordinates": [ 175.638369713235278, -40.387599433285388 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 61, "TOILET_NAME": "KAHUTERAWA RESERVE PUBLIC TOILET", "CLASS_DESCR": "GENERAL PUBLIC", "USE_RESTRICTIONS": "24hr", "DESCRIPTION": "Public Toilet" }, "geometry": { "type": "Point", "coordinates": [ 175.620683248094281, -40.447204011298339 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 62, "TOILET_NAME": "MILSON COMMUNITY CENTRE PUBLIC TOILETS", "CLASS_DESCR": "GENERAL PUBLIC", "USE_RESTRICTIONS": "7am-7pm", "DESCRIPTION": "Shopping Centre Public Toilets" }, "geometry": { "type": "Point", "coordinates": [ 175.614565676350566, -40.33096239814855 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 63, "TOILET_NAME": "CELAENO PARK PUBLIC TOILET", "CLASS_DESCR": "GENERAL PUBLIC", "USE_RESTRICTIONS": "7am - 6pm", "DESCRIPTION": "Public Toilet" }, "geometry": { "type": "Point", "coordinates": [ 175.654240771570926, -40.326627433504662 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 64, "TOILET_NAME": "CELAENO PARK PAVILION", "CLASS_DESCR": "PARKS RESTRICTED", "USE_RESTRICTIONS": "Event", "DESCRIPTION": "Sports Changing Facility" }, "geometry": { "type": "Point", "coordinates": [ 175.654267003645117, -40.326885719847773 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 65, "TOILET_NAME": "KAHUTERAWA RD END CARPARK TOILETS", "CLASS_DESCR": "GENERAL PUBLIC", "USE_RESTRICTIONS": "24hr", "DESCRIPTION": "Public Toilets" }, "geometry": { "type": "Point", "coordinates": [ 175.611662923216159, -40.46852962905264 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 66, "TOILET_NAME": "ASHHURST DOMAIN CAMPING GROUND ", "CLASS_DESCR": "GENERAL PUBLIC", "USE_RESTRICTIONS": "24 Hr", "DESCRIPTION": "Public Toilets" }, "geometry": { "type": "Point", "coordinates": [ 175.757508980781552, -40.302085577195783 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 67, "TOILET_NAME": "BUNNYTHORPE PUBLIC TOILETS  Campbell Rd", "CLASS_DESCR": "GENERAL PUBLIC", "USE_RESTRICTIONS": "7am-7pm", "DESCRIPTION": "Public Toilet" }, "geometry": { "type": "Point", "coordinates": [ 175.630699925697684, -40.282153953928585 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 68, "TOILET_NAME": "BUNNYTHORPE DOMAIN PAVILION", "CLASS_DESCR": "PARKS RESTRICTED", "USE_RESTRICTIONS": "Event", "DESCRIPTION": "Sports Changing Facility" }, "geometry": { "type": "Point", "coordinates": [ 175.634609582491436, -40.280573969514663 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 69, "TOILET_NAME": "AWAPUNI LIBRARY", "CLASS_DESCR": "GENERAL PUBLIC", "USE_RESTRICTIONS": "Library Hours", "DESCRIPTION": "Public Toilets" }, "geometry": { "type": "Point", "coordinates": [ 175.592094366526226, -40.373252130567387 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 70, "TOILET_NAME": "TAKARO PARK PUBLIC TOILETS", "CLASS_DESCR": "GENERAL PUBLIC", "USE_RESTRICTIONS": "7am-7pm", "DESCRIPTION": "Public Toilets" }, "geometry": { "type": "Point", "coordinates": [ 175.590913463433935, -40.358194327817579 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 71, "TOILET_NAME": "ROSLYN LIBRARY", "CLASS_DESCR": "GENERAL PUBLIC", "USE_RESTRICTIONS": "Library Hours", "DESCRIPTION": "Public Toilets" }, "geometry": { "type": "Point", "coordinates": [ 175.631142719783668, -40.331181970209755 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 72, "TOILET_NAME": "MANAWATU GORGE CARPARK TOILETS", "CLASS_DESCR": "GENERAL PUBLIC", "USE_RESTRICTIONS": "24 Hr", "DESCRIPTION": "Public Toilets" }, "geometry": { "type": "Point", "coordinates": [ 175.771281518176465, -40.306752052938052 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 73, "TOILET_NAME": "PANIERI PARK PUBLIC TOILETS", "CLASS_DESCR": "GENERAL PUBLIC", "USE_RESTRICTIONS": "7am-7pm", "DESCRIPTION": "Public Toilets" }, "geometry": { "type": "Point", "coordinates": [ 175.586973266522705, -40.382239099064641 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 74, "TOILET_NAME": "WATERLOO PARK PUBLIC TOILETS", "CLASS_DESCR": "GENERAL PUBLIC", "USE_RESTRICTIONS": "7am-7pm", "DESCRIPTION": "Public Toilets" }, "geometry": { "type": "Point", "coordinates": [ 175.645720217468664, -40.363229656762613 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 75, "TOILET_NAME": "COLQUHOUN PARK PUBLIC TOILETS", "CLASS_DESCR": "GENERAL PUBLIC", "USE_RESTRICTIONS": "7am-7pm", "DESCRIPTION": "Public Toilets" }, "geometry": { "type": "Point", "coordinates": [ 175.599310049184197, -40.334464760451546 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 76, "TOILET_NAME": "ASHHURST DOMAIN", "CLASS_DESCR": "GENERAL PUBLIC", "USE_RESTRICTIONS": "24 Hr", "DESCRIPTION": "Public Toilets" }, "geometry": { "type": "Point", "coordinates": [ 175.757509887707812, -40.302222592832912 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 77, "TOILET_NAME": "ASHHURST GUILDFORD ST PUBLIC TOILETS", "CLASS_DESCR": "GENERAL PUBLIC", "USE_RESTRICTIONS": "7am-7pm", "DESCRIPTION": "Shopping Centre Public Toilets" }, "geometry": { "type": "Point", "coordinates": [ 175.753905191571107, -40.290575434913961 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 78, "TOILET_NAME": "BILL BROWN PARK CHANGING ROOMS", "CLASS_DESCR": "PARKS RESTRICTED", "USE_RESTRICTIONS": "Event", "DESCRIPTION": "Sports Changing Facility" }, "geometry": { "type": "Point", "coordinates": [ 175.58088778837319, -40.357341107195495 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 79, "TOILET_NAME": "HIGHBURY WHANAU CENTRE PUBLIC TOILETS", "CLASS_DESCR": "GENERAL PUBLIC", "USE_RESTRICTIONS": "7am-7pm", "DESCRIPTION": "Public Toilet" }, "geometry": { "type": "Point", "coordinates": [ 175.590189570873633, -40.362444674827699 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 80, "TOILET_NAME": "SKOGLUND PARK PAVILION PUBLIC TOILETS", "CLASS_DESCR": "PARKS RESTRICTED", "USE_RESTRICTIONS": "Event", "DESCRIPTION": "Public Toilet" }, "geometry": { "type": "Point", "coordinates": [ 175.627870206382852, -40.335337930685121 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 81, "TOILET_NAME": "VAUTIER PARK PAVILION", "CLASS_DESCR": "PARKS RESTRICTED", "USE_RESTRICTIONS": "Event", "DESCRIPTION": "Sports Changing Facility" }, "geometry": { "type": "Point", "coordinates": [ 175.623341530980042, -40.335602521731118 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 82, "TOILET_NAME": "Longburn", "CLASS_DESCR": "GENERAL PUBLIC", "USE_RESTRICTIONS": null, "DESCRIPTION": null }, "geometry": { "type": "Point", "coordinates": [ 175.542727415433518, -40.383592746588924 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 482, "TOILET_NAME": "LINKLATER RESERVE", "CLASS_DESCR": "GENERAL PUBLIC", "USE_RESTRICTIONS": null, "DESCRIPTION": null }, "geometry": { "type": "Point", "coordinates": [ 175.642079456175622, -40.324031126629144 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 483, "TOILET_NAME": "Arapuke Forest Park", "CLASS_DESCR": "GENERAL PUBLIC", "USE_RESTRICTIONS": "24hr", "DESCRIPTION": "Public Toilets" }, "geometry": { "type": "Point", "coordinates": [ 175.601704790930341, -40.480687858478575 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 883, "TOILET_NAME": "MAHANGA KAKARIKI PUBLIC TOILET", "CLASS_DESCR": "GENERAL PUBLIC", "USE_RESTRICTIONS": null, "DESCRIPTION": "Public Toilets" }, "geometry": { "type": "Point", "coordinates": [ 175.620901444926773, -40.327303285579433 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 1283, "TOILET_NAME": "Ruamahanga Wilderness Reserve", "CLASS_DESCR": "GENERAL PUBLIC", "USE_RESTRICTIONS": "24hr", "DESCRIPTION": "Public Toilet" }, "geometry": { "type": "Point", "coordinates": [ 175.650008734883585, -40.349093856674834 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 1696, "TOILET_NAME": "Rangitane Park Public Toilet ", "CLASS_DESCR": "GENERAL PUBLIC", "USE_RESTRICTIONS": null, "DESCRIPTION": "Public Toilet " }, "geometry": { "type": "Point", "coordinates": [ 175.581011190460856, -40.376100135082226 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 1697, "TOILET_NAME": "Gordon Kear Forest ", "CLASS_DESCR": "PARKS UNRESTRICED", "USE_RESTRICTIONS": "24hr", "DESCRIPTION": "Public Toilet" }, "geometry": { "type": "Point", "coordinates": [ 175.583134034197201, -40.503627979314366 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 1698, "TOILET_NAME": "HE Ara Kotahi", "CLASS_DESCR": "GENERAL PUBLIC", "USE_RESTRICTIONS": null, "DESCRIPTION": null }, "geometry": { "type": "Point", "coordinates": [ 175.608659316757866, -40.372044015625264 ] } }
-]
+    "type": "FeatureCollection",
+    "name": "Public_Toilets",
+    "crs": {
+        "type": "name",
+        "properties": {
+            "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+        }
+    },
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 1,
+                "TOILET_NAME": "THE SQUARE TOILET MENS",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": "7am-9pm",
+                "DESCRIPTION": "Shopping Centre Public Toilets"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.611366794810721,
+                    -40.355660031809151
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 2,
+                "TOILET_NAME": "THE SQUARE TOILET LADIES REST",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": "7am-9pm",
+                "DESCRIPTION": "Shopping Centre Public Toilets"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.611338021496039,
+                    -40.355612570756939
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 3,
+                "TOILET_NAME": "HOKOWHITU SHOPS PUBLIC TOILET",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": "7am-7pm",
+                "DESCRIPTION": "Shopping Centre Public Toilets"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.633304176971308,
+                    -40.363021638597097
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 4,
+                "TOILET_NAME": "TERRACE END SHOPPING CENTRE PUBLIC TOILETS",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": "7am-7pm",
+                "DESCRIPTION": "Shopping Centre Public Toilets"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.627097636586257,
+                    -40.347821587189848
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 5,
+                "TOILET_NAME": "HIGHBURY SHOPPING CENTRE TOILETS",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": "7am-7pm",
+                "DESCRIPTION": "Shopping Centre Public Toilets"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.586770239752695,
+                    -40.36028341668883
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 6,
+                "TOILET_NAME": "CORONATION PARK SOUTH PAVILION ",
+                "CLASS_DESCR": "PARKS RESTRICTED",
+                "USE_RESTRICTIONS": "Event",
+                "DESCRIPTION": "Sports Changing Facility"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.59711039022244,
+                    -40.345149676357927
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 7,
+                "TOILET_NAME": "CORONATION PARK NORTH PAVILION",
+                "CLASS_DESCR": "PARKS RESTRICTED",
+                "USE_RESTRICTIONS": "Event",
+                "DESCRIPTION": "Sports Changing Facility"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.599137604434901,
+                    -40.344236415121266
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 8,
+                "TOILET_NAME": "AWAPUNI COMMUNITY CENTRE",
+                "CLASS_DESCR": "PARKS RESTRICTED",
+                "USE_RESTRICTIONS": "Event",
+                "DESCRIPTION": "Community Centre"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.592913142592892,
+                    -40.370680287983262
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 9,
+                "TOILET_NAME": "SKOGLUND PARK PAVILION",
+                "CLASS_DESCR": "PARKS RESTRICTED",
+                "USE_RESTRICTIONS": "Event",
+                "DESCRIPTION": "Sports Changing Facility"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.628059431501669,
+                    -40.335238296349004
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 10,
+                "TOILET_NAME": "VICTORIA ESPLANADE -  RESTROOM AND TOILET",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": "7am-6pm",
+                "DESCRIPTION": "Public Toilets"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.615445959880446,
+                    -40.371374486782742
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 11,
+                "TOILET_NAME": "VICTORIA ESPLANADE - PLAYGROUND TOILET",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": "7am-6pm",
+                "DESCRIPTION": "Public Toilets"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.62101000775553,
+                    -40.371306966032883
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 12,
+                "TOILET_NAME": "CENTENNIAL LAGOON CHALET TOILETS",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": "7am-7pm",
+                "DESCRIPTION": "Public Toilets"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.629793468471064,
+                    -40.36730156564235
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 13,
+                "TOILET_NAME": "WALLACE PARK PAVILION",
+                "CLASS_DESCR": "PARKS RESTRICTED",
+                "USE_RESTRICTIONS": "Event",
+                "DESCRIPTION": "Sports Changing Facility"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.622786824574064,
+                    -40.367769128472432
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 14,
+                "TOILET_NAME": "MILVERTON PARK PUBLIC TOILETS",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": "7am-7pm",
+                "DESCRIPTION": "Public Toilets"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.621305302040156,
+                    -40.356110232772025
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 15,
+                "TOILET_NAME": "VAUTIER PARK PAVILION PUBLIC TOILETS",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": "7am-6pm",
+                "DESCRIPTION": "Public Toilets"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.623499750117588,
+                    -40.335827727265396
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 16,
+                "TOILET_NAME": "HOKOWHITU PARK PAVILION",
+                "CLASS_DESCR": "PARKS RESTRICTED",
+                "USE_RESTRICTIONS": "Event",
+                "DESCRIPTION": "Sports Changing Facility"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.630654898723378,
+                    -40.357585543393384
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 17,
+                "TOILET_NAME": "ARENA MANAWATU PASCAL ST",
+                "CLASS_DESCR": "PARKS RESTRICTED",
+                "USE_RESTRICTIONS": "Event",
+                "DESCRIPTION": "Spectator Toilets"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.599918422222657,
+                    -40.357021199323214
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 18,
+                "TOILET_NAME": "ARENA MANAWATU CUBA ST",
+                "CLASS_DESCR": "PARKS RESTRICTED",
+                "USE_RESTRICTIONS": "Event",
+                "DESCRIPTION": "Spectator Toilets"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.601739290843824,
+                    -40.357279048020978
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 19,
+                "TOILET_NAME": "COLQUHOUN PARK PAVILION",
+                "CLASS_DESCR": "PARKS RESTRICTED",
+                "USE_RESTRICTIONS": "Event",
+                "DESCRIPTION": "Sports Changing Facility"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.603159483367051,
+                    -40.336656869992055
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 20,
+                "TOILET_NAME": "MEMORIAL PARK SPORTS CHANGING ROOMS",
+                "CLASS_DESCR": "PARKS RESTRICTED",
+                "USE_RESTRICTIONS": "Event",
+                "DESCRIPTION": "Sports Changing Facility"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.635732141927576,
+                    -40.345459946658906
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 21,
+                "TOILET_NAME": "MEMORIAL PARK SPORTS FIELDS TOILET",
+                "CLASS_DESCR": "PARKS RESTRICTED",
+                "USE_RESTRICTIONS": "Event",
+                "DESCRIPTION": "Spectator Toilets"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.634915933456966,
+                    -40.345914165892687
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 22,
+                "TOILET_NAME": "KELVIN GROVE CEMETERY PUBLIC TOILET",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": "6am-6pm",
+                "DESCRIPTION": "Public Toilets"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.661576337683528,
+                    -40.323473713153881
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 23,
+                "TOILET_NAME": "VICTORIA ESPLANADE - ARBORETUM TOILET",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": "7am-6pm",
+                "DESCRIPTION": "Public Toilets"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.622901293158918,
+                    -40.372554012969864
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 24,
+                "TOILET_NAME": "FITZHERBERT PARK GRANDSTAND",
+                "CLASS_DESCR": "PARKS RESTRICTED",
+                "USE_RESTRICTIONS": "Event",
+                "DESCRIPTION": "Sports Changing Facility"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.621220446352822,
+                    -40.370015170890461
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 25,
+                "TOILET_NAME": "MANAWAROA ST PUBLIC TOILETS",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": "7am-7pm",
+                "DESCRIPTION": "Public Toilets"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.618108420402592,
+                    -40.369645357851574
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 26,
+                "TOILET_NAME": "ONGLEY PARK PAVILION CHANGING ROOMS",
+                "CLASS_DESCR": "PARKS RESTRICTED",
+                "USE_RESTRICTIONS": "Event",
+                "DESCRIPTION": "Sports Changing Facility"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.614134819665651,
+                    -40.367229330908295
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 27,
+                "TOILET_NAME": "MONRAD PARK PAVILION TOILETS",
+                "CLASS_DESCR": "PARKS RESTRICTED",
+                "USE_RESTRICTIONS": "Event",
+                "DESCRIPTION": "Sports Changing Facility"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.589197958174537,
+                    -40.364851052057787
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 28,
+                "TOILET_NAME": "BILL BROWN PARK PUBLIC TOILETS",
+                "CLASS_DESCR": "PARKS RESTRICTED",
+                "USE_RESTRICTIONS": "Event",
+                "DESCRIPTION": "Public Toilets"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.58090614787838,
+                    -40.357169099522508
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 29,
+                "TOILET_NAME": "PANEIRI PARK PAVILION",
+                "CLASS_DESCR": "PARKS RESTRICTED",
+                "USE_RESTRICTIONS": "Event",
+                "DESCRIPTION": "Sports Changing Facility"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.587047453785289,
+                    -40.382073396113768
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 30,
+                "TOILET_NAME": "RANGITANE PARK PAVILION",
+                "CLASS_DESCR": "PARKS RESTRICTED",
+                "USE_RESTRICTIONS": "Event",
+                "DESCRIPTION": "Sports Changing Facility"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.580400130762655,
+                    -40.37620916311468
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 31,
+                "TOILET_NAME": "PAPOIOEA PARK PUBLIC TOILETS",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": "7am-7pm",
+                "DESCRIPTION": "Public Toilets"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.622699225911674,
+                    -40.342751874698031
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 32,
+                "TOILET_NAME": "PAPOIOEA PARK PAVILION",
+                "CLASS_DESCR": "PARKS RESTRICTED",
+                "USE_RESTRICTIONS": "Event",
+                "DESCRIPTION": "Sports Changing Facility"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.623177430580057,
+                    -40.343653748716221
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 33,
+                "TOILET_NAME": "ASHHURST VILLAGE VALLEY CENTRE",
+                "CLASS_DESCR": "PARKS RESTRICTED",
+                "USE_RESTRICTIONS": "Event",
+                "DESCRIPTION": "Community Centre"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.753697800107204,
+                    -40.290928928523329
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 34,
+                "TOILET_NAME": "ASHHURST LINCOLN PARK CHANGING ROOMS ",
+                "CLASS_DESCR": "PARKS RESTRICTED",
+                "USE_RESTRICTIONS": "Event",
+                "DESCRIPTION": "Sports Changing Facility"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.762075553180921,
+                    -40.288105257075891
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 35,
+                "TOILET_NAME": "ASHHURST DOMAIN PAVILION",
+                "CLASS_DESCR": "PARKS RESTRICTED",
+                "USE_RESTRICTIONS": "Event",
+                "DESCRIPTION": "Sports Changing Facility"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.753006111780934,
+                    -40.298853801332335
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 36,
+                "TOILET_NAME": "MILSON COMMUNITY CENTRE",
+                "CLASS_DESCR": "PARKS RESTRICTED",
+                "USE_RESTRICTIONS": "Event",
+                "DESCRIPTION": "Community Centre"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.614664262021279,
+                    -40.330855088417657
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 37,
+                "TOILET_NAME": "FITZHERBERT PARK HOCKEY PAVILION",
+                "CLASS_DESCR": "PARKS RESTRICTED",
+                "USE_RESTRICTIONS": "Event",
+                "DESCRIPTION": "Sports Changing Facility"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.619263060211807,
+                    -40.370314954075006
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 38,
+                "TOILET_NAME": "MEMORIAL PARK PUBLIC TOILET",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": "7am-7pm",
+                "DESCRIPTION": "Public Toilets"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.634281263854291,
+                    -40.346314228669719
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 39,
+                "TOILET_NAME": "VICTORIA ESPLANADE - MINIATURE RAILWAY",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": "7am-6pm",
+                "DESCRIPTION": "Public Toilets"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.611149479016916,
+                    -40.370866006648363
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 40,
+                "TOILET_NAME": "ASHHURST DOMAIN PUBLIC TOILETS",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": "7am-7pm",
+                "DESCRIPTION": "Public Toilet"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.75296542151591,
+                    -40.298696596491318
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 41,
+                "TOILET_NAME": "RAILWAY LAND PUBLIC TOILETS",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": "7am-11.30pm",
+                "DESCRIPTION": "Public Toilets"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.604107979590566,
+                    -40.360617463756377
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 43,
+                "TOILET_NAME": "MANAWAROA PAVILION ",
+                "CLASS_DESCR": "PARKS RESTRICTED",
+                "USE_RESTRICTIONS": "Event",
+                "DESCRIPTION": "Sports Changing Facility"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.616144011839594,
+                    -40.369919195181296
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 44,
+                "TOILET_NAME": "FITZHERBERT PARK MENS TOILET",
+                "CLASS_DESCR": "PARKS RESTRICTED",
+                "USE_RESTRICTIONS": "Event",
+                "DESCRIPTION": "Spectator Toilets"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.621214055757889,
+                    -40.36967785618215
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 45,
+                "TOILET_NAME": "FITZHERBERT PARK LADIES TOILET",
+                "CLASS_DESCR": "PARKS RESTRICTED",
+                "USE_RESTRICTIONS": "Event",
+                "DESCRIPTION": "Spectator Toilets"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.621095853802188,
+                    -40.369540220583829
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 46,
+                "TOILET_NAME": "ONGLEY PARK PUBLIC TOILETS",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": "7am-7pm",
+                "DESCRIPTION": "Public Toilets"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.614277593706987,
+                    -40.36743330561692
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 47,
+                "TOILET_NAME": "AWAPUNI COMMUNITY CENTRE PUBLIC TOILETS",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": "7am-7pm",
+                "DESCRIPTION": "Public Toilets"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.592880679257661,
+                    -40.370786946232897
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 48,
+                "TOILET_NAME": "CORONATION PARK NORTH PUBLIC TOILETS",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": "7am-7pm",
+                "DESCRIPTION": "Public Toilets"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.598938749186431,
+                    -40.34433008565324
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 49,
+                "TOILET_NAME": "CORONATION PARK SOUTH PUBLIC TOILETS",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": "7am-7pm",
+                "DESCRIPTION": "Public Toilets"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.596896132747219,
+                    -40.345226738686982
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 50,
+                "TOILET_NAME": "MONRAD PARK PAVILION PUBLIC TOILETS",
+                "CLASS_DESCR": "PARKS RESTRICTED",
+                "USE_RESTRICTIONS": "Event",
+                "DESCRIPTION": "Public Toilet"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.589046739772726,
+                    -40.364761167236807
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 51,
+                "TOILET_NAME": "WESTBROOK COMMUNITY CENTRE",
+                "CLASS_DESCR": "PARKS RESTRICTED",
+                "USE_RESTRICTIONS": "Event",
+                "DESCRIPTION": "Community Centre"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.580809847502252,
+                    -40.35694426344326
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 52,
+                "TOILET_NAME": "HIGHBURY WHANAU CENTRE",
+                "CLASS_DESCR": "PARKS RESTRICTED",
+                "USE_RESTRICTIONS": "Event",
+                "DESCRIPTION": "Community Centre"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.590220359982794,
+                    -40.362272387429094
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 53,
+                "TOILET_NAME": "KELVIN GROVE CREMATORIUM",
+                "CLASS_DESCR": "PARKS RESTRICTED",
+                "USE_RESTRICTIONS": "Event",
+                "DESCRIPTION": "Community Events and Operational Staff"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.664006682088996,
+                    -40.321855165032574
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 54,
+                "TOILET_NAME": "THE SQUARE ALL GENDER TOILET",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": "7am-9pm",
+                "DESCRIPTION": "Shopping Centre Public Toilets"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.61140521824214,
+                    -40.35558298449201
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 55,
+                "TOILET_NAME": "THE SQUARE PUBLIC TOILET AFTER HOURS",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": "9pm-7am",
+                "DESCRIPTION": "Shopping Centre Public Toilets"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.611456744379751,
+                    -40.355560444990623
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 56,
+                "TOILET_NAME": "RANGIORA AVENUE COMMUNITY CENTRE",
+                "CLASS_DESCR": "PARKS RESTRICTED",
+                "USE_RESTRICTIONS": "Event",
+                "DESCRIPTION": "Community Centre"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.633876922059983,
+                    -40.34133487592171
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 57,
+                "TOILET_NAME": "KELVIN GROVE COMMUNITY CENTRE",
+                "CLASS_DESCR": "PARKS RESTRICTED",
+                "USE_RESTRICTIONS": "Event",
+                "DESCRIPTION": "Community Centre"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.64086589854233,
+                    -40.33230511158775
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 58,
+                "TOILET_NAME": "WALLACE PARK PAVILION PUBLIC TOILETS",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": "7am-7pm",
+                "DESCRIPTION": "Public Toilets"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.62267243849027,
+                    -40.367715074906016
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 59,
+                "TOILET_NAME": "HOKOWHITU PARK PAVILION PUBLIC TOILETS",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": "7am-7pm",
+                "DESCRIPTION": "Public Toilets"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.630591665935356,
+                    -40.357476187946908
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 60,
+                "TOILET_NAME": "SUMMERHILL SHOPPING CENTRE PUBLIC TOILET",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": "7am-7pm",
+                "DESCRIPTION": "Shopping Centre Public Toilets by Private Agreement"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.638369713235278,
+                    -40.387599433285388
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 61,
+                "TOILET_NAME": "KAHUTERAWA RESERVE PUBLIC TOILET",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": "24hr",
+                "DESCRIPTION": "Public Toilet"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.620683248094281,
+                    -40.447204011298339
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 62,
+                "TOILET_NAME": "MILSON COMMUNITY CENTRE PUBLIC TOILETS",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": "7am-7pm",
+                "DESCRIPTION": "Shopping Centre Public Toilets"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.614565676350566,
+                    -40.33096239814855
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 63,
+                "TOILET_NAME": "CELAENO PARK PUBLIC TOILET",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": "7am - 6pm",
+                "DESCRIPTION": "Public Toilet"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.654240771570926,
+                    -40.326627433504662
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 64,
+                "TOILET_NAME": "CELAENO PARK PAVILION",
+                "CLASS_DESCR": "PARKS RESTRICTED",
+                "USE_RESTRICTIONS": "Event",
+                "DESCRIPTION": "Sports Changing Facility"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.654267003645117,
+                    -40.326885719847773
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 65,
+                "TOILET_NAME": "KAHUTERAWA RD END CARPARK TOILETS",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": "24hr",
+                "DESCRIPTION": "Public Toilets"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.611662923216159,
+                    -40.46852962905264
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 66,
+                "TOILET_NAME": "ASHHURST DOMAIN CAMPING GROUND ",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": "24 Hr",
+                "DESCRIPTION": "Public Toilets"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.757508980781552,
+                    -40.302085577195783
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 67,
+                "TOILET_NAME": "BUNNYTHORPE PUBLIC TOILETS  Campbell Rd",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": "7am-7pm",
+                "DESCRIPTION": "Public Toilet"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.630699925697684,
+                    -40.282153953928585
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 68,
+                "TOILET_NAME": "BUNNYTHORPE DOMAIN PAVILION",
+                "CLASS_DESCR": "PARKS RESTRICTED",
+                "USE_RESTRICTIONS": "Event",
+                "DESCRIPTION": "Sports Changing Facility"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.634609582491436,
+                    -40.280573969514663
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 69,
+                "TOILET_NAME": "AWAPUNI LIBRARY",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": "Library Hours",
+                "DESCRIPTION": "Public Toilets"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.592094366526226,
+                    -40.373252130567387
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 70,
+                "TOILET_NAME": "TAKARO PARK PUBLIC TOILETS",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": "7am-7pm",
+                "DESCRIPTION": "Public Toilets"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.590913463433935,
+                    -40.358194327817579
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 71,
+                "TOILET_NAME": "ROSLYN LIBRARY",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": "Library Hours",
+                "DESCRIPTION": "Public Toilets"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.631142719783668,
+                    -40.331181970209755
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 72,
+                "TOILET_NAME": "MANAWATU GORGE CARPARK TOILETS",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": "24 Hr",
+                "DESCRIPTION": "Public Toilets"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.771281518176465,
+                    -40.306752052938052
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 73,
+                "TOILET_NAME": "PANIERI PARK PUBLIC TOILETS",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": "7am-7pm",
+                "DESCRIPTION": "Public Toilets"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.586973266522705,
+                    -40.382239099064641
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 74,
+                "TOILET_NAME": "WATERLOO PARK PUBLIC TOILETS",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": "7am-7pm",
+                "DESCRIPTION": "Public Toilets"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.645720217468664,
+                    -40.363229656762613
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 75,
+                "TOILET_NAME": "COLQUHOUN PARK PUBLIC TOILETS",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": "7am-7pm",
+                "DESCRIPTION": "Public Toilets"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.599310049184197,
+                    -40.334464760451546
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 76,
+                "TOILET_NAME": "ASHHURST DOMAIN",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": "24 Hr",
+                "DESCRIPTION": "Public Toilets"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.757509887707812,
+                    -40.302222592832912
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 77,
+                "TOILET_NAME": "ASHHURST GUILDFORD ST PUBLIC TOILETS",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": "7am-7pm",
+                "DESCRIPTION": "Shopping Centre Public Toilets"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.753905191571107,
+                    -40.290575434913961
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 78,
+                "TOILET_NAME": "BILL BROWN PARK CHANGING ROOMS",
+                "CLASS_DESCR": "PARKS RESTRICTED",
+                "USE_RESTRICTIONS": "Event",
+                "DESCRIPTION": "Sports Changing Facility"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.58088778837319,
+                    -40.357341107195495
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 79,
+                "TOILET_NAME": "HIGHBURY WHANAU CENTRE PUBLIC TOILETS",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": "7am-7pm",
+                "DESCRIPTION": "Public Toilet"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.590189570873633,
+                    -40.362444674827699
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 80,
+                "TOILET_NAME": "SKOGLUND PARK PAVILION PUBLIC TOILETS",
+                "CLASS_DESCR": "PARKS RESTRICTED",
+                "USE_RESTRICTIONS": "Event",
+                "DESCRIPTION": "Public Toilet"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.627870206382852,
+                    -40.335337930685121
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 81,
+                "TOILET_NAME": "VAUTIER PARK PAVILION",
+                "CLASS_DESCR": "PARKS RESTRICTED",
+                "USE_RESTRICTIONS": "Event",
+                "DESCRIPTION": "Sports Changing Facility"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.623341530980042,
+                    -40.335602521731118
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 82,
+                "TOILET_NAME": "Longburn",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": null,
+                "DESCRIPTION": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.542727415433518,
+                    -40.383592746588924
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 482,
+                "TOILET_NAME": "LINKLATER RESERVE",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": null,
+                "DESCRIPTION": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.642079456175622,
+                    -40.324031126629144
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 483,
+                "TOILET_NAME": "Arapuke Forest Park",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": "24hr",
+                "DESCRIPTION": "Public Toilets"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.601704790930341,
+                    -40.480687858478575
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 883,
+                "TOILET_NAME": "MAHANGA KAKARIKI PUBLIC TOILET",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": null,
+                "DESCRIPTION": "Public Toilets"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.620901444926773,
+                    -40.327303285579433
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 1283,
+                "TOILET_NAME": "Ruamahanga Wilderness Reserve",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": "24hr",
+                "DESCRIPTION": "Public Toilet"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.650008734883585,
+                    -40.349093856674834
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 1696,
+                "TOILET_NAME": "Rangitane Park Public Toilet ",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": null,
+                "DESCRIPTION": "Public Toilet "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.581011190460856,
+                    -40.376100135082226
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 1697,
+                "TOILET_NAME": "Gordon Kear Forest ",
+                "CLASS_DESCR": "PARKS UNRESTRICED",
+                "USE_RESTRICTIONS": "24hr",
+                "DESCRIPTION": "Public Toilet"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.583134034197201,
+                    -40.503627979314366
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 1698,
+                "TOILET_NAME": "HE Ara Kotahi",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": null,
+                "DESCRIPTION": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    175.608659316757866,
+                    -40.372044015625264
+                ]
+            }
+        }
+    ]
 }
