@@ -123,7 +123,7 @@ country: "New Zealand",
 country_code: "NZL",
 county: null,
 label: "Dufferin Street, New Zealand",
-latitude: -41.301204,
+latitude: -12.121212,
 locality: null,
 longitude: 123.123123
 name: "Dufferin Street",
