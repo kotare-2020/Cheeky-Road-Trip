@@ -7,8 +7,8 @@ import { connect } from 'react-redux'
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet'
 import { Icon } from 'leaflet'
 import bathroomData from '../../data/bathroom_data.json'
-import LeafletMap from '../components/Map'
 import HomePage from './HomePage'
+import Dashboard from './Dashboard'
 
 
 export class App extends React.Component {
@@ -16,30 +16,24 @@ export class App extends React.Component {
   state = {
     showHome: true
   }
- 
+
   setShowHome = (string) => {
-    console.log('data in app setshowhome', string)
-    this.setState ({
+    this.setState({
       showHome: string
     })
-    
-    
-}
 
 
-
+  }
   render() {
-  
+
     return (
       <>
-        {this.state.showHome ? 
-        <HomePage showHome = {this.setShowHome}/>
+        {this.state.showHome ?
+          <HomePage showHome={this.setShowHome} />
           :
-        <div>
-        <LeafletMap />
-        </div>
-      }
-        
+          <Dashboard showHome={this.setShowHome} />
+        }
+
 
         {/* <Map center={[-39.291890, 174.267720]} zoom={12}>
           <TileLayer
