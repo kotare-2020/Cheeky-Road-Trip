@@ -12,6 +12,12 @@ class HomePage extends React.Component {
         console.log('form is changing!')
     }
 
+    handleSubmit = (event) => {
+        event.preventDefault()
+        console.log(this.props)
+        this.props.showHome(false)
+    }
+
     render() {
         return (
 
@@ -19,7 +25,7 @@ class HomePage extends React.Component {
                 <div className='landing-page-content-div'>
                     <h1 className='landing-page-title'>Cheeky Road Trip </h1>
                     <h3 className='landing-page-subtitle' >Tell us where you're going!</h3>
-                    <form>
+                    <form onSubmit={this.handleSubmit}>
                         <label id="display-block">
                             From:
     <input onChange= {this.handleChange} type="text" name="from" />
