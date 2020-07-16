@@ -18,14 +18,12 @@ export class App extends React.Component {
   }
 
   setShowHome = (string) => {
-    console.log('data in app setshowhome', string)
     this.setState({
       showHome: string //boolean? lol
     })
   }
 
   render() {
-    console.log('App props', this.props)
     return (
       <>
         {this.state.showHome ?

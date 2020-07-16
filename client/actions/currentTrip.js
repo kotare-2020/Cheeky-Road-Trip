@@ -12,14 +12,12 @@ export function addNewTrip(tripData) {
     }
 }
 
-export function setWaypoints(withDataFromAPI) {
+export function setWaypoints(withObject) {
   return {
       type: ADD_WAYPOINT,
-      lat: withDataFromAPI.latitude,
-      long: withDataFromAPI.longitude,
-      streetName: withDataFromAPI.street,
-      buildingName: withDataFromAPI.name,
-      label: withDataFromAPI.label,
+      startWaypoint: withObject.startWaypoint,
+      inbetweenWaypoints: withObject.inbetweenWaypoints,
+      endWaypoint: withObject.endWaypoint
   }
 }
 

@@ -6,12 +6,10 @@ const initialState = {
   startPoint: [-38.992391, 174.395546],
   //hard coded for testing purposes, this needs to be changed
   endPoint: [-39.099695, 174.074156],
-  waypoint: {
-    latitude: 0,
-    longitude: 0,
-    streetName: "",
-    buildingName: "",
-    label: "",
+  waypoints: {
+    startWaypoint: {},
+    inbetweenWaypoints: [],
+    endWaypoint: {},
   },
   haveWaypoints: false
 }
@@ -26,12 +24,10 @@ const reducer = (state = initialState, action) => {
       }
     case ADD_WAYPOINT:
       return {...state,
-        waypoint: {
-          latitude: action.lat,
-          longitude: action.long,
-          streetName: action.streetName,
-          buildingName: action.buildingName,
-          label: action.label,
+        waypoints: {
+          startWaypoint: action.startWaypoint,
+          inbetweenWaypoints: action.inbetweenWaypoints,
+          endWaypoint: action.endWaypoint,
         }
       }
     case SHOW_MAP:

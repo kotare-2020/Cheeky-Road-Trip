@@ -12,7 +12,7 @@ import { setWaypoints } from '../actions/currentTrip'
 
 class LeafletMap extends Component {
   state = {
-    // Palmy?
+    // Palmy? Richard
     lat: -40.35,
     lng: 175.60,
     zoom: 13,
@@ -20,7 +20,7 @@ class LeafletMap extends Component {
   }
 
   componentDidMount() {
-    console.log("env", process.env.POSITION_STACK_API_KEY)
+    console.log("env", process.env.POSITION_STACK_API_KEY)// please fix
     request.get("http://api.positionstack.com/v1/forward", {
       'access_key': '',// key go here as string
       //process.env.POSITION_STACK_API_KEY "how the fuck do i make work" (Richard, 2020)
@@ -28,8 +28,32 @@ class LeafletMap extends Component {
       '& query': "87 Rugby Street, Palmerston North,",// address part goes here
     })
       .then(res => {
-        console.log("api :)", res.body.data)
-        this.props.dispatch(setWaypoints(res.body.data[0]))
+        // Can't push to an array WHILE setting to a variable otherwise .push() will return array length.
+        this.props.currentTrip.waypoints.inbetweenWaypoints.push({
+          buildingName: res.body.data[0].name,
+          label: res.body.data[0].label,
+          latitude: res.body.data[0].latitude,
+          longitude: res.body.data[0].longitude,
+          streetName: res.body.data[0].street,
+        })
+        const waypoints = {
+          startWaypoint: {
+            buildingName: res.body.data[0].name,
+            label: res.body.data[0].label,
+            latitude: res.body.data[0].latitude,
+            longitude: res.body.data[0].longitude,
+            streetName: res.body.data[0].street,
+          },
+          inbetweenWaypoints: this.props.currentTrip.waypoints.inbetweenWaypoints,
+          endWaypoint: {
+            buildingName: res.body.data[0].name,
+            label: res.body.data[0].label,
+            latitude: res.body.data[0].latitude,
+            longitude: res.body.data[0].longitude,
+            streetName: res.body.data[0].street,
+          },
+        }
+        this.props.dispatch(setWaypoints(waypoints))
       })
   }
 
