@@ -50,7 +50,6 @@ class App extends React.Component {
 const mapStateToProps = ({ auth }) => {
   return {
     auth,
-    currentTrip,
   }
 }
 
