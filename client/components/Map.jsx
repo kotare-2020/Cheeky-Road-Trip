@@ -29,9 +29,13 @@ export default class LeafletMap extends Component {
   };
 
   renderLoos = () => {
-    return 
-    <Marker position={[ -40.355660031809151, 175.611366794810721  ]}> <Popup>Mall Toilets</Popup>
-    </Marker>
+    return {bathroomData.features.map((bathroom) => {
+      <Marker key={bathroom.properties.OBJECTID} position={[175.611366, -40.355660]} />
+    })}
+
+    
+    // <Marker position={[ -40.355660031809151, 175.611366794810721  ]}> <Popup>Mall Toilets</Popup>
+    // </Marker>
   }
 
   render() {
