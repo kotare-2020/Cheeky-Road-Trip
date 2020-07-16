@@ -7,11 +7,11 @@ import { connect } from 'react-redux'
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet'
 import { Icon } from 'leaflet'
 import bathroomData from '../../data/bathroom_data.json'
-import LeafletMap from '../components/Map'
+import LeafletMap from './LeafletMap'
 import HomePage from './HomePage'
 
 
-export class App extends React.Component {
+class App extends React.Component {
 
   state = {
     showHome: true
