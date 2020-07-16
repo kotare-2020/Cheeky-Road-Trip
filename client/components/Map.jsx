@@ -7,8 +7,9 @@
 
 
 import React, { Component } from "react";
-import { Map, TileLayer } from "react-leaflet";
+import { Map, Marker, Popup, TileLayer } from "react-leaflet";
 import Routing from "./RoutingMachine";
+import bathroomData from '../../data/bathroom_data.json'
 
 export default class LeafletMap extends Component {
   state = {
@@ -16,15 +17,30 @@ export default class LeafletMap extends Component {
     lng: 175.60,
     zoom: 13,
     isMapInit: true
+    
   };
+  
   saveMap = map => {
     this.map = map;
     this.setState({
       isMapInit: false
+      
     });
   };
 
+  renderLoos = () => {
+    return bathroomData.features.map((bathroom) => {
+      const coords = bathroom.geometry.coordinate
+      return <Marker key={bathroom.properties.OBJECTID} position={[bathroom.geometry.coordinates[1], bathroom.geometry.coordinates[0]]} /> 
+    })
+
+    
+    // <Marker position={[ -40.355660031809151, 175.611366794810721  ]}> <Popup>Mall Toilets</Popup>
+    // </Marker>
+  }
+
   render() {
+    console.log(bathroomData)
     const position = [this.state.lat, this.state.lng];
     return (
       <Map center={position} zoom={this.state.zoom} ref={this.saveMap}>
@@ -32,11 +48,17 @@ export default class LeafletMap extends Component {
           attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
         />
-        {this.state.isMapInit && <Routing map={this.map} />}
+        {this.renderLoos()}
+        
+         {/* <JSON data={bathroomData.feature} onEachFeature={this.onEachFeature} />{' '}
+         <GeoJSON key={keyFunction(this.props.map.data.json)} data={this.props.map.data.json} /> */}
+        {/* {this.state.isMapInit && <Routing map={this.map}
+         />} */}
       </Map>
     );
   }
 }
+
 
 
 
@@ -75,3 +97,12 @@ export default class LeafletMap extends Component {
 // }
 
 // export default MapComponent;
+
+
+  // onEachFeature = (feature, layer) => {
+  //   console.log('onEachFeature fired: ');
+  //   layer.on({
+  //       mouseover: (e) => this.MouseOverFeature(e, feature),
+  //       mouseout: (e) => this.MouseOutFeature(e, feature)
+
+  //   });
