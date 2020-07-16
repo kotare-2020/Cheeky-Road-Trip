@@ -26,7 +26,7 @@ export default class LeafletMap extends Component {
     // const geocoder = LCG.L.Control.Geocoder.nominatim();
     // let marker;
     request.get("http://api.positionstack.com/v1/forward", {
-      'access_key': 'c3aac075cbf3aa1d75eba33c81e4b300',
+      'access_key': 'thingy goes here',
       "country": "NZ",
       '& query': "3/11 Dufferin Street, Mount Victoria, 6021, Wellington, New Zealand",
     })  
