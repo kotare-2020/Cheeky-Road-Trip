@@ -49,8 +49,22 @@ npm start
 <img src="readme-images/initial-map-page.jpg" width="500">
 
 
+## Components
 
+#### App 
+Renders Homepage - on button click renders Dashboard
 
+#### Homepage 
+Show's a 'from' and 'to' form.
+On button click App renders Dashboard component
+
+#### Dashboard
+
+This component will display the map. With route overlaid. 
+Dashboard will render these components:
+* Map
+* Directions
+* Trip Info
 
 ## Heroku!!!
 
