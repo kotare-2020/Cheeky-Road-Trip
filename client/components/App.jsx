@@ -13,21 +13,17 @@ import Dashboard from './Dashboard'
 
 
 class App extends React.Component {
-
   state = {
     showHome: true
   }
 
   setShowHome = (string) => {
-    console.log('data in app setshowhome', string)
     this.setState({
-      showHome: string
+      showHome: string //boolean? lol
     })
   }
 
-  
   render() {
-
     return (
       <>
         {this.state.showHome ?
@@ -53,9 +49,8 @@ class App extends React.Component {
 
 const mapStateToProps = ({ auth }) => {
   return {
-    auth
+    auth,
   }
 }
 
 export default connect(mapStateToProps)(App)
-
