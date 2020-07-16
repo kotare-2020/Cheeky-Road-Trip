@@ -125,7 +125,7 @@ county: null,
 label: "Dufferin Street, New Zealand",
 latitude: -41.301204,
 locality: null,
-longitude: 174.781237,
+longitude: 123.123123
 name: "Dufferin Street",
 neighbourhood: "Mount Cook",
 number: null,
