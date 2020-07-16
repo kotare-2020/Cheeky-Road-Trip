@@ -12,6 +12,7 @@ class Routing extends MapLayer {
       waypoints: [
         L.latLng(this.props.currentTrip.startPoint[0], this.props.currentTrip.startPoint[1]),
         L.latLng(this.props.currentTrip.endPoint[0], this.props.currentTrip.endPoint[1]),
+        // L.latLng(this.props.currentTrip.waypoint.latitude, this.props.currentTrip.waypoint.longitude),
       ],
       lineOptions: {
         styles: [

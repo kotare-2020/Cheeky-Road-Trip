@@ -4,6 +4,7 @@ import Routing from "./RoutingMachine";
 import bathroomData from '../../data/bathroom_data.json'
 import request from 'superagent'
 import { connect } from 'react-redux'
+import { setWaypoints } from '../actions/currentTrip'
 
 
 
@@ -11,6 +12,7 @@ import { connect } from 'react-redux'
 
 class LeafletMap extends Component {
   state = {
+    // Palmy?
     lat: -40.35,
     lng: 175.60,
     zoom: 13,
@@ -18,13 +20,16 @@ class LeafletMap extends Component {
   }
 
   componentDidMount() {
+    console.log("env", process.env.POSITION_STACK_API_KEY)
     request.get("http://api.positionstack.com/v1/forward", {
-      'access_key': '',
+      'access_key': '',// key go here as string
+      //process.env.POSITION_STACK_API_KEY "how the fuck do i make work" (Richard, 2020)
       "country": "NZ",
-      '& query': "address part goes here",
+      '& query': "87 Rugby Street, Palmerston North,",// address part goes here
     })
       .then(res => {
-        console.log(res.body.data)
+        console.log("api :)", res.body.data)
+        this.props.dispatch(setWaypoints(res.body.data[0]))
       })
   }
 
@@ -73,8 +78,6 @@ export default connect(mapStateToProps)(LeafletMap)
 
 
 
-
-
   // onEachFeature = (feature, layer) => {
   //   console.log('onEachFeature fired: ')
   //   layer.on({
@@ -83,6 +86,9 @@ export default connect(mapStateToProps)(LeafletMap)
 
   //   })
 
+
+
+//for Richard
 //res.body.data will look like this:
 /*
 data = {

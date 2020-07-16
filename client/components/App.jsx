@@ -13,7 +13,6 @@ import Dashboard from './Dashboard'
 
 
 export class App extends React.Component {
-/*georgy
   state = {
     showHome: true
   }
@@ -21,16 +20,15 @@ export class App extends React.Component {
   setShowHome = (string) => {
     console.log('data in app setshowhome', string)
     this.setState({
-      showHome: string
+      showHome: string //boolean? lol
     })
   }
-*/
-// setWaypoints
-  render() {
 
+  render() {
+    console.log('App props', this.props)
     return (
       <>
-        {this.props.haveWaypoints ?
+        {this.state.showHome ?
           <HomePage showHome={this.setShowHome} />
           :
           <Dashboard showHome={this.setShowHome} />
@@ -51,10 +49,10 @@ export class App extends React.Component {
   }
 }
 
-const mapStateToProps = ({ auth, globalState }) => {
+const mapStateToProps = ({ auth, currentTrip }) => {
   return {
     auth,
-    haveWaypoints: globalState.haveWaypoints
+    currentTrip,
   }
 }
 
