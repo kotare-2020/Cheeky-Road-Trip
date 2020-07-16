@@ -1,0 +1,94 @@
+.leaflet-container {
+    width: 50%;
+    height: 706px;
+    float:right;
+}
+
+body {
+    color: black;
+}
+/* h1 - h6 default  */
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+font-size: 24px;
+}
+
+h3 {
+    font-size: 20px;
+
+}
+
+.landing-page-content-div {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+}
+
+.landing-page-title {
+    font-size: 74px;
+    padding-bottom: 28px;
+}
+
+.landing-page-subtitle {
+    font-size: 29px;
+    padding-bottom: 28px;
+}
+
+#display-block {
+    display: flex;
+    padding-bottom: 10px;
+    align-items: center;
+}
+
+.background-div {
+    background-image: url('Images/rd-trip-background.jpg');
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    height:100%;
+    width:100%;
+}
+
+#dashboard-container{
+    position: absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    height:100%;
+    width:100%;
+    border:cornflowerblue dashed 4px;
+    padding: 20px;
+    
+}
+
+#directions-list-div {
+    margin: 20px;
+    width: 20vw;
+    height: 400px;
+    border: black solid 3px;
+}
+
+#trip-info-div{
+    width: 20vw;
+    height: 400px;
+    border: black solid 3px;
+    margin: 20px;
+}
+
+.column-left-dashboard {
+    float: left;
+}
+
+.column-right-dashboard {
+
+}
