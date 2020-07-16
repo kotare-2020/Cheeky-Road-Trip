@@ -19,15 +19,15 @@ class Dashboard extends React.Component {
     render() {
         return (
             <>
+            
             <div id="dashboard-container">
             <button onClick={this.handleClick} > Home </button>
-            
-            <div className="flex-column">
+            <div className="column-left-dashboard">
             <TripInfo/>
             <DirectionsList/>
             </div>
 
-            <div>
+            <div className="column-right-dashboard" >
             <LeafletMap />
             </div>
             
