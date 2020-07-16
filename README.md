@@ -63,8 +63,8 @@ On form submit *Homepage* renders *Dashboard* component
 This component will display the map. With route overlaid. 
 Dashboard will render these components:
 * Map
-* Directions
-* Trip Info
+* Directions - step by step instructions created by Leaflet
+* Trip Info - Display start and end point + list of bathrooms near route
 
 ## Heroku!!!
 
