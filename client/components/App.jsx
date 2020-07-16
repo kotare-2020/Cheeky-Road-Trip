@@ -12,7 +12,7 @@ import HomePage from './HomePage'
 import Dashboard from './Dashboard'
 
 
-export class App extends React.Component {
+class App extends React.Component {
   state = {
     showHome: true
   }
@@ -47,12 +47,10 @@ export class App extends React.Component {
   }
 }
 
-const mapStateToProps = ({ auth, currentTrip }) => {
+const mapStateToProps = ({ auth }) => {
   return {
     auth,
-    currentTrip,
   }
 }
 
 export default connect(mapStateToProps)(App)
-

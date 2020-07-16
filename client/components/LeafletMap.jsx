@@ -15,7 +15,7 @@ class LeafletMap extends Component {
   }
 
   componentDidMount() {
-    // moved to HomePage
+    // moved API get to HomePage
   }
 
 
@@ -84,9 +84,9 @@ country: "New Zealand",
 country_code: "NZL",
 county: null,
 label: "Dufferin Street, New Zealand",
-latitude: -41.301204,
+latitude: -12.121212,
 locality: null,
-longitude: 174.781237,
+longitude: 123.123123
 name: "Dufferin Street",
 neighbourhood: "Mount Cook",
 number: null,

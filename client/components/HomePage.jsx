@@ -12,12 +12,11 @@ class HomePage extends React.Component {
   }
 
   componentDidMount() {
-    console.log("env", process.env.POSITION_STACK_API_KEY)// please fix
-request.get("http://api.positionstack.com/v1/forward", {
-  'access_key': '',// key go here as string
-  //process.env.POSITION_STACK_API_KEY "how the fuck do i make work" (Richard, 2020)
+  request.get("http://api.positionstack.com/v1/forward", {
+  'access_key': process.env.POSITION_STACK_API_KEY,
+  //process.env.POSITION_STACK_API_KEY,
   "country": "NZ",
-  '& query': "87 Rugby Street, Palmerston North,",// address part goes here
+  '& query': "87 Rugby Street, Palmerston North,",// address part or varialbe goes here
 })
   .then(res => {
     // Can't push to an array WHILE setting to a variable otherwise .push() will return array length.
@@ -67,12 +66,12 @@ request.get("http://api.positionstack.com/v1/forward", {
             <h3 className='landing-page-subtitle' >Tell us where you're going!</h3>
             <form onSubmit={this.handleSubmit}>
               <label id="display-block">
-                From:
+                Leaving From:
                 <input onChange={this.handleChange} type="text" name="from" />
               </label>
 
               <label id="display-block">
-                To:
+                Destination:
                 <input onChange={this.handleChange} type="text" name="to" />
               </label>
               <input id="display-block" type="submit" value="Let's go!" />
