@@ -1,7 +1,11 @@
 .leaflet-container {
-    width: 50%;
-    height: 706px;
+    width: 90%;
+    height: 1000px;
     float:right;
+}
+
+.leaflet-routing-alt {
+    background-color: crimson;
 }
 
 .landing-page-content-div {
