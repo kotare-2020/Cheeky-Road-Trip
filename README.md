@@ -42,7 +42,7 @@ npm start
 ##### Landing Page
 
 
-<img src="/Images/readme_images/update-dashboard.jpg" width="500">
+<img src="readme_images/update-dashboard.jpg" width="500">
 
 
 ##### Inital Map Page / Roadtrip Page
