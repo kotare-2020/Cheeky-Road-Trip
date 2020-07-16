@@ -7,9 +7,6 @@ import { connect } from 'react-redux'
 import { setWaypoints } from '../actions/currentTrip'
 
 
-
-
-
 class LeafletMap extends Component {
   state = {
     // Palmy? Richard
@@ -20,15 +17,16 @@ class LeafletMap extends Component {
   }
 
   componentDidMount() {
-    console.log("env", process.env.POSITION_STACK_API_KEY)// please fix
+    console.log("env", process.env.NODE_ENV)// please fix
     request.get("http://api.positionstack.com/v1/forward", {
-      'access_key': '',// key go here as string
+      'access_key': process.env.POSITION_STACK_API_KEY,// key go here as string
       //process.env.POSITION_STACK_API_KEY "how the fuck do i make work" (Richard, 2020)
       "country": "NZ",
       '& query': "87 Rugby Street, Palmerston North,",// address part goes here
     })
       .then(res => {
         // Can't push to an array WHILE setting to a variable otherwise .push() will return array length.
+        console.log(res)
         this.props.currentTrip.waypoints.inbetweenWaypoints.push({
           buildingName: res.body.data[0].name,
           label: res.body.data[0].label,
