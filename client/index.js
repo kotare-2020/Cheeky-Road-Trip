@@ -7,7 +7,6 @@ import thunk from 'redux-thunk'
 import reducers from './reducers'
 import App from './components/App'
 
-console.log("env", process.env.POSITION_STACK_API_KEY)// please fix
 
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
