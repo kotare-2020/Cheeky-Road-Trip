@@ -35,7 +35,19 @@ To run in production:
 npm start
 ```
 
+## User Stories
+### MVP
+* I want to be able to establish my road trip with a title, and start/end waypoints
+* I want to see a map that shows me the route between my waypoints
+* I want to see all the public bathrooms near my route
+* I want to see direction instructions
 
+### Stretch
+* I want to log in
+* I want to be able to leave ratings of bathrooms and see the average rating 
+* I want to be able to see other neat stops besides public bathrooms (e.g. swimming spots, cafe's) 
+* I want to be able to select these stops on the map to add them as waypoints
+* I want to be able to save my road trip as a img or text file to refer to later
 
 ## Wireframes
 
@@ -94,6 +106,7 @@ Rough outline of projected database tables (Subject to change):
  | latitude | decimal | GPS latitude of bathroom |
  | longitude | decimal | GPS longitude of bathroom |
  | rating | integer/decimal | rating out of 5 for this bathroom |
+ | accessability | boolean | whether the bathroom has disability access |
  
  
 
