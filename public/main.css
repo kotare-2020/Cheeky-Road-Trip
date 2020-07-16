@@ -4,9 +4,21 @@
     float:right;
 }
 
+body {
+    color: black;
+}
 /* h1 - h6 default  */
 h1 {
     font-size: 24px;
+}
+
+h2 {
+font-size: 24px;
+}
+
+h3 {
+    font-size: 20px;
+
 }
 
 .landing-page-content-div {
@@ -36,7 +48,6 @@ h1 {
 }
 
 .background-div {
-    background-color: cadetblue;
     background-image: url('Images/rd-trip-background.jpg');
     position:absolute;
     top:0;
@@ -48,7 +59,6 @@ h1 {
 }
 
 #dashboard-container{
-    background-color: bisque;
     position: absolute;
     top:0;
     left:0;
@@ -56,22 +66,29 @@ h1 {
     right:0;
     height:100%;
     width:100%;
+    border:cornflowerblue dashed 4px;
+    padding: 20px;
     
 }
 
 #directions-list-div {
+    margin: 20px;
     width: 20vw;
     height: 400px;
-    background-color: cornflowerblue;
+    border: black solid 3px;
 }
 
 #trip-info-div{
     width: 20vw;
     height: 400px;
-    background-color: red;
+    border: black solid 3px;
+    margin: 20px;
 }
 
-.flex-column {
-    display: flex;
-    flex-direction: column;
+.column-left-dashboard {
+    float: left;
+}
+
+.column-right-dashboard {
+
 }
