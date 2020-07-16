@@ -55,8 +55,8 @@ npm start
 Renders Homepage - on button click renders Dashboard
 
 #### Homepage 
-Show's a 'from' and 'to' form.
-On button click App renders Dashboard component
+Lets user enter a start point and an end point for roadtrip. 
+On form submit *Homepage* renders *Dashboard* component
 
 #### Dashboard
 
