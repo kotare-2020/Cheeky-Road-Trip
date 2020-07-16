@@ -62,6 +62,15 @@ Used to convert street addresses into GPS coordinates for our user start/end poi
 * Something to filter out markers that aren't close to our route
 To be researched and implemented.
 
+## Views
+| name | purpose |
+| --- | --- |
+| Login | View for user to enter their login credentials | 
+| Register | View for user to sign up for the App |
+| Homepage | Establish details of trip |
+| Dashboard | Shows the map, route, directions and relevant stops |
+
+
 ## Database
 
 No database needed for barebones MVP, as bathroom data can be stored as simple GeoJSON. 
@@ -105,26 +114,14 @@ currently some overlap in action/reducer as work on this develops, will reconven
   | ADD_WAYPOINT | coordinates | For adding waypoints to the map |
   | ADD_NEW_TRIP | coordinates/name | For establishing the details of the new trip |
   
-  
-## Useful boilerplate stuff that was removed
+## API (Client - Server)
 
-* FoundForm
-* LostForm
+| Method | Endpoint | Protected | Usage | Response |
+| --- | --- | --- | --- | --- |
+| Post | /api/auth/login | Yes | Log In a User | The Users JWT Token |
+| Post | /api/auth/register | Yes | Register a User | The Users JWT Token |
+| Get | /api/bathrooms | No | Get the list of bathrooms | Array of Objects (object = bathroom) |
 
-#### App 
-Renders Homepage - on button click renders Dashboard
-
-#### Homepage 
-Lets user enter a start point and an end point for roadtrip. 
-On form submit *Homepage* renders *Dashboard* component
-
-#### Dashboard
-
-This component will display the map. With route overlaid. 
-Dashboard will render these components:
-* Map
-* Directions - step by step instructions created by Leaflet
-* Trip Info - Display start and end point + list of bathrooms near route
 
 ## Heroku!!!
 
@@ -140,6 +137,8 @@ You can check that this was successful by running `heroku apps` to view a list o
 Add postgresql (hobby dev) to your app at `https://dashboard.heroku.com/apps/[APP NAME HERE]/resources`
 
 Check that pg has been added by running `heroku addons` to ensure the postgresql db is on your app
+
+
 
 
 ### Deploying!
