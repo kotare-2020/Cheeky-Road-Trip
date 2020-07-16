@@ -4,6 +4,12 @@
     float:right;
 }
 
+/* h1 - h6 default  */
+
+h1 {
+    font-size: 24px;
+}
+
 .landing-page-content-div {
     height: 100vh;
     display: flex;
@@ -40,4 +46,33 @@
     right:0;
     height:100%;
     width:100%;
+}
+
+#dashboard-container{
+    background-color: bisque;
+    position: absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    height:100%;
+    width:100%;
+    
+}
+
+#directions-list-div {
+    width: 20vw;
+    height: 400px;
+    background-color: cornflowerblue;
+}
+
+#trip-info-div{
+    width: 20vw;
+    height: 400px;
+    background-color: red;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
 }
