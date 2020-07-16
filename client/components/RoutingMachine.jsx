@@ -3,17 +3,16 @@ import L from "leaflet";
 import "leaflet-routing-machine";
 import "lrm-google";
 import { withLeaflet } from "react-leaflet";
+import { connect } from 'react-redux'
 
 class Routing extends MapLayer {
   createLeafletElement() {
     const { map } = this.props;
     let leafletElement = L.Routing.control({
       waypoints: [
-        L.latLng(-40.355612570756939, 175.611338021496039),
-        L.latLng(-40.363021638597097, 175.633304176971308),
-        L.latLng(-40.347821587189848, 175.627097636586257)
+        L.latLng(this.props.currentTrip.startPoint[0], this.props.currentTrip.startPoint[1]),
+        L.latLng(this.props.currentTrip.endPoint[0], this.props.currentTrip.endPoint[1]),
       ],
-      // router: new L.Routing.Google(),
       lineOptions: {
         styles: [
           {
@@ -31,4 +30,13 @@ class Routing extends MapLayer {
     return leafletElement.getPlan();
   }
 }
-export default withLeaflet(Routing);
+
+const mapStateToProps = ({ auth, currentTrip }) => {
+  return {
+    auth,
+    currentTrip,
+  }
+}
+
+export default connect(mapStateToProps)(withLeaflet(Routing))
+

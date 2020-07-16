@@ -1,78 +1,47 @@
-import MapInfo from "./MapInfo";
 import React, { Component } from "react";
 import { Map, Marker, Popup, TileLayer } from "react-leaflet";
 import Routing from "./RoutingMachine";
-import L, { Icon } from 'leaflet'
 import bathroomData from '../../data/bathroom_data.json'
-import LCG from 'leaflet-control-geocoder';
 import request from 'superagent'
+import { connect } from 'react-redux'
 
 
 
 
 
-
-export default class LeafletMap extends Component {
+class LeafletMap extends Component {
   state = {
-    lat: -40.35, 
+    lat: -40.35,
     lng: 175.60,
     zoom: 13,
-    isMapInit: true 
+    isMapInit: true
   }
 
   componentDidMount() {
-    // const map = this.map.leafletElement;
-    // console.log(map)
-    // const geocoder = LCG.L.Control.Geocoder.nominatim();
-    // let marker;
     request.get("http://api.positionstack.com/v1/forward", {
-      'access_key': 'c3aac075cbf3aa1d75eba33c81e4b300',
+      'access_key': '',
       "country": "NZ",
-      '& query': "3/11 Dufferin Street, Mount Victoria, 6021, Wellington, New Zealand",
-    })  
-      .then (res => {
+      '& query': "address part goes here",
+    })
+      .then(res => {
         console.log(res.body.data)
       })
+  }
 
-    // map.on('click', e => {
-    //     geocoder.reverse(e.latlng, map.options.crs.scale(map.getZoom()), results => {
-    //         var r = results[0];
-    //         if (r) {
-    //             if (marker) {
-    //                 marker.
-    //                     setLatLng(r.center).
-    //                     setPopupContent(r.html || r.name).
-    //                     openPopup();
-    //             } else {
-    //                 marker = L.marker(r.center)
-    //                     .bindPopup(r.name)
-    //                     .addTo(map)
-    //                     .openPopup();
-    //             }
-    //         }
-    //     })
-    // })
-}
 
-  
   saveMap = map => {
     this.map = map;
-    // console.log(map.leafletElement)
     this.setState({
       isMapInit: true
-      
+
     })
   }
 
   renderLoos = () => {
     return bathroomData.features.map((bathroom) => {
       const coords = bathroom.geometry.coordinates
-      return <Marker key={bathroom.properties.OBJECTID} position={[coords[1], coords[0]]}/>
+      return <Marker key={bathroom.properties.OBJECTID} position={[coords[1], coords[0]]} />
     })
-
-    
-    // <Marker position={[ -40.355660031809151, 175.611366794810721  ]}> <Popup>Mall Toilets</Popup>
-    // </Marker>
   }
 
   render() {
@@ -84,24 +53,35 @@ export default class LeafletMap extends Component {
           url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
         />
         {this.renderLoos()}
-        
-       
+
+
         {this.state.isMapInit && <Routing map={this.map}
-         />}
+        />}
       </Map>
     );
   }
 }
 
+const mapStateToProps = ({ auth, currentTrip }) => {
+  return {
+    auth,
+    currentTrip,
+  }
+}
+
+export default connect(mapStateToProps)(LeafletMap)
+
+
+
 
 
   // onEachFeature = (feature, layer) => {
-  //   console.log('onEachFeature fired: ');
+  //   console.log('onEachFeature fired: ')
   //   layer.on({
   //       mouseover: (e) => this.MouseOverFeature(e, feature),
   //       mouseout: (e) => this.MouseOutFeature(e, feature)
 
-  //   });
+  //   })
 
 //res.body.data will look like this:
 /*
@@ -126,5 +106,3 @@ street: "Dufferin Street",
 type: "street",
 }
 */
-
-// hook up map to global state
