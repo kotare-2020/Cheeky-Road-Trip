@@ -103,24 +103,28 @@ export default class LeafletMap extends Component {
 
   //   });
 
+//res.body.data will look like this:
 /*
-{
-administrative_area: null
-confidence: 0.8
-continent: "Oceania"
-country: "New Zealand"
-country_code: "NZL"
-county: null
-label: "Dufferin Street, New Zealand"
-latitude: -41.301204
-locality: null
-longitude: 174.781237
-name: "Dufferin Street"
-neighbourhood: "Mount Cook"
-number: null
-postal_code: null
-region: "Wellington Region"
-region_code: "WG"
-street: "Dufferin Street"
-type: "street"
-}*/
+data = {
+administrative_area: null,
+confidence: 0.8,
+continent: "Oceania",
+country: "New Zealand",
+country_code: "NZL",
+county: null,
+label: "Dufferin Street, New Zealand",
+latitude: -41.301204,
+locality: null,
+longitude: 174.781237,
+name: "Dufferin Street",
+neighbourhood: "Mount Cook",
+number: null,
+postal_code: null,
+region: "Wellington Region",
+region_code: "WG",
+street: "Dufferin Street",
+type: "street",
+}
+*/
+
+// hook up map to global state

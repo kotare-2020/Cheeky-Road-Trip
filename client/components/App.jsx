@@ -12,7 +12,7 @@ import HomePage from './HomePage'
 
 
 export class App extends React.Component {
-
+georgy/*
   state = {
     showHome: true
   }
@@ -23,12 +23,13 @@ export class App extends React.Component {
       showHome: string
     })
   }
-
+*/
+setWaypoints
   render() {
 
     return (
       <>
-        {this.state.showHome ?
+        {this.props.haveWaypoints ?
           <HomePage showHome={this.setShowHome} />
           :
           <div>
@@ -40,9 +41,10 @@ export class App extends React.Component {
   }
 }
 
-const mapStateToProps = ({ auth }) => {
+const mapStateToProps = ({ auth, globalState }) => {
   return {
-    auth
+    auth,
+    haveWaypoints: globalState.haveWaypoints
   }
 }
 

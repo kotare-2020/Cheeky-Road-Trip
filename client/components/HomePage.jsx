@@ -1,4 +1,5 @@
 import React from 'react'
+import { connect } from 'react-redux'
 
 
 class HomePage extends React.Component {
@@ -28,12 +29,12 @@ class HomePage extends React.Component {
                     <form onSubmit={this.handleSubmit}>
                         <label id="display-block">
                             From:
-    <input onChange= {this.handleChange} type="text" name="from" />
+                        <input onChange= {this.handleChange} type="text" name="from" />
                         </label>
 
                         <label id="display-block">
                             To:
-    <input  onChange= {this.handleChange} type="text" name="to" />
+                        <input  onChange= {this.handleChange} type="text" name="to" />
                         </label>
                         <input id="display-block" type="submit" value="Let's go!" />
                     </form>
@@ -45,6 +46,10 @@ class HomePage extends React.Component {
     }
 
 }
+const mapStateToProps = ({ globalState }) => {
+    return {
+      setWaypoints: globalState.setWaypoints
+    }
+  }
 
-
-export default HomePage
+export default connect(mapStateToProps)(HomePage)

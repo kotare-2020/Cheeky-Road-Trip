@@ -1,4 +1,5 @@
 export const ADD_NEW_TRIP = "ADD_NEW_TRIP"
+export const ADD_WAYPOINT = "ADD_WAYPOINT"
 
 
 export function addNewTrip(tripData) {
@@ -11,12 +12,15 @@ export function addNewTrip(tripData) {
 }
 
 
-// export function fetchLostPets() {
-//   return (dispatch) => {
-//     getLost()
-//     .then(lostPets => {
-//       dispatch(getLostPets(lostPets))
-//       console.log(lostPets)
-//     })
-//   }
-// }
+export function setWaypoints(withDataFromAPI) {
+  return {
+      type: ADD_WAYPOINT,
+      lat: withDataFromAPI.latitude,
+      long: withDataFromAPI.longitude,
+      streetName: withDataFromAPI.street,
+      buildingName: withDataFromAPI.name,
+      label: withDataFromAPI.label,
+  }
+}
+
+//haveWaypoints
