@@ -41,12 +41,13 @@ npm start
 
 ##### Landing Page
 
-<img src="readme-images/landing-page.jpg" width="500">
+
+<img src="readme_images/update-landing-page.jpg" width="500">
 
 
 ##### Inital Map Page / Roadtrip Page
 
-<img src="readme-images/initial-map-page.jpg" width="500">
+<img src="readme_images/update-dashboard.jpg" width="500">
 
 
 ## Useful boilerplate stuff that was removed
