@@ -1,18 +1,17 @@
 .leaflet-container {
-    width: 90%;
+    width: 50%;
     height: 1000px;
     float:right;
 }
 
-<<<<<<< HEAD
 .leaflet-routing-alt {
     background-color: papayawhip;
+    position: relative;
 }
 
-||||||| aef0bf8
-=======
 body {
     color: black;
+    background-color: antiquewhite;
 }
 /* h1 - h6 default  */
 h1 {
@@ -28,7 +27,6 @@ h3 {
 
 }
 
->>>>>>> a134b64730cf06ffa974c441054027df33c09050
 .landing-page-content-div {
     height: 100vh;
     display: flex;
@@ -76,6 +74,7 @@ h3 {
     width:100%;
     border:cornflowerblue dashed 4px;
     padding: 20px;
+    background-color: antiquewhite;
     
 }
 
