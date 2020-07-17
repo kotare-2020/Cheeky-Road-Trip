@@ -1,4 +1,4 @@
-import { ADD_NEW_TRIP, ADD_WAYPOINT, SHOW_MAP } from '../actions/currentTrip'
+import { ADD_NEW_TRIP, ADD_WAYPOINTS, SHOW_MAP } from '../actions/currentTrip'
 
 
 const initialState = {
@@ -22,7 +22,7 @@ const reducer = (state = initialState, action) => {
         startPoint: action.startPoint,
         endPoint: action.endPoint,
       }
-    case ADD_WAYPOINT:
+    case ADD_WAYPOINTS:
       return {...state,
         waypoints: {
           startWaypoint: action.startWaypoint,
