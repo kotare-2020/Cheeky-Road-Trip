@@ -10,19 +10,15 @@ Run the following commands in your terminal:
 
 ```sh
 npm install
+cp .env.example .env
 ```
+Input API keys into .env
 
-When we have stretch:
+When we have stretch/use db:
 
 ```sh
 npx knex migrate:latest
 npx knex seed:run
-```
-
-make sure you have in your .env:
-
-```sh
-JWT_SECRET="<the special password we put in here ;)>"
 ```
 
 To run in development: (make sure you have a .env file)
