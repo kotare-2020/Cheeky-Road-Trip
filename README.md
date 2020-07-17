@@ -51,12 +51,12 @@ npm start
 
 ## Wireframes
 
-##### Landing Page
+##### Homepage
 
 <img src="readme-images/update-landing-page.jpg" width="500">
 
 
-##### Inital Map Page / Roadtrip Page
+##### Dashboard
 
 <img src="readme-images/update-dashboard.jpg" width="500">
 
