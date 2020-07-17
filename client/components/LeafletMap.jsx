@@ -7,10 +7,9 @@ import { connect } from 'react-redux'
 
 class LeafletMap extends Component {
   state = {
-    // Palmy? Richard
-    lat: -40.35,
-    lng: 175.60,
-    zoom: 13,
+    lat: this.props.currentTrip.waypoints.startWaypoint.latitude,
+    lng: this.props.currentTrip.waypoints.startWaypoint.longitude,
+    zoom: 14,
     isMapInit: true
   }
 
