@@ -8,12 +8,26 @@ import { connect } from 'react-redux'
 class Routing extends MapLayer {
   createLeafletElement() {
     const { map } = this.props;
+    const waypoints = []
+
+    waypoints.push(L.latLng(
+      this.props.currentTrip.waypoints.startWaypoint.latitude,
+      this.props.currentTrip.waypoints.startWaypoint.longitude
+      ))
+    for (let i = 0; i < this.props.currentTrip.waypoints.inbetweenWaypoints.length; i++) {
+        waypoints.push(L.latLng(
+          this.props.currentTrip.waypoints.inbetweenWaypoints[i].latitude,
+          this.props.currentTrip.waypoints.inbetweenWaypoints[i].longitude
+        ))
+    }
+    waypoints.push(L.latLng(
+      this.props.currentTrip.waypoints.endWaypoint.latitude,
+      this.props.currentTrip.waypoints.endWaypoint.longitude
+      ))
+    console.log("waypoints", waypoints)
+
     let leafletElement = L.Routing.control({
-      waypoints: [
-        L.latLng(this.props.currentTrip.startPoint[0], this.props.currentTrip.startPoint[1]),
-        L.latLng(this.props.currentTrip.endPoint[0], this.props.currentTrip.endPoint[1]),
-        L.latLng(-41.277069, 174.772315),
-      ],
+      waypoints,
       lineOptions: {
         styles: [
           {
