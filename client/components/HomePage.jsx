@@ -15,11 +15,6 @@ class HomePage extends React.Component {
     startWaypoint: {},
     inbetweenWaypoints: [],
     endWaypoint: {},
-    waypointsForDispatch: {
-      startWaypoint: {},
-      inbetweenWaypoints: [],
-      endWaypoint: {},
-    },
   }
 
   // componentDidMount() {
@@ -67,7 +62,12 @@ class HomePage extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault()
-    this.props.dispatch(setWaypoints(this.state.waypointsForDispatch))
+    const waypointsForDispatch = {
+      startWaypoint: this.state.startWaypoint,
+      inbetweenWaypoints: this.state.inbetweenWaypoints,
+      endWaypoint: this.state.endWaypoint,
+    }
+    this.props.dispatch(setWaypoints(waypointsForDispatch))
     this.props.showHome(false)
   }
 
@@ -75,10 +75,11 @@ class HomePage extends React.Component {
 
 
   confirmWaypoint = (event) => {
-    alert('read comments in code')
-    //   // eventually we want to make an array show and a user select the correct address. For now, only one address shows and thwey can confirm whether the first address from the API response is the correct one.
-    //   // confirm button is for when will:
-    //   // set response data to waypointDispatch object?
+    event.preventDefault()
+      // eventually we want to make an array show and a user select the correct address. For now, only one address shows and thwey can confirm whether the first address from the API response is the correct one.
+      // confirm button is for when we'll:
+        // confirm selected address from the list we get from API response
+        // set response data to waypointDispatch object.
   }
 
   searchStart = (event) => {
@@ -88,7 +89,6 @@ class HomePage extends React.Component {
       "country": "NZ",
       '& query': this.state.startPoint,
     }).then(res => {
-      // eventually we want to make an array show and a user select the correct address. For now, only one address shows and thwey can confirm whether the first address from the API response is the correct one.
       if (confirm(`Is ${res.body.data[0].label} the correct starting point?`)) {
         this.setState({
             startWaypoint: {
