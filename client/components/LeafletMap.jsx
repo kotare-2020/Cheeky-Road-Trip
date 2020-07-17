@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Map, Marker, Popup, TileLayer } from "react-leaflet";
 import Routing from "./RoutingMachine";
-import bathroomData from '../../data/bathroom_data.json'
+import bathroomData from '../../data/bathroom_data2.json'
 import { connect } from 'react-redux'
 
 
@@ -11,10 +11,6 @@ class LeafletMap extends Component {
     lng: this.props.currentTrip.waypoints.startWaypoint.longitude,
     zoom: 14,
     isMapInit: true
-  }
-
-  componentDidMount() {
-    // moved API get to HomePage
   }
 
 
@@ -27,19 +23,28 @@ class LeafletMap extends Component {
   }
 
   renderLoos = () => {
-    return bathroomData.features.map((bathroom) => {
+    return bathroomData.features.map((bathroom, i) => {
       const coords = bathroom.geometry.coordinates
-      return <Marker key={bathroom.properties.OBJECTID} position={[coords[1], coords[0]]} />
+      return <Marker key={i} position={[coords[1], coords[0]]} />
     })
   }
+
+
+  // var Thunderforest_SpinalMap = L.tileLayer('https://{s}.tile.thunderforest.com/spinal-map/{z}/{x}/{y}.png?apikey={apikey}', {
+  //   attribution: '&copy; <a href="http://www.thunderforest.com/">Thunderforest</a>, &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  //   apikey: '<your apikey>',
+  //   maxZoom: 22
+  // });
+
 
   render() {
     const position = [this.state.lat, this.state.lng];
     return (
       <Map center={position} zoom={this.state.zoom} ref={this.saveMap}>
         <TileLayer
-          attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-          url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
+          attribution='&copy; <a href="http://www.thunderforest.com/">Thunderforest</a>, &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url='https://{s}.tile.thunderforest.com/spinal-map/{z}/{x}/{y}.png?apikey={apikey}'
+          apikey={process.env.THUNDERFOREST_API_KEY}
         />
         {this.renderLoos()}
 
@@ -61,7 +66,6 @@ const mapStateToProps = ({ auth, currentTrip }) => {
 export default connect(mapStateToProps)(LeafletMap)
 
 
-
   // onEachFeature = (feature, layer) => {
   //   console.log('onEachFeature fired: ')
   //   layer.on({
@@ -70,29 +74,3 @@ export default connect(mapStateToProps)(LeafletMap)
 
   //   })
 
-
-
-//for Richard
-//res.body.data will look like this:
-/*
-data = {
-administrative_area: null,
-confidence: 0.8,
-continent: "Oceania",
-country: "New Zealand",
-country_code: "NZL",
-county: null,
-label: "Dufferin Street, New Zealand",
-latitude: -12.121212,
-locality: null,
-longitude: 123.123123
-name: "Dufferin Street",
-neighbourhood: "Mount Cook",
-number: null,
-postal_code: null,
-region: "Wellington Region",
-region_code: "WG",
-street: "Dufferin Street",
-type: "street",
-}
-*/
