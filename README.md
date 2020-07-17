@@ -106,7 +106,7 @@ Rough outline of projected database tables (Subject to change):
  | latitude | decimal | GPS latitude of bathroom |
  | longitude | decimal | GPS longitude of bathroom |
  | rating | integer/decimal | rating out of 5 for this bathroom |
- | accessability | boolean | whether the bathroom has disability access |
+ | accessibility | boolean | whether the bathroom has disability access |
  
  
 
