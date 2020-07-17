@@ -7,17 +7,20 @@ import { setWaypoints } from '../actions/currentTrip'
 class HomePage extends React.Component {
 
   state = {
-    from: '',
-    to: ''
+    tripName: '',
+    startPoint: '',
+    stopOver: '',
+    destination: '',
+    waypointsForDispatch: {},
   }
-
+  /*
   componentDidMount() {
   request.get("http://api.positionstack.com/v1/forward", {
   'access_key': process.env.POSITION_STACK_API_KEY,
   //process.env.POSITION_STACK_API_KEY,
   "country": "NZ",
   '& query': "87 Rugby Street, Palmerston North,",// address part or varialbe goes here
-})
+  })
   .then(res => {
     // Can't push to an array WHILE setting to a variable otherwise .push() will return array length.
     this.props.currentTrip.waypoints.inbetweenWaypoints.push({
@@ -27,7 +30,7 @@ class HomePage extends React.Component {
       longitude: res.body.data[0].longitude,
       streetName: res.body.data[0].street,
     })
-    const waypoints = {
+    this.setState({ waypointsForDispatch : { // put empty version of this in State?
       startWaypoint: {
         buildingName: res.body.data[0].name,
         label: res.body.data[0].label,
@@ -43,19 +46,49 @@ class HomePage extends React.Component {
         longitude: res.body.data[0].longitude,
         streetName: res.body.data[0].street,
       },
-    }
-    this.props.dispatch(setWaypoints(waypoints))
+    }})
+    // this.props.dispatch(setWaypoints(waypointsForDispatch))
   })
-  }
+  }*/
 
   handleChange = (event) => {
-    console.log('form is changing!')
+    this.setState({
+      [event.target.name]: event.target.value
+    })
   }
 
   handleSubmit = (event) => {
     event.preventDefault()
+    this.props.dispatch(setWaypoints(this.state.waypointsForDispatch))
     this.props.showHome(false)
   }
+
+  // make handleClick
+
+  confirmWaypoint = (event) => {
+
+  }
+
+  searchStart = (event) => {
+    event.preventDefault()
+    request.get("http://api.positionstack.com/v1/forward", {
+    'access_key': process.env.POSITION_STACK_API_KEY,
+    "country": "NZ",
+    '& query': this.state.startPoint,
+    }).then(res => {
+      alert(res.body.data[0].label)
+    })
+  }
+
+  // searchAddress = (event, waypoint) => {
+  //   console.log("wp", waypoint)
+  //   console.log("event", event)
+  // }
+
+  // searchAddress = (event, waypoint) => {
+  //   console.log("wp", waypoint)
+  //   console.log("event", event)
+  // }
 
   render() {
     return (
@@ -65,15 +98,35 @@ class HomePage extends React.Component {
             <h1 className='landing-page-title'>Cheeky Road Trip </h1>
             <h3 className='landing-page-subtitle' >Tell us where you're going!</h3>
             <form onSubmit={this.handleSubmit}>
+
               <label id="display-block">
-                Leaving From:
-                <input onChange={this.handleChange} type="text" name="from" />
+                Trip Name:
+                <input onChange={this.handleChange} type="text" name="tripName" />
               </label>
 
               <label id="display-block">
-                Destination:
-                <input onChange={this.handleChange} type="text" name="to" />
+                Start-Point:
+                <input onChange={this.handleChange} type="text" name="startPoint" />
+                <button onClick={this.searchStart}>Search</button>
+                <button onClick={this.confirmWaypoint}>Confirm</button>
               </label>
+
+              <label id="display-block">
+                Stop-Over:
+                <input onChange={this.handleChange} type="text" name="stopOver" />
+                <button onClick={this.searchStop}>Search</button>
+                <button>Confirm</button>
+              </label>
+
+
+
+              <label id="display-block">
+                Destination:
+                <input onChange={this.handleChange} type="text" name="destination" />
+                <button onClick={this.searchDestination}>Search</button>
+                <button>Confirm</button>
+              </label>
+
               <input id="display-block" type="submit" value="Let's go!" />
             </form>
           </div>

@@ -1,5 +1,5 @@
 export const ADD_NEW_TRIP = "ADD_NEW_TRIP"
-export const ADD_WAYPOINT = "ADD_WAYPOINT"
+export const ADD_WAYPOINTS = "ADD_WAYPOINTS"
 export const SHOW_MAP = "SHOW_MAP"
 
 
@@ -14,7 +14,7 @@ export function addNewTrip(tripData) {
 
 export function setWaypoints(withObject) {
   return {
-      type: ADD_WAYPOINT,
+      type: ADD_WAYPOINTS,
       startWaypoint: withObject.startWaypoint,
       inbetweenWaypoints: withObject.inbetweenWaypoints,
       endWaypoint: withObject.endWaypoint
