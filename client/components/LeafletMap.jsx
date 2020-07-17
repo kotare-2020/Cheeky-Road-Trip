@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Map, Marker, Popup, TileLayer } from "react-leaflet";
 import Routing from "./RoutingMachine";
-import bathroomData from '../../data/bathroom_data.json'
+import bathroomData from '../../data/bathroom_data2.json'
 import request from 'superagent'
 import { connect } from 'react-redux'
 import { setWaypoints } from '../actions/currentTrip'
@@ -65,9 +65,9 @@ class LeafletMap extends Component {
   }
 
   renderLoos = () => {
-    return bathroomData.features.map((bathroom) => {
+    return bathroomData.features.map((bathroom, i) => {
       const coords = bathroom.geometry.coordinates
-      return <Marker key={bathroom.properties.OBJECTID} position={[coords[1], coords[0]]} />
+      return <Marker key={i} position={[coords[1], coords[0]]} />
     })
   }
 

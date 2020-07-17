@@ -10,6 +10,11 @@ Run the following commands in your terminal:
 
 ```sh
 npm install
+```
+
+When we have stretch:
+
+```sh
 npx knex migrate:latest
 npx knex seed:run
 ```
@@ -43,17 +48,83 @@ npm start
 
 <img src="readme-images/initial-map-page.jpg" width="500">
 
+## New Tech
 
+* Leaflet and React-Leaflet
+Node modules used to set up the map interface and the markers using react components.
+
+* Leaflet Routing Machine
+Creates the route between our established waypoints.
+
+* Position Stack API
+Used to convert street addresses into GPS coordinates for our user start/end point input.
+
+* Something to filter out markers that aren't close to our route
+To be researched and implemented.
+
+## Database
+
+No database needed for barebones MVP, as bathroom data can be stored as simple GeoJSON. 
+First step once MVP completed will be converting this into data tables.
+Rough outline of projected database tables (Subject to change):
+
+### Auth
+| Column Name | Data Type | Purpose |
+ | --- | --- | --- |
+ | id | integer | Unique identifier for each user |
+ | username | string | Used for login |
+ | contact_details | string | displayed for contact information |
+ | email_address | string | displayed for contact information |
+ | hash | text | hashed login password |
+ 
+ ### Bathrooms
+ | Column Name | Data Type | Purpose |
+ | --- | --- | --- |
+ | id | integer | Unique identifier for each bathroom |
+ | name | string | Name of bathroom |
+ | latitude | decimal | GPS latitude of bathroom |
+ | longitude | decimal | GPS longitude of bathroom |
+ | rating | integer/decimal | rating out of 5 for this bathroom |
+ 
+ 
+
+
+## Reducers
+
+| name | purpose |
+  | --- | --- |
+  | auth | Store information regarding user logins, auth status and auth errors |
+  | currentTrip | Store info about the users current road trip (waypoints, trip name) |
+  
+## Actions
+
+currently some overlap in action/reducer as work on this develops, will reconvene and re-establish these.
+
+| type | data | purpose |
+  | --- | --- | --- |
+  | ADD_WAYPOINT | coordinates | For adding waypoints to the map |
+  | ADD_NEW_TRIP | coordinates/name | For establishing the details of the new trip |
+  
+  
 ## Useful boilerplate stuff that was removed
 
 * FoundForm
 * LostForm
 
-### to delete
+#### App 
+Renders Homepage - on button click renders Dashboard
 
-* apis/foundpets
-* /actions/lost
+#### Homepage 
+Lets user enter a start point and an end point for roadtrip. 
+On form submit *Homepage* renders *Dashboard* component
 
+#### Dashboard
+
+This component will display the map. With route overlaid. 
+Dashboard will render these components:
+* Map
+* Directions - step by step instructions created by Leaflet
+* Trip Info - Display start and end point + list of bathrooms near route
 
 ## Heroku!!!
 
