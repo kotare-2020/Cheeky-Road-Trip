@@ -11,45 +11,53 @@ class HomePage extends React.Component {
     startPoint: '',
     stopOver: '',
     destination: '',
-    waypointsForDispatch: {},
+    // i'm sorry
+    startWaypoint: {},
+    inbetweenWaypoints: [],
+    endWaypoint: {},
+    waypointsForDispatch: {
+      startWaypoint: {},
+      inbetweenWaypoints: [],
+      endWaypoint: {},
+    },
   }
-  /*
-  componentDidMount() {
-  request.get("http://api.positionstack.com/v1/forward", {
-  'access_key': process.env.POSITION_STACK_API_KEY,
-  //process.env.POSITION_STACK_API_KEY,
-  "country": "NZ",
-  '& query': "87 Rugby Street, Palmerston North,",// address part or varialbe goes here
-  })
-  .then(res => {
-    // Can't push to an array WHILE setting to a variable otherwise .push() will return array length.
-    this.props.currentTrip.waypoints.inbetweenWaypoints.push({
-      buildingName: res.body.data[0].name,
-      label: res.body.data[0].label,
-      latitude: res.body.data[0].latitude,
-      longitude: res.body.data[0].longitude,
-      streetName: res.body.data[0].street,
-    })
-    this.setState({ waypointsForDispatch : { // put empty version of this in State?
-      startWaypoint: {
-        buildingName: res.body.data[0].name,
-        label: res.body.data[0].label,
-        latitude: res.body.data[0].latitude,
-        longitude: res.body.data[0].longitude,
-        streetName: res.body.data[0].street,
-      },
-      inbetweenWaypoints: this.props.currentTrip.waypoints.inbetweenWaypoints,
-      endWaypoint: {
-        buildingName: res.body.data[0].name,
-        label: res.body.data[0].label,
-        latitude: res.body.data[0].latitude,
-        longitude: res.body.data[0].longitude,
-        streetName: res.body.data[0].street,
-      },
-    }})
-    // this.props.dispatch(setWaypoints(waypointsForDispatch))
-  })
-  }*/
+
+  // componentDidMount() {
+  // request.get("http://api.positionstack.com/v1/forward", {
+  // 'access_key': process.env.POSITION_STACK_API_KEY,
+  // //process.env.POSITION_STACK_API_KEY,
+  // "country": "NZ",
+  // '& query': "87 Rugby Street, Palmerston North,",// address part or varialbe goes here
+  // })
+  // .then(res => {
+  //   // Can't push to an array WHILE setting to a variable otherwise .push() will return array length.
+  //   this.props.currentTrip.waypoints.inbetweenWaypoints.push({
+  //     buildingName: res.body.data[0].name,
+  //     label: res.body.data[0].label,
+  //     latitude: res.body.data[0].latitude,
+  //     longitude: res.body.data[0].longitude,
+  //     streetName: res.body.data[0].street,
+  //   })
+  //   this.setState({ waypointsForDispatch : { // put empty version of this in State?
+  //     startWaypoint: {
+  //       buildingName: res.body.data[0].name,
+  //       label: res.body.data[0].label,
+  //       latitude: res.body.data[0].latitude,
+  //       longitude: res.body.data[0].longitude,
+  //       streetName: res.body.data[0].street,
+  //     },
+  //     inbetweenWaypoints: this.props.currentTrip.waypoints.inbetweenWaypoints,
+  //     endWaypoint: {
+  //       buildingName: res.body.data[0].name,
+  //       label: res.body.data[0].label,
+  //       latitude: res.body.data[0].latitude,
+  //       longitude: res.body.data[0].longitude,
+  //       streetName: res.body.data[0].street,
+  //     },
+  //   }})
+  //   // this.props.dispatch(setWaypoints(waypointsForDispatch))
+  // })
+  // }
 
   handleChange = (event) => {
     this.setState({
@@ -63,32 +71,81 @@ class HomePage extends React.Component {
     this.props.showHome(false)
   }
 
-  // make handleClick
+  // make handleClick refactor
+
 
   confirmWaypoint = (event) => {
-
+    alert('read comments in code')
+    //   // eventually we want to make an array show and a user select the correct address. For now, only one address shows and thwey can confirm whether the first address from the API response is the correct one.
+    //   // confirm button is for when will:
+    //   // set response data to waypointDispatch object?
   }
 
   searchStart = (event) => {
     event.preventDefault()
     request.get("http://api.positionstack.com/v1/forward", {
-    'access_key': process.env.POSITION_STACK_API_KEY,
-    "country": "NZ",
-    '& query': this.state.startPoint,
+      'access_key': process.env.POSITION_STACK_API_KEY,
+      "country": "NZ",
+      '& query': this.state.startPoint,
     }).then(res => {
-      alert(res.body.data[0].label)
+      // eventually we want to make an array show and a user select the correct address. For now, only one address shows and thwey can confirm whether the first address from the API response is the correct one.
+      if (confirm(`Is ${res.body.data[0].label} the correct starting point?`)) {
+        this.setState({
+            startWaypoint: {
+              buildingName: res.body.data[0].name,
+              label: res.body.data[0].label,
+              latitude: res.body.data[0].latitude,
+              longitude: res.body.data[0].longitude,
+              streetName: res.body.data[0].street,
+            }
+        })
+      }
     })
   }
 
-  // searchAddress = (event, waypoint) => {
-  //   console.log("wp", waypoint)
-  //   console.log("event", event)
-  // }
+  searchStop = (event) => {
+    event.preventDefault()
+    request.get("http://api.positionstack.com/v1/forward", {
+      'access_key': process.env.POSITION_STACK_API_KEY,
+      "country": "NZ",
+      '& query': this.state.stopOver,
+    }).then(res => {
+      if (confirm(`Is ${res.body.data[0].label} the correct destination?`)) {
+        const newArray = this.state.inbetweenWaypoints
+        newArray.push({
+          buildingName: res.body.data[0].name,
+          label: res.body.data[0].label,
+          latitude: res.body.data[0].latitude,
+          longitude: res.body.data[0].longitude,
+          streetName: res.body.data[0].street,
+        })
+        this.setState({
+          inbetweenWaypoints: newArray,
+        })
+      }
+    })
+  }
 
-  // searchAddress = (event, waypoint) => {
-  //   console.log("wp", waypoint)
-  //   console.log("event", event)
-  // }
+  searchDestination = (event) => {
+    event.preventDefault()
+    request.get("http://api.positionstack.com/v1/forward", {
+      'access_key': process.env.POSITION_STACK_API_KEY,
+      "country": "NZ",
+      '& query': this.state.destination,
+    }).then(res => {
+      if (confirm(`Is ${res.body.data[0].label} the correct destination?`)) {
+        this.setState({
+            endWaypoint: {
+              buildingName: res.body.data[0].name,
+              label: res.body.data[0].label,
+              latitude: res.body.data[0].latitude,
+              longitude: res.body.data[0].longitude,
+              streetName: res.body.data[0].street,
+            }
+        })
+      }
+    })
+  }
 
   render() {
     return (
