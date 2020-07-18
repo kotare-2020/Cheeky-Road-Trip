@@ -1,7 +1,6 @@
 import React from 'react'
 
 //Import components
-import LeafletMap from '../components/LeafletMap'
 import TripInfo from './TripInfo'
 import DirectionsList from './DirectionsList'
 import Mapbox from './Mapbox'

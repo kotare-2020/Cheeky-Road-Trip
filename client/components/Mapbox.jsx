@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import mapboxgl from 'mapbox-gl';
 import MapboxDirections from '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions'
 
-mapboxgl.accessToken = 'pk.eyJ1IjoiYmVuamk3MjAyNyIsImEiOiJja2NyMDRpcmowcm9qMnJtMWNuOTJoaDA3In0.mNn-7oJXSAjY0Orw4UVdAg'
+mapboxgl.accessToken = process.env.MAPBOX_API_KEY
 
 class Mapbox extends React.Component {
     state = {

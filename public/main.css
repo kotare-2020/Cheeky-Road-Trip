@@ -1,14 +1,3 @@
-.leaflet-container {
-    width: 50%;
-    height: 1000px;
-    float:right;
-}
-
-.leaflet-routing-alt {
-    background-color: papayawhip;
-    position: relative;
-}
-
 .sidebarStyle {
     display: inline-block;
     position: absolute;
