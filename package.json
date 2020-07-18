@@ -63,6 +63,7 @@
     "leaflet-control-geocoder": "^1.13.0",
     "leaflet-routing-machine": "^3.2.12",
     "lrm-google": "^1.0.1",
+    "mapbox-gl": "^1.11.1",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.14.1",
     "npm-run-all": "^4.1.5",

@@ -10,11 +10,12 @@ import bathroomData from '../../data/bathroom_data.json'
 import LeafletMap from './LeafletMap'
 import HomePage from './HomePage'
 import Dashboard from './Dashboard'
+import Mapbox from './Mapbox'
 
 
 class App extends React.Component {
   state = {
-    showHome: true
+    showHome: false
   }
 
   setShowHome = (string) => {

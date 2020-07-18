@@ -4,6 +4,7 @@ import React from 'react'
 import LeafletMap from '../components/LeafletMap'
 import TripInfo from './TripInfo'
 import DirectionsList from './DirectionsList'
+import Mapbox from './Mapbox'
 
 
 
@@ -28,7 +29,8 @@ class Dashboard extends React.Component {
             </div>
 
             <div className="column-right-dashboard" >
-            <LeafletMap />
+                <Mapbox/>
+            {/* <LeafletMap /> */}
             </div>
             
             
