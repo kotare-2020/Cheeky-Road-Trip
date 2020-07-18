@@ -26,7 +26,7 @@ class Mapbox extends React.Component {
     ]
     let url = 'https://api.mapbox.com/directions/v5/mapbox/driving/' + start[0] + ',' + start[1] + ';' + end[0] + ',' + end[1] + '?steps=true&geometries=geojson&access_token=' + mapboxgl.accessToken
     request.get(url)
-      .then(res => console.log(res.body))
+      .then(res => console.log('steps to take', res.body))
 
     const map = new mapboxgl.Map({
       container: this.mapContainer,
@@ -95,6 +95,7 @@ class Mapbox extends React.Component {
       )
     })
   }
+  
   render() {
     return (
       <div>
