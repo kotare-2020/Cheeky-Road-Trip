@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import mapboxgl from 'mapbox-gl';
+import MapboxDirections from '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions'
 
-mapboxgl.accessToken = 'pk.eyJ1IjoiYmVuamk3MjAyNyIsImEiOiJja2NuenhjYnkwMDM2MnFyeGdjNHR6cWY0In0.GJRqsbEMhqaZzZ6hPVLQng';
+mapboxgl.accessToken = 'pk.eyJ1IjoiYmVuamk3MjAyNyIsImEiOiJja2NyMDRpcmowcm9qMnJtMWNuOTJoaDA3In0.mNn-7oJXSAjY0Orw4UVdAg'
 
 class Mapbox extends React.Component {
-
     state = {
         lng: 174.6785,
         lat: -38.3172,
@@ -27,7 +27,6 @@ class Mapbox extends React.Component {
                 zoom: map.getZoom().toFixed(2)
             });
         });
-
 
         map.on('load', function () {
             // Add an image to use as a custom marker
@@ -59,7 +58,7 @@ class Mapbox extends React.Component {
                             ]
                         }
                     });
-
+    
                     // Add a symbol layer
                     map.addLayer({
                         'id': 'points',
@@ -76,10 +75,19 @@ class Mapbox extends React.Component {
                             'text-offset': [0, 1.25],
                             'text-anchor': 'top'
                         }
-                    });
+                    })
                 }
-            );
-        });
+            )
+        })
+
+        const directions = new MapboxDirections({
+            accessToken: mapboxgl.accessToken,
+            unit: 'metric',
+            profile: 'mapbox/driving'
+          })
+
+          map.addControl(directions, 'top-left')
+
     }
 
 
@@ -99,3 +107,5 @@ class Mapbox extends React.Component {
 }
 
 export default Mapbox
+
+

@@ -74,6 +74,12 @@ h3 {
     align-items: center;
 }
 
+.mapbox-directions-instructions-wrapper {
+    display: none;
+}
+
+
+
 .background-div {
     background-image: url('Images/rd-trip-background.jpg');
     position:absolute;
@@ -83,6 +89,11 @@ h3 {
     right:0;
     height:100%;
     width:100%;
+}
+
+.mapboxgl-ctrl-top-left {
+    background-color: rgba(228, 171, 29, 0.7);
+    
 }
 
 #dashboard-container{
