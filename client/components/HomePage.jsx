@@ -17,43 +17,6 @@ class HomePage extends React.Component {
     endWaypoint: {},
   }
 
-  // componentDidMount() {
-  // request.get("http://api.positionstack.com/v1/forward", {
-  // 'access_key': process.env.POSITION_STACK_API_KEY,
-  // //process.env.POSITION_STACK_API_KEY,
-  // "country": "NZ",
-  // '& query': "87 Rugby Street, Palmerston North,",// address part or varialbe goes here
-  // })
-  // .then(res => {
-  //   // Can't push to an array WHILE setting to a variable otherwise .push() will return array length.
-  //   this.props.currentTrip.waypoints.inbetweenWaypoints.push({
-  //     buildingName: res.body.data[0].name,
-  //     label: res.body.data[0].label,
-  //     latitude: res.body.data[0].latitude,
-  //     longitude: res.body.data[0].longitude,
-  //     streetName: res.body.data[0].street,
-  //   })
-  //   this.setState({ waypointsForDispatch : { // put empty version of this in State?
-  //     startWaypoint: {
-  //       buildingName: res.body.data[0].name,
-  //       label: res.body.data[0].label,
-  //       latitude: res.body.data[0].latitude,
-  //       longitude: res.body.data[0].longitude,
-  //       streetName: res.body.data[0].street,
-  //     },
-  //     inbetweenWaypoints: this.props.currentTrip.waypoints.inbetweenWaypoints,
-  //     endWaypoint: {
-  //       buildingName: res.body.data[0].name,
-  //       label: res.body.data[0].label,
-  //       latitude: res.body.data[0].latitude,
-  //       longitude: res.body.data[0].longitude,
-  //       streetName: res.body.data[0].street,
-  //     },
-  //   }})
-  //   // this.props.dispatch(setWaypoints(waypointsForDispatch))
-  // })
-  // }
-
   handleChange = (event) => {
     this.setState({
       [event.target.name]: event.target.value
@@ -74,13 +37,13 @@ class HomePage extends React.Component {
   // make handleClick refactor
 
 
-  confirmWaypoint = (event) => {
-    event.preventDefault()
+  // confirmWaypoint = (event) => {
+  //   event.preventDefault()
       // eventually we want to make an array show and a user select the correct address. For now, only one address shows and thwey can confirm whether the first address from the API response is the correct one.
       // confirm button is for when we'll:
         // confirm selected address from the list we get from API response
         // set response data to waypointDispatch object.
-  }
+  // }
 
   searchStart = (event) => {
     event.preventDefault()

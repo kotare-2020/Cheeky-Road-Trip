@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import mapboxgl from 'mapbox-gl';
 import MapboxDirections from '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions'
+import bathroomData from '../../data/bathroom_data2.json'
+import request from 'superagent'
 
 mapboxgl.accessToken = process.env.MAPBOX_API_KEY
 
@@ -13,6 +15,14 @@ class Mapbox extends React.Component {
     }
 
     componentDidMount() {
+        //hardcoded these coords for testing, needs to be changed
+        let start = [174.95052,-37.10211];
+        let end = [174.97625,-37.19249]
+        let url = 'https://api.mapbox.com/directions/v5/mapbox/driving/' + start[0] + ',' + start[1] + ';' + end[0] + ',' + end[1] + '?steps=true&geometries=geojson&access_token=' + mapboxgl.accessToken;
+        request.get(url)
+        .then(res => console.log(res.body))
+
+
         const map = new mapboxgl.Map({
             container: this.mapContainer,
             style: 'mapbox://styles/mapbox/streets-v11',
@@ -38,27 +48,10 @@ class Mapbox extends React.Component {
                     // Add a GeoJSON source with 2 points
                     map.addSource('points', {
                         'type': 'geojson',
-                        'data': {
-                            'type': 'FeatureCollection',
-                            'features': [
-                                  {
-                                    "type": "Feature",
-                                    "properties": {
-                                      "OBJECTID": 15,
-                                      "NAME": "VAUTIER PARK PAVILION PUBLIC TOILETS",
-                                      "CLASS_DESCR": "GENERAL PUBLIC",
-                                      "USE_RESTRICTIONS": "7am-6pm",
-                                      "DESCRIPTION": "Public Toilets"
-                                    },
-                                    "geometry": {
-                                      "type": "Point",
-                                      "coordinates": [175.623499750117588, -40.335827727265396]
-                                    }
-                                  }
-                            ]
-                        }
-                    });
-    
+                        'data': bathroomData
+                    }
+                    )
+
                     // Add a symbol layer
                     map.addLayer({
                         'id': 'points',
@@ -84,9 +77,9 @@ class Mapbox extends React.Component {
             accessToken: mapboxgl.accessToken,
             unit: 'metric',
             profile: 'mapbox/driving'
-          })
+        })
 
-          map.addControl(directions, 'top-left')
+        map.addControl(directions, 'top-left')
 
     }
 
@@ -109,3 +102,20 @@ class Mapbox extends React.Component {
 export default Mapbox
 
 
+
+// {
+//     'type': 'FeatureCollection',
+//     'features': [
+//           {
+//             "type": "Feature",
+//             "properties": {
+//               "OBJECTID": 15,
+//               "NAME": "VAUTIER PARK PAVILION PUBLIC TOILETS",
+//               "CLASS_DESCR": "GENERAL PUBLIC",
+//               "USE_RESTRICTIONS": "7am-6pm",
+//               "DESCRIPTION": "Public Toilets"
+//             },
+//             "geometry": {
+//               "type": "Point",
+//               "coordinates": [175.623499750117588, -40.335827727265396]
+//             }
