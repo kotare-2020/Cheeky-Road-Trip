@@ -16,6 +16,8 @@ class Mapbox extends React.Component {
   }
 
   componentDidMount() {
+
+    //api call to get information on map route
     let start = [
       this.props.currentTrip.waypoints.startWaypoint.longitude,
       this.props.currentTrip.waypoints.startWaypoint.latitude
@@ -26,7 +28,7 @@ class Mapbox extends React.Component {
     ]
     let url = 'https://api.mapbox.com/directions/v5/mapbox/driving/' + start[0] + ',' + start[1] + ';' + end[0] + ',' + end[1] + '?steps=true&geometries=geojson&access_token=' + mapboxgl.accessToken
     request.get(url)
-      .then(res => console.log(res.body))
+      .then(res => console.log('response from directions api' , res.body))
 
     const map = new mapboxgl.Map({
       container: this.mapContainer,
