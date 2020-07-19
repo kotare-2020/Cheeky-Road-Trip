@@ -43,7 +43,6 @@ class HomePage extends React.Component {
   }
 
   hideAddressOptions = (waypointName) => {
-    console.log('new new ', waypointName)
     this.setState({
       [waypointName]: false
     })
@@ -51,13 +50,6 @@ class HomePage extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault()
-    const tripData = {
-      tripName: this.state.tripName,
-      startWaypoint: this.state.startWaypoint,
-      inbetweenWaypoints: this.state.inbetweenWaypoints,
-      endWaypoint: this.state.endWaypoint,
-    }
-    this.props.dispatch(addNewTrip(tripData))
     this.props.showHome(false)
   }
 

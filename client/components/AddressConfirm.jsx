@@ -8,7 +8,6 @@ class AddressConfirm extends React.Component {
     addressOptions = this.props.waypointConfirmation.waypointsArray
 
     handleSelect = (addressInfo , waypointName) => {
-        console.log(' data in addressConfirm - checkbox function', addressInfo, waypointName)
         let Waypoint = {
             buildingName: addressInfo.name,
             label: addressInfo.label,
@@ -21,7 +20,6 @@ class AddressConfirm extends React.Component {
     }
 
     render() {
-        console.log('address confrim component props ----> ', this.props)
         return (
             <div className="address-confirm-list" >
 
