@@ -125,32 +125,32 @@ class HomePage extends React.Component {
 
 {/* Start / Destination Form */}
 
-              <label id="display-block">
+              <label className="landing-page-form-boxes">
                 Trip Name:
                 <input className="input is-rounded is-small" onChange={this.handleChange} type="text" name="tripName" />
               </label>
 
-              <label className="landing-form-elements" id="display-block">
+              <label className="landing-form-elements" >
                 Start-Point:
                 <input className="input is-rounded is-small" onChange={this.handleChange} type="text" name="startPoint" />
                 <button className="button is-rounded is-small" onClick={this.searchStart}>Search</button>
                 {this.state.START ? <AddressConfirm waypointName="START" hideOptions={this.hideAddressOptions} /> : ''}
               </label>
 
-              {/* <label id="display-block">
+              {/* <label className="address-confirm-list">
                 Stop-Over:
                 <input onChange={this.handleChange} type="text" name="stopOver" />
                 <button onClick={this.searchStop}>Search</button>
               </label> */}
 
-              <label id="display-block">
+              <label className="landing-page-form-boxes">
                 Destination:
                 <input className="input is-rounded is-small" onChange={this.handleChange} type="text" name="destination" />
                 <button className="button is-rounded is-small " onClick={this.searchDestination}>Search</button>
                 {this.state.END ? <AddressConfirm waypointName="END" hideOptions={this.hideAddressOptions} /> : ''}
               </label>
 
-              <input className="button is-rounded is-small" id="display-block" type="submit" value="Let's go!" />
+              <input className="button is-rounded is-small" className="landing-page-form-boxes" type="submit" value="Let's go!" />
 
 {/* Start / Destination Form */}
 

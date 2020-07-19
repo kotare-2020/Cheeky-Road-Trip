@@ -57,7 +57,7 @@ h3 {
     padding-bottom: 28px;
 }
 
-#display-block {
+.landing-page-form-boxes{
     display: flex;
     padding-bottom: 10px;
     align-items: center;
@@ -122,9 +122,12 @@ height: 800px;
 }
 
 .address-confirm-list {
-    background-color: rgba(21, 21, 21, 0.7);
+    font-size: 11px;
+    color: black;
+    background-color: whitesmoke;
     height: auto;
-    width: 300px;
+    width: auto;
+    display: flex;
 }
 
 .address-confirm-item {
