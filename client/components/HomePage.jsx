@@ -52,7 +52,7 @@ class HomePage extends React.Component {
       "country": "NZ",
       '& query': this.state.startPoint,
     }).then(res => {
-      if (confirm(`Is ${res.body.data[0].label} the correct starting point?`)) {
+      // if (confirm(`Is ${res.body.data[0].label} the correct starting point?`)) {
         this.setState({
             startWaypoint: {
               buildingName: res.body.data[0].name,
@@ -62,7 +62,7 @@ class HomePage extends React.Component {
               streetName: res.body.data[0].street,
             }
         })
-      }
+      // } for the confirm function
     })
   }
 
@@ -73,7 +73,7 @@ class HomePage extends React.Component {
       "country": "NZ",
       '& query': this.state.stopOver,
     }).then(res => {
-      if (confirm(`Is ${res.body.data[0].label} the correct destination?`)) {
+      // if (confirm(`Is ${res.body.data[0].label} the correct destination?`)) {
         const newArray = this.state.inbetweenWaypoints
         newArray.push({
           buildingName: res.body.data[0].name,
@@ -85,7 +85,7 @@ class HomePage extends React.Component {
         this.setState({
           inbetweenWaypoints: newArray,
         })
-      }
+      // } for the confirm function
     })
   }
 
@@ -96,7 +96,7 @@ class HomePage extends React.Component {
       "country": "NZ",
       '& query': this.state.destination,
     }).then(res => {
-      if (confirm(`Is ${res.body.data[0].label} the correct destination?`)) {
+      // if (confirm(`Is ${res.body.data[0].label} the correct destination?`)) {
         this.setState({
             endWaypoint: {
               buildingName: res.body.data[0].name,
@@ -106,7 +106,7 @@ class HomePage extends React.Component {
               streetName: res.body.data[0].street,
             }
         })
-      }
+      // } confirm function
     })
   }
 
