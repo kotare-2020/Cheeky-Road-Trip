@@ -3,9 +3,9 @@ import { ADD_NEW_TRIP, ADD_WAYPOINTS, SHOW_MAP } from '../actions/currentTrip'
 
 const initialState = {
   tripName: '',
-  startPoint: [-38.992391, 174.395546],
+  startPoint: [],
   //hard coded for testing purposes, this needs to be changed
-  endPoint: [-39.099695, 174.074156],
+  endPoint: [],
   waypoints: {
     startWaypoint: {},
     inbetweenWaypoints: [],
