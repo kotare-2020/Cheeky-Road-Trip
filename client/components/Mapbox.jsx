@@ -34,8 +34,13 @@ class Mapbox extends React.Component {
     let url = 'https://api.mapbox.com/directions/v5/mapbox/driving/' + start[0] + ','  + start[1] + ';' + midCoords + end[0] + ',' + end[1] + '?steps=true&geometries=geojson&access_token=' + mapboxgl.accessToken
     request.get(url)
       .then(res => {
-        console.log(res.body.routes)
-        console.log(res.body.routes[0].legs[0].steps[0].maneuver.instruction)
+        let instructionsArr = []
+        res.body.routes[0].legs.map((element) => {
+          element.steps.map((element) => {
+            instructionsArr.push(element.maneuver.instruction)
+          })
+        })
+        this.props.dispatch(addTripInstructions(instructionsArr))
       })
 
     const map = new mapboxgl.Map({
@@ -126,7 +131,10 @@ class Mapbox extends React.Component {
         .addTo(map)
     })
 
-    directions.onClick = null
+    directions.onClick = () => {
+      console.log('yippee')
+    }
+    
     map.addControl(directions, 'top-left')
 
     map.on('load', () => {

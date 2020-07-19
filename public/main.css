@@ -120,3 +120,8 @@ h3 {
 .column-right-dashboard {
 height: 800px;
 }
+
+.directions-list {
+    overflow:scroll;
+    height: 400px;
+}
