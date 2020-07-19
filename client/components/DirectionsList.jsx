@@ -6,11 +6,11 @@ class DirectionsList extends React.Component {
     return (
       <div id="directions-list-div">
         <h3>Directions</h3>
-        <ul className="directions-list">
-          {this.props.currentTrip.tripInstructions.map((element) => {
-            return <li>{element}</li>
+        <ol className="directions-list">
+          {this.props.currentTrip.tripInstructions.map((element, i) => {
+            return <li>{i+1}. {element}</li>
           })}
-        </ul>
+        </ol>
       </div>
     )
   }
