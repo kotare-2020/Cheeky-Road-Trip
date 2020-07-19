@@ -6,7 +6,7 @@ const initialState = {
   startWaypoint: {},
   inbetweenWaypoints: [],
   endWaypoint: {},
-  tripInstructions: []
+  tripInstructions: [],
 }
 
 const reducer = (state = initialState, action) => {

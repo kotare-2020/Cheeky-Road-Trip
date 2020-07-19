@@ -21,11 +21,17 @@ class Mapbox extends React.Component {
       this.props.currentTrip.startWaypoint.longitude,
       this.props.currentTrip.startWaypoint.latitude
     ]
+    let midCoords = ''
+    this.props.currentTrip.waypoints.inbetweenWaypoints.map((element) => {
+        let newString = `${element.longitude},` + `${element.latitude};`
+        midCoords = midCoords + newString
+    })
     let end = [
       this.props.currentTrip.endWaypoint.longitude,
       this.props.currentTrip.endWaypoint.latitude
     ]
-    let url = 'https://api.mapbox.com/directions/v5/mapbox/driving/' + start[0] + ',' + start[1] + ';' + end[0] + ',' + end[1] + '?steps=true&geometries=geojson&access_token=' + mapboxgl.accessToken
+    
+    let url = 'https://api.mapbox.com/directions/v5/mapbox/driving/' + start[0] + ','  + start[1] + ';' + midCoords + end[0] + ',' + end[1] + '?steps=true&geometries=geojson&access_token=' + mapboxgl.accessToken
     request.get(url)
       .then(res => {
         console.log(res.body.routes)
@@ -69,6 +75,7 @@ class Mapbox extends React.Component {
         ])
     })
 
+
       directions.setDestination([
         this.props.currentTrip.endWaypoint.longitude,
         this.props.currentTrip.endWaypoint.latitude,
@@ -84,8 +91,9 @@ class Mapbox extends React.Component {
             'type': 'geojson',
             'data': bathroomData
           })
+          console.log(this.props.currentTrip.waypoints.inbetweenWaypoints)
 
-          // Add a symbol layer
+          //Add a symbol layer
           map.addLayer({
             'id': 'points',
             'type': 'symbol',
