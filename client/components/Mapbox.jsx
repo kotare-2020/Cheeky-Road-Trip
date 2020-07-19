@@ -40,10 +40,13 @@ class Mapbox extends React.Component {
 
     const map = new mapboxgl.Map({
       container: this.mapContainer,
-      style: 'mapbox://styles/mapbox/streets-v11',
+      style: 'mapbox://styles/deriyaki/ckctmc2yt2xi01iplkz3px4bd',
+      accessToken: process.env.MAPBOX_SKIN_KEY, 
       center: [this.state.lng, this.state.lat],
       zoom: this.state.zoom
     })
+
+
 
     map.on('move', () => {
       this.setState({
