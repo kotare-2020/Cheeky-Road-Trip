@@ -5,28 +5,38 @@ import mapboxgl from 'mapbox-gl';
 import MapboxDirections from '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions'
 import bathroomData from '../../data/bathroom_data2.json'
 import request from 'superagent'
+import { addTripInstructions } from '../actions/currentTrip'
 
 mapboxgl.accessToken = process.env.MAPBOX_API_KEY
 
 class Mapbox extends React.Component {
   state = {
-    lng: this.props.currentTrip.waypoints.startWaypoint.longitude,
-    lat: this.props.currentTrip.waypoints.startWaypoint.latitude,
+    lng: this.props.currentTrip.startWaypoint.longitude,
+    lat: this.props.currentTrip.startWaypoint.latitude,
     zoom: 5.75
   }
 
   componentDidMount() {
     let start = [
-      this.props.currentTrip.waypoints.startWaypoint.longitude,
-      this.props.currentTrip.waypoints.startWaypoint.latitude
+      this.props.currentTrip.startWaypoint.longitude,
+      this.props.currentTrip.startWaypoint.latitude
     ]
+    let midCoords = ''
+    this.props.currentTrip.inbetweenWaypoints.map((element) => {
+        let newString = `${element.longitude},` + `${element.latitude};`
+        midCoords = midCoords + newString
+    })
     let end = [
-      this.props.currentTrip.waypoints.endWaypoint.longitude,
-      this.props.currentTrip.waypoints.endWaypoint.latitude
+      this.props.currentTrip.endWaypoint.longitude,
+      this.props.currentTrip.endWaypoint.latitude
     ]
-    let url = 'https://api.mapbox.com/directions/v5/mapbox/driving/' + start[0] + ',' + start[1] + ';' + end[0] + ',' + end[1] + '?steps=true&geometries=geojson&access_token=' + mapboxgl.accessToken
+    
+    let url = 'https://api.mapbox.com/directions/v5/mapbox/driving/' + start[0] + ','  + start[1] + ';' + midCoords + end[0] + ',' + end[1] + '?steps=true&geometries=geojson&access_token=' + mapboxgl.accessToken
     request.get(url)
-      .then(res => console.log('steps to take', res.body))
+      .then(res => {
+        console.log(res.body.routes)
+        console.log(res.body.routes[0].legs[0].steps[0].maneuver.instruction)
+      })
 
     const map = new mapboxgl.Map({
       container: this.mapContainer,
@@ -54,13 +64,21 @@ class Mapbox extends React.Component {
     map.on('load', () => {
       // Add an image to use as a custom marker
       directions.setOrigin([
-        this.props.currentTrip.waypoints.startWaypoint.longitude,
-        this.props.currentTrip.waypoints.startWaypoint.latitude,
+        this.props.currentTrip.startWaypoint.longitude,
+        this.props.currentTrip.startWaypoint.latitude,
       ])
 
+      this.props.currentTrip.inbetweenWaypoints.map((element, i) => {
+        directions.addWaypoint(i + 1, [
+            element.longitude,
+            element.latitude,
+        ])
+    })
+
+
       directions.setDestination([
-        this.props.currentTrip.waypoints.endWaypoint.longitude,
-        this.props.currentTrip.waypoints.endWaypoint.latitude,
+        this.props.currentTrip.endWaypoint.longitude,
+        this.props.currentTrip.endWaypoint.latitude,
       ])
 
       map.loadImage(
@@ -73,8 +91,9 @@ class Mapbox extends React.Component {
             'type': 'geojson',
             'data': bathroomData
           })
+          console.log(this.props.currentTrip.waypoints.inbetweenWaypoints)
 
-          // Add a symbol layer
+          //Add a symbol layer
           map.addLayer({
             'id': 'points',
             'type': 'symbol',
