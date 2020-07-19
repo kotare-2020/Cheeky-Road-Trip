@@ -66,7 +66,6 @@ class HomePage extends React.Component {
       console.log('postion stack api response ---->', res.body.data)
       this.props.dispatch(searchAddress(res.body.data))
     }).then ( res => {
-console.log ('bazinga')
 this.setState({
   showStartOptions: !this.state.showStartOptions
 })
@@ -151,7 +150,7 @@ this.setState({
                 Start-Point:
                 <input onChange={this.handleChange} type="text" name="startPoint" />
                 <button onClick={this.searchStart}>Search</button>
-                {this.state.showStartOptions ? <AddressConfirm/> : ''}
+                {this.state.showStartOptions ? <AddressConfirm type="START" /> : ''}
                 
 
               </label>

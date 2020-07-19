@@ -1,4 +1,4 @@
-import { ADD_NEW_TRIP, ADD_WAYPOINTS, SHOW_MAP } from '../actions/currentTrip'
+import { ADD_NEW_TRIP, ADD_WAYPOINTS, SHOW_MAP, CONFIRM_WAYPOINT } from '../actions/currentTrip'
 
 
 const initialState = {
@@ -11,7 +11,8 @@ const initialState = {
     inbetweenWaypoints: [],
     endWaypoint: {},
   },
-  haveWaypoints: false
+  haveWaypoints: false,
+  confirmedWaypoint: {}
 }
 
 const reducer = (state = initialState, action) => {
@@ -33,6 +34,10 @@ const reducer = (state = initialState, action) => {
     case SHOW_MAP:
       return {...state,
         haveWaypoints: action.boolean,
+      }
+      case CONFIRM_WAYPOINT:
+      return {...state,
+        confirmedWaypoint: action.boolean,
       }
     default:
       return state
