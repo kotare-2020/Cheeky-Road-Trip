@@ -50,6 +50,9 @@ class Mapbox extends React.Component {
       profile: 'mapbox/driving'
     })
 
+    console.log("directions", directions)
+    console.log("directions.onClick", directions.onClick)
+    // directions.onClick = null
     map.addControl(directions, 'top-left')
 
     map.on('load', () => {
@@ -94,6 +97,7 @@ class Mapbox extends React.Component {
           })
         }
       )
+
       map.on('click', 'points', function (e) {
         // There's a few different ways data is layed out in the json because of differing sources.
         const dataStructureType1 = {
@@ -115,9 +119,7 @@ class Mapbox extends React.Component {
           if (descOne.name != undefined) {
             return `<strong>${descOne.name}</strong>`
           }
-          else if (descOne.name == undefined && descTwo.description != "null" && descTwo.description != undefined || descTwo.openTimes != "null" && descTwo.openTimes != undefined) {
-            console.log('bro', e.features[0].properties)
-            console.log("descTwo.name", descTwo.name)
+          else if (descOne.name == undefined && descTwo.description != "null" && descTwo.description != undefined && descTwo.openTimes != "null" && descTwo.openTimes != undefined) {
             return (
               `<strong>${capitalize(descTwo.name)}</strong>
               <p>${descTwo.description}</p>
@@ -125,7 +127,6 @@ class Mapbox extends React.Component {
             )
           }
           else if (descOne.name == undefined && descTwo.description == "null" || descTwo.openTimes == "null") {
-            console.log(descTwo.name)
             return (
               `<strong>${capitalize(descTwo.name)}</strong>
               <strong>Toilets</strong>
