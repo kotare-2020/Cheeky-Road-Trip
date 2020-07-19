@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import request from 'superagent'
-import { setWaypoints } from '../actions/currentTrip'
+import { addNewTrip } from '../actions/currentTrip'
 
 
 class HomePage extends React.Component {
@@ -11,7 +11,6 @@ class HomePage extends React.Component {
     startPoint: '',
     stopOver: '',
     destination: '',
-    // i'm sorry
     startWaypoint: {},
     inbetweenWaypoints: [],
     endWaypoint: {},
@@ -25,12 +24,13 @@ class HomePage extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault()
-    const waypointsForDispatch = {
+    const tripData = {
+      tripName: this.state.tripName,
       startWaypoint: this.state.startWaypoint,
       inbetweenWaypoints: this.state.inbetweenWaypoints,
       endWaypoint: this.state.endWaypoint,
     }
-    this.props.dispatch(setWaypoints(waypointsForDispatch))
+    this.props.dispatch(addNewTrip(tripData))
     this.props.showHome(false)
   }
 
