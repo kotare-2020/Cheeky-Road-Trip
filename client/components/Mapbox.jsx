@@ -134,9 +134,7 @@ class Mapbox extends React.Component {
         .addTo(map)
     })
 
-    directions.onClick = () => {
-      console.log('yippee')
-    }
+    directions.onClick = () => {}
     
     map.addControl(directions, 'top-left')
 
