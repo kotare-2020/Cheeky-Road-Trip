@@ -59,10 +59,17 @@ class Mapbox extends React.Component {
       profile: 'mapbox/driving'
     })
 
+    // popup = () => {
+      map.on('click', function(e) {
+        console.log(e)
+      })
+    // }
+
+    directions.onClick = null
+
     map.addControl(directions, 'top-left')
 
     map.on('load', () => {
-      // Add an image to use as a custom marker
       directions.setOrigin([
         this.props.currentTrip.startWaypoint.longitude,
         this.props.currentTrip.startWaypoint.latitude,
@@ -75,11 +82,11 @@ class Mapbox extends React.Component {
         ])
     })
 
-
       directions.setDestination([
         this.props.currentTrip.endWaypoint.longitude,
         this.props.currentTrip.endWaypoint.latitude,
       ])
+
 
       map.loadImage(
         'https://docs.mapbox.com/mapbox-gl-js/assets/custom_marker.png',
@@ -91,7 +98,6 @@ class Mapbox extends React.Component {
             'type': 'geojson',
             'data': bathroomData
           })
-          console.log(this.props.currentTrip.waypoints.inbetweenWaypoints)
 
           //Add a symbol layer
           map.addLayer({
