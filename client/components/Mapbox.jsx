@@ -24,6 +24,7 @@ class Mapbox extends React.Component {
       this.props.currentTrip.waypoints.endWaypoint.longitude,
       this.props.currentTrip.waypoints.endWaypoint.latitude
     ]
+
     let url = 'https://api.mapbox.com/directions/v5/mapbox/driving/' + start[0] + ',' + start[1] + ';' + end[0] + ',' + end[1] + '?steps=true&geometries=geojson&access_token=' + mapboxgl.accessToken
     request.get(url)
       .then(res => console.log('steps to take', res.body))
@@ -93,6 +94,27 @@ class Mapbox extends React.Component {
           })
         }
       )
+      map.on('click', 'points', function(e) {
+        let coordinates = e.features[0].geometry.coordinates.slice();
+        let description = `<strong> ${e.features[0].properties.Name} </strong>`
+        if (description == `<strong> ${undefined} </strong>`){
+          description = "<strong>Toilets:</strong><p>No extra information :(</p>"
+        }
+
+        // Ensure that if the map is zoomed out such that multiple
+        // copies of the feature are visible, the popup appears
+        // over the copy being pointed to.
+        /*
+        while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+            coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+        }
+        */
+
+        new mapboxgl.Popup()
+            .setLngLat(coordinates)
+            .setHTML(description)
+            .addTo(map);
+      });
     })
   }
   
