@@ -39,8 +39,6 @@ class Mapbox extends React.Component {
     let url = 'https://api.mapbox.com/directions/v5/mapbox/driving/' + start[0] + ',' + start[1] + ';' + midCoords + end[0] + ',' + end[1] + '?steps=true&geometries=geojson&access_token=' + mapboxgl.accessToken
     request.get(url)
       .then(res => {
-        console.log(res.body.routes)
-        console.log(res.body.routes[0].legs[0].steps[0].maneuver.instruction)
       })
 
     const map = new mapboxgl.Map({
@@ -93,7 +91,6 @@ class Mapbox extends React.Component {
           inbetweenWaypoints: newArray,
           endWaypoint: this.props.currentTrip.endWaypoint,
         }
-        console.log('add to waypoints')
         this.props.dispatch(addNewTrip(tripData))
       }
 
@@ -104,7 +101,11 @@ class Mapbox extends React.Component {
         }
         else if (descOne.name == undefined && descTwo.description != "null" && descTwo.description != undefined && descTwo.openTimes != "null" && descTwo.openTimes != undefined) {
           
-          window.dostuff = this.dostuff
+          // window.dostuff = this.dostuff
+          // ^--- to make a function as global as possible.
+          // <button onClick='window.dostuff()'>hi</button>
+          // ^--- for below HTML
+
           // window.addToWaypoints = this.addToWaypoints(coordinates, descTwo.name)
           // ^--- can't use arguments?
           window.addToWaypoints = addToWaypointsNoArgs
@@ -116,8 +117,7 @@ class Mapbox extends React.Component {
             `<strong>${descTwo.name}</strong>
             <p>${descTwo.description}</p>
             <p>Open: ${descTwo.openTimes}</p>
-            <button onClick='window.dostuff()'>hi</button>
-            <button onClick='window.addToWaypoints()'>yo</button>`
+            <button onClick='window.addToWaypoints()'>Add stop to trip</button>`
           )
         }
         else if (descOne.name == undefined && descTwo.description == "null" || descTwo.openTimes == "null") {
@@ -161,8 +161,6 @@ class Mapbox extends React.Component {
         .addTo(map);
     })
 
-    console.log("directions", directions)
-    console.log("directions.onClick", directions.onClick)
     directions.onClick = () => {}
     map.addControl(directions, 'top-left')
 
