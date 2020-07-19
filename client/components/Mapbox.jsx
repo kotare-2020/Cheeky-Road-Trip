@@ -94,35 +94,60 @@ class Mapbox extends React.Component {
           })
         }
       )
-      map.on('click', 'points', function(e) {
+      map.on('click', 'points', function (e) {
         // There's a few different ways data is layed out in the json because of differing sources.
-        const objectType1 = {
+        const dataStructureType1 = {
           name: e.features[0].properties.Name
         }
-        const objectType2 = {
+        const dataStructureType2 = {
           name: e.features[0].properties.TOILET_NAME,
           description: e.features[0].properties.DESCRIPTION,
           openTimes: e.features[0].properties.USE_RESTRICTIONS,
         }
-        const objectType3 = {
+        const dataStructureType3 = {
           description: "<strong>Toilets :)</strong> <p>No extra information :(</p>"
         }
 
         const coordinates = e.features[0].geometry.coordinates.slice();
-        let description = ""
+        let description = setToiletDescription(dataStructureType1, dataStructureType2, dataStructureType3)
 
-        // set descritpion for marker
-        if ( objectType1.name != undefined ){
-          description = `<strong>${objectType1.name}</strong>`
+        function setToiletDescription(descOne, descTwo, descThree) {
+          if (descOne.name != undefined) {
+            return `<strong>${descOne.name}</strong>`
+          }
+          else if (descOne.name == undefined && descTwo.description != "null" && descTwo.description != undefined || descTwo.openTimes != "null" && descTwo.openTimes != undefined) {
+            console.log('bro', e.features[0].properties)
+            console.log("descTwo.name", descTwo.name)
+            return (
+              `<strong>${capitalize(descTwo.name)}</strong>
+              <p>${descTwo.description}</p>
+              <p>Open: ${descTwo.openTimes}</p>`
+            )
+          }
+          else if (descOne.name == undefined && descTwo.description == "null" || descTwo.openTimes == "null") {
+            console.log(descTwo.name)
+            return (
+              `<strong>${capitalize(descTwo.name)}</strong>
+              <strong>Toilets</strong>
+              <p>No extra information :(</p>`
+            )
+          }
+          else {
+            return descThree.description
+          }
         }
-        else if ( objectType1.name == undefined && objectType2.description != "null" && objectType2.description != undefined || objectType2.openTimes != "null" && objectType2.openTimes != undefined ){
-          description = `<strong>${objectType2.name}</strong> <p>${objectType2.description}</p> <p>Open: ${objectType2.openTimes}</p>`
-        }
-        else if (description == `<strong>${undefined}</strong>` && objectType2.description == "null" || objectType2.openTimes == "null" ){
-          description = `<strong>${objectType2.name}</strong> <strong>Toilets</strong> <p>No extra information :(</p>`
-        }
-        else {
-          description = objectType3.description
+
+        function capitalize(sentence) {
+          let arrayOfStrings = sentence.split(" ")
+          if (arrayOfStrings.indexOf("") != -1){ // in case there's only one word (Longburn was being deleted >:c ) .length might've been useful)
+            arrayOfStrings.splice(arrayOfStrings.indexOf(""), 1) // in case there's an extra space in a sentance ie "yo  dog."
+          }
+          let capitalizedArray = arrayOfStrings.map(string => {
+            const wordBody = string.substr(1)
+            return (string[0].toUpperCase() + wordBody.toLowerCase())
+          })
+          let capitalizedStr = capitalizedArray.join(' ')
+          return (capitalizedStr)
         }
 
         // Ensure that if the map is zoomed out such that multiple
@@ -135,13 +160,13 @@ class Mapbox extends React.Component {
         */
 
         new mapboxgl.Popup()
-            .setLngLat(coordinates)
-            .setHTML(description)
-            .addTo(map);
+          .setLngLat(coordinates)
+          .setHTML(description)
+          .addTo(map);
       });
     })
   }
-  
+
   render() {
     return (
       <div>
