@@ -160,7 +160,7 @@ class Mapbox extends React.Component {
 
 
       map.loadImage(
-        'https://docs.mapbox.com/mapbox-gl-js/assets/custom_marker.png',
+        './images/toilet-icon.png',
         function (error, image) {
           if (error) throw error;
           map.addImage('custom-marker', image);
