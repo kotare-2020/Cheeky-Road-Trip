@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import ReactDOM from 'react-dom';
 import { connect } from 'react-redux'
 import mapboxgl from 'mapbox-gl';
@@ -17,23 +17,10 @@ class Mapbox extends React.Component {
     zoom: 5.75
   }
 
-  addToWaypoints = (coords, name) => {
-    const newArray = this.props.currentTrip.inbetweenWaypoints
-        newArray.push({
-          buildingName: name,
-          label: "label",
-          latitude: coords[1],
-          longitude: coords[0],
-          streetName: "street",
-        })
-    const tripData = {
-      tripName: this.props.currentTrip.tripName,
-      startWaypoint: this.props.currentTrip.startWaypoint,
-      inbetweenWaypoints: newArray,
-      endWaypoint: this.props.currentTrip.endWaypoint,
-    }
-    this.props.dispatch(addNewTrip(tripData))
+  dostuff = () => {
+    console.log('hello')
   }
+
   componentDidMount() {
     let start = [
       this.props.currentTrip.startWaypoint.longitude,
@@ -77,7 +64,7 @@ class Mapbox extends React.Component {
       profile: 'mapbox/driving'
     })
 
-    map.on('click', 'points', function (e) {
+    map.on('click', 'points', (e) => {
       // There's a few different ways data is layed out in the json because of differing sources.
       const dataStructureType1 = {
         name: e.features[0].properties.Name
@@ -91,18 +78,46 @@ class Mapbox extends React.Component {
         description: "<strong>Toilets :)</strong> <p>No extra information :(</p>"
       }
 
+      const addToWaypointsNoArgs = () => {
+        const newArray = this.props.currentTrip.inbetweenWaypoints
+        newArray.push({
+          buildingName: capitalize(dataStructureType2.name),
+          label: "label",
+          latitude: coordinates[1],
+          longitude: coordinates[0],
+          streetName: "street",
+        })
+        const tripData = {
+          tripName: this.props.currentTrip.tripName,
+          startWaypoint: this.props.currentTrip.startWaypoint,
+          inbetweenWaypoints: newArray,
+          endWaypoint: this.props.currentTrip.endWaypoint,
+        }
+        console.log('add to waypoints')
+        this.props.dispatch(addNewTrip(tripData))
+      }
+
       const coordinates = e.features[0].geometry.coordinates.slice();
-      let description = setToiletDescription(dataStructureType1, dataStructureType2, dataStructureType3)
-      function setToiletDescription(descOne, descTwo, descThree) {
+      let setToiletDescription = (descOne, descTwo, descThree) => {
         if (descOne.name != undefined) {
           return `<strong>${descOne.name}</strong>`
         }
         else if (descOne.name == undefined && descTwo.description != "null" && descTwo.description != undefined && descTwo.openTimes != "null" && descTwo.openTimes != undefined) {
+          
+          window.dostuff = this.dostuff
+          // window.addToWaypoints = this.addToWaypoints(coordinates, descTwo.name)
+          // ^--- can't use arguments?
+          window.addToWaypoints = addToWaypointsNoArgs
+          // ^--- defined above in current scope (map on click) to keep variables
+          // because we can't use arguments (I think).
+          
+          descTwo.name = capitalize(descTwo.name)
           return (
-            `<strong>${capitalize(descTwo.name)}</strong>
+            `<strong>${descTwo.name}</strong>
             <p>${descTwo.description}</p>
             <p>Open: ${descTwo.openTimes}</p>
-            <button onClick=${()=>{this.addToWaypoints(coordinates, dataStructureType2.name)}}>yo</button>`
+            <button onClick='window.dostuff()'>hi</button>
+            <button onClick='window.addToWaypoints()'>yo</button>`
           )
         }
         else if (descOne.name == undefined && descTwo.description == "null" || descTwo.openTimes == "null") {
@@ -116,6 +131,7 @@ class Mapbox extends React.Component {
           return descThree.description
         }
       }
+      let description = setToiletDescription(dataStructureType1, dataStructureType2, dataStructureType3)
 
       function capitalize(sentence) {
         let arrayOfStrings = sentence.split(" ")
@@ -147,7 +163,7 @@ class Mapbox extends React.Component {
 
     console.log("directions", directions)
     console.log("directions.onClick", directions.onClick)
-    directions.onClick = null
+    directions.onClick = () => {}
     map.addControl(directions, 'top-left')
 
     map.on('load', () => {
