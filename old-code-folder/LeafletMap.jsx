@@ -30,12 +30,6 @@ class LeafletMap extends Component {
   }
 
 
-  // var Thunderforest_SpinalMap = L.tileLayer('https://{s}.tile.thunderforest.com/spinal-map/{z}/{x}/{y}.png?apikey={apikey}', {
-  //   attribution: '&copy; <a href="http://www.thunderforest.com/">Thunderforest</a>, &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-  //   apikey: '<your apikey>',
-  //   maxZoom: 22
-  // });
-
 
   render() {
     const position = [this.state.lat, this.state.lng];

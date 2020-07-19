@@ -1,13 +1,23 @@
-.leaflet-container {
-    width: 50%;
-    height: 1000px;
-    float:right;
-}
-
-.leaflet-routing-alt {
-    background-color: papayawhip;
-    position: relative;
-}
+.sidebarStyle {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 12px;
+    background-color: #404040;
+    color: #ffffff;
+    z-index: 1 !important;
+    padding: 6px;
+    font-weight: bold;
+    }
+     
+    .mapContainer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    }
 
 body {
     color: black;
@@ -53,6 +63,12 @@ h3 {
     align-items: center;
 }
 
+.mapbox-directions-instructions-wrapper {
+    display: none;
+}
+
+
+
 .background-div {
     background-image: url('Images/rd-trip-background.jpg');
     position:absolute;
@@ -62,6 +78,11 @@ h3 {
     right:0;
     height:100%;
     width:100%;
+}
+
+.mapboxgl-ctrl-top-left {
+    background-color: rgba(228, 171, 29, 0.7);
+    
 }
 
 #dashboard-container{
@@ -97,5 +118,5 @@ h3 {
 }
 
 .column-right-dashboard {
-
+height: 800px;
 }
