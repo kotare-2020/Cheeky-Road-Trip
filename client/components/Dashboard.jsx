@@ -14,8 +14,6 @@ class Dashboard extends React.Component {
         this.props.showHome(true)
     }
 
-
-
     render() {
         return (
             <>
