@@ -1,38 +1,28 @@
-import { ADD_NEW_TRIP, ADD_WAYPOINTS, SHOW_MAP } from '../actions/currentTrip'
+import { ADD_TRIP, ADD_INSTRUCTIONS } from '../actions/currentTrip'
 
 
 const initialState = {
   tripName: '',
-  startPoint: [],
-  //hard coded for testing purposes, this needs to be changed
-  endPoint: [],
-  waypoints: {
-    startWaypoint: {},
-    inbetweenWaypoints: [],
-    endWaypoint: {},
-  },
-  haveWaypoints: false
+  startWaypoint: {},
+  inbetweenWaypoints: [],
+  endWaypoint: {},
+  tripInstructions: [],
 }
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case ADD_NEW_TRIP:
-      return {...state,
+    case ADD_TRIP:
+      return {
+        ...state,
         tripName: action.tripName,
-        startPoint: action.startPoint,
-        endPoint: action.endPoint,
+        startWaypoint: action.startWaypoint,
+        inbetweenWaypoints: action.inbetweenWaypoints,
+        endWaypoint: action.endWaypoint,
       }
-    case ADD_WAYPOINTS:
-      return {...state,
-        waypoints: {
-          startWaypoint: action.startWaypoint,
-          inbetweenWaypoints: action.inbetweenWaypoints,
-          endWaypoint: action.endWaypoint,
-        }
-      }
-    case SHOW_MAP:
-      return {...state,
-        haveWaypoints: action.boolean,
+    case ADD_INSTRUCTIONS:
+      return {
+        ...state,
+        tripInstructions: action.instructions
       }
     default:
       return state
