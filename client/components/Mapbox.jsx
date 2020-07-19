@@ -64,6 +64,13 @@ class Mapbox extends React.Component {
         this.props.currentTrip.waypoints.startWaypoint.latitude,
       ])
 
+      this.props.currentTrip.waypoints.inbetweenWaypoints.map((element, i) => {
+          directions.addWaypoint(i + 1, [
+              element.longitude,
+              element.latitude,
+          ])
+      })
+
       directions.setDestination([
         this.props.currentTrip.waypoints.endWaypoint.longitude,
         this.props.currentTrip.waypoints.endWaypoint.latitude,
@@ -79,8 +86,9 @@ class Mapbox extends React.Component {
             'type': 'geojson',
             'data': bathroomData
           })
+          console.log(this.props.currentTrip.waypoints.inbetweenWaypoints)
 
-          // Add a symbol layer
+          //Add a symbol layer
           map.addLayer({
             'id': 'points',
             'type': 'symbol',
