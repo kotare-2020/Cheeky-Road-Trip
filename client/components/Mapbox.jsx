@@ -6,6 +6,7 @@ import MapboxDirections from '@mapbox/mapbox-gl-directions/dist/mapbox-gl-direct
 import bathroomData from '../../data/bathroom_data2.json'
 import request from 'superagent'
 import { addTripInstructions } from '../actions/currentTrip'
+import { addNewTrip } from '../actions/currentTrip'
 
 mapboxgl.accessToken = process.env.MAPBOX_API_KEY
 
@@ -16,6 +17,23 @@ class Mapbox extends React.Component {
     zoom: 5.75
   }
 
+  addToWaypoints = (coords, name) => {
+    const newArray = this.props.currentTrip.inbetweenWaypoints
+        newArray.push({
+          buildingName: name,
+          label: "label",
+          latitude: coords[1],
+          longitude: coords[0],
+          streetName: "street",
+        })
+    const tripData = {
+      tripName: this.props.currentTrip.tripName,
+      startWaypoint: this.props.currentTrip.startWaypoint,
+      inbetweenWaypoints: newArray,
+      endWaypoint: this.props.currentTrip.endWaypoint,
+    }
+    this.props.dispatch(addNewTrip(tripData))
+  }
   componentDidMount() {
     let start = [
       this.props.currentTrip.startWaypoint.longitude,
@@ -75,7 +93,6 @@ class Mapbox extends React.Component {
 
       const coordinates = e.features[0].geometry.coordinates.slice();
       let description = setToiletDescription(dataStructureType1, dataStructureType2, dataStructureType3)
-
       function setToiletDescription(descOne, descTwo, descThree) {
         if (descOne.name != undefined) {
           return `<strong>${descOne.name}</strong>`
@@ -84,7 +101,8 @@ class Mapbox extends React.Component {
           return (
             `<strong>${capitalize(descTwo.name)}</strong>
             <p>${descTwo.description}</p>
-            <p>Open: ${descTwo.openTimes}</p>`
+            <p>Open: ${descTwo.openTimes}</p>
+            <button onClick=${()=>{this.addToWaypoints(coordinates, dataStructureType2.name)}}>yo</button>`
           )
         }
         else if (descOne.name == undefined && descTwo.description == "null" || descTwo.openTimes == "null") {
