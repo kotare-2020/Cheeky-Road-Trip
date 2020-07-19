@@ -95,12 +95,34 @@ class Mapbox extends React.Component {
         }
       )
       map.on('click', 'points', function(e) {
-        let coordinates = e.features[0].geometry.coordinates.slice();
-        let description = `<strong> ${e.features[0].properties.Name} </strong>`
-        if (description == `<strong> ${undefined} </strong>`){
-          description = "<strong>Toilets:</strong><p>No extra information :(</p>"
+        // There's a few different ways data is layed out in the json because of differing sources.
+        const objectType1 = {
+          name: e.features[0].properties.Name
+        }
+        const objectType2 = {
+          name: e.features[0].properties.TOILET_NAME,
+          description: e.features[0].properties.DESCRIPTION,
+          openTimes: e.features[0].properties.USE_RESTRICTIONS,
+        }
+        const objectType3 = {
+          description: "<strong>Toilets:</strong><p>No extra information :(</p>"
         }
 
+        let coordinates = e.features[0].geometry.coordinates.slice();
+        let description = `<strong>${objectType1.name}</strong>`
+
+        if (description == `<strong>${undefined}</strong>` && objectType2.description != "null" && objectType2.description != undefined || objectType2.openTimes != "null" && objectType2.openTimes != undefined ){
+          description = `<strong>${objectType2.name}</strong> <p>${objectType2.description}</p> <p>Open: ${objectType2.openTimes}</p>`
+        }
+        else if (description == `<strong>${undefined}</strong>` && objectType2.description == "null" || objectType2.openTimes == "null" ){
+          description = `<strong>${objectType2.name}</strong> <p>Toilets</p> <p>No extra information :(</p>`
+        }
+        else {
+          description = objectType3.description
+        }
+
+        console.log("target", e.features[0])
+        console.log("description", description)
         // Ensure that if the map is zoomed out such that multiple
         // copies of the feature are visible, the popup appears
         // over the copy being pointed to.
