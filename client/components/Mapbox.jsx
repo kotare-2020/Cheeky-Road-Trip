@@ -23,15 +23,15 @@ class Mapbox extends React.Component {
     ]
     let midCoords = ''
     this.props.currentTrip.inbetweenWaypoints.map((element) => {
-        let newString = `${element.longitude},` + `${element.latitude};`
-        midCoords = midCoords + newString
+      let newString = `${element.longitude},` + `${element.latitude};`
+      midCoords = midCoords + newString
     })
     let end = [
       this.props.currentTrip.endWaypoint.longitude,
       this.props.currentTrip.endWaypoint.latitude
     ]
-    
-    let url = 'https://api.mapbox.com/directions/v5/mapbox/driving/' + start[0] + ','  + start[1] + ';' + midCoords + end[0] + ',' + end[1] + '?steps=true&geometries=geojson&access_token=' + mapboxgl.accessToken
+
+    let url = 'https://api.mapbox.com/directions/v5/mapbox/driving/' + start[0] + ',' + start[1] + ';' + midCoords + end[0] + ',' + end[1] + '?steps=true&geometries=geojson&access_token=' + mapboxgl.accessToken
     request.get(url)
       .then(res => {
         console.log(res.body.routes)
@@ -59,9 +59,77 @@ class Mapbox extends React.Component {
       profile: 'mapbox/driving'
     })
 
+    map.on('click', 'points', function (e) {
+      // There's a few different ways data is layed out in the json because of differing sources.
+      const dataStructureType1 = {
+        name: e.features[0].properties.Name
+      }
+      const dataStructureType2 = {
+        name: e.features[0].properties.TOILET_NAME,
+        description: e.features[0].properties.DESCRIPTION,
+        openTimes: e.features[0].properties.USE_RESTRICTIONS,
+      }
+      const dataStructureType3 = {
+        description: "<strong>Toilets :)</strong> <p>No extra information :(</p>"
+      }
+
+      const coordinates = e.features[0].geometry.coordinates.slice();
+      let description = setToiletDescription(dataStructureType1, dataStructureType2, dataStructureType3)
+
+      function setToiletDescription(descOne, descTwo, descThree) {
+        if (descOne.name != undefined) {
+          return `<strong>${descOne.name}</strong>`
+        }
+        else if (descOne.name == undefined && descTwo.description != "null" && descTwo.description != undefined && descTwo.openTimes != "null" && descTwo.openTimes != undefined) {
+          return (
+            `<strong>${capitalize(descTwo.name)}</strong>
+            <p>${descTwo.description}</p>
+            <p>Open: ${descTwo.openTimes}</p>`
+          )
+        }
+        else if (descOne.name == undefined && descTwo.description == "null" || descTwo.openTimes == "null") {
+          return (
+            `<strong>${capitalize(descTwo.name)}</strong>
+            <strong>Toilets</strong>
+            <p>No extra information :(</p>`
+          )
+        }
+        else {
+          return descThree.description
+        }
+      }
+
+      function capitalize(sentence) {
+        let arrayOfStrings = sentence.split(" ")
+        if (arrayOfStrings.indexOf("") != -1) { // in case there's only one word (Longburn was being deleted >:c ) .length might've been useful)
+          arrayOfStrings.splice(arrayOfStrings.indexOf(""), 1) // in case there's an extra space in a sentance ie "yo  dog."
+        }
+        let capitalizedArray = arrayOfStrings.map(string => {
+          const wordBody = string.substr(1)
+          return (string[0].toUpperCase() + wordBody.toLowerCase())
+        })
+        let capitalizedStr = capitalizedArray.join(' ')
+        return (capitalizedStr)
+      }
+
+      // Ensure that if the map is zoomed out such that multiple
+      // copies of the feature are visible, the popup appears
+      // over the copy being pointed to.
+      /*
+      while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+          coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+      }
+      */
+
+      new mapboxgl.Popup()
+        .setLngLat(coordinates)
+        .setHTML(description)
+        .addTo(map);
+    })
+
     console.log("directions", directions)
     console.log("directions.onClick", directions.onClick)
-    // directions.onClick = null
+    directions.onClick = null
     map.addControl(directions, 'top-left')
 
     map.on('load', () => {
@@ -73,10 +141,10 @@ class Mapbox extends React.Component {
 
       this.props.currentTrip.inbetweenWaypoints.map((element, i) => {
         directions.addWaypoint(i + 1, [
-            element.longitude,
-            element.latitude,
+          element.longitude,
+          element.latitude,
         ])
-    })
+      })
 
 
       directions.setDestination([
@@ -114,74 +182,6 @@ class Mapbox extends React.Component {
           })
         }
       )
-
-      map.on('click', 'points', function (e) {
-        // There's a few different ways data is layed out in the json because of differing sources.
-        const dataStructureType1 = {
-          name: e.features[0].properties.Name
-        }
-        const dataStructureType2 = {
-          name: e.features[0].properties.TOILET_NAME,
-          description: e.features[0].properties.DESCRIPTION,
-          openTimes: e.features[0].properties.USE_RESTRICTIONS,
-        }
-        const dataStructureType3 = {
-          description: "<strong>Toilets :)</strong> <p>No extra information :(</p>"
-        }
-
-        const coordinates = e.features[0].geometry.coordinates.slice();
-        let description = setToiletDescription(dataStructureType1, dataStructureType2, dataStructureType3)
-
-        function setToiletDescription(descOne, descTwo, descThree) {
-          if (descOne.name != undefined) {
-            return `<strong>${descOne.name}</strong>`
-          }
-          else if (descOne.name == undefined && descTwo.description != "null" && descTwo.description != undefined && descTwo.openTimes != "null" && descTwo.openTimes != undefined) {
-            return (
-              `<strong>${capitalize(descTwo.name)}</strong>
-              <p>${descTwo.description}</p>
-              <p>Open: ${descTwo.openTimes}</p>`
-            )
-          }
-          else if (descOne.name == undefined && descTwo.description == "null" || descTwo.openTimes == "null") {
-            return (
-              `<strong>${capitalize(descTwo.name)}</strong>
-              <strong>Toilets</strong>
-              <p>No extra information :(</p>`
-            )
-          }
-          else {
-            return descThree.description
-          }
-        }
-
-        function capitalize(sentence) {
-          let arrayOfStrings = sentence.split(" ")
-          if (arrayOfStrings.indexOf("") != -1){ // in case there's only one word (Longburn was being deleted >:c ) .length might've been useful)
-            arrayOfStrings.splice(arrayOfStrings.indexOf(""), 1) // in case there's an extra space in a sentance ie "yo  dog."
-          }
-          let capitalizedArray = arrayOfStrings.map(string => {
-            const wordBody = string.substr(1)
-            return (string[0].toUpperCase() + wordBody.toLowerCase())
-          })
-          let capitalizedStr = capitalizedArray.join(' ')
-          return (capitalizedStr)
-        }
-
-        // Ensure that if the map is zoomed out such that multiple
-        // copies of the feature are visible, the popup appears
-        // over the copy being pointed to.
-        /*
-        while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-            coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-        }
-        */
-
-        new mapboxgl.Popup()
-          .setLngLat(coordinates)
-          .setHTML(description)
-          .addTo(map);
-      });
     })
   }
 
