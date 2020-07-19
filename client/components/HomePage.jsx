@@ -158,7 +158,7 @@ class HomePage extends React.Component {
 }
 const mapStateToProps = ({ currentTrip }) => {
   return {
-    currentTrip
+    currentTrip,
   }
 }
 
