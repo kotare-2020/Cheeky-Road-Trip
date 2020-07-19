@@ -155,17 +155,19 @@ class HomePage extends React.Component {
           <div className='landing-page-content-div'>
             <h1 className='landing-page-title'>Cheeky Road Trip</h1>
             <h3 className='landing-page-subtitle' >Tell us where you're going!</h3>
-            <form onSubmit={this.handleSubmit}>
+            <form className='waypoints-form' onSubmit={this.handleSubmit}>
 
               <label id="display-block">
                 Trip Name:
-                <input onChange={this.handleChange} type="text" name="tripName" />
+                <input class="input is-rounded is-small" onChange={this.handleChange} type="text" name="tripName" />
               </label>
 
-              <label id="display-block">
+              <label className="landing-form-elements" id="display-block">
                 Start-Point:
-                <input onChange={this.handleChange} type="text" name="startPoint" />
-                <button onClick={this.searchStart}>Search</button>
+
+                <input class="input is-rounded is-small" onChange={this.handleChange} type="text" name="startPoint" />
+
+                <button class="button is-rounded is-small" onClick={this.searchStart}>Search</button>
                 {this.state.showStartOptions ? <AddressConfirm type="START" hideOptions={this.hideAddressOptions} /> : ''}
               </label>
 
@@ -177,12 +179,12 @@ class HomePage extends React.Component {
 
               <label id="display-block">
                 Destination:
-                <input onChange={this.handleChange} type="text" name="destination" />
-                <button onClick={this.searchDestination}>Search</button>
+                <input class="input is-rounded is-small" onChange={this.handleChange} type="text" name="destination" />
+                <button class="button is-rounded is-small " onClick={this.searchDestination}>Search</button>
                 {this.state.showDestOptions ? <AddressConfirm type="END" hideOptions={this.hideAddressOptions} /> : ''}
               </label>
 
-              <input id="display-block" type="submit" value="Let's go!" />
+              <input class="button is-rounded is-small" id="display-block" type="submit" value="Let's go!" />
             </form>
           </div>
         </div>
