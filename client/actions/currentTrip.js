@@ -1,29 +1,21 @@
-export const ADD_NEW_TRIP = "ADD_NEW_TRIP"
-export const ADD_WAYPOINTS = "ADD_WAYPOINTS"
-export const SHOW_MAP = "SHOW_MAP"
+export const ADD_TRIP = "ADD_TRIP"
+export const ADD_INSTRUCTIONS = "ADD_INSTRUCTIONS"
+
 
 
 export function addNewTrip(tripData) {
-    return {
-        type: ADD_NEW_TRIP,
-        tripName: tripData.tripName,
-        startPoint: tripData.startPoint,
-        endPoint: tripData.endPoint,
-    }
-}
-
-export function setWaypoints(withObject) {
   return {
-      type: ADD_WAYPOINTS,
-      startWaypoint: withObject.startWaypoint,
-      inbetweenWaypoints: withObject.inbetweenWaypoints,
-      endWaypoint: withObject.endWaypoint
+      type: ADD_TRIP,
+      tripName: tripData.tripName,
+      startWaypoint: tripData.startWaypoint,
+      inbetweenWaypoints: tripData.inbetweenWaypoints,
+      endWaypoint: tripData.endWaypoint
   }
 }
 
-export function haveWaypoints(boolean) {
+export function addTripInstructions(instructions) {
     return {
-        type: SHOW_MAP,
-        haveWaypoints: boolean
+        type: ADD_INSTRUCTIONS,
+        instructions: instructions,
     }
 }
