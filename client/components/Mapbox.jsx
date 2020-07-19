@@ -20,11 +20,17 @@ class Mapbox extends React.Component {
       this.props.currentTrip.waypoints.startWaypoint.longitude,
       this.props.currentTrip.waypoints.startWaypoint.latitude
     ]
+    let midCoords = ''
+    this.props.currentTrip.waypoints.inbetweenWaypoints.map((element) => {
+        let newString = `${element.longitude},` + `${element.latitude};`
+        midCoords = midCoords + newString
+    })
     let end = [
       this.props.currentTrip.waypoints.endWaypoint.longitude,
       this.props.currentTrip.waypoints.endWaypoint.latitude
     ]
-    let url = 'https://api.mapbox.com/directions/v5/mapbox/driving/' + start[0] + ',' + start[1] + ';' + end[0] + ',' + end[1] + '?steps=true&geometries=geojson&access_token=' + mapboxgl.accessToken
+    
+    let url = 'https://api.mapbox.com/directions/v5/mapbox/driving/' + start[0] + ','  + start[1] + ';' + midCoords + end[0] + ',' + end[1] + '?steps=true&geometries=geojson&access_token=' + mapboxgl.accessToken
     request.get(url)
       .then(res => console.log(res.body))
 
