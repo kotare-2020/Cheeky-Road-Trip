@@ -105,24 +105,26 @@ class Mapbox extends React.Component {
           openTimes: e.features[0].properties.USE_RESTRICTIONS,
         }
         const objectType3 = {
-          description: "<strong>Toilets:</strong><p>No extra information :(</p>"
+          description: "<strong>Toilets :)</strong> <p>No extra information :(</p>"
         }
 
-        let coordinates = e.features[0].geometry.coordinates.slice();
-        let description = `<strong>${objectType1.name}</strong>`
+        const coordinates = e.features[0].geometry.coordinates.slice();
+        let description = ""
 
-        if (description == `<strong>${undefined}</strong>` && objectType2.description != "null" && objectType2.description != undefined || objectType2.openTimes != "null" && objectType2.openTimes != undefined ){
+        // set descritpion for marker
+        if ( objectType1.name != undefined ){
+          description = `<strong>${objectType1.name}</strong>`
+        }
+        else if ( objectType1.name == undefined && objectType2.description != "null" && objectType2.description != undefined || objectType2.openTimes != "null" && objectType2.openTimes != undefined ){
           description = `<strong>${objectType2.name}</strong> <p>${objectType2.description}</p> <p>Open: ${objectType2.openTimes}</p>`
         }
         else if (description == `<strong>${undefined}</strong>` && objectType2.description == "null" || objectType2.openTimes == "null" ){
-          description = `<strong>${objectType2.name}</strong> <p>Toilets</p> <p>No extra information :(</p>`
+          description = `<strong>${objectType2.name}</strong> <strong>Toilets</strong> <p>No extra information :(</p>`
         }
         else {
           description = objectType3.description
         }
 
-        console.log("target", e.features[0])
-        console.log("description", description)
         // Ensure that if the map is zoomed out such that multiple
         // copies of the feature are visible, the popup appears
         // over the copy being pointed to.
