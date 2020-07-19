@@ -4,6 +4,13 @@ import request from 'superagent'
 import { setWaypoints } from '../actions/currentTrip'
 
 
+//Component Imports
+import AddressConfirm from './AddressConfirm'
+
+// Actions imports
+import {searchAddress} from '../actions/waypointConfirmation'
+
+
 class HomePage extends React.Component {
 
   state = {
@@ -15,6 +22,8 @@ class HomePage extends React.Component {
     startWaypoint: {},
     inbetweenWaypoints: [],
     endWaypoint: {},
+
+    showStartOptions:false
   }
 
   handleChange = (event) => {
@@ -34,7 +43,7 @@ class HomePage extends React.Component {
     this.props.showHome(false)
   }
 
-  // make handleClick refactor
+
 
 
   // confirmWaypoint = (event) => {
@@ -46,25 +55,39 @@ class HomePage extends React.Component {
   // }
 
   searchStart = (event) => {
+    
     event.preventDefault()
+ 
     request.get("http://api.positionstack.com/v1/forward", {
       'access_key': process.env.POSITION_STACK_API_KEY,
       "country": "NZ",
       '& query': this.state.startPoint,
     }).then(res => {
-      if (confirm(`Is ${res.body.data[0].label} the correct starting point?`)) {
-        this.setState({
-            startWaypoint: {
-              buildingName: res.body.data[0].name,
-              label: res.body.data[0].label,
-              latitude: res.body.data[0].latitude,
-              longitude: res.body.data[0].longitude,
-              streetName: res.body.data[0].street,
-            }
-        })
-      }
+      console.log('postion stack api response ---->', res.body.data)
+      this.props.dispatch(searchAddress(res.body.data))
+    }).then ( res => {
+console.log ('bazinga')
+this.setState({
+  showStartOptions: !this.state.showStartOptions
+})
     })
+
   }
+
+
+
+// old search start function
+  // if (confirm(`Is ${res.body.data[0].label} the correct starting point?`)) {
+  //   this.setState({
+  //       startWaypoint: {
+  //         buildingName: res.body.data[0].name,
+  //         label: res.body.data[0].label,
+  //         latitude: res.body.data[0].latitude,
+  //         longitude: res.body.data[0].longitude,
+  //         streetName: res.body.data[0].street,
+  //       }
+  //   })
+  // }
 
   searchStop = (event) => {
     event.preventDefault()
@@ -115,7 +138,7 @@ class HomePage extends React.Component {
       <>
         <div className="background-div" >
           <div className='landing-page-content-div'>
-            <h1 className='landing-page-title'>Cheeky Road Trip </h1>
+            <h1 className='landing-page-title'>Cheeky Road Trip</h1>
             <h3 className='landing-page-subtitle' >Tell us where you're going!</h3>
             <form onSubmit={this.handleSubmit}>
 
@@ -128,15 +151,16 @@ class HomePage extends React.Component {
                 Start-Point:
                 <input onChange={this.handleChange} type="text" name="startPoint" />
                 <button onClick={this.searchStart}>Search</button>
-                <button onClick={this.confirmWaypoint}>Confirm</button>
+                {this.state.showStartOptions ? <AddressConfirm/> : ''}
+                
+
               </label>
 
-              <label id="display-block">
+              {/* <label id="display-block">
                 Stop-Over:
                 <input onChange={this.handleChange} type="text" name="stopOver" />
                 <button onClick={this.searchStop}>Search</button>
-                <button>Confirm</button>
-              </label>
+              </label> */}
 
 
 
@@ -144,7 +168,6 @@ class HomePage extends React.Component {
                 Destination:
                 <input onChange={this.handleChange} type="text" name="destination" />
                 <button onClick={this.searchDestination}>Search</button>
-                <button>Confirm</button>
               </label>
 
               <input id="display-block" type="submit" value="Let's go!" />
@@ -156,9 +179,9 @@ class HomePage extends React.Component {
     )
   }
 }
-const mapStateToProps = ({ currentTrip }) => {
+const mapStateToProps = ({ waypointConfirmation }) => {
   return {
-    currentTrip
+    waypointConfirmation
   }
 }
 
