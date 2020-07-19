@@ -8,7 +8,7 @@ import { addNewTrip } from '../actions/currentTrip'
 import AddressConfirm from './AddressConfirm'
 
 // Actions imports
-import {searchAddress} from '../actions/waypointConfirmation'
+import { searchAddress } from '../actions/waypointConfirmation'
 
 
 class HomePage extends React.Component {
@@ -18,16 +18,36 @@ class HomePage extends React.Component {
     startPoint: '',
     stopOver: '',
     destination: '',
-    startWaypoint: {},
+    startWaypoint: {
+      // default test values
+      latitude: -36.8191,
+      longitude: 174.7248
+    },
     inbetweenWaypoints: [],
-    endWaypoint: {},
+    endWaypoint: {
+      // default test values
+      latitude: -38.3723,
+      longitude: 177.5581
+    },
+    showStartOptions: false,
+    showDestOptions: false,
+    showMidOptions: false
 
-    showStartOptions:false
   }
+
+
+
+
 
   handleChange = (event) => {
     this.setState({
       [event.target.name]: event.target.value
+    })
+  }
+
+  hideAddressOptions = () => {
+    this.setState({
+      showStartOptions: false
     })
   }
 
@@ -48,16 +68,16 @@ class HomePage extends React.Component {
 
   // confirmWaypoint = (event) => {
   //   event.preventDefault()
-      // eventually we want to make an array show and a user select the correct address. For now, only one address shows and thwey can confirm whether the first address from the API response is the correct one.
-      // confirm button is for when we'll:
-        // confirm selected address from the list we get from API response
-        // set response data to waypointDispatch object.
+  // eventually we want to make an array show and a user select the correct address. For now, only one address shows and thwey can confirm whether the first address from the API response is the correct one.
+  // confirm button is for when we'll:
+  // confirm selected address from the list we get from API response
+  // set response data to waypointDispatch object.
   // }
 
   searchStart = (event) => {
-    
+
     event.preventDefault()
- 
+
     request.get("http://api.positionstack.com/v1/forward", {
       'access_key': process.env.POSITION_STACK_API_KEY,
       "country": "NZ",
@@ -65,28 +85,14 @@ class HomePage extends React.Component {
     }).then(res => {
       console.log('postion stack api response ---->', res.body.data)
       this.props.dispatch(searchAddress(res.body.data))
-    }).then ( res => {
-this.setState({
-  showStartOptions: !this.state.showStartOptions
-})
+    }).then(res => {
+      this.setState({
+        showStartOptions: !this.state.showStartOptions
+      })
     })
 
   }
 
-
-
-// old search start function
-  // if (confirm(`Is ${res.body.data[0].label} the correct starting point?`)) {
-  //   this.setState({
-  //       startWaypoint: {
-  //         buildingName: res.body.data[0].name,
-  //         label: res.body.data[0].label,
-  //         latitude: res.body.data[0].latitude,
-  //         longitude: res.body.data[0].longitude,
-  //         streetName: res.body.data[0].street,
-  //       }
-  //   })
-  // }
 
   searchStop = (event) => {
     event.preventDefault()
@@ -112,25 +118,35 @@ this.setState({
   }
 
   searchDestination = (event) => {
+
     event.preventDefault()
+
     request.get("http://api.positionstack.com/v1/forward", {
       'access_key': process.env.POSITION_STACK_API_KEY,
       "country": "NZ",
       '& query': this.state.destination,
     }).then(res => {
-      if (confirm(`Is ${res.body.data[0].label} the correct destination?`)) {
-        this.setState({
-            endWaypoint: {
-              buildingName: res.body.data[0].name,
-              label: res.body.data[0].label,
-              latitude: res.body.data[0].latitude,
-              longitude: res.body.data[0].longitude,
-              streetName: res.body.data[0].street,
-            }
-        })
-      }
+      this.props.dispatch(searchAddress(res.body.data))
+    }).then(res => {
+      this.setState({
+        showDestOptions: !this.state.showDestOptions
+      })
     })
+
   }
+
+
+  // if (confirm(`Is ${res.body.data[0].label} the correct destination?`)) {
+  //   this.setState({
+  //     endWaypoint: {
+  //       buildingName: res.body.data[0].name,
+  //       label: res.body.data[0].label,
+  //       latitude: res.body.data[0].latitude,
+  //       longitude: res.body.data[0].longitude,
+  //       streetName: res.body.data[0].street,
+  //     }
+  //   })
+  // }
 
   render() {
     return (
@@ -150,9 +166,7 @@ this.setState({
                 Start-Point:
                 <input onChange={this.handleChange} type="text" name="startPoint" />
                 <button onClick={this.searchStart}>Search</button>
-                {this.state.showStartOptions ? <AddressConfirm type="START" /> : ''}
-                
-
+                {this.state.showStartOptions ? <AddressConfirm type="START" hideOptions={this.hideAddressOptions} /> : ''}
               </label>
 
               {/* <label id="display-block">
@@ -161,12 +175,11 @@ this.setState({
                 <button onClick={this.searchStop}>Search</button>
               </label> */}
 
-
-
               <label id="display-block">
                 Destination:
                 <input onChange={this.handleChange} type="text" name="destination" />
                 <button onClick={this.searchDestination}>Search</button>
+                {this.state.showDestOptions ? <AddressConfirm type="END" hideOptions={this.hideAddressOptions} /> : ''}
               </label>
 
               <input id="display-block" type="submit" value="Let's go!" />

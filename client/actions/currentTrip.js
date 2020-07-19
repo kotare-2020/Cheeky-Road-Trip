@@ -1,6 +1,6 @@
 export const ADD_TRIP = "ADD_TRIP"
 export const ADD_INSTRUCTIONS = "ADD_INSTRUCTIONS"
-export const CONFIRM_WAYPOINT = "CONFIRM_WAYPOINT"
+export const CONFIRM_ADDRESS = "CONFIRM_ADDRESS"
 
 
 
@@ -23,7 +23,7 @@ export function addTripInstructions(instructions) {
 
 export function confirmAddress (addressInfo) {
     return {
-        type: CONFIRM_WAYPOINT,
+        type: CONFIRM_ADDRESS,
         addressInfo: addressInfo
     }
 }

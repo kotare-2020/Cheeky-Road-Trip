@@ -1,21 +1,26 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
+import {confirmAddress} from '../actions/currentTrip'
+
 class AddressConfirm extends React.Component {
 
     addressOptions = this.props.waypointConfirmation.waypointsArray
 
     handleSelect = (addressInfo) => {
-        console.log('checkbox function', addressInfo)
-                //   startWaypoint: {
-                //     buildingName: res.body.data[0].name,
-                //     label: res.body.data[0].label,
-                //     latitude: res.body.data[0].latitude,
-                //     longitude: res.body.data[0].longitude,
-                //     streetName: res.body.data[0].street,
-                //   }
+        console.log('checkbox function', addressInfo)       
+        
+        let startWaypoint =  {
+                    buildingName: addressInfo.name,
+                    label: addressInfo.label,
+                    latitude: addressInfo.latitude,
+                    longitude: addressInfo.longitude,
+                    streetName: addressInfo.street,
+                  }
+                //   this.props.dispatch(confirmAddress(startWaypoint))
 
-
+                console.log('ur new thing' , this.props)
+                this.props.hideOptions()
     }
 
     render() {
@@ -48,9 +53,10 @@ class AddressConfirm extends React.Component {
 }
 
 
-const mapStateToProps = ({ waypointConfirmation }) => {
+const mapStateToProps = ({ waypointConfirmation, currentTrip }) => {
     return {
-        waypointConfirmation
+        waypointConfirmation,
+        currentTrip
     }
 }
 
