@@ -27,7 +27,7 @@ const reducer = (state = initialState, action) => {
       }
       case CONFIRM_ADDRESS:
       return {...state,
-        startWaypoint: action.addressInfo,
+        [action.waypointName]: action.addressInfo,
       }
     default:
       return state

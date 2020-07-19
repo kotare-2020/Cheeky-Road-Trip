@@ -1,30 +1,27 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import {confirmAddress} from '../actions/currentTrip'
+import { confirmAddress } from '../actions/currentTrip'
 
 class AddressConfirm extends React.Component {
 
     addressOptions = this.props.waypointConfirmation.waypointsArray
 
-    handleSelect = (addressInfo) => {
-        console.log('checkbox function', addressInfo)       
-        
-        let startWaypoint =  {
-                    buildingName: addressInfo.name,
-                    label: addressInfo.label,
-                    latitude: addressInfo.latitude,
-                    longitude: addressInfo.longitude,
-                    streetName: addressInfo.street,
-                  }
-                //   this.props.dispatch(confirmAddress(startWaypoint))
-
-                console.log('ur new thing' , this.props)
-                this.props.hideOptions()
+    handleSelect = (addressInfo , waypointName) => {
+        console.log(' data in addressConfirm - checkbox function', addressInfo, waypointName)
+        let Waypoint = {
+            buildingName: addressInfo.name,
+            label: addressInfo.label,
+            latitude: addressInfo.latitude,
+            longitude: addressInfo.longitude,
+            streetName: addressInfo.street,
+        }
+        this.props.dispatch(confirmAddress(Waypoint,waypointName))
+        this.props.hideOptions(waypointName)
     }
 
     render() {
-        console.log('address confrim component props ----> ', this.addressOptions)
+        console.log('address confrim component props ----> ', this.props)
         return (
             <div className="address-confirm-list" >
 
@@ -33,7 +30,7 @@ class AddressConfirm extends React.Component {
                         return (
 
                             <div className="address-confirm-item">
-                                <input onChange={() => this.handleSelect(addressInfo)} type="checkbox" name="vehicle1" ></input>
+                                <input onChange={() => this.handleSelect(addressInfo, this.props.waypointName)} type="checkbox" name="confirmAddress" ></input>
                                 <p>{addressInfo.label}</p>
                                 <p>{addressInfo.region}</p>
                             </div>

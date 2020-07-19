@@ -29,12 +29,9 @@ class HomePage extends React.Component {
       latitude: -38.3723,
       longitude: 177.5581
     },
-    showStartOptions: false,
-    showDestOptions: false,
-    showMidOptions: false
-
+    START: false,
+    END: false,
   }
-
 
 
 
@@ -45,9 +42,10 @@ class HomePage extends React.Component {
     })
   }
 
-  hideAddressOptions = () => {
+  hideAddressOptions = (waypointName) => {
+    console.log('new new ', waypointName)
     this.setState({
-      showStartOptions: false
+      [waypointName]: false
     })
   }
 
@@ -64,18 +62,7 @@ class HomePage extends React.Component {
   }
 
 
-
-
-  // confirmWaypoint = (event) => {
-  //   event.preventDefault()
-  // eventually we want to make an array show and a user select the correct address. For now, only one address shows and thwey can confirm whether the first address from the API response is the correct one.
-  // confirm button is for when we'll:
-  // confirm selected address from the list we get from API response
-  // set response data to waypointDispatch object.
-  // }
-
   searchStart = (event) => {
-
     event.preventDefault()
 
     request.get("http://api.positionstack.com/v1/forward", {
@@ -83,42 +70,16 @@ class HomePage extends React.Component {
       "country": "NZ",
       '& query': this.state.startPoint,
     }).then(res => {
-      console.log('postion stack api response ---->', res.body.data)
       this.props.dispatch(searchAddress(res.body.data))
     }).then(res => {
       this.setState({
-        showStartOptions: !this.state.showStartOptions
+        START: !this.state.START
       })
     })
 
   }
 
-
-  searchStop = (event) => {
-    event.preventDefault()
-    request.get("http://api.positionstack.com/v1/forward", {
-      'access_key': process.env.POSITION_STACK_API_KEY,
-      "country": "NZ",
-      '& query': this.state.stopOver,
-    }).then(res => {
-      if (confirm(`Is ${res.body.data[0].label} the correct destination?`)) {
-        const newArray = this.state.inbetweenWaypoints
-        newArray.push({
-          buildingName: res.body.data[0].name,
-          label: res.body.data[0].label,
-          latitude: res.body.data[0].latitude,
-          longitude: res.body.data[0].longitude,
-          streetName: res.body.data[0].street,
-        })
-        this.setState({
-          inbetweenWaypoints: newArray,
-        })
-      }
-    })
-  }
-
   searchDestination = (event) => {
-
     event.preventDefault()
 
     request.get("http://api.positionstack.com/v1/forward", {
@@ -129,24 +90,37 @@ class HomePage extends React.Component {
       this.props.dispatch(searchAddress(res.body.data))
     }).then(res => {
       this.setState({
-        showDestOptions: !this.state.showDestOptions
+        END: !this.state.END
       })
     })
 
   }
 
-
-  // if (confirm(`Is ${res.body.data[0].label} the correct destination?`)) {
-  //   this.setState({
-  //     endWaypoint: {
-  //       buildingName: res.body.data[0].name,
-  //       label: res.body.data[0].label,
-  //       latitude: res.body.data[0].latitude,
-  //       longitude: res.body.data[0].longitude,
-  //       streetName: res.body.data[0].street,
+// ADD STOP OVER TO ROUTE!!!!
+  // searchStop = (event) => {
+  //   event.preventDefault()
+  //   request.get("http://api.positionstack.com/v1/forward", {
+  //     'access_key': process.env.POSITION_STACK_API_KEY,
+  //     "country": "NZ",
+  //     '& query': this.state.stopOver,
+  //   }).then(res => {
+  //     if (confirm(`Is ${res.body.data[0].label} the correct destination?`)) {
+  //       const newArray = this.state.inbetweenWaypoints
+  //       newArray.push({
+  //         buildingName: res.body.data[0].name,
+  //         label: res.body.data[0].label,
+  //         latitude: res.body.data[0].latitude,
+  //         longitude: res.body.data[0].longitude,
+  //         streetName: res.body.data[0].street,
+  //       })
+  //       this.setState({
+  //         inbetweenWaypoints: newArray,
+  //       })
   //     }
   //   })
   // }
+
+
 
   render() {
     return (
@@ -157,18 +131,18 @@ class HomePage extends React.Component {
             <h3 className='landing-page-subtitle' >Tell us where you're going!</h3>
             <form className='waypoints-form' onSubmit={this.handleSubmit}>
 
+{/* Start / Destination Form */}
+
               <label id="display-block">
                 Trip Name:
-                <input class="input is-rounded is-small" onChange={this.handleChange} type="text" name="tripName" />
+                <input className="input is-rounded is-small" onChange={this.handleChange} type="text" name="tripName" />
               </label>
 
               <label className="landing-form-elements" id="display-block">
                 Start-Point:
-
-                <input class="input is-rounded is-small" onChange={this.handleChange} type="text" name="startPoint" />
-
-                <button class="button is-rounded is-small" onClick={this.searchStart}>Search</button>
-                {this.state.showStartOptions ? <AddressConfirm type="START" hideOptions={this.hideAddressOptions} /> : ''}
+                <input className="input is-rounded is-small" onChange={this.handleChange} type="text" name="startPoint" />
+                <button className="button is-rounded is-small" onClick={this.searchStart}>Search</button>
+                {this.state.START ? <AddressConfirm waypointName="START" hideOptions={this.hideAddressOptions} /> : ''}
               </label>
 
               {/* <label id="display-block">
@@ -179,12 +153,15 @@ class HomePage extends React.Component {
 
               <label id="display-block">
                 Destination:
-                <input class="input is-rounded is-small" onChange={this.handleChange} type="text" name="destination" />
-                <button class="button is-rounded is-small " onClick={this.searchDestination}>Search</button>
-                {this.state.showDestOptions ? <AddressConfirm type="END" hideOptions={this.hideAddressOptions} /> : ''}
+                <input className="input is-rounded is-small" onChange={this.handleChange} type="text" name="destination" />
+                <button className="button is-rounded is-small " onClick={this.searchDestination}>Search</button>
+                {this.state.END ? <AddressConfirm waypointName="END" hideOptions={this.hideAddressOptions} /> : ''}
               </label>
 
-              <input class="button is-rounded is-small" id="display-block" type="submit" value="Let's go!" />
+              <input className="button is-rounded is-small" id="display-block" type="submit" value="Let's go!" />
+
+{/* Start / Destination Form */}
+
             </form>
           </div>
         </div>

@@ -21,9 +21,10 @@ export function addTripInstructions(instructions) {
     }
 }
 
-export function confirmAddress (addressInfo) {
+export function confirmAddress (addressInfo, waypointName) {
     return {
         type: CONFIRM_ADDRESS,
-        addressInfo: addressInfo
+        addressInfo: addressInfo,
+        waypointName: waypointName
     }
 }
