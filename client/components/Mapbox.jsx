@@ -59,14 +59,74 @@ class Mapbox extends React.Component {
       profile: 'mapbox/driving'
     })
 
-    // popup = () => {
-      map.on('click', function(e) {
-        console.log(e)
-      })
-    // }
+    map.on('click', 'points', function (e) {
+      // There's a few different ways data is layed out in the json because of differing sources.
+      const dataStructureType1 = {
+        name: e.features[0].properties.Name
+      }
+      const dataStructureType2 = {
+        name: e.features[0].properties.TOILET_NAME,
+        description: e.features[0].properties.DESCRIPTION,
+        openTimes: e.features[0].properties.USE_RESTRICTIONS,
+      }
+      const dataStructureType3 = {
+        description: "<strong>Toilets :)</strong> <p>No extra information :(</p>"
+      }
+
+      const coordinates = e.features[0].geometry.coordinates.slice();
+      let description = setToiletDescription(dataStructureType1, dataStructureType2, dataStructureType3)
+
+      function setToiletDescription(descOne, descTwo, descThree) {
+        if (descOne.name != undefined) {
+          return `<strong>${descOne.name}</strong>`
+        }
+        else if (descOne.name == undefined && descTwo.description != "null" && descTwo.description != undefined && descTwo.openTimes != "null" && descTwo.openTimes != undefined) {
+          return (
+            `<strong>${capitalize(descTwo.name)}</strong>
+            <p>${descTwo.description}</p>
+            <p>Open: ${descTwo.openTimes}</p>`
+          )
+        }
+        else if (descOne.name == undefined && descTwo.description == "null" || descTwo.openTimes == "null") {
+          return (
+            `<strong>${capitalize(descTwo.name)}</strong>
+            <strong>Toilets</strong>
+            <p>No extra information :(</p>`
+          )
+        }
+        else {
+          return descThree.description
+        }
+      }
+
+      function capitalize(sentence) {
+        let arrayOfStrings = sentence.split(" ")
+        if (arrayOfStrings.indexOf("") != -1){ // in case there's only one word (Longburn was being deleted >:c ) .length might've been useful)
+          arrayOfStrings.splice(arrayOfStrings.indexOf(""), 1) // in case there's an extra space in a sentance ie "yo  dog."
+        }
+        let capitalizedArray = arrayOfStrings.map(string => {
+          const wordBody = string.substr(1)
+          return (string[0].toUpperCase() + wordBody.toLowerCase())
+        })
+        let capitalizedStr = capitalizedArray.join(' ')
+        return (capitalizedStr)
+      }
+
+      // Ensure that if the map is zoomed out such that multiple
+      // copies of the feature are visible, the popup appears
+      // over the copy being pointed to.
+      /*
+      while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+          coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+      }
+      */
+      let popup = new mapboxgl.Popup({ closeOnClick: false })
+        .setLngLat(coordinates)
+        .setHTML(description)
+        .addTo(map)
+    })
 
     directions.onClick = null
-
     map.addControl(directions, 'top-left')
 
     map.on('load', () => {
@@ -120,6 +180,7 @@ class Mapbox extends React.Component {
       )
     })
   }
+
   render() {
     return (
       <div>
@@ -140,21 +201,3 @@ const mapStateToProps = ({ currentTrip }) => {
 
 export default connect(mapStateToProps)(Mapbox)
 
-
-
-// {
-//     'type': 'FeatureCollection',
-//     'features': [
-//           {
-//             "type": "Feature",
-//             "properties": {
-//               "OBJECTID": 15,
-//               "NAME": "VAUTIER PARK PAVILION PUBLIC TOILETS",
-//               "CLASS_DESCR": "GENERAL PUBLIC",
-//               "USE_RESTRICTIONS": "7am-6pm",
-//               "DESCRIPTION": "Public Toilets"
-//             },
-//             "geometry": {
-//               "type": "Point",
-//               "coordinates": [175.623499750117588, -40.335827727265396]
-//             }
