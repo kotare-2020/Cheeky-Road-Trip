@@ -22,7 +22,7 @@ class Mapbox extends React.Component {
       this.props.currentTrip.startWaypoint.latitude
     ]
     let midCoords = ''
-    this.props.currentTrip.waypoints.inbetweenWaypoints.map((element) => {
+    this.props.currentTrip.inbetweenWaypoints.map((element) => {
         let newString = `${element.longitude},` + `${element.latitude};`
         midCoords = midCoords + newString
     })
