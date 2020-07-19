@@ -123,5 +123,9 @@ height: 800px;
 
 .address-confirm-list {
     background-color: rgba(21, 21, 21, 0.7);
-    height: 200px;
+    height: auto;
+}
+
+.address-confirm-item {
+    margin-top: 4px;
 }
