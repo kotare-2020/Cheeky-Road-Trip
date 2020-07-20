@@ -1,18 +1,7 @@
-export const ADD_TRIP = "ADD_TRIP"
 export const ADD_INSTRUCTIONS = "ADD_INSTRUCTIONS"
 export const CONFIRM_ADDRESS = "CONFIRM_ADDRESS"
-
-
-
-export function addNewTrip(tripData) {
-  return {
-      type: ADD_TRIP,
-      tripName: tripData.tripName,
-      startWaypoint: tripData.startWaypoint,
-      inbetweenWaypoints: tripData.inbetweenWaypoints,
-      endWaypoint: tripData.endWaypoint
-  }
-}
+export const ADD_TRIP_NAME = "ADD_TRIP_NAME"
+export const ERASE_TRIP = "ERASE_TRIP"
 
 export function addTripInstructions(instructions) {
     return {
@@ -26,5 +15,18 @@ export function confirmAddress (addressInfo, waypointName) {
         type: CONFIRM_ADDRESS,
         addressInfo: addressInfo,
         waypointName: waypointName
+    }
+}
+
+export function addTripName (tripName) {
+    return {
+        type: ADD_TRIP_NAME,
+        tripName: tripName,
+    }
+}
+
+export function eraseTrip() {
+    return {
+        type: ERASE_TRIP
     }
 }
