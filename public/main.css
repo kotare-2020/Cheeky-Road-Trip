@@ -26,6 +26,7 @@ body {
 /* h1 - h6 default  */
 h1 {
     font-size: 24px;
+
 }
 
 h2 {
@@ -47,12 +48,20 @@ h3 {
 
 }
 
+#landing-page-title-container {
+    margin-bottom: 170px;
+    text-align: center;
+}
+
 .landing-page-title {
+    font-family: 'Quicksand', sans-serif;
     font-size: 74px;
     padding-bottom: 28px;
 }
 
 .landing-page-subtitle {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
     font-size: 29px;
     padding-bottom: 28px;
 }
@@ -61,6 +70,10 @@ h3 {
     display: flex;
     padding-bottom: 10px;
     align-items: center;
+}
+
+.lets-go-button {
+    margin-top: 10px;
 }
 
 .mapbox-directions-instructions-wrapper {
@@ -128,6 +141,10 @@ height: 800px;
     height: auto;
     width: auto;
     display: flex;
+    position: absolute;
+    padding: 26px;
+    z-index: 2;
+    top: 98px;
 }
 
 .address-confirm-item {
@@ -147,4 +164,8 @@ height: 800px;
 .directions-list {
     overflow:scroll;
     height: 250px;
+}
+
+#landingpage-form-container {
+    position: relative;
 }
