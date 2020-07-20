@@ -57,7 +57,7 @@ h3 {
     padding-bottom: 28px;
 }
 
-#display-block {
+.landing-page-form-boxes{
     display: flex;
     padding-bottom: 10px;
     align-items: center;
@@ -120,6 +120,29 @@ h3 {
 .column-right-dashboard {
 height: 800px;
 }
+
+.address-confirm-list {
+    font-size: 11px;
+    color: black;
+    background-color: whitesmoke;
+    height: auto;
+    width: auto;
+    display: flex;
+}
+
+.address-confirm-item {
+    margin-top: 4px;
+}
+
+.waypoints-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+}
+
+/* .landing-form-elements {
+} */
 
 .directions-list {
     overflow:scroll;

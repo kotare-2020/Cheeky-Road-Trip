@@ -1,37 +1,42 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
 import { connect } from 'react-redux'
-import mapboxgl from 'mapbox-gl';
+import mapboxgl from 'mapbox-gl'
 import MapboxDirections from '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions'
 import bathroomData from '../../data/bathroom_data2.json'
 import request from 'superagent'
 import { addTripInstructions } from '../actions/currentTrip'
+import { addNewTrip } from '../actions/currentTrip'
 
 mapboxgl.accessToken = process.env.MAPBOX_API_KEY
 
 class Mapbox extends React.Component {
   state = {
-    lng: this.props.currentTrip.startWaypoint.longitude,
-    lat: this.props.currentTrip.startWaypoint.latitude,
+    lng: this.props.currentTrip.START.longitude,
+    lat: this.props.currentTrip.START.latitude,
     zoom: 5.75
+  }
+
+  dostuff = () => {
+    console.log('hello')
   }
 
   componentDidMount() {
     let start = [
-      this.props.currentTrip.startWaypoint.longitude,
-      this.props.currentTrip.startWaypoint.latitude
+      this.props.currentTrip.START.longitude,
+      this.props.currentTrip.START.latitude
     ]
     let midCoords = ''
     this.props.currentTrip.inbetweenWaypoints.map((element) => {
-        let newString = `${element.longitude},` + `${element.latitude};`
-        midCoords = midCoords + newString
+      let newString = `${element.longitude},` + `${element.latitude};`
+      midCoords = midCoords + newString
     })
     let end = [
-      this.props.currentTrip.endWaypoint.longitude,
-      this.props.currentTrip.endWaypoint.latitude
+      this.props.currentTrip.END.longitude,
+      this.props.currentTrip.END.latitude
     ]
-    
-    let url = 'https://api.mapbox.com/directions/v5/mapbox/driving/' + start[0] + ','  + start[1] + ';' + midCoords + end[0] + ',' + end[1] + '?steps=true&geometries=geojson&access_token=' + mapboxgl.accessToken
+
+    let url = 'https://api.mapbox.com/directions/v5/mapbox/driving/' + start[0] + ',' + start[1] + ';' + midCoords + end[0] + ',' + end[1] + '?steps=true&geometries=geojson&access_token=' + mapboxgl.accessToken
     request.get(url)
       .then(res => {
         let instructionsArr = []
@@ -67,7 +72,7 @@ class Mapbox extends React.Component {
       profile: 'mapbox/driving'
     })
 
-    map.on('click', 'points', function (e) {
+    map.on('click', 'points', (e) => {
       // There's a few different ways data is layed out in the json because of differing sources.
       const dataStructureType1 = {
         name: e.features[0].properties.Name
@@ -81,18 +86,48 @@ class Mapbox extends React.Component {
         description: "<strong>Toilets :)</strong> <p>No extra information :(</p>"
       }
 
-      const coordinates = e.features[0].geometry.coordinates.slice();
-      let description = setToiletDescription(dataStructureType1, dataStructureType2, dataStructureType3)
+      const addToWaypointsNoArgs = () => {
+        const newArray = this.props.currentTrip.inbetweenWaypoints
+        newArray.push({
+          buildingName: capitalize(dataStructureType2.name),
+          label: "label",
+          latitude: coordinates[1],
+          longitude: coordinates[0],
+          streetName: "street",
+        })
+        const tripData = {
+          tripName: this.props.currentTrip.tripName,
+          startWaypoint: this.props.currentTrip.startWaypoint,
+          inbetweenWaypoints: newArray,
+          endWaypoint: this.props.currentTrip.endWaypoint,
+        }
+        this.props.dispatch(addNewTrip(tripData))
+      }
 
-      function setToiletDescription(descOne, descTwo, descThree) {
+      const coordinates = e.features[0].geometry.coordinates.slice()
+      let setToiletDescription = (descOne, descTwo, descThree) => {
         if (descOne.name != undefined) {
           return `<strong>${descOne.name}</strong>`
         }
         else if (descOne.name == undefined && descTwo.description != "null" && descTwo.description != undefined && descTwo.openTimes != "null" && descTwo.openTimes != undefined) {
+          
+          // window.dostuff = this.dostuff
+          // ^--- to make a function as global as possible.
+          // <button onClick='window.dostuff()'>hi</button>
+          // ^--- for below HTML
+
+          // window.addToWaypoints = this.addToWaypoints(coordinates, descTwo.name)
+          // ^--- can't use arguments?
+          window.addToWaypoints = addToWaypointsNoArgs
+          // ^--- defined above in current scope (map on click) to keep variables
+          // because we can't use arguments (I think).
+          
+          descTwo.name = capitalize(descTwo.name)
           return (
-            `<strong>${capitalize(descTwo.name)}</strong>
+            `<strong>${descTwo.name}</strong>
             <p>${descTwo.description}</p>
-            <p>Open: ${descTwo.openTimes}</p>`
+            <p>Open: ${descTwo.openTimes}</p>
+            <button onClick='window.addToWaypoints()'>Add stop to trip</button>`
           )
         }
         else if (descOne.name == undefined && descTwo.description == "null" || descTwo.openTimes == "null") {
@@ -106,10 +141,11 @@ class Mapbox extends React.Component {
           return descThree.description
         }
       }
+      let description = setToiletDescription(dataStructureType1, dataStructureType2, dataStructureType3)
 
       function capitalize(sentence) {
         let arrayOfStrings = sentence.split(" ")
-        if (arrayOfStrings.indexOf("") != -1){ // in case there's only one word (Longburn was being deleted >:c ) .length might've been useful)
+        if (arrayOfStrings.indexOf("") != -1) { // in case there's only one word (Longburn was being deleted >:c ) .length might've been useful)
           arrayOfStrings.splice(arrayOfStrings.indexOf(""), 1) // in case there's an extra space in a sentance ie "yo  dog."
         }
         let capitalizedArray = arrayOfStrings.map(string => {
@@ -125,45 +161,43 @@ class Mapbox extends React.Component {
       // over the copy being pointed to.
       /*
       while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-          coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+          coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360
       }
       */
-      let popup = new mapboxgl.Popup({ closeOnClick: false })
+
+      new mapboxgl.Popup()
         .setLngLat(coordinates)
         .setHTML(description)
         .addTo(map)
     })
 
-    directions.onClick = () => {
-      console.log('yippee')
-    }
-    
+    directions.onClick = () => {}
     map.addControl(directions, 'top-left')
 
     map.on('load', () => {
       directions.setOrigin([
-        this.props.currentTrip.startWaypoint.longitude,
-        this.props.currentTrip.startWaypoint.latitude,
+        this.props.currentTrip.START.longitude,
+        this.props.currentTrip.START.latitude,
       ])
 
       this.props.currentTrip.inbetweenWaypoints.map((element, i) => {
         directions.addWaypoint(i + 1, [
-            element.longitude,
-            element.latitude,
+          element.longitude,
+          element.latitude,
         ])
-    })
+      })
 
       directions.setDestination([
-        this.props.currentTrip.endWaypoint.longitude,
-        this.props.currentTrip.endWaypoint.latitude,
+        this.props.currentTrip.END.longitude,
+        this.props.currentTrip.END.latitude,
       ])
 
 
       map.loadImage(
         './images/toilet-icon.png',
         function (error, image) {
-          if (error) throw error;
-          map.addImage('custom-marker', image);
+          if (error) throw error
+          map.addImage('custom-marker', image)
           // Add a GeoJSON source with 2 points
           map.addSource('points', {
             'type': 'geojson',

@@ -4,6 +4,13 @@ import request from 'superagent'
 import { addNewTrip } from '../actions/currentTrip'
 
 
+//Component Imports
+import AddressConfirm from './AddressConfirm'
+
+// Actions imports
+import { searchAddress } from '../actions/waypointConfirmation'
+
+
 class HomePage extends React.Component {
 
   state = {
@@ -11,10 +18,23 @@ class HomePage extends React.Component {
     startPoint: '',
     stopOver: '',
     destination: '',
-    startWaypoint: {},
+    startWaypoint: {
+      // default test values
+      latitude: -36.8191,
+      longitude: 174.7248
+    },
     inbetweenWaypoints: [],
-    endWaypoint: {},
+    endWaypoint: {
+      // default test values
+      latitude: -38.3723,
+      longitude: 177.5581
+    },
+    START: false,
+    END: false,
   }
+
+
+
 
   handleChange = (event) => {
     this.setState({
@@ -22,28 +42,17 @@ class HomePage extends React.Component {
     })
   }
 
+  hideAddressOptions = (waypointName) => {
+    this.setState({
+      [waypointName]: false
+    })
+  }
+
   handleSubmit = (event) => {
     event.preventDefault()
-    const tripData = {
-      tripName: this.state.tripName,
-      startWaypoint: this.state.startWaypoint,
-      inbetweenWaypoints: this.state.inbetweenWaypoints,
-      endWaypoint: this.state.endWaypoint,
-    }
-    this.props.dispatch(addNewTrip(tripData))
     this.props.showHome(false)
   }
 
-  // make handleClick refactor
-
-
-  // confirmWaypoint = (event) => {
-  //   event.preventDefault()
-      // eventually we want to make an array show and a user select the correct address. For now, only one address shows and thwey can confirm whether the first address from the API response is the correct one.
-      // confirm button is for when we'll:
-        // confirm selected address from the list we get from API response
-        // set response data to waypointDispatch object.
-  // }
 
 // options = {
 //   enableHighAccuracy: true,
@@ -73,117 +82,112 @@ class HomePage extends React.Component {
       "country": "NZ",
       '& query': this.state.startPoint,
     }).then(res => {
-      // if (confirm(`Is ${res.body.data[0].label} the correct starting point?`)) {
-        this.setState({
-            startWaypoint: {
-              buildingName: res.body.data[0].name,
-              label: res.body.data[0].label,
-              latitude: res.body.data[0].latitude,
-              longitude: res.body.data[0].longitude,
-              streetName: res.body.data[0].street,
-            }
-        })
-      // } for the confirm function
-    })
-  }
-
-  searchStop = (event) => {
-    event.preventDefault()
-    request.get("http://api.positionstack.com/v1/forward", {
-      'access_key': process.env.POSITION_STACK_API_KEY,
-      "country": "NZ",
-      '& query': this.state.stopOver,
+      this.props.dispatch(searchAddress(res.body.data))
     }).then(res => {
-      // if (confirm(`Is ${res.body.data[0].label} the correct destination?`)) {
-        const newArray = this.state.inbetweenWaypoints
-        newArray.push({
-          buildingName: res.body.data[0].name,
-          label: res.body.data[0].label,
-          latitude: res.body.data[0].latitude,
-          longitude: res.body.data[0].longitude,
-          streetName: res.body.data[0].street,
-        })
-        this.setState({
-          inbetweenWaypoints: newArray,
-        })
-      // } for the confirm function
+      this.setState({
+        START: !this.state.START
+      })
     })
   }
 
-  searchDestination = (event) => {
-    event.preventDefault()
-    request.get("http://api.positionstack.com/v1/forward", {
-      'access_key': process.env.POSITION_STACK_API_KEY,
-      "country": "NZ",
-      '& query': this.state.destination,
-    }).then(res => {
-      // if (confirm(`Is ${res.body.data[0].label} the correct destination?`)) {
+    searchDestination = (event) => {
+      event.preventDefault()
+      request.get("http://api.positionstack.com/v1/forward", {
+        'access_key': process.env.POSITION_STACK_API_KEY,
+        "country": "NZ",
+        '& query': this.state.destination,
+      }).then(res => {
+        this.props.dispatch(searchAddress(res.body.data))
+      }).then(res => {
         this.setState({
-            endWaypoint: {
-              buildingName: res.body.data[0].name,
-              label: res.body.data[0].label,
-              latitude: res.body.data[0].latitude,
-              longitude: res.body.data[0].longitude,
-              streetName: res.body.data[0].street,
-            }
+          END: !this.state.END
         })
-      // } confirm function
-    })
-  }
+      })
+    }
 
-  render() {
-    return (
-      <>
-        <div className="background-div" >
-          <div className='landing-page-content-div'>
-            <h1 className='landing-page-title'>Cheeky Road Trip </h1>
-            <h3 className='landing-page-subtitle' >Tell us where you're going!</h3>
-            <form onSubmit={this.handleSubmit}>
 
-              <label id="display-block">
-                Trip Name:
-                <input onChange={this.handleChange} type="text" name="tripName" />
-              </label>
+    // ADD STOP OVER TO ROUTE!!!!
+    // searchStop = (event) => {
+    //   event.preventDefault()
+    //   request.get("http://api.positionstack.com/v1/forward", {
+    //     'access_key': process.env.POSITION_STACK_API_KEY,
+    //     "country": "NZ",
+    //     '& query': this.state.stopOver,
+    //   }).then(res => {
+    //     if (confirm(`Is ${res.body.data[0].label} the correct destination?`)) {
+    //       const newArray = this.state.inbetweenWaypoints
+    //       newArray.push({
+    //         buildingName: res.body.data[0].name,
+    //         label: res.body.data[0].label,
+    //         latitude: res.body.data[0].latitude,
+    //         longitude: res.body.data[0].longitude,
+    //         streetName: res.body.data[0].street,
+    //       })
+    //       this.setState({
+    //         inbetweenWaypoints: newArray,
+    //       })
+    //     }
+    //   })
+    // }
 
-              <label id="display-block">
-                Start-Point:
-                <input onChange={this.handleChange} type="text" name="startPoint" />
-                <button onClick={this.searchStart}>Search</button>
-                <button onClick={this.confirmWaypoint}>Confirm</button>
-              </label>
 
-              <label id="display-block">
+
+    render() {
+      return (
+        <>
+          <div className="background-div" >
+            <div className='landing-page-content-div'>
+              <h1 className='landing-page-title'>Cheeky Road Trip</h1>
+              <h3 className='landing-page-subtitle' >Tell us where you're going!</h3>
+              <form className='waypoints-form' onSubmit={this.handleSubmit}>
+
+                {/* Start / Destination Form */}
+
+                <label className="landing-page-form-boxes">
+                  Trip Name:
+                <input className="input is-rounded is-small" onChange={this.handleChange} type="text" name="tripName" />
+                </label>
+
+                <label className="landing-form-elements" >
+                  Start-Point:
+                <input className="input is-rounded is-small" onChange={this.handleChange} type="text" name="startPoint" />
+                  <button className="button is-rounded is-small" onClick={this.searchStart}>Search</button>
+                  {this.state.START ? <AddressConfirm waypointName="START" hideOptions={this.hideAddressOptions} /> : ''}
+                </label>
+
+                {/* <label className="address-confirm-list">
                 Stop-Over:
                 <input onChange={this.handleChange} type="text" name="stopOver" />
                 <button onClick={this.searchStop}>Search</button>
-                <button>Confirm</button>
-              </label>
+              </label> */}
 
+                <label className="landing-page-form-boxes">
+                  Destination:
+                <input className="input is-rounded is-small" onChange={this.handleChange} type="text" name="destination" />
+                  <button className="button is-rounded is-small " onClick={this.searchDestination}>Search</button>
+                  {this.state.END ? <AddressConfirm waypointName="END" hideOptions={this.hideAddressOptions} /> : ''}
+                </label>
 
+                <input className="button is-rounded is-small" className="landing-page-form-boxes" type="submit" value="Let's go!" />
 
-              <label id="display-block">
-                Destination:
-                <input onChange={this.handleChange} type="text" name="destination" />
-                <button onClick={this.searchDestination}>Search</button>
-                <button>Confirm</button>
-              </label>
+                {/* Start / Destination Form */}
 
-              <input id="display-block" type="submit" value="Let's go!" />
-            </form>
+              </form>
+            </div>
           </div>
-        </div>
-      </>
+        </>
 
-    )
+      )
+    }
   }
-}
-const mapStateToProps = ({ currentTrip }) => {
-  return {
-    currentTrip,
+  const mapStateToProps = ({ waypointConfirmation, currentTrip }) => {
+    return {
+      waypointConfirmation,
+      currentTrip
+    }
   }
-}
 
-export default connect(mapStateToProps)(HomePage)
+  export default connect(mapStateToProps)(HomePage)
 
 
 /*
