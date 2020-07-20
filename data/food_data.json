@@ -1,0 +1,28 @@
+{
+    "type": "FeatureCollection",
+    "name": "Public_Toilet_Location",
+    "crs": {
+        "type": "name",
+        "properties": {
+            "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+        }
+    },
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 39,
+                "TOILET_NAME": "VICTORIA ESPLANADE - MINIATURE RAILWAY",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": "7am-6pm",
+                "DESCRIPTION": "Public Toilets"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    174.7760,
+                    -41.2950
+                ]
+            }
+        }
+    ]}

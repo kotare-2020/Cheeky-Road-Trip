@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import mapboxgl from 'mapbox-gl'
 import MapboxDirections from '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions'
 import bathroomData from '../../data/bathroom_data.json'
+import food_data from '../../data/food_data.json'
 import request from 'superagent'
 import { confirmAddress, eraseTrip, addTripInstructions } from '../actions/currentTrip'
 
@@ -221,6 +222,40 @@ class Mapbox extends React.Component {
           })
         }
       )
+      
+      map.loadImage(
+        './images/food.png',
+        function (error, image) {
+          if (error) throw error
+          map.addImage('food-marker', image)
+          // Add a GeoJSON source with 2 points
+          map.addSource('points', {
+            'type': 'geojson',
+            'data': food_data
+          })
+
+          //Add a symbol layer
+          map.addLayer({
+            'id': 'points',
+            'type': 'symbol',
+            'source': 'points',
+            'layout': {
+              'icon-image': 'food-marker',
+              // get the title name from the source's "title" property ---V
+              // 'text-field': ['get', 'Name'],
+              // 'text-font': [
+              //   'Open Sans Semibold',
+              //   'Arial Unicode MS Bold'
+              // ],
+              'text-offset': [0, 1.25],
+              'text-anchor': 'top'
+            }
+          })
+        }
+      )
+
+
+
     })
   }
 
