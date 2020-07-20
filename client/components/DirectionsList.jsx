@@ -8,7 +8,7 @@ class DirectionsList extends React.Component {
         <h3>Directions</h3>
         <ol className="directions-list">
           {this.props.currentTrip.tripInstructions.map((element, i) => {
-            return <li>{i+1}. {element}</li>
+            return <li key={i}>{i+1}. {element}</li>
           })}
         </ol>
       </div>
