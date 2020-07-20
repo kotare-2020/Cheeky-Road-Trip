@@ -22,6 +22,7 @@
 body {
     color: black;
     background-color: antiquewhite;
+    font-family: 'Quicksand', sans-serif;
 }
 /* h1 - h6 default  */
 h1 {
@@ -36,6 +37,10 @@ font-size: 24px;
 h3 {
     font-size: 20px;
 
+}
+
+p {
+    font-size: 15px;
 }
 
 .landing-page-content-div {
@@ -62,7 +67,7 @@ h3 {
 .landing-page-subtitle {
     font-family: 'Quicksand', sans-serif;
     font-weight: 300;
-    font-size: 29px;
+    font-size: 35px;
     padding-bottom: 28px;
 }
 
@@ -138,13 +143,15 @@ height: 800px;
     font-size: 11px;
     color: black;
     background-color: whitesmoke;
-    height: auto;
     width: auto;
     display: flex;
     position: absolute;
     padding: 26px;
     z-index: 2;
-    top: 98px;
+    top: -6px;
+    right: -161px;
+    overflow: auto;
+    height: 150px;
 }
 
 .address-confirm-item {
