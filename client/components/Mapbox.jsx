@@ -79,6 +79,7 @@ class Mapbox extends React.Component {
       unit: 'metric',
       profile: 'mapbox/driving'
     })
+    console.log('dirs', directions)
 
     map.on('click', 'points', (e) => {
       // There's a few different ways data is layed out in the json because of differing sources.
@@ -170,7 +171,8 @@ class Mapbox extends React.Component {
         .addTo(map)
     })
 
-    directions.onClick = () => { }
+    directions.onClick = () => {}
+    directions.onDragDown = () => {} // Stops user from moving waypoints because they don't set GS currently.
     map.addControl(directions, 'top-left')
 
     map.on('load', () => {
