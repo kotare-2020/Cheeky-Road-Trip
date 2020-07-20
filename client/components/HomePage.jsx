@@ -45,6 +45,27 @@ class HomePage extends React.Component {
         // set response data to waypointDispatch object.
   // }
 
+// options = {
+//   enableHighAccuracy: true,
+//   timeout: 5000,
+//   maximumAge: 0
+// };
+
+// success = (pos) => {
+//   var crd = pos.coords;
+//   console.log('Your current position: ');
+//   console.log (`Latitude' : ${crd.latitude}`);
+//   console.log (`Longitude : ${crd.longitude}`);
+//   console.log(`More or less ${crd.accuracy} metres. `);
+// }
+
+// errorr = (err) => {
+//   console.warn(`ERROR(${err.code}): ${err.message}`);
+// }
+
+// navigator.geolocation.getCurrentPosition(success, error, options);
+
+
   searchStart = (event) => {
     event.preventDefault()
     request.get("http://api.positionstack.com/v1/forward", {
