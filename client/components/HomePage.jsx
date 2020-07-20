@@ -77,7 +77,7 @@ class HomePage extends React.Component {
 
   searchStart = (event) => {
     event.preventDefault()
-    request.get("https://api.positionstack.com/v1/forward", {
+    request.get("http://api.positionstack.com/v1/forward", {
       'access_key': process.env.POSITION_STACK_API_KEY,
       "country": "NZ",
       '& query': this.state.startPoint,
@@ -93,7 +93,7 @@ class HomePage extends React.Component {
     searchDestination = (event) => {
       event.preventDefault()
       console.log(process.env)
-      request.get("https://api.positionstack.com/v1/forward", {
+      request.get("http://api.positionstack.com/v1/forward", {
         'access_key': process.env.POSITION_STACK_API_KEY,
         "country": "NZ",
         '& query': this.state.destination,
@@ -169,8 +169,9 @@ class HomePage extends React.Component {
                   {this.state.END ? <AddressConfirm waypointName="END" hideOptions={this.hideAddressOptions} /> : ''}
                 </label>
 
+<div>
                 <input className="button is-rounded is-small" className="landing-page-form-boxes" type="submit" value="Let's go!" />
-
+                </div>
                 {/* Start / Destination Form */}
 
               </form>

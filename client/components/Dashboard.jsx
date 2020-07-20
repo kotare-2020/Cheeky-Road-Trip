@@ -12,7 +12,6 @@ class Dashboard extends React.Component {
     
     handleClick = () => {
         this.props.showHome(true)
-        console.log(process.env.POSITION_STACK_API_KEY)
     }
 
     render() {
