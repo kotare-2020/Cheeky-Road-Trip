@@ -18,10 +18,6 @@ class Mapbox extends React.Component {
     zoom: 5.75,
   }
 
-  dostuff = () => {
-    console.log('hello')
-  }
-
   componentDidMount() {
     this.renderMap()
   }
@@ -124,15 +120,8 @@ class Mapbox extends React.Component {
 
       const coordinates = e.features[0].geometry.coordinates.slice()
       const setToiletDescription = (descOne, descTwo, descThree) => {
-        // window.dostuff = this.dostuff
-        // ^--- to make a function as global as possible.
-        // <button onClick='window.dostuff()'>hi</button>
-        // ^--- for below HTML in if statements
-        // window.addToWaypoints = this.addToWaypoints(coordinates, descTwo.name)
-        // ^--- can't use arguments?
-        window.addToWaypoints = addToWaypointsNoArgs // <--- use this one
-        // ^--- defined above in current scope (map on click) to keep variables
-        // because we can't use arguments (I think).
+        window.addToWaypoints = addToWaypointsNoArgs
+        // ^--- See page buttom for explanation and tips
         if (descOne.name != undefined) {
           return (
             `<strong>${descOne.name}</strong>
@@ -261,3 +250,17 @@ const mapStateToProps = ({ currentTrip }) => {
 
 export default connect(mapStateToProps)(Mapbox)
 
+
+// dostuff = () => {
+//   console.log('hello')
+// }
+
+// window.dostuff = this.dostuff
+// ^--- to make a function as global as possible.
+// <button onClick='window.dostuff()'>hi</button>
+// ^--- for below HTML in if statements
+// window.addToWaypoints = this.addToWaypoints(coordinates, descTwo.name)
+// ^--- can't use arguments?
+// window.addToWaypoints = addToWaypointsNoArgs // <--- use this one (shown in above code)
+// ^--- defined above in current scope (map on click) to keep variables
+// because we can't use arguments (I think).
