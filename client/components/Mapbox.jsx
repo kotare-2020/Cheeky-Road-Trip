@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import { connect } from 'react-redux'
 import mapboxgl from 'mapbox-gl'
 import MapboxDirections from '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions'
-import bathroomData from '../../data/bathroom_data2.json'
+import bathroomData from '../../data/bathroom_data.json'
 import request from 'superagent'
 import { addTripInstructions } from '../actions/currentTrip'
 import { addNewTrip } from '../actions/currentTrip'
@@ -212,12 +212,12 @@ class Mapbox extends React.Component {
             'source': 'points',
             'layout': {
               'icon-image': 'custom-marker',
-              // get the title name from the source's "title" property
-              'text-field': ['get', 'NAME'],
-              'text-font': [
-                'Open Sans Semibold',
-                'Arial Unicode MS Bold'
-              ],
+              // get the title name from the source's "title" property ---V
+              // 'text-field': ['get', 'Name'],
+              // 'text-font': [
+              //   'Open Sans Semibold',
+              //   'Arial Unicode MS Bold'
+              // ],
               'text-offset': [0, 1.25],
               'text-anchor': 'top'
             }
