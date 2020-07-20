@@ -125,13 +125,15 @@ p {
     width: 20vw;
     height: 400px;
     border: black solid 3px;
+    overflow: auto;
 }
 
 #trip-info-div{
     width: 20vw;
-    height: 400px;
+    height: 30vh;
     border: black solid 3px;
     margin: 20px;
+    overflow: auto;
 }
 
 /* .column-left-dashboard {
@@ -144,7 +146,7 @@ p {
     font-size: 11px;
     color: black;
     background-color: whitesmoke;
-    width: auto;
+    width: 300px;
     display: flex;
     position: absolute;
     padding: 26px;
@@ -152,7 +154,7 @@ p {
     top: -6px;
     right: -161px;
     overflow: auto;
-    height: 150px;
+    height: 250px;
 }
 
 .address-confirm-item {
@@ -169,10 +171,9 @@ p {
 /* .landing-form-elements {
 } */
 
-.directions-list {
-    overflow:scroll;
-    height: 250px;
-}
+/* .directions-list {
+    
+} */
 
 /*SVG BORDER ANIMATION BY ZACH SAUCIER CODEPEN  */ 
 .svg-wrapper {
