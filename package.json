@@ -1,7 +1,7 @@
 {
-  "name": "lost-and-found",
+  "name": "cheeky-road-trip",
   "version": "0.3.0",
-  "description": "Lost and Found",
+  "description": "Cheeky Road Trip",
   "repository": "https://github.com/dev-academy-challenges/lost-and-found.git",
   "main": "server/index.js",
   "scripts": {
