@@ -1,12 +1,13 @@
-import { ADD_TRIP, ADD_INSTRUCTIONS } from '../actions/currentTrip'
+import { ADD_TRIP, ADD_INSTRUCTIONS, CONFIRM_ADDRESS } from '../actions/currentTrip'
 
 
 const initialState = {
   tripName: '',
   startWaypoint: {},
   inbetweenWaypoints: [],
-  endWaypoint: {},
+  endWaypoint:  {},
   tripInstructions: [],
+  confirmedWaypoint: {}
 }
 
 const reducer = (state = initialState, action) => {
@@ -23,6 +24,10 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         tripInstructions: action.instructions
+      }
+      case CONFIRM_ADDRESS:
+      return {...state,
+        [action.waypointName]: action.addressInfo,
       }
     default:
       return state

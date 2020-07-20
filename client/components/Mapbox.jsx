@@ -1,7 +1,7 @@
 import React from 'react'
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom'
 import { connect } from 'react-redux'
-import mapboxgl from 'mapbox-gl';
+import mapboxgl from 'mapbox-gl'
 import MapboxDirections from '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions'
 import bathroomData from '../../data/bathroom_data2.json'
 import request from 'superagent'
@@ -12,8 +12,8 @@ mapboxgl.accessToken = process.env.MAPBOX_API_KEY
 
 class Mapbox extends React.Component {
   state = {
-    lng: this.props.currentTrip.startWaypoint.longitude,
-    lat: this.props.currentTrip.startWaypoint.latitude,
+    lng: this.props.currentTrip.START.longitude,
+    lat: this.props.currentTrip.START.latitude,
     zoom: 5.75
   }
 
@@ -23,8 +23,8 @@ class Mapbox extends React.Component {
 
   componentDidMount() {
     let start = [
-      this.props.currentTrip.startWaypoint.longitude,
-      this.props.currentTrip.startWaypoint.latitude
+      this.props.currentTrip.START.longitude,
+      this.props.currentTrip.START.latitude
     ]
     let midCoords = ''
     this.props.currentTrip.inbetweenWaypoints.map((element) => {
@@ -32,21 +32,31 @@ class Mapbox extends React.Component {
       midCoords = midCoords + newString
     })
     let end = [
-      this.props.currentTrip.endWaypoint.longitude,
-      this.props.currentTrip.endWaypoint.latitude
+      this.props.currentTrip.END.longitude,
+      this.props.currentTrip.END.latitude
     ]
 
     let url = 'https://api.mapbox.com/directions/v5/mapbox/driving/' + start[0] + ',' + start[1] + ';' + midCoords + end[0] + ',' + end[1] + '?steps=true&geometries=geojson&access_token=' + mapboxgl.accessToken
     request.get(url)
       .then(res => {
+        let instructionsArr = []
+        res.body.routes[0].legs.map((element) => {
+          element.steps.map((element) => {
+            instructionsArr.push(element.maneuver.instruction)
+          })
+        })
+        this.props.dispatch(addTripInstructions(instructionsArr))
       })
 
     const map = new mapboxgl.Map({
       container: this.mapContainer,
-      style: 'mapbox://styles/mapbox/streets-v11',
+      style: 'mapbox://styles/deriyaki/ckctmc2yt2xi01iplkz3px4bd',
+      accessToken: process.env.MAPBOX_SKIN_KEY, 
       center: [this.state.lng, this.state.lat],
       zoom: this.state.zoom
     })
+
+
 
     map.on('move', () => {
       this.setState({
@@ -94,7 +104,7 @@ class Mapbox extends React.Component {
         this.props.dispatch(addNewTrip(tripData))
       }
 
-      const coordinates = e.features[0].geometry.coordinates.slice();
+      const coordinates = e.features[0].geometry.coordinates.slice()
       let setToiletDescription = (descOne, descTwo, descThree) => {
         if (descOne.name != undefined) {
           return `<strong>${descOne.name}</strong>`
@@ -151,24 +161,23 @@ class Mapbox extends React.Component {
       // over the copy being pointed to.
       /*
       while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-          coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+          coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360
       }
       */
 
       new mapboxgl.Popup()
         .setLngLat(coordinates)
         .setHTML(description)
-        .addTo(map);
+        .addTo(map)
     })
 
     directions.onClick = () => {}
     map.addControl(directions, 'top-left')
 
     map.on('load', () => {
-      // Add an image to use as a custom marker
       directions.setOrigin([
-        this.props.currentTrip.startWaypoint.longitude,
-        this.props.currentTrip.startWaypoint.latitude,
+        this.props.currentTrip.START.longitude,
+        this.props.currentTrip.START.latitude,
       ])
 
       this.props.currentTrip.inbetweenWaypoints.map((element, i) => {
@@ -178,17 +187,17 @@ class Mapbox extends React.Component {
         ])
       })
 
-
       directions.setDestination([
-        this.props.currentTrip.endWaypoint.longitude,
-        this.props.currentTrip.endWaypoint.latitude,
+        this.props.currentTrip.END.longitude,
+        this.props.currentTrip.END.latitude,
       ])
 
+
       map.loadImage(
-        'https://docs.mapbox.com/mapbox-gl-js/assets/custom_marker.png',
+        './images/toilet-icon.png',
         function (error, image) {
-          if (error) throw error;
-          map.addImage('custom-marker', image);
+          if (error) throw error
+          map.addImage('custom-marker', image)
           // Add a GeoJSON source with 2 points
           map.addSource('points', {
             'type': 'geojson',
@@ -237,21 +246,3 @@ const mapStateToProps = ({ currentTrip }) => {
 
 export default connect(mapStateToProps)(Mapbox)
 
-
-
-// {
-//     'type': 'FeatureCollection',
-//     'features': [
-//           {
-//             "type": "Feature",
-//             "properties": {
-//               "OBJECTID": 15,
-//               "NAME": "VAUTIER PARK PAVILION PUBLIC TOILETS",
-//               "CLASS_DESCR": "GENERAL PUBLIC",
-//               "USE_RESTRICTIONS": "7am-6pm",
-//               "DESCRIPTION": "Public Toilets"
-//             },
-//             "geometry": {
-//               "type": "Point",
-//               "coordinates": [175.623499750117588, -40.335827727265396]
-//             }
