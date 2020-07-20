@@ -8605,7 +8605,7 @@
                 "OBJECTID": 1698,
                 "TOILET_NAME": "HE Ara Kotahi",
                 "CLASS_DESCR": "GENERAL PUBLIC",
-                "USE_RESTRICTIONS": null,
+                "USE_RESTRICTIONS": "24h",
                 "DESCRIPTION": null
             },
             "geometry": {
@@ -8623,7 +8623,7 @@
                 "TOILET_NAME": "Tower Junction Customer Toilets",
                 "CLASS_DESCR": "GENERAL PUBLIC",
                 "USE_RESTRICTIONS": "9am-5:30pm",
-                "DESCRIPTION": null
+                "DESCRIPTION": "Public Toilets"
             },
             "geometry": {
                 "type": "Point",
@@ -8640,7 +8640,7 @@
                 "TOILET_NAME": "Invercargill City Public Toilet",
                 "CLASS_DESCR": "GENERAL PUBLIC",
                 "USE_RESTRICTIONS": "8am-8pm",
-                "DESCRIPTION": null
+                "DESCRIPTION": "Public Toilets"
             },
             "geometry": {
                 "type": "Point",
@@ -8656,8 +8656,8 @@
                 "OBJECTID": 1701,
                 "TOILET_NAME": "Green Island Public Toilet",
                 "CLASS_DESCR": "GENERAL PUBLIC",
-                "USE_RESTRICTIONS": null,
-                "DESCRIPTION": null
+                "USE_RESTRICTIONS": "24h",
+                "DESCRIPTION": "Public Toilets"
             },
             "geometry": {
                 "type": "Point",
@@ -8674,7 +8674,7 @@
                 "TOILET_NAME": "Earnslaw Park Public Toilet",
                 "CLASS_DESCR": "GENERAL PUBLIC",
                 "USE_RESTRICTIONS": "24h",
-                "DESCRIPTION": null
+                "DESCRIPTION": "Public Toilets"
             },
             "geometry": {
                 "type": "Point",
@@ -8691,7 +8691,7 @@
                 "TOILET_NAME": "Hokitika Public Toilet",
                 "CLASS_DESCR": "GENERAL PUBLIC",
                 "USE_RESTRICTIONS": "24h",
-                "DESCRIPTION": null
+                "DESCRIPTION": "Public Toilets"
             },
             "geometry": {
                 "type": "Point",
@@ -8707,8 +8707,8 @@
                 "OBJECTID": 1704,
                 "TOILET_NAME": "Fiordland Town Public Toilet",
                 "CLASS_DESCR": "GENERAL PUBLIC",
-                "USE_RESTRICTIONS": null,
-                "DESCRIPTION": null
+                "USE_RESTRICTIONS": "24h",
+                "DESCRIPTION": "Public Toilets"
             },
             "geometry": {
                 "type": "Point",
@@ -8725,7 +8725,7 @@
                 "TOILET_NAME": "Knights Point Public Toilets",
                 "CLASS_DESCR": "GENERAL PUBLIC",
                 "USE_RESTRICTIONS": "24h",
-                "DESCRIPTION": null
+                "DESCRIPTION": "Public Toilets"
             },
             "geometry": {
                 "type": "Point",
@@ -8741,8 +8741,8 @@
                 "OBJECTID": 1706,
                 "TOILET_NAME": "Karamea Public Toilets",
                 "CLASS_DESCR": "GENERAL PUBLIC",
-                "USE_RESTRICTIONS": null,
-                "DESCRIPTION": null
+                "USE_RESTRICTIONS": "24h",
+                "DESCRIPTION": "Public Toilets"
             },
             "geometry": {
                 "type": "Point",
@@ -8758,8 +8758,8 @@
                 "OBJECTID": 1707,
                 "TOILET_NAME": "Whakatane Gardens Public Toilets",
                 "CLASS_DESCR": "GENERAL PUBLIC",
-                "USE_RESTRICTIONS": null,
-                "DESCRIPTION": null
+                "USE_RESTRICTIONS": "24h",
+                "DESCRIPTION": "Public Toilets"
             },
             "geometry": {
                 "type": "Point",
@@ -8775,8 +8775,8 @@
                 "OBJECTID": 1708,
                 "TOILET_NAME": "Yandle Park Public Toilets",
                 "CLASS_DESCR": "GENERAL PUBLIC",
-                "USE_RESTRICTIONS": null,
-                "DESCRIPTION": null
+                "USE_RESTRICTIONS": "24h",
+                "DESCRIPTION": "Public Toilets"
             },
             "geometry": {
                 "type": "Point",
@@ -8793,7 +8793,7 @@
                 "TOILET_NAME": "Opunake Lake Public Toilets",
                 "CLASS_DESCR": "GENERAL PUBLIC",
                 "USE_RESTRICTIONS": "24h",
-                "DESCRIPTION": null
+                "DESCRIPTION": "Public Toilets"
             },
             "geometry": {
                 "type": "Point",
@@ -8809,8 +8809,8 @@
                 "OBJECTID": 1710,
                 "TOILET_NAME": "Dargaville Public Toilets",
                 "CLASS_DESCR": "GENERAL PUBLIC",
-                "USE_RESTRICTIONS": null,
-                "DESCRIPTION": null
+                "USE_RESTRICTIONS": "24h",
+                "DESCRIPTION": "Public Toilets"
             },
             "geometry": {
                 "type": "Point",

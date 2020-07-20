@@ -11,15 +11,16 @@ mapboxgl.accessToken = process.env.MAPBOX_API_KEY
 
 class Mapbox extends React.Component {
   state = {
-    lng: this.props.currentTrip.startWaypoint.longitude,
-    lat: this.props.currentTrip.startWaypoint.latitude,
+    lng: this.props.currentTrip.START.longitude,
+    lat: this.props.currentTrip.START.latitude,
     zoom: 5.75
   }
 
   componentDidMount() {
+    console.log(this.props.currentTrip)
     let start = [
-      this.props.currentTrip.startWaypoint.longitude,
-      this.props.currentTrip.startWaypoint.latitude
+      this.props.currentTrip.START.longitude,
+      this.props.currentTrip.START.latitude
     ]
     let midCoords = ''
     this.props.currentTrip.inbetweenWaypoints.map((element) => {
@@ -27,8 +28,8 @@ class Mapbox extends React.Component {
         midCoords = midCoords + newString
     })
     let end = [
-      this.props.currentTrip.endWaypoint.longitude,
-      this.props.currentTrip.endWaypoint.latitude
+      this.props.currentTrip.END.longitude,
+      this.props.currentTrip.END.latitude
     ]
     
     let url = 'https://api.mapbox.com/directions/v5/mapbox/driving/' + start[0] + ','  + start[1] + ';' + midCoords + end[0] + ',' + end[1] + '?steps=true&geometries=geojson&access_token=' + mapboxgl.accessToken
@@ -140,8 +141,8 @@ class Mapbox extends React.Component {
 
     map.on('load', () => {
       directions.setOrigin([
-        this.props.currentTrip.startWaypoint.longitude,
-        this.props.currentTrip.startWaypoint.latitude,
+        this.props.currentTrip.START.longitude,
+        this.props.currentTrip.START.latitude,
       ])
 
       this.props.currentTrip.inbetweenWaypoints.map((element, i) => {
@@ -152,13 +153,13 @@ class Mapbox extends React.Component {
     })
 
       directions.setDestination([
-        this.props.currentTrip.endWaypoint.longitude,
-        this.props.currentTrip.endWaypoint.latitude,
+        this.props.currentTrip.END.longitude,
+        this.props.currentTrip.END.latitude,
       ])
 
 
       map.loadImage(
-        'https://docs.mapbox.com/mapbox-gl-js/assets/custom_marker.png',
+        './images/toilet-icon.png',
         function (error, image) {
           if (error) throw error;
           map.addImage('custom-marker', image);

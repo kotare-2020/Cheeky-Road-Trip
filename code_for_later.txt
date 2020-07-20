@@ -26,3 +26,14 @@
     // this.props.dispatch(checkAuth(confirmSuccess))
 
   }
+
+
+#### Code from landing page to/from form
+
+    // confirmWaypoint = (event) => {
+  //   event.preventDefault()
+  // eventually we want to make an array show and a user select the correct address. For now, only one address shows and thwey can confirm whether the first address from the API response is the correct one.
+  // confirm button is for when we'll:
+  // confirm selected address from the list we get from API response
+  // set response data to waypointDispatch object.
+  // }
