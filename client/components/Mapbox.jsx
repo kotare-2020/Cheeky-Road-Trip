@@ -12,9 +12,10 @@ mapboxgl.accessToken = process.env.MAPBOX_API_KEY
 
 class Mapbox extends React.Component {
   state = {
+    changer: false,
     lng: this.props.currentTrip.START.longitude,
     lat: this.props.currentTrip.START.latitude,
-    zoom: 5.75
+    zoom: 5.75,
   }
 
   dostuff = () => {
@@ -22,6 +23,15 @@ class Mapbox extends React.Component {
   }
 
   componentDidMount() {
+    this.renderMap()
+  }
+  componentDidUpdate(prevProps) {
+    if (prevProps.currentTrip.inbetweenWaypoints.length != this.props.currentTrip.inbetweenWaypoints.length) {
+      this.renderMap()
+    }
+  }
+
+  renderMap = () => {
     let start = [
       this.props.currentTrip.START.longitude,
       this.props.currentTrip.START.latitude
@@ -51,12 +61,10 @@ class Mapbox extends React.Component {
     const map = new mapboxgl.Map({
       container: this.mapContainer,
       style: 'mapbox://styles/deriyaki/ckctmc2yt2xi01iplkz3px4bd',
-      accessToken: process.env.MAPBOX_SKIN_KEY, 
+      accessToken: process.env.MAPBOX_SKIN_KEY,
       center: [this.state.lng, this.state.lat],
       zoom: this.state.zoom
     })
-
-
 
     map.on('move', () => {
       this.setState({
@@ -71,6 +79,7 @@ class Mapbox extends React.Component {
       unit: 'metric',
       profile: 'mapbox/driving'
     })
+    console.log('dirs', directions)
 
     map.on('click', 'points', (e) => {
       // There's a few different ways data is layed out in the json because of differing sources.
@@ -87,7 +96,7 @@ class Mapbox extends React.Component {
       }
 
       const addToWaypointsNoArgs = () => {
-        const newArray = this.props.currentTrip.inbetweenWaypoints
+        const newArray = [...this.props.currentTrip.inbetweenWaypoints]
         newArray.push({
           buildingName: capitalize(dataStructureType2.name),
           label: "label",
@@ -110,7 +119,7 @@ class Mapbox extends React.Component {
           return `<strong>${descOne.name}</strong>`
         }
         else if (descOne.name == undefined && descTwo.description != "null" && descTwo.description != undefined && descTwo.openTimes != "null" && descTwo.openTimes != undefined) {
-          
+
           // window.dostuff = this.dostuff
           // ^--- to make a function as global as possible.
           // <button onClick='window.dostuff()'>hi</button>
@@ -118,10 +127,10 @@ class Mapbox extends React.Component {
 
           // window.addToWaypoints = this.addToWaypoints(coordinates, descTwo.name)
           // ^--- can't use arguments?
-          window.addToWaypoints = addToWaypointsNoArgs
+          window.addToWaypoints = addToWaypointsNoArgs // <--- use this one
           // ^--- defined above in current scope (map on click) to keep variables
           // because we can't use arguments (I think).
-          
+
           descTwo.name = capitalize(descTwo.name)
           return (
             `<strong>${descTwo.name}</strong>
@@ -156,15 +165,6 @@ class Mapbox extends React.Component {
         return (capitalizedStr)
       }
 
-      // Ensure that if the map is zoomed out such that multiple
-      // copies of the feature are visible, the popup appears
-      // over the copy being pointed to.
-      /*
-      while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-          coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360
-      }
-      */
-
       new mapboxgl.Popup()
         .setLngLat(coordinates)
         .setHTML(description)
@@ -172,6 +172,7 @@ class Mapbox extends React.Component {
     })
 
     directions.onClick = () => {}
+    directions.onDragDown = () => {} // Stops user from moving waypoints because they don't set GS currently.
     map.addControl(directions, 'top-left')
 
     map.on('load', () => {
