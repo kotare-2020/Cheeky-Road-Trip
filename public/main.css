@@ -1,27 +1,36 @@
 .sidebarStyle {
-    display: inline-block;
     position: absolute;
-    top: 0;
-    left: 0;
-    margin: 12px;
+    top: 17px;
+    right: 26px;
     background-color: #404040;
     color: #ffffff;
     z-index: 1 !important;
-    padding: 6px;
     font-weight: bold;
-    }
+    width: 22%;
+}
      
-    .mapContainer {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
+    .mapboxgl-ctrl-top-left {
+        font-size: 20px;
+    margin-left: 9px;
+    margin-top: 10px;
     }
+    .mapbox-directions-component-keyline{
+        display: none;
+    }
+    .mapbox-directions-inputs {
+        display: none;
+    }
+
+    .mapboxgl-canvas-container {
+        height: 100vh;
+    }
+    .mapContainer {
+        width: 77vw;
+        height: 100vh;
+        }
 
 body {
     color: black;
-    background-color: antiquewhite;
     font-family: 'Quicksand', sans-serif;
 }
 /* h1 - h6 default  */
@@ -85,7 +94,11 @@ p {
     display: none;
 }
 
-
+#home-button {
+    position: absolute;
+    margin-left: 22px;
+    margin-top: 12px;
+}
 
 .background-div {
     background-image: url('Images/rd-trip-background.jpg');
@@ -98,23 +111,13 @@ p {
     width:100%;
 }
 
-.mapboxgl-ctrl-top-left {
-    background-color: rgba(228, 171, 29, 0.7);
-    
-}
 
 #dashboard-container{
-    position: absolute;
-    top:0;
-    left:0;
-    bottom:0;
-    right:0;
-    height:100%;
-    width:100%;
-    border:cornflowerblue dashed 4px;
-    padding: 20px;
-    background-color: antiquewhite;
-    
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    background-color: #fff8dc78;
 }
 
 #directions-list-div {
@@ -131,13 +134,11 @@ p {
     margin: 20px;
 }
 
-.column-left-dashboard {
-    float: left;
+/* .column-left-dashboard {
 }
 
 .column-right-dashboard {
-height: 800px;
-}
+} */
 
 .address-confirm-list {
     font-size: 11px;
