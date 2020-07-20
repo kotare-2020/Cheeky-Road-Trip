@@ -1,38 +1,48 @@
-import { ADD_NEW_TRIP, ADD_WAYPOINT, SHOW_MAP } from '../actions/currentTrip'
+import { ADD_INSTRUCTIONS, CONFIRM_ADDRESS, ADD_TRIP_NAME, ERASE_TRIP } from '../actions/currentTrip'
 
 
 const initialState = {
   tripName: '',
-  startPoint: [-38.992391, 174.395546],
-  //hard coded for testing purposes, this needs to be changed
-  endPoint: [-39.099695, 174.074156],
-  waypoints: {
-    startWaypoint: {},
-    inbetweenWaypoints: [],
-    endWaypoint: {},
-  },
-  haveWaypoints: false
+  START: {},
+  MID: [],
+  END: {},
+  tripInstructions: [],
+  confirmedWaypoint: {}
 }
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case ADD_NEW_TRIP:
-      return {...state,
-        tripName: action.tripName,
-        startPoint: action.startPoint,
-        endPoint: action.endPoint,
+    case ADD_INSTRUCTIONS:
+      return {
+        ...state,
+        tripInstructions: action.instructions
       }
-    case ADD_WAYPOINT:
-      return {...state,
-        waypoints: {
-          startWaypoint: action.startWaypoint,
-          inbetweenWaypoints: action.inbetweenWaypoints,
-          endWaypoint: action.endWaypoint,
+    case CONFIRM_ADDRESS:
+      if (action.waypointName == "MID") {
+        state.MID.push(action.addressInfo)
+        return {
+          ...state,
+          [action.waypointName]: state.MID
+        }
+      } else {
+        return {
+          ...state,
+          [action.waypointName]: action.addressInfo,
         }
       }
-    case SHOW_MAP:
-      return {...state,
-        haveWaypoints: action.boolean,
+    case ADD_TRIP_NAME:
+      return {
+        ...state,
+        tripName: action.tripName
+      }
+    case ERASE_TRIP:
+      return {
+        tripName: '',
+        START: {},
+        MID: [],
+        END: {},
+        tripInstructions: [],
+        confirmedWaypoint: {}
       }
     default:
       return state

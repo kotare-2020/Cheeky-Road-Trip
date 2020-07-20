@@ -1,14 +1,26 @@
 import React from 'react'
+import { connect } from 'react-redux'
 
 class DirectionsList extends React.Component {
-    render() {
-      return (
-          <div id="directions-list-div">
-              <h3>Directions</h3>
-
-          </div>
-      )
-    }
+  render() {
+    return (
+      <div id="directions-list-div">
+        <h3>Directions</h3>
+        <ol className="directions-list">
+          {this.props.currentTrip.tripInstructions.map((element, i) => {
+            return <li key={i}>{i+1}. {element}</li>
+          })}
+        </ol>
+      </div>
+    )
   }
+}
 
-  export default DirectionsList
+const mapStateToProps = ({ currentTrip }) => {
+  return {
+    currentTrip,
+  }
+}
+
+
+export default connect(mapStateToProps)(DirectionsList)

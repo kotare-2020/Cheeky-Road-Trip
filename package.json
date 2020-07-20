@@ -1,10 +1,11 @@
 {
-  "name": "lost-and-found",
+  "name": "cheeky-road-trip",
   "version": "0.3.0",
-  "description": "Lost and Found",
+  "description": "Cheeky Road Trip",
   "repository": "https://github.com/dev-academy-challenges/lost-and-found.git",
   "main": "server/index.js",
   "scripts": {
+    "deploy": "git add . && git commit -m 'deploy' && git push heroku heroku-deploy:master",
     "dev": "run-p watch:client watch:server",
     "watch:client": "webpack --watch",
     "watch:server": "nodemon --watch server",
@@ -53,8 +54,10 @@
     "dotenv": "^8.2.0"
   },
   "dependencies": {
+    "@mapbox/mapbox-gl-directions": "^4.0.3",
     "bulma": "^0.9.0",
     "css-loader": "^3.6.0",
+    "authenticare": "^0.4.7",
     "dotenv": "^8.2.0",
     "dotenv-webpack": "^1.8.0",
     "express": "^4.17.1",
@@ -63,6 +66,8 @@
     "leaflet-control-geocoder": "^1.13.0",
     "leaflet-routing-machine": "^3.2.12",
     "lrm-google": "^1.0.1",
+    "mapbox": "^1.0.0-beta10",
+    "mapbox-gl": "^1.11.1",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.14.1",
     "npm-run-all": "^4.1.5",
