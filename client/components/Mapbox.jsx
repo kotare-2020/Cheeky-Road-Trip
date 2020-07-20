@@ -212,12 +212,12 @@ class Mapbox extends React.Component {
             'source': 'points',
             'layout': {
               'icon-image': 'custom-marker',
-              // get the title name from the source's "title" property
-              'text-field': ['get', 'NAME'],
-              'text-font': [
-                'Open Sans Semibold',
-                'Arial Unicode MS Bold'
-              ],
+              // get the title name from the source's "title" property ---V
+              // 'text-field': ['get', 'Name'],
+              // 'text-font': [
+              //   'Open Sans Semibold',
+              //   'Arial Unicode MS Bold'
+              // ],
               'text-offset': [0, 1.25],
               'text-anchor': 'top'
             }

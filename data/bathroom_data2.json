@@ -6026,10 +6026,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 463,
-                "Name": "A&P Park",
+                "TOILET_NAME": "A&P Park",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/a-and-p-park",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/a-and-p-park",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/C5039B20-2E08-4782-8D66-9796C495135F\/A%26P%20320x240.png"
             },
             "geometry": {
@@ -6044,10 +6044,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 464,
-                "Name": "Alfred Stream Reserve",
+                "TOILET_NAME": "Alfred Stream Reserve",
                 "DisabledAccess": "No",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/alfred-stream-reserve",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/alfred-stream-reserve",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/1C365DC8-49FB-43D2-BC33-3953E9391643\/Alfred%20Stream%20public%20toilet%20320x240.png"
             },
             "geometry": {
@@ -6062,10 +6062,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 465,
-                "Name": "Alfred Street Carpark Building",
+                "TOILET_NAME": "Alfred Street Carpark Building",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "6am - 6pm",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--alfred-street-carpark",
+                "USE_RESTRICTIONS": "6am - 6pm",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--alfred-street-carpark",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/168A398C-3648-48A1-ACEC-9A7A3E67D647\/Alfred%20Street%20Carpark%20925x694.png"
             },
             "geometry": {
@@ -6080,10 +6080,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 466,
-                "Name": "Anakiwa",
+                "TOILET_NAME": "Anakiwa",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--anakiwa",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--anakiwa",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/57C54CFD-0332-4DA3-85F8-6E14480196E9\/Anakiwa%20320x240.png"
             },
             "geometry": {
@@ -6098,10 +6098,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 467,
-                "Name": "Auckland Street Reserve",
+                "TOILET_NAME": "Auckland Street Reserve",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/auckland-street-reserve",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/auckland-street-reserve",
                 "ImageURL": "https:\/\/dds-cdn.datascape.cloud\/public\/marlborough\/d311788e-bbd2-42ca-8ca0-c8df0aa82653"
             },
             "geometry": {
@@ -6116,10 +6116,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 468,
-                "Name": "Blarich Reserve",
+                "TOILET_NAME": "Blarich Reserve",
                 "DisabledAccess": "No",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/blairich-recreation-reserve",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/blairich-recreation-reserve",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/1D7F8BFD-0BEB-46E4-AD8E-8CB14EC724E7\/Blairich%20Recreation%20Reserve%20%20Toilets%20320x240.png"
             },
             "geometry": {
@@ -6134,10 +6134,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 469,
-                "Name": "Blenheim Railway Station",
+                "TOILET_NAME": "Blenheim Railway Station",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "6am - 9pm",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--blenheim-railway-station",
+                "USE_RESTRICTIONS": "6am - 9pm",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--blenheim-railway-station",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/1C77B775-9818-4385-8F17-3EF24D821E9D\/Blenheim%20Railway%20Station%20320x240.png"
             },
             "geometry": {
@@ -6152,10 +6152,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 470,
-                "Name": "Blenheim Skate Park",
+                "TOILET_NAME": "Blenheim Skate Park",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/blenheim-skate-park",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/blenheim-skate-park",
                 "ImageURL": null
             },
             "geometry": {
@@ -6170,10 +6170,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 471,
-                "Name": "Bob's Bay Reserve",
+                "TOILET_NAME": "Bob's Bay Reserve",
                 "DisabledAccess": "No",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/bob%27s-bay-reserve",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/bob%27s-bay-reserve",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/FB76D79F-365A-400B-A72A-7CB5212A3D89\/Bobs%20Bay%20toilet%20320x240.png"
             },
             "geometry": {
@@ -6188,10 +6188,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 472,
-                "Name": "Brown River Reserve",
+                "TOILET_NAME": "Brown River Reserve",
                 "DisabledAccess": "No",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/brown-river-reserve",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/brown-river-reserve",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/82CB974E-F6BA-440D-9A07-C2962EBAA482\/Brown%20River%20Reserve%20Toilet%20320x240.png"
             },
             "geometry": {
@@ -6206,10 +6206,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 473,
-                "Name": "Canvastown",
+                "TOILET_NAME": "Canvastown",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--canvastown",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--canvastown",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/1B035CB1-E9FD-4834-8B3A-D171A9987636\/Canvastown%20320x240.png"
             },
             "geometry": {
@@ -6224,10 +6224,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 474,
-                "Name": "Collins Memorial Reserve",
+                "TOILET_NAME": "Collins Memorial Reserve",
                 "DisabledAccess": "No",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/collins-memorial-reserve",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/collins-memorial-reserve",
                 "ImageURL": null
             },
             "geometry": {
@@ -6242,10 +6242,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 475,
-                "Name": "Countdown Carpark",
+                "TOILET_NAME": "Countdown Carpark",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--countdown-carkpark",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--countdown-carkpark",
                 "ImageURL": null
             },
             "geometry": {
@@ -6260,10 +6260,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 476,
-                "Name": "Double Bay Reserve",
+                "TOILET_NAME": "Double Bay Reserve",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/double-bay-reserve",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/double-bay-reserve",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/4CF558E2-AC4B-4DA8-A93D-C3F0FC4F60C2\/Double%20Bay%20Reserve%20Toilets%20320x240.png"
             },
             "geometry": {
@@ -6278,10 +6278,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 477,
-                "Name": "Elterwater Reserve",
+                "TOILET_NAME": "Elterwater Reserve",
                 "DisabledAccess": "No",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/elterwater-reserve",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/elterwater-reserve",
                 "ImageURL": null
             },
             "geometry": {
@@ -6296,10 +6296,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 478,
-                "Name": "Endeavour Park",
+                "TOILET_NAME": "Endeavour Park",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/endeavour-park",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/endeavour-park",
                 "ImageURL": "https:\/\/dds-cdn.datascape.cloud\/public\/marlborough\/ac2c8159-e7a0-45e5-9a3d-e80dbcbbc54e"
             },
             "geometry": {
@@ -6314,10 +6314,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 479,
-                "Name": "Fairhall Cemetery",
+                "TOILET_NAME": "Fairhall Cemetery",
                 "DisabledAccess": "No",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/www.marlborough.govt.nz\/services\/cemeteries\/fairhall",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/www.marlborough.govt.nz\/services\/cemeteries\/fairhall",
                 "ImageURL": null
             },
             "geometry": {
@@ -6332,10 +6332,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 480,
-                "Name": "French Pass Hall",
+                "TOILET_NAME": "French Pass Hall",
                 "DisabledAccess": "No",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--french-pass-hall",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--french-pass-hall",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/94B522FE-9D42-4A10-B5A4-3197F9EE45C6\/French%20Pass%20Hall%20320x240.png"
             },
             "geometry": {
@@ -6350,10 +6350,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 481,
-                "Name": "Harling Park",
+                "TOILET_NAME": "Harling Park",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/harling-park",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/harling-park",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/3E1DACE1-004F-42E5-B667-2AEDE0F54622\/Harling%20Park%20320x240.png"
             },
             "geometry": {
@@ -6368,10 +6368,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 482,
-                "Name": "Havelock Memorial Park",
+                "TOILET_NAME": "Havelock Memorial Park",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/havelock-war-memorial-park",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/havelock-war-memorial-park",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/1EEBF3BA-E3BF-43D7-ADC8-4B76C4B3D9FE\/Toilet%20320x240.png"
             },
             "geometry": {
@@ -6386,10 +6386,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 483,
-                "Name": "Havelock Township",
+                "TOILET_NAME": "Havelock Township",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--havelock-township",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--havelock-township",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/DCB58464-BFFE-4B36-A7A9-51B99B52C5C0\/Havelock%20Township%20320x240.png"
             },
             "geometry": {
@@ -6404,10 +6404,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 484,
-                "Name": "High Street Carpark, Blenheim",
+                "TOILET_NAME": "High Street Carpark, Blenheim",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--high-street-carpark-blenheim",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--high-street-carpark-blenheim",
                 "ImageURL": "https:\/\/dds-cdn.datascape.cloud\/public\/marlborough\/199647a8-91b4-4c6b-b29d-60c410022381"
             },
             "geometry": {
@@ -6422,10 +6422,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 485,
-                "Name": "High Street, Picton",
+                "TOILET_NAME": "High Street, Picton",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--high-street%2c-picton",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--high-street%2c-picton",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/DC58DA74-5F9F-4178-88E9-B5D4FA5C0AE4\/High%20Street%20Picton%20320x240.png"
             },
             "geometry": {
@@ -6440,10 +6440,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 486,
-                "Name": "High Street, Picton",
+                "TOILET_NAME": "High Street, Picton",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--high-street%2c-picton",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--high-street%2c-picton",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/DC58DA74-5F9F-4178-88E9-B5D4FA5C0AE4\/High%20Street%20Picton%20320x240.png"
             },
             "geometry": {
@@ -6458,10 +6458,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 487,
-                "Name": "Hodder River",
+                "TOILET_NAME": "Hodder River",
                 "DisabledAccess": "No",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--hodder-river",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--hodder-river",
                 "ImageURL": null
             },
             "geometry": {
@@ -6476,10 +6476,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 488,
-                "Name": "Horton Park",
+                "TOILET_NAME": "Horton Park",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/horton-park",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/horton-park",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/2B486054-9F33-43F7-B425-823446A557ED\/Horton%20Park%20320x240.png"
             },
             "geometry": {
@@ -6494,10 +6494,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 489,
-                "Name": "Kinross Street Carpark",
+                "TOILET_NAME": "Kinross Street Carpark",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--kinross-street",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--kinross-street",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/463D3353-6A6F-450A-9E06-2D1DC7E5F130\/Kinross%20320x240.png"
             },
             "geometry": {
@@ -6512,10 +6512,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 490,
-                "Name": "Lansdowne Park",
+                "TOILET_NAME": "Lansdowne Park",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/lansdowne-park",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/lansdowne-park",
                 "ImageURL": "https:\/\/dds-cdn.datascape.cloud\/public\/marlborough\/2b6615e4-99f0-44d0-b3a4-8757614a25b0"
             },
             "geometry": {
@@ -6530,10 +6530,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 491,
-                "Name": "Lansdowne Park",
+                "TOILET_NAME": "Lansdowne Park",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/lansdowne-park",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/lansdowne-park",
                 "ImageURL": "https:\/\/dds-cdn.datascape.cloud\/public\/marlborough\/2b6615e4-99f0-44d0-b3a4-8757614a25b0"
             },
             "geometry": {
@@ -6548,10 +6548,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 492,
-                "Name": "Lansdowne Park",
+                "TOILET_NAME": "Lansdowne Park",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/lansdowne-park",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/lansdowne-park",
                 "ImageURL": "https:\/\/dds-cdn.datascape.cloud\/public\/marlborough\/2b6615e4-99f0-44d0-b3a4-8757614a25b0"
             },
             "geometry": {
@@ -6566,10 +6566,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 493,
-                "Name": "Liz Davidson Place",
+                "TOILET_NAME": "Liz Davidson Place",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/liz-davidson-place",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/liz-davidson-place",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/38E4C187-7D8C-4CE6-8EF8-A3200427ACFB\/Liz%20Davidson%20Place%20320x240.png"
             },
             "geometry": {
@@ -6584,10 +6584,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 494,
-                "Name": "London Quay",
+                "TOILET_NAME": "London Quay",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/london-quay",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/london-quay",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/3CC05369-A660-45AA-BE89-6AB2C0421E83\/Toilets%20320x240.png"
             },
             "geometry": {
@@ -6602,10 +6602,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 495,
-                "Name": "Ohingaroa Reserve",
+                "TOILET_NAME": "Ohingaroa Reserve",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/ohingaroa-reserve",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/ohingaroa-reserve",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/AE47AC5A-E802-466C-B6F8-C04BE37C0142\/Public%20Toilet%20320x240.png"
             },
             "geometry": {
@@ -6620,10 +6620,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 496,
-                "Name": "Picton Foreshore",
+                "TOILET_NAME": "Picton Foreshore",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "6am - 8pm",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/picton-foreshore",
+                "USE_RESTRICTIONS": "6am - 8pm",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/picton-foreshore",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/80B0D387-B5D9-4964-A640-4B599E460D1E\/Public%20Toilet%20320x240.png"
             },
             "geometry": {
@@ -6638,10 +6638,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 497,
-                "Name": "Pollard Park",
+                "TOILET_NAME": "Pollard Park",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "7am - 8pm",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/pollard-park",
+                "USE_RESTRICTIONS": "7am - 8pm",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/pollard-park",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/4127F2E6-28EF-4E95-A8A1-717C165BA400\/Pollard%20Park%20320x240.png"
             },
             "geometry": {
@@ -6656,10 +6656,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 498,
-                "Name": "Quail Stream",
+                "TOILET_NAME": "Quail Stream",
                 "DisabledAccess": "No",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/wither-hills-farm-park",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/wither-hills-farm-park",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/B2E2A039-547F-48DA-876C-483404079997\/Toilet%20320x240.png"
             },
             "geometry": {
@@ -6674,10 +6674,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 499,
-                "Name": "Quail Stream Carpark",
+                "TOILET_NAME": "Quail Stream Carpark",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/wither-hills-farm-park",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/wither-hills-farm-park",
                 "ImageURL": "https:\/\/dds-cdn.datascape.cloud\/public\/marlborough\/df250dee-6f11-40ae-816f-cedfbfba8c9e"
             },
             "geometry": {
@@ -6692,10 +6692,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 500,
-                "Name": "Rai Valley Township",
+                "TOILET_NAME": "Rai Valley Township",
                 "DisabledAccess": "No",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--rai-valley",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--rai-valley",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/F27BBC5E-FD02-4FB8-8F85-ACA5978777AE\/Rai%20Valley%20320x240.png"
             },
             "geometry": {
@@ -6710,10 +6710,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 501,
-                "Name": "Red Cross Building",
+                "TOILET_NAME": "Red Cross Building",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--red-cross-building%2c-picton",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--red-cross-building%2c-picton",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/3EB67CCA-48A3-4738-B840-1BB869F98BE6\/Redcross%20320x240.png"
             },
             "geometry": {
@@ -6728,10 +6728,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 502,
-                "Name": "Redwoodtown Carpark",
+                "TOILET_NAME": "Redwoodtown Carpark",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--redwoodtown-carpark",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--redwoodtown-carpark",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/6A541C35-8FE5-4E70-BCAB-09201DECB850\/Redwood%20toilets%20925x694.png"
             },
             "geometry": {
@@ -6746,10 +6746,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 503,
-                "Name": "Redwoodtown Hall",
+                "TOILET_NAME": "Redwoodtown Hall",
                 "DisabledAccess": "No",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--redwoodtown-hall",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--redwoodtown-hall",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/DA6DA66C-C747-4324-BB7A-BE99D04E541D\/Redwood%20Town%20Hall%20925x694.png"
             },
             "geometry": {
@@ -6764,10 +6764,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 504,
-                "Name": "Renwick Domain",
+                "TOILET_NAME": "Renwick Domain",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/renwick-domain",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/renwick-domain",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/31B0F38E-B104-481F-B561-73D0EC5C9E11\/Public%20Toilets%20320x240.png"
             },
             "geometry": {
@@ -6782,10 +6782,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 505,
-                "Name": "Renwick Township Toilet",
+                "TOILET_NAME": "Renwick Township Toilet",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": null,
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": null,
                 "ImageURL": null
             },
             "geometry": {
@@ -6800,10 +6800,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 506,
-                "Name": "Rifle Range Carpark",
+                "TOILET_NAME": "Rifle Range Carpark",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/wither-hills-farm-park",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/wither-hills-farm-park",
                 "ImageURL": null
             },
             "geometry": {
@@ -6818,10 +6818,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 507,
-                "Name": "Seddon Domain",
+                "TOILET_NAME": "Seddon Domain",
                 "DisabledAccess": "No",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/seddon-domain",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/seddon-domain",
                 "ImageURL": null
             },
             "geometry": {
@@ -6836,10 +6836,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 508,
-                "Name": "Seddon Toilet",
+                "TOILET_NAME": "Seddon Toilet",
                 "DisabledAccess": "No",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--seddon",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--seddon",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/BE4FD4A5-E2A5-468F-85A1-4F19399C170E\/Seddon%20Toilets%20320x240.png"
             },
             "geometry": {
@@ -6854,10 +6854,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 509,
-                "Name": "Seymour Square",
+                "TOILET_NAME": "Seymour Square",
                 "DisabledAccess": "No",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/seymour-square",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/seymour-square",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/B48E2563-512F-4973-8DA4-6426613A0BB3\/Seymour%20Square%20320x240.png"
             },
             "geometry": {
@@ -6872,10 +6872,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 510,
-                "Name": "Shelley Beach",
+                "TOILET_NAME": "Shelley Beach",
                 "DisabledAccess": "No",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/shelley-beach-reserve",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/shelley-beach-reserve",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/1DDA5A73-84F5-4F53-BA74-B20282DCDF71\/Public%20Toilet%20320x240.png"
             },
             "geometry": {
@@ -6890,10 +6890,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 511,
-                "Name": "Sheps' Park",
+                "TOILET_NAME": "Sheps' Park",
                 "DisabledAccess": "No",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/sheps%27-park",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/sheps%27-park",
                 "ImageURL": "https:\/\/dds-cdn.datascape.cloud\/public\/marlborough\/e4ac8bea-6da8-4fab-a31d-a0dd97d06812"
             },
             "geometry": {
@@ -6908,10 +6908,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 512,
-                "Name": "Sutherland Stream",
+                "TOILET_NAME": "Sutherland Stream",
                 "DisabledAccess": "No",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/wither-hills-farm-park",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/wither-hills-farm-park",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/D28DC6B7-4835-42B9-85CE-DC9C487ADFB0\/Toilet%20320x240.png"
             },
             "geometry": {
@@ -6926,10 +6926,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 513,
-                "Name": "Taylor Dam",
+                "TOILET_NAME": "Taylor Dam",
                 "DisabledAccess": "No",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/taylor-dam",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/taylor-dam",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/03582AF5-FC51-4A8C-A0CB-5ACB24EF856D\/Taylor%20Dam%20320x240.png"
             },
             "geometry": {
@@ -6944,10 +6944,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 514,
-                "Name": "Taylor River Reserve",
+                "TOILET_NAME": "Taylor River Reserve",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/taylor-river-reserve",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/taylor-river-reserve",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/D8666109-2AD2-408F-8C19-D4B72346CAAB\/Toilet%20320x240.png"
             },
             "geometry": {
@@ -6962,10 +6962,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 515,
-                "Name": "Te Mahia",
+                "TOILET_NAME": "Te Mahia",
                 "DisabledAccess": "No",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--te-mahia",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--te-mahia",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/4BCFE9DD-2E18-4BC2-B97D-91AC0F4A4ACF\/Te%20Mahia%20320x240.png"
             },
             "geometry": {
@@ -6980,10 +6980,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 516,
-                "Name": "The Snout Walkway",
+                "TOILET_NAME": "The Snout Walkway",
                 "DisabledAccess": "No",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/victoria-domain",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/victoria-domain",
                 "ImageURL": null
             },
             "geometry": {
@@ -6998,10 +6998,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 517,
-                "Name": "Tunnicliff Reserve",
+                "TOILET_NAME": "Tunnicliff Reserve",
                 "DisabledAccess": "No",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/tunnicliff-reserve",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/tunnicliff-reserve",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/2D9C002E-B327-40E4-8945-97F6F24C9A2F\/Public%20Toilet%20320x240.png"
             },
             "geometry": {
@@ -7016,10 +7016,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 518,
-                "Name": "Waikawa Foreshore",
+                "TOILET_NAME": "Waikawa Foreshore",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/waikawa-foreshore-reserve",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/waikawa-foreshore-reserve",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/7D062ADB-5B41-482A-ACA5-84910B13F886\/Waikawa%20Toilets%20320x240.png"
             },
             "geometry": {
@@ -7034,10 +7034,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 519,
-                "Name": "Wairau Diversion",
+                "TOILET_NAME": "Wairau Diversion",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/wairau-diversion-reserve",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/wairau-diversion-reserve",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/47046136-7469-4FB1-816B-6E031AB61F1C\/Toilet%20320x240.png"
             },
             "geometry": {
@@ -7052,10 +7052,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 520,
-                "Name": "Wairau Valley Church",
+                "TOILET_NAME": "Wairau Valley Church",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--wairau-valley-church",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--wairau-valley-church",
                 "ImageURL": "https:\/\/dds-cdn.datascape.cloud\/public\/marlborough\/63c9c650-fb79-4f1c-9298-1854a0598231"
             },
             "geometry": {
@@ -7070,10 +7070,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 521,
-                "Name": "Waitaria Bay Hall",
+                "TOILET_NAME": "Waitaria Bay Hall",
                 "DisabledAccess": "No",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--waitaria-bay",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--waitaria-bay",
                 "ImageURL": null
             },
             "geometry": {
@@ -7088,10 +7088,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 522,
-                "Name": "Ward Beach",
+                "TOILET_NAME": "Ward Beach",
                 "DisabledAccess": "No",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/ward-beach-reserve",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/ward-beach-reserve",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/25AD7256-A793-4E49-8F18-B016FC2F0B7C\/Ward%20Beach%20Reserve%20toilet%20320x240.png"
             },
             "geometry": {
@@ -7106,10 +7106,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 523,
-                "Name": "Ward Domain",
+                "TOILET_NAME": "Ward Domain",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/ward-domain",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/ward-domain",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/32971AF9-8F0E-4FF0-8953-936A61E61C66\/Toilets%20320x240.png"
             },
             "geometry": {
