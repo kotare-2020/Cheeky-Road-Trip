@@ -77,7 +77,7 @@ class HomePage extends React.Component {
 
   searchStart = (event) => {
     event.preventDefault()
-    request.get("http://api.positionstack.com/v1/forward", {
+    request.get("https://api.positionstack.com/v1/forward", {
       'access_key': process.env.POSITION_STACK_API_KEY,
       "country": "NZ",
       '& query': this.state.startPoint,
@@ -92,7 +92,7 @@ class HomePage extends React.Component {
 
     searchDestination = (event) => {
       event.preventDefault()
-      request.get("http://api.positionstack.com/v1/forward", {
+      request.get("https://api.positionstack.com/v1/forward", {
         'access_key': process.env.POSITION_STACK_API_KEY,
         "country": "NZ",
         '& query': this.state.destination,
