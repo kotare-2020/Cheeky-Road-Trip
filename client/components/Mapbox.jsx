@@ -94,43 +94,53 @@ class Mapbox extends React.Component {
       const dataStructureType3 = {
         description: "<strong>Toilets :)</strong> <p>No extra information :(</p>"
       }
+      
+      const setName = () => {if (dataStructureType1.name != undefined) {
+        return dataStructureType1.name
+      } else if (dataStructureType2.name != undefined){
+        return dataStructureType2.name
+      } else {
+        return "Toilets :)"
+      }}
 
       const addToWaypointsNoArgs = () => {
         const newArray = [...this.props.currentTrip.inbetweenWaypoints]
+        const nameOfToilet = setName()
         newArray.push({
-          buildingName: capitalize(dataStructureType2.name),
+          buildingName: capitalize(nameOfToilet),
           label: "label",
           latitude: coordinates[1],
           longitude: coordinates[0],
           streetName: "street",
         })
-        const tripData = {
+        const tripDataWithNewStop = {
           tripName: this.props.currentTrip.tripName,
           startWaypoint: this.props.currentTrip.startWaypoint,
           inbetweenWaypoints: newArray,
           endWaypoint: this.props.currentTrip.endWaypoint,
         }
-        this.props.dispatch(addNewTrip(tripData))
+        this.props.dispatch(addNewTrip(tripDataWithNewStop))
       }
 
       const coordinates = e.features[0].geometry.coordinates.slice()
-      let setToiletDescription = (descOne, descTwo, descThree) => {
+      const setToiletDescription = (descOne, descTwo, descThree) => {
+        // window.dostuff = this.dostuff
+        // ^--- to make a function as global as possible.
+        // <button onClick='window.dostuff()'>hi</button>
+        // ^--- for below HTML in if statements
+        // window.addToWaypoints = this.addToWaypoints(coordinates, descTwo.name)
+        // ^--- can't use arguments?
+        window.addToWaypoints = addToWaypointsNoArgs // <--- use this one
+        // ^--- defined above in current scope (map on click) to keep variables
+        // because we can't use arguments (I think).
         if (descOne.name != undefined) {
-          return `<strong>${descOne.name}</strong>`
+          return (
+            `<strong>${descOne.name}</strong>
+            <br>
+            <button onClick='window.addToWaypoints()'>Add stop to trip</button>`
+            )
         }
         else if (descOne.name == undefined && descTwo.description != "null" && descTwo.description != undefined && descTwo.openTimes != "null" && descTwo.openTimes != undefined) {
-
-          // window.dostuff = this.dostuff
-          // ^--- to make a function as global as possible.
-          // <button onClick='window.dostuff()'>hi</button>
-          // ^--- for below HTML
-
-          // window.addToWaypoints = this.addToWaypoints(coordinates, descTwo.name)
-          // ^--- can't use arguments?
-          window.addToWaypoints = addToWaypointsNoArgs // <--- use this one
-          // ^--- defined above in current scope (map on click) to keep variables
-          // because we can't use arguments (I think).
-
           descTwo.name = capitalize(descTwo.name)
           return (
             `<strong>${descTwo.name}</strong>
@@ -143,11 +153,15 @@ class Mapbox extends React.Component {
           return (
             `<strong>${capitalize(descTwo.name)}</strong>
             <strong>Toilets</strong>
-            <p>No extra information :(</p>`
+            <p>No extra information :(</p>
+            <button onClick='window.addToWaypoints()'>Add stop to trip</button>`
           )
         }
         else {
-          return descThree.description
+          return (
+            `${descThree.description}
+            <button onClick='window.addToWaypoints()'>Add stop to trip</button>`
+          )
         }
       }
       let description = setToiletDescription(dataStructureType1, dataStructureType2, dataStructureType3)
