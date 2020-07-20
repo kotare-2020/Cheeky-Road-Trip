@@ -3428,7 +3428,7 @@
             "type": "Feature",
             "properties": {
                 "FID": 1,
-                "name": "Hikuataia"
+                "Name": "Hikuataia"
             },
             "geometry": {
                 "type": "Point",
@@ -3442,7 +3442,7 @@
             "type": "Feature",
             "properties": {
                 "FID": 2,
-                "name": "Mangaiti"
+                "Name": "Mangaiti"
             },
             "geometry": {
                 "type": "Point",
@@ -3456,7 +3456,7 @@
             "type": "Feature",
             "properties": {
                 "FID": 3,
-                "name": "Paeroa"
+                "Name": "Paeroa"
             },
             "geometry": {
                 "type": "Point",
@@ -3470,7 +3470,7 @@
             "type": "Feature",
             "properties": {
                 "FID": 4,
-                "name": "Te Aroha"
+                "Name": "Te Aroha"
             },
             "geometry": {
                 "type": "Point",
@@ -3484,7 +3484,7 @@
             "type": "Feature",
             "properties": {
                 "FID": 5,
-                "name": "Tirohia"
+                "Name": "Tirohia"
             },
             "geometry": {
                 "type": "Point",
@@ -4545,11 +4545,11 @@
             "properties": {
                 "FID": 1,
                 "ADDRESS": "1994 East Cape Road",
-                "NAME": "East Cape",
+                "TOILET_NAME": "East Cape",
                 "COMMENTS": " ",
                 "LOCATION": "East Cape Light House",
-                "Type": "Mens & Womens Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Mens & Womens Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -4564,11 +4564,11 @@
             "properties": {
                 "FID": 2,
                 "ADDRESS": "42 Wharf Road",
-                "NAME": "Hicks Bay",
+                "TOILET_NAME": "Hicks Bay",
                 "COMMENTS": " ",
                 "LOCATION": "Wharekahika School Grounds",
-                "Type": "Mens & Womens Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Mens & Womens Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -4583,11 +4583,11 @@
             "properties": {
                 "FID": 3,
                 "ADDRESS": "439 Lottin Point Road",
-                "NAME": "Lottin Point",
+                "TOILET_NAME": "Lottin Point",
                 "COMMENTS": " ",
                 "LOCATION": "Lottin Point",
-                "Type": "Single Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Single Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -4602,11 +4602,11 @@
             "properties": {
                 "FID": 4,
                 "ADDRESS": "2 Matakaoa Road",
-                "NAME": "Hicks Bay",
+                "TOILET_NAME": "Hicks Bay",
                 "COMMENTS": " ",
                 "LOCATION": "Adj Hicks Bay Wharf",
-                "Type": "Pit toilet",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Pit toilet",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -4621,11 +4621,11 @@
             "properties": {
                 "FID": 5,
                 "ADDRESS": "139A Onepoto Road",
-                "NAME": "Onepoto Bay",
+                "TOILET_NAME": "Onepoto Bay",
                 "COMMENTS": " ",
                 "LOCATION": "Onepoto Hicks Bay",
-                "Type": "Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -4640,11 +4640,11 @@
             "properties": {
                 "FID": 6,
                 "ADDRESS": "25 Moana Parade",
-                "NAME": "Te Araroa",
+                "TOILET_NAME": "Te Araroa",
                 "COMMENTS": " ",
                 "LOCATION": "Te Araroa",
-                "Type": "Mens & Womens Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Mens & Womens Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -4659,11 +4659,11 @@
             "properties": {
                 "FID": 7,
                 "ADDRESS": "3 Hall Street",
-                "NAME": "Te Puia Springs",
+                "TOILET_NAME": "Te Puia Springs",
                 "COMMENTS": " ",
                 "LOCATION": "Te Puia Springs",
-                "Type": "Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -4678,11 +4678,11 @@
             "properties": {
                 "FID": 8,
                 "ADDRESS": "23 Marae Road",
-                "NAME": "Waipiro Bay",
+                "TOILET_NAME": "Waipiro Bay",
                 "COMMENTS": " ",
                 "LOCATION": "Waipiro Bay Adj Iritekura Marae",
-                "Type": "Pit toilet",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Pit toilet",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -4697,11 +4697,11 @@
             "properties": {
                 "FID": 9,
                 "ADDRESS": "110 Mcilroy Road",
-                "NAME": "Waipiro Bay",
+                "TOILET_NAME": "Waipiro Bay",
                 "COMMENTS": " ",
                 "LOCATION": "Waipiro Bay",
-                "Type": "Pit toilet",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Pit toilet",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -4716,11 +4716,11 @@
             "properties": {
                 "FID": 10,
                 "ADDRESS": "1866 Te Araroa Road",
-                "NAME": "Tikitiki",
+                "TOILET_NAME": "Tikitiki",
                 "COMMENTS": " ",
                 "LOCATION": "Tikitiki",
-                "Type": "Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -4735,11 +4735,11 @@
             "properties": {
                 "FID": 11,
                 "ADDRESS": "10 Beach Road",
-                "NAME": "Tokomaru Bay",
+                "TOILET_NAME": "Tokomaru Bay",
                 "COMMENTS": " ",
                 "LOCATION": "Tokomaru Bay",
-                "Type": "Mens & Womens Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Mens & Womens Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -4754,11 +4754,11 @@
             "properties": {
                 "FID": 12,
                 "ADDRESS": "61 Cliff Road",
-                "NAME": "Te Karaka",
+                "TOILET_NAME": "Te Karaka",
                 "COMMENTS": " ",
                 "LOCATION": "Te Karaka",
-                "Type": "Mens & Womens Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Mens & Womens Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -4773,11 +4773,11 @@
             "properties": {
                 "FID": 13,
                 "ADDRESS": "29 Cook Street",
-                "NAME": "Tolaga Bay",
+                "TOILET_NAME": "Tolaga Bay",
                 "COMMENTS": " ",
                 "LOCATION": "Tolaga Bay Township",
-                "Type": "Mens & Womens Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Mens & Womens Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -4792,11 +4792,11 @@
             "properties": {
                 "FID": 14,
                 "ADDRESS": "5 Ferneaux Street",
-                "NAME": "Blue Waters",
+                "TOILET_NAME": "Blue Waters",
                 "COMMENTS": " ",
                 "LOCATION": "Blue Waters Tolaga Bay",
-                "Type": "Mens & Womens Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Mens & Womens Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -4811,11 +4811,11 @@
             "properties": {
                 "FID": 15,
                 "ADDRESS": "6529 Matawai Road",
-                "NAME": "Matawai",
+                "TOILET_NAME": "Matawai",
                 "COMMENTS": " ",
                 "LOCATION": "Matawai Township",
-                "Type": "Mens & Womens Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Mens & Womens Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -4830,11 +4830,11 @@
             "properties": {
                 "FID": 16,
                 "ADDRESS": "166 Onslow Road",
-                "NAME": "Patutahi",
+                "TOILET_NAME": "Patutahi",
                 "COMMENTS": " ",
                 "LOCATION": "Patutahi Reserve",
-                "Type": "Mens & Womens Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Mens & Womens Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -4849,11 +4849,11 @@
             "properties": {
                 "FID": 17,
                 "ADDRESS": "209 Grey Street",
-                "NAME": "Visitor Information Centre",
+                "TOILET_NAME": "Visitor Information Centre",
                 "COMMENTS": " ",
                 "LOCATION": "Gisborne City",
-                "Type": "Toilet",
-                "Opening_Hours": "6am - 9:30pm"
+                "DESCRIPTION": "Toilet",
+                "USE_RESTRICTIONS": "6am - 9:30pm"
             },
             "geometry": {
                 "type": "Point",
@@ -4868,11 +4868,11 @@
             "properties": {
                 "FID": 18,
                 "ADDRESS": "58 Lytton Road",
-                "NAME": "Bmx",
+                "TOILET_NAME": "Bmx",
                 "COMMENTS": " ",
                 "LOCATION": "Lytton Park",
-                "Type": "Toilet",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Toilet",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -4887,11 +4887,11 @@
             "properties": {
                 "FID": 19,
                 "ADDRESS": "150 Sponge Bay Road",
-                "NAME": "Sponge Bay",
+                "TOILET_NAME": "Sponge Bay",
                 "COMMENTS": " ",
                 "LOCATION": "Sponge Bay Car Park",
-                "Type": "Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -4906,11 +4906,11 @@
             "properties": {
                 "FID": 20,
                 "ADDRESS": "7 Ferneaux Street",
-                "NAME": "Tolaga Bay",
+                "TOILET_NAME": "Tolaga Bay",
                 "COMMENTS": " ",
                 "LOCATION": "Tolaga Bay Beach Front",
-                "Type": "Mens & Womens Accessible Flushing",
-                "Opening_Hours": "24 Hours - during summer months"
+                "DESCRIPTION": "Mens & Womens Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours - during summer months"
             },
             "geometry": {
                 "type": "Point",
@@ -4925,11 +4925,11 @@
             "properties": {
                 "FID": 21,
                 "ADDRESS": "11 Moana Road",
-                "NAME": "Lysnar Reserve",
+                "TOILET_NAME": "Lysnar Reserve",
                 "COMMENTS": " ",
                 "LOCATION": "Wainui Surf Club",
-                "Type": "Mens & Womens Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Mens & Womens Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -4944,11 +4944,11 @@
             "properties": {
                 "FID": 22,
                 "ADDRESS": "158 Waiomatatini Road",
-                "NAME": "Ruatoria",
+                "TOILET_NAME": "Ruatoria",
                 "COMMENTS": " ",
                 "LOCATION": "Ruatoria",
-                "Type": "Mens & Womens Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Mens & Womens Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -4963,11 +4963,11 @@
             "properties": {
                 "FID": 23,
                 "ADDRESS": "40 Centennial Marine Drive",
-                "NAME": "Midway Beach",
+                "TOILET_NAME": "Midway Beach",
                 "COMMENTS": " ",
                 "LOCATION": "Midway Beach Surf Club Bldg",
-                "Type": "Mens & Womens Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Mens & Womens Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -4982,11 +4982,11 @@
             "properties": {
                 "FID": 24,
                 "ADDRESS": "73 Centennial Marine Drive",
-                "NAME": "Adventure Playground",
+                "TOILET_NAME": "Adventure Playground",
                 "COMMENTS": " ",
                 "LOCATION": "Adventure Playground",
-                "Type": "Mens & Womens Accessible Flushing",
-                "Opening_Hours": "6am - 9:30pm"
+                "DESCRIPTION": "Mens & Womens Accessible Flushing",
+                "USE_RESTRICTIONS": "6am - 9:30pm"
             },
             "geometry": {
                 "type": "Point",
@@ -5001,11 +5001,11 @@
             "properties": {
                 "FID": 26,
                 "ADDRESS": "24 Hospital Road",
-                "NAME": "Mangapapa Reserve",
+                "TOILET_NAME": "Mangapapa Reserve",
                 "COMMENTS": " ",
                 "LOCATION": "Mangapapa Reserve",
-                "Type": "Mens & Womens Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Mens & Womens Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5020,11 +5020,11 @@
             "properties": {
                 "FID": 27,
                 "ADDRESS": "116 Roebuck Road",
-                "NAME": "Childers Road Reserve",
+                "TOILET_NAME": "Childers Road Reserve",
                 "COMMENTS": " ",
                 "LOCATION": "Childers Road Reserve",
-                "Type": "Mens & Womens Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Mens & Womens Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5039,11 +5039,11 @@
             "properties": {
                 "FID": 28,
                 "ADDRESS": "100 Salisbury Road",
-                "NAME": "Churchill Park",
+                "TOILET_NAME": "Churchill Park",
                 "COMMENTS": " ",
                 "LOCATION": "Churchill Park",
-                "Type": "Toilet",
-                "Opening_Hours": "Only Open for Events"
+                "DESCRIPTION": "Toilet",
+                "USE_RESTRICTIONS": "Only Open for Events"
             },
             "geometry": {
                 "type": "Point",
@@ -5058,11 +5058,11 @@
             "properties": {
                 "FID": 29,
                 "ADDRESS": "80 Wairere Road",
-                "NAME": "Wainui Reserve",
+                "TOILET_NAME": "Wainui Reserve",
                 "COMMENTS": " ",
                 "LOCATION": "Wainui Reserve",
-                "Type": "Toilet",
-                "Opening_Hours": "Only open during sports times"
+                "DESCRIPTION": "Toilet",
+                "USE_RESTRICTIONS": "Only open during sports times"
             },
             "geometry": {
                 "type": "Point",
@@ -5077,11 +5077,11 @@
             "properties": {
                 "FID": 30,
                 "ADDRESS": "33 Bright Street",
-                "NAME": "Bright Street",
+                "TOILET_NAME": "Bright Street",
                 "COMMENTS": " ",
                 "LOCATION": "Gisborne City",
-                "Type": "Toilets & Showers",
-                "Opening_Hours": "Mon - Fri 8:30am - 5pm, Sat 9am - 1pm"
+                "DESCRIPTION": "Toilets & Showers",
+                "USE_RESTRICTIONS": "Mon - Fri 8:30am - 5pm, Sat 9am - 1pm"
             },
             "geometry": {
                 "type": "Point",
@@ -5096,11 +5096,11 @@
             "properties": {
                 "FID": 31,
                 "ADDRESS": "60 Station Road",
-                "NAME": "Te Karaka",
+                "TOILET_NAME": "Te Karaka",
                 "COMMENTS": " ",
                 "LOCATION": "Te Karaka Reserve",
-                "Type": "Toilet",
-                "Opening_Hours": "Only open during sports times"
+                "DESCRIPTION": "Toilet",
+                "USE_RESTRICTIONS": "Only open during sports times"
             },
             "geometry": {
                 "type": "Point",
@@ -5115,11 +5115,11 @@
             "properties": {
                 "FID": 33,
                 "ADDRESS": "41 Ballance Street",
-                "NAME": "Ballance Street Village",
+                "TOILET_NAME": "Ballance Street Village",
                 "COMMENTS": " ",
                 "LOCATION": "Ormond Road Adj Ballance Street Village",
-                "Type": "Exeloo Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Exeloo Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5134,11 +5134,11 @@
             "properties": {
                 "FID": 34,
                 "ADDRESS": "390 Nelson Road",
-                "NAME": "Nelson Park",
+                "TOILET_NAME": "Nelson Park",
                 "COMMENTS": " ",
                 "LOCATION": "Nelson Park",
-                "Type": "Toilet",
-                "Opening_Hours": "Only open during sports times"
+                "DESCRIPTION": "Toilet",
+                "USE_RESTRICTIONS": "Only open during sports times"
             },
             "geometry": {
                 "type": "Point",
@@ -5153,11 +5153,11 @@
             "properties": {
                 "FID": 35,
                 "ADDRESS": "121 Lytton Road",
-                "NAME": "Harry Barker Reserve",
+                "TOILET_NAME": "Harry Barker Reserve",
                 "COMMENTS": " ",
                 "LOCATION": "Harry Barker Reserve",
-                "Type": "Toilet",
-                "Opening_Hours": "Only open during sports times"
+                "DESCRIPTION": "Toilet",
+                "USE_RESTRICTIONS": "Only open during sports times"
             },
             "geometry": {
                 "type": "Point",
@@ -5172,11 +5172,11 @@
             "properties": {
                 "FID": 36,
                 "ADDRESS": "498A Wainui Road",
-                "NAME": "Kaiti Mall",
+                "TOILET_NAME": "Kaiti Mall",
                 "COMMENTS": " ",
                 "LOCATION": "Kaiti Mall",
-                "Type": "Mens & Womens Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Mens & Womens Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5191,11 +5191,11 @@
             "properties": {
                 "FID": 37,
                 "ADDRESS": "89 Kaiti Beach Road",
-                "NAME": "Kaiti Beach",
+                "TOILET_NAME": "Kaiti Beach",
                 "COMMENTS": " ",
                 "LOCATION": "Kaiti Beach Adj Yacht Club",
-                "Type": "Exeloo Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Exeloo Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5210,11 +5210,11 @@
             "properties": {
                 "FID": 38,
                 "ADDRESS": "9 Vogel Street",
-                "NAME": "Vogel Street",
+                "TOILET_NAME": "Vogel Street",
                 "COMMENTS": " ",
                 "LOCATION": "Marina Park",
-                "Type": "Mens & Womens Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Mens & Womens Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5229,11 +5229,11 @@
             "properties": {
                 "FID": 39,
                 "ADDRESS": "391 Aberdeen Road",
-                "NAME": "Botanical Garden",
+                "TOILET_NAME": "Botanical Garden",
                 "COMMENTS": " ",
                 "LOCATION": "Botanical Gardens",
-                "Type": "Mens & Womens Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Mens & Womens Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5248,11 +5248,11 @@
             "properties": {
                 "FID": 40,
                 "ADDRESS": "32 Stanley Road",
-                "NAME": "Barry Park",
+                "TOILET_NAME": "Barry Park",
                 "COMMENTS": " ",
                 "LOCATION": "Barry Park",
-                "Type": "Toilet",
-                "Opening_Hours": "Only open during sports times"
+                "DESCRIPTION": "Toilet",
+                "USE_RESTRICTIONS": "Only open during sports times"
             },
             "geometry": {
                 "type": "Point",
@@ -5267,11 +5267,11 @@
             "properties": {
                 "FID": 41,
                 "ADDRESS": "87 Centennial Marine Drive",
-                "NAME": "Gisborne Outdoor Theatre",
+                "TOILET_NAME": "Gisborne Outdoor Theatre",
                 "COMMENTS": " ",
                 "LOCATION": "Gisborne Outdoor Theatre",
-                "Type": "Toilet",
-                "Opening_Hours": "Only open during sports times or event"
+                "DESCRIPTION": "Toilet",
+                "USE_RESTRICTIONS": "Only open during sports times or event"
             },
             "geometry": {
                 "type": "Point",
@@ -5286,11 +5286,11 @@
             "properties": {
                 "FID": 42,
                 "ADDRESS": "16 Potae Avenue",
-                "NAME": "Lytton West",
+                "TOILET_NAME": "Lytton West",
                 "COMMENTS": " ",
                 "LOCATION": "Lytton West Village",
-                "Type": "Exeloo Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Exeloo Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5305,11 +5305,11 @@
             "properties": {
                 "FID": 43,
                 "ADDRESS": "50 Peel Street",
-                "NAME": "Peel Street",
+                "TOILET_NAME": "Peel Street",
                 "COMMENTS": " ",
                 "LOCATION": "Gisborne City",
-                "Type": "Toilet",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Toilet",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5324,11 +5324,11 @@
             "properties": {
                 "FID": 44,
                 "ADDRESS": "744 Whangara Road",
-                "NAME": "Turihaua",
+                "TOILET_NAME": "Turihaua",
                 "COMMENTS": " ",
                 "LOCATION": "Turihaua",
-                "Type": "Mens & Womens Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Mens & Womens Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5343,11 +5343,11 @@
             "properties": {
                 "FID": 45,
                 "ADDRESS": "1 Motu Falls Road",
-                "NAME": "Motu",
+                "TOILET_NAME": "Motu",
                 "COMMENTS": " ",
                 "LOCATION": "Motu",
-                "Type": "Mens & Womens Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Mens & Womens Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5362,11 +5362,11 @@
             "properties": {
                 "FID": 46,
                 "ADDRESS": "137 Waima Road",
-                "NAME": "Tokomaru Bay Wharf",
+                "TOILET_NAME": "Tokomaru Bay Wharf",
                 "COMMENTS": " ",
                 "LOCATION": "Tokomaru Bay",
-                "Type": "Mens & Womens Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Mens & Womens Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5381,11 +5381,11 @@
             "properties": {
                 "FID": 47,
                 "ADDRESS": "168 Wharf Road",
-                "NAME": "Tolaga Bay Wharf",
+                "TOILET_NAME": "Tolaga Bay Wharf",
                 "COMMENTS": " ",
                 "LOCATION": "Tolaga Bay Wharf",
-                "Type": "Mens & Womens Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Mens & Womens Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5400,11 +5400,11 @@
             "properties": {
                 "FID": 49,
                 "ADDRESS": "578 Kaiaua Road",
-                "NAME": "Kaiaua Beach South",
+                "TOILET_NAME": "Kaiaua Beach South",
                 "COMMENTS": " ",
                 "LOCATION": "Kaiaua Beach",
-                "Type": "Single Flushing & Holding tank",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Single Flushing & Holding tank",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5419,11 +5419,11 @@
             "properties": {
                 "FID": 50,
                 "ADDRESS": "602 Waihau Road",
-                "NAME": "Loisels Beach South",
+                "TOILET_NAME": "Loisels Beach South",
                 "COMMENTS": " ",
                 "LOCATION": "Waihau Bay",
-                "Type": "Single Flushing & Holding tank",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Single Flushing & Holding tank",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5438,11 +5438,11 @@
             "properties": {
                 "FID": 51,
                 "ADDRESS": "609 Waihau Road",
-                "NAME": "Loisels Beach North",
+                "TOILET_NAME": "Loisels Beach North",
                 "COMMENTS": " ",
                 "LOCATION": "Waihau Bay",
-                "Type": "Toilet",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Toilet",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5457,11 +5457,11 @@
             "properties": {
                 "FID": 53,
                 "ADDRESS": "1028 Whangara Road",
-                "NAME": "Pouawa",
+                "TOILET_NAME": "Pouawa",
                 "COMMENTS": " ",
                 "LOCATION": "Pouawa Beach",
-                "Type": "Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5476,11 +5476,11 @@
             "properties": {
                 "FID": 54,
                 "ADDRESS": "2A Oneroa Road",
-                "NAME": "Wainui",
+                "TOILET_NAME": "Wainui",
                 "COMMENTS": " ",
                 "LOCATION": "Stock Route Wainui",
-                "Type": "Mens & Womens Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Mens & Womens Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5495,11 +5495,11 @@
             "properties": {
                 "FID": 55,
                 "ADDRESS": "129 Tyndall Road",
-                "NAME": "Waikirikiri Reserve",
+                "TOILET_NAME": "Waikirikiri Reserve",
                 "COMMENTS": " ",
                 "LOCATION": "Waikirikiri Reserve",
-                "Type": "Toilet",
-                "Opening_Hours": "Only open during sports times"
+                "DESCRIPTION": "Toilet",
+                "USE_RESTRICTIONS": "Only open during sports times"
             },
             "geometry": {
                 "type": "Point",
@@ -5514,11 +5514,11 @@
             "properties": {
                 "FID": 56,
                 "ADDRESS": "11 Worsley Street",
-                "NAME": "Heath Johnston Park",
+                "TOILET_NAME": "Heath Johnston Park",
                 "COMMENTS": " ",
                 "LOCATION": "Heath Johnston Park",
-                "Type": "Toilet",
-                "Opening_Hours": "Only open during sports times"
+                "DESCRIPTION": "Toilet",
+                "USE_RESTRICTIONS": "Only open during sports times"
             },
             "geometry": {
                 "type": "Point",
@@ -5533,11 +5533,11 @@
             "properties": {
                 "FID": 57,
                 "ADDRESS": "11 Score Road",
-                "NAME": "Anzac Park",
+                "TOILET_NAME": "Anzac Park",
                 "COMMENTS": " ",
                 "LOCATION": "Anzac Park",
-                "Type": "Mens & Womens Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Mens & Womens Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5552,11 +5552,11 @@
             "properties": {
                 "FID": 58,
                 "ADDRESS": "689A Childers Road",
-                "NAME": "Elgin",
+                "TOILET_NAME": "Elgin",
                 "COMMENTS": " ",
                 "LOCATION": "Elgin Shops",
-                "Type": "Exeloo Accessible Flushing",
-                "Opening_Hours": "6am - 9:30pm"
+                "DESCRIPTION": "Exeloo Accessible Flushing",
+                "USE_RESTRICTIONS": "6am - 9:30pm"
             },
             "geometry": {
                 "type": "Point",
@@ -5571,11 +5571,11 @@
             "properties": {
                 "FID": 59,
                 "ADDRESS": "2A Cook Street",
-                "NAME": "Uawa Domain",
+                "TOILET_NAME": "Uawa Domain",
                 "COMMENTS": " ",
                 "LOCATION": "Uawa Rugby Union & Sports Club",
-                "Type": "Toilet",
-                "Opening_Hours": "Only open during sports times"
+                "DESCRIPTION": "Toilet",
+                "USE_RESTRICTIONS": "Only open during sports times"
             },
             "geometry": {
                 "type": "Point",
@@ -5590,11 +5590,11 @@
             "properties": {
                 "FID": 60,
                 "ADDRESS": "3 Mangahauini Street",
-                "NAME": "Hatea-A-Rangi Memorial Park",
+                "TOILET_NAME": "Hatea-A-Rangi Memorial Park",
                 "COMMENTS": " ",
                 "LOCATION": "Tokomaru Bay",
-                "Type": "Toilet",
-                "Opening_Hours": "Only open during sports times"
+                "DESCRIPTION": "Toilet",
+                "USE_RESTRICTIONS": "Only open during sports times"
             },
             "geometry": {
                 "type": "Point",
@@ -5609,11 +5609,11 @@
             "properties": {
                 "FID": 62,
                 "ADDRESS": "156 Stanley Road",
-                "NAME": "Oval Reserve",
+                "TOILET_NAME": "Oval Reserve",
                 "COMMENTS": " ",
                 "LOCATION": "Oval Reserve",
-                "Type": "Toilet",
-                "Opening_Hours": "Only open during sports times"
+                "DESCRIPTION": "Toilet",
+                "USE_RESTRICTIONS": "Only open during sports times"
             },
             "geometry": {
                 "type": "Point",
@@ -5628,11 +5628,11 @@
             "properties": {
                 "FID": 63,
                 "ADDRESS": "141A Derby Street",
-                "NAME": "Derby Street",
+                "TOILET_NAME": "Derby Street",
                 "COMMENTS": null,
                 "LOCATION": "Gisborne City",
-                "Type": "Exeloo Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Exeloo Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5647,11 +5647,11 @@
             "properties": {
                 "FID": 64,
                 "ADDRESS": "170 Whangara Road",
-                "NAME": "Makorori Point",
+                "TOILET_NAME": "Makorori Point",
                 "COMMENTS": null,
                 "LOCATION": "Makorori Point Car Park",
-                "Type": "Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5666,11 +5666,11 @@
             "properties": {
                 "FID": 65,
                 "ADDRESS": "70A Moana Road",
-                "NAME": "Lysnar Reserve",
+                "TOILET_NAME": "Lysnar Reserve",
                 "COMMENTS": null,
                 "LOCATION": "Lysnar Reserve - Adj Chalet Car Park",
-                "Type": "Mens & Womens Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Mens & Womens Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5685,11 +5685,11 @@
             "properties": {
                 "FID": 66,
                 "ADDRESS": "12 Whangara Road",
-                "NAME": "Lysnar Reserve",
+                "TOILET_NAME": "Lysnar Reserve",
                 "COMMENTS": null,
                 "LOCATION": "Lysnar Reserve Northern Car Park",
-                "Type": "Toilet",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Toilet",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5704,11 +5704,11 @@
             "properties": {
                 "FID": 67,
                 "ADDRESS": "1976 Ruakaka Road",
-                "NAME": "Doneraile Park",
+                "TOILET_NAME": "Doneraile Park",
                 "COMMENTS": null,
                 "LOCATION": "Hangaroa",
-                "Type": "Toilet",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Toilet",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5723,11 +5723,11 @@
             "properties": {
                 "FID": 68,
                 "ADDRESS": "322 Whangara Road",
-                "NAME": "Makorori",
+                "TOILET_NAME": "Makorori",
                 "COMMENTS": null,
                 "LOCATION": "Makorori Layby",
-                "Type": "Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5742,11 +5742,11 @@
             "properties": {
                 "FID": 70,
                 "ADDRESS": "3607 Wharekopae Road",
-                "NAME": "Rere Falls",
+                "TOILET_NAME": "Rere Falls",
                 "COMMENTS": null,
                 "LOCATION": "Adj Rere Falls",
-                "Type": "Mens & Womens Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Mens & Womens Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5761,11 +5761,11 @@
             "properties": {
                 "FID": 71,
                 "ADDRESS": "3844 Wharekopae Road",
-                "NAME": "Rere Rockslide",
+                "TOILET_NAME": "Rere Rockslide",
                 "COMMENTS": null,
                 "LOCATION": "Rere",
-                "Type": "Mens & Womens Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Mens & Womens Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5780,11 +5780,11 @@
             "properties": {
                 "FID": 72,
                 "ADDRESS": "204 Grey Street",
-                "NAME": "Skate Park",
+                "TOILET_NAME": "Skate Park",
                 "COMMENTS": " ",
                 "LOCATION": "Gisborne City",
-                "Type": "Toilet",
-                "Opening_Hours": "Only Open when Supervised"
+                "DESCRIPTION": "Toilet",
+                "USE_RESTRICTIONS": "Only Open when Supervised"
             },
             "geometry": {
                 "type": "Point",
@@ -5799,11 +5799,11 @@
             "properties": {
                 "FID": 73,
                 "ADDRESS": "78 Pouawa Road",
-                "NAME": "Pouawa",
+                "TOILET_NAME": "Pouawa",
                 "COMMENTS": " ",
                 "LOCATION": "Pouawa Beach",
-                "Type": "Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5818,11 +5818,11 @@
             "properties": {
                 "FID": 74,
                 "ADDRESS": "10A Pohutu Road",
-                "NAME": "Te Araroa Domain",
+                "TOILET_NAME": "Te Araroa Domain",
                 "COMMENTS": " ",
                 "LOCATION": "Te Araroa",
-                "Type": "Mens & Womens Accessible Flushing",
-                "Opening_Hours": "Only open during sports times"
+                "DESCRIPTION": "Mens & Womens Accessible Flushing",
+                "USE_RESTRICTIONS": "Only open during sports times"
             },
             "geometry": {
                 "type": "Point",
@@ -5837,11 +5837,11 @@
             "properties": {
                 "FID": 75,
                 "ADDRESS": "4819 Tiniroto Road",
-                "NAME": "Tiniroto",
+                "TOILET_NAME": "Tiniroto",
                 "COMMENTS": null,
                 "LOCATION": "Tiniroto",
-                "Type": "Mens & Womens Flushing & Holding tank",
-                "Opening_Hours": "Only Open for Events"
+                "DESCRIPTION": "Mens & Womens Flushing & Holding tank",
+                "USE_RESTRICTIONS": "Only Open for Events"
             },
             "geometry": {
                 "type": "Point",
@@ -5856,11 +5856,11 @@
             "properties": {
                 "FID": 76,
                 "ADDRESS": "8 Uawa Parade",
-                "NAME": "Uawa Boat Ramp",
+                "TOILET_NAME": "Uawa Boat Ramp",
                 "COMMENTS": " ",
                 "LOCATION": "Tolaga Bay",
-                "Type": "Toilet",
-                "Opening_Hours": "Not in Use"
+                "DESCRIPTION": "Toilet",
+                "USE_RESTRICTIONS": "Not in Use"
             },
             "geometry": {
                 "type": "Point",
@@ -5875,11 +5875,11 @@
             "properties": {
                 "FID": 77,
                 "ADDRESS": "876 Tuparoa Road",
-                "NAME": "Tuparoa",
+                "TOILET_NAME": "Tuparoa",
                 "COMMENTS": " ",
                 "LOCATION": "Tuparoa Beach",
-                "Type": "Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5894,11 +5894,11 @@
             "properties": {
                 "FID": 78,
                 "ADDRESS": "135 Centennial Marine Drive",
-                "NAME": "Watson Park",
+                "TOILET_NAME": "Watson Park",
                 "COMMENTS": " ",
                 "LOCATION": "Watson Park",
-                "Type": "Toilet",
-                "Opening_Hours": "Only open during sports times"
+                "DESCRIPTION": "Toilet",
+                "USE_RESTRICTIONS": "Only open during sports times"
             },
             "geometry": {
                 "type": "Point",
@@ -5913,11 +5913,11 @@
             "properties": {
                 "FID": 79,
                 "ADDRESS": "116A Roebuck Road",
-                "NAME": "Childers Road Reserve Grandstand",
+                "TOILET_NAME": "Childers Road Reserve Grandstand",
                 "COMMENTS": " ",
                 "LOCATION": "Childers Road Reserve Grandstand",
-                "Type": "Toilet",
-                "Opening_Hours": "Only open during sports times"
+                "DESCRIPTION": "Toilet",
+                "USE_RESTRICTIONS": "Only open during sports times"
             },
             "geometry": {
                 "type": "Point",
@@ -5932,11 +5932,11 @@
             "properties": {
                 "FID": 80,
                 "ADDRESS": "10 Pohutu Road",
-                "NAME": "Te Araroa Domain",
+                "TOILET_NAME": "Te Araroa Domain",
                 "COMMENTS": " ",
                 "LOCATION": "Te Araroa",
-                "Type": "Toilet",
-                "Opening_Hours": "Only open during sports times"
+                "DESCRIPTION": "Toilet",
+                "USE_RESTRICTIONS": "Only open during sports times"
             },
             "geometry": {
                 "type": "Point",
@@ -5951,11 +5951,11 @@
             "properties": {
                 "FID": 81,
                 "ADDRESS": "135A Centennial Marine Drive",
-                "NAME": "Watson Park Train Station",
+                "TOILET_NAME": "Watson Park Train Station",
                 "COMMENTS": " ",
                 "LOCATION": "Watson Park Train Station",
-                "Type": "Toilet",
-                "Opening_Hours": "Only open during sports times"
+                "DESCRIPTION": "Toilet",
+                "USE_RESTRICTIONS": "Only open during sports times"
             },
             "geometry": {
                 "type": "Point",
@@ -5970,11 +5970,11 @@
             "properties": {
                 "FID": 82,
                 "ADDRESS": "112 Waihirere Domain Road",
-                "NAME": "Waihirere Domain",
+                "TOILET_NAME": "Waihirere Domain",
                 "COMMENTS": " ",
                 "LOCATION": "Waihirere Domain",
-                "Type": "Mens & Womens Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Mens & Womens Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5989,11 +5989,11 @@
             "properties": {
                 "FID": 83,
                 "ADDRESS": "284 Grey Street",
-                "NAME": "Waikanae",
+                "TOILET_NAME": "Waikanae",
                 "COMMENTS": null,
                 "LOCATION": "Surf Club",
-                "Type": "Mens & Womens Accessible Flushing",
-                "Opening_Hours": "6:00am - 7:30pm"
+                "DESCRIPTION": "Mens & Womens Accessible Flushing",
+                "USE_RESTRICTIONS": "6:00am - 7:30pm"
             },
             "geometry": {
                 "type": "Point",
@@ -6008,11 +6008,11 @@
             "properties": {
                 "FID": 84,
                 "ADDRESS": "654 Kaiaua Road",
-                "NAME": "Kaiaua Beach North",
+                "TOILET_NAME": "Kaiaua Beach North",
                 "COMMENTS": " ",
                 "LOCATION": "Kaiaua Beach",
-                "Type": "Single Flushing & Holding tank",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Single Flushing & Holding tank",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
