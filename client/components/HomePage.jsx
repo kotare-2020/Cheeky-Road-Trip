@@ -1,13 +1,12 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import request from 'superagent'
-import { addNewTrip } from '../actions/currentTrip'
-
 
 //Component Imports
 import AddressConfirm from './AddressConfirm'
 
 // Actions imports
+import { addTripName } from '../actions/currentTrip'
 import { searchAddress } from '../actions/waypointConfirmation'
 
 
@@ -16,25 +15,12 @@ class HomePage extends React.Component {
   state = {
     tripName: '',
     startPoint: '',
-    stopOver: '',
-    destination: '',
-    startWaypoint: {
-      // default test values
-      latitude: -36.8191,
-      longitude: 174.7248
-    },
-    inbetweenWaypoints: [],
-    endWaypoint: {
-      // default test values
-      latitude: -38.3723,
-      longitude: 177.5581
-    },
+    midPoint: '',
+    endPoint: '',
     START: false,
     END: false,
+    MID: false,
   }
-
-
-
 
   handleChange = (event) => {
     this.setState({
@@ -50,6 +36,7 @@ class HomePage extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault()
+    this.props.dispatch(addTripName(this.state.tripName))
     this.props.showHome(false)
   }
 
@@ -68,13 +55,28 @@ class HomePage extends React.Component {
       })
     })
   }
+  
+  searchMid = (event) => {
+    event.preventDefault()
+    request.get("http://api.positionstack.com/v1/forward", {
+      'access_key': process.env.POSITION_STACK_API_KEY,
+      "country": "NZ",
+      '& query': this.state.midPoint,
+    }).then(res => {
+      this.props.dispatch(searchAddress(res.body.data))
+    }).then(res => {
+      this.setState({
+        MID: !this.state.MID
+      })
+    })
+  }
 
-    searchDestination = (event) => {
+    searchEnd = (event) => {
       event.preventDefault()
       request.get("http://api.positionstack.com/v1/forward", {
         'access_key': process.env.POSITION_STACK_API_KEY,
         "country": "NZ",
-        '& query': this.state.destination,
+        '& query': this.state.endPoint,
       }).then(res => {
         this.props.dispatch(searchAddress(res.body.data))
       }).then(res => {
@@ -85,29 +87,6 @@ class HomePage extends React.Component {
     }
 
 
-    // ADD STOP OVER TO ROUTE!!!!
-    // searchStop = (event) => {
-    //   event.preventDefault()
-    //   request.get("http://api.positionstack.com/v1/forward", {
-    //     'access_key': process.env.POSITION_STACK_API_KEY,
-    //     "country": "NZ",
-    //     '& query': this.state.stopOver,
-    //   }).then(res => {
-    //     if (confirm(`Is ${res.body.data[0].label} the correct destination?`)) {
-    //       const newArray = this.state.inbetweenWaypoints
-    //       newArray.push({
-    //         buildingName: res.body.data[0].name,
-    //         label: res.body.data[0].label,
-    //         latitude: res.body.data[0].latitude,
-    //         longitude: res.body.data[0].longitude,
-    //         streetName: res.body.data[0].street,
-    //       })
-    //       this.setState({
-    //         inbetweenWaypoints: newArray,
-    //       })
-    //     }
-    //   })
-    // }
 
 
 
@@ -119,8 +98,6 @@ class HomePage extends React.Component {
               <h1 className='landing-page-title'>Cheeky Road Trip</h1>
               <h3 className='landing-page-subtitle' >Tell us where you're going!</h3>
               <form className='waypoints-form' onSubmit={this.handleSubmit}>
-
-                {/* Start / Destination Form */}
 
                 <label className="landing-page-form-boxes">
                   Trip Name:
@@ -134,23 +111,21 @@ class HomePage extends React.Component {
                   {this.state.START ? <AddressConfirm waypointName="START" hideOptions={this.hideAddressOptions} /> : ''}
                 </label>
 
-                {/* <label className="address-confirm-list">
-                Stop-Over:
-                <input onChange={this.handleChange} type="text" name="stopOver" />
-                <button onClick={this.searchStop}>Search</button>
-              </label> */}
+                <label className="landing-form-elements" >
+                  Stop Over:
+                <input className="input is-rounded is-small" onChange={this.handleChange} type="text" name="midPoint" />
+                  <button className="button is-rounded is-small" onClick={this.searchMid}>Search</button>
+                  {this.state.MID ? <AddressConfirm waypointName="MID" hideOptions={this.hideAddressOptions} /> : ''}
+                </label>
 
                 <label className="landing-page-form-boxes">
                   Destination:
-                <input className="input is-rounded is-small" onChange={this.handleChange} type="text" name="destination" />
-                  <button className="button is-rounded is-small " onClick={this.searchDestination}>Search</button>
+                <input className="input is-rounded is-small" onChange={this.handleChange} type="text" name="endPoint" />
+                  <button className="button is-rounded is-small " onClick={this.searchEnd}>Search</button>
                   {this.state.END ? <AddressConfirm waypointName="END" hideOptions={this.hideAddressOptions} /> : ''}
                 </label>
 
                 <input className="button is-rounded is-small" className="landing-page-form-boxes" type="submit" value="Let's go!" />
-
-                {/* Start / Destination Form */}
-
               </form>
             </div>
           </div>
@@ -166,43 +141,4 @@ class HomePage extends React.Component {
     }
   }
 
-  export default connect(mapStateToProps)(HomePage)
-
-
-/*
-console.log("env", process.env.POSITION_STACK_API_KEY)// please fix
-request.get("http://api.positionstack.com/v1/forward", {
-  'access_key': '',// key go here as string
-  //process.env.POSITION_STACK_API_KEY "how the fuck do i make work" (Richard, 2020)
-  "country": "NZ",
-  '& query': "87 Rugby Street, Palmerston North,",// address part goes here
-})
-  .then(res => {
-    // Can't push to an array WHILE setting to a variable otherwise .push() will return array length.
-    this.props.currentTrip.waypoints.inbetweenWaypoints.push({
-      buildingName: res.body.data[0].name,
-      label: res.body.data[0].label,
-      latitude: res.body.data[0].latitude,
-      longitude: res.body.data[0].longitude,
-      streetName: res.body.data[0].street,
-    })
-    const waypoints = {
-      startWaypoint: {
-        buildingName: res.body.data[0].name,
-        label: res.body.data[0].label,
-        latitude: res.body.data[0].latitude,
-        longitude: res.body.data[0].longitude,
-        streetName: res.body.data[0].street,
-      },
-      inbetweenWaypoints: this.props.currentTrip.waypoints.inbetweenWaypoints,
-      endWaypoint: {
-        buildingName: res.body.data[0].name,
-        label: res.body.data[0].label,
-        latitude: res.body.data[0].latitude,
-        longitude: res.body.data[0].longitude,
-        streetName: res.body.data[0].street,
-      },
-    }
-    this.props.dispatch(setWaypoints(waypoints))
-  })
-  */
+export default connect(mapStateToProps)(HomePage)

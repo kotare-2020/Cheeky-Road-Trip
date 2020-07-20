@@ -5,17 +5,16 @@ import mapboxgl from 'mapbox-gl'
 import MapboxDirections from '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions'
 import bathroomData from '../../data/bathroom_data2.json'
 import request from 'superagent'
-import { addTripInstructions } from '../actions/currentTrip'
-import { addNewTrip } from '../actions/currentTrip'
+import { confirmAddress, eraseTrip, addTripInstructions } from '../actions/currentTrip'
 
 mapboxgl.accessToken = process.env.MAPBOX_API_KEY
 
 class Mapbox extends React.Component {
   state = {
-    changer: false,
     lng: this.props.currentTrip.START.longitude,
     lat: this.props.currentTrip.START.latitude,
     zoom: 5.75,
+    currentMidPoints: this.props.currentTrip.MID.length,
   }
 
   dostuff = () => {
@@ -25,10 +24,12 @@ class Mapbox extends React.Component {
   componentDidMount() {
     this.renderMap()
   }
-  componentDidUpdate(prevProps) {
-    if (prevProps.currentTrip.inbetweenWaypoints.length != this.props.currentTrip.inbetweenWaypoints.length) {
+  reloadMap = () => {
       this.renderMap()
-    }
+  }
+
+  componentWillUnmount(){
+    this.props.dispatch(eraseTrip())
   }
 
   renderMap = () => {
@@ -37,7 +38,7 @@ class Mapbox extends React.Component {
       this.props.currentTrip.START.latitude
     ]
     let midCoords = ''
-    this.props.currentTrip.inbetweenWaypoints.map((element) => {
+    this.props.currentTrip.MID.map((element) => {
       let newString = `${element.longitude},` + `${element.latitude};`
       midCoords = midCoords + newString
     })
@@ -96,21 +97,15 @@ class Mapbox extends React.Component {
       }
 
       const addToWaypointsNoArgs = () => {
-        const newArray = [...this.props.currentTrip.inbetweenWaypoints]
-        newArray.push({
+        const midpoint = {
           buildingName: capitalize(dataStructureType2.name),
           label: "label",
           latitude: coordinates[1],
           longitude: coordinates[0],
           streetName: "street",
-        })
-        const tripData = {
-          tripName: this.props.currentTrip.tripName,
-          startWaypoint: this.props.currentTrip.startWaypoint,
-          inbetweenWaypoints: newArray,
-          endWaypoint: this.props.currentTrip.endWaypoint,
         }
-        this.props.dispatch(addNewTrip(tripData))
+        this.props.dispatch(confirmAddress(midpoint, "MID"))
+        this.reloadMap()
       }
 
       const coordinates = e.features[0].geometry.coordinates.slice()
@@ -181,7 +176,7 @@ class Mapbox extends React.Component {
         this.props.currentTrip.START.latitude,
       ])
 
-      this.props.currentTrip.inbetweenWaypoints.map((element, i) => {
+      this.props.currentTrip.MID.map((element, i) => {
         directions.addWaypoint(i + 1, [
           element.longitude,
           element.latitude,
