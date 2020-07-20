@@ -41,6 +41,27 @@ class HomePage extends React.Component {
   }
 
 
+// options = {
+//   enableHighAccuracy: true,
+//   timeout: 5000,
+//   maximumAge: 0
+// };
+
+// success = (pos) => {
+//   var crd = pos.coords;
+//   console.log('Your current position: ');
+//   console.log (`Latitude' : ${crd.latitude}`);
+//   console.log (`Longitude : ${crd.longitude}`);
+//   console.log(`More or less ${crd.accuracy} metres. `);
+// }
+
+// errorr = (err) => {
+//   console.warn(`ERROR(${err.code}): ${err.message}`);
+// }
+
+// navigator.geolocation.getCurrentPosition(success, error, options);
+
+
   searchStart = (event) => {
     event.preventDefault()
     request.get("http://api.positionstack.com/v1/forward", {
@@ -73,6 +94,7 @@ class HomePage extends React.Component {
 
     searchEnd = (event) => {
       event.preventDefault()
+      console.log(process.env)
       request.get("http://api.positionstack.com/v1/forward", {
         'access_key': process.env.POSITION_STACK_API_KEY,
         "country": "NZ",
@@ -95,38 +117,53 @@ class HomePage extends React.Component {
         <>
           <div className="background-div" >
             <div className='landing-page-content-div'>
+              <div id="landing-page-title-container">
               <h1 className='landing-page-title'>Cheeky Road Trip</h1>
               <h3 className='landing-page-subtitle' >Tell us where you're going!</h3>
+              </div>
+ 
+ <div id="landingpage-form-container">
               <form className='waypoints-form' onSubmit={this.handleSubmit}>
 
                 <label className="landing-page-form-boxes">
-                  Trip Name:
-                <input className="input is-rounded is-small" onChange={this.handleChange} type="text" name="tripName" />
+                  {/* Trip Name */}
+                <input className="input is-rounded is-expanded" onChange={this.handleChange} type="text" placeholder="Name Your Roadtrip!" name="tripName" />
+                <button className="button is-rounded is-small">Enter</button>
                 </label>
 
-                <label className="landing-form-elements" >
-                  Start-Point:
-                <input className="input is-rounded is-small" onChange={this.handleChange} type="text" name="startPoint" />
+
+                <label className="landing-page-form-boxes" >
+                  {/* Start-Point: */}
+                <input className="input is-rounded is-expanded" onChange={this.handleChange} type="text" name="startPoint" placeholder="Add Start Point" />
                   <button className="button is-rounded is-small" onClick={this.searchStart}>Search</button>
                   {this.state.START ? <AddressConfirm waypointName="START" hideOptions={this.hideAddressOptions} /> : ''}
                 </label>
 
-                <label className="landing-form-elements" >
-                  Stop Over:
-                <input className="input is-rounded is-small" onChange={this.handleChange} type="text" name="midPoint" />
+                <label className="landing-page-form-boxes" >
+                  {/* Stop Over: */}
+                <input className="input is-rounded is-expanded" onChange={this.handleChange} type="text" name="midPoint" placeholder="Add Stop Over"/>
                   <button className="button is-rounded is-small" onClick={this.searchMid}>Search</button>
                   {this.state.MID ? <AddressConfirm waypointName="MID" hideOptions={this.hideAddressOptions} /> : ''}
                 </label>
 
                 <label className="landing-page-form-boxes">
-                  Destination:
-                <input className="input is-rounded is-small" onChange={this.handleChange} type="text" name="endPoint" />
-                  <button className="button is-rounded is-small " onClick={this.searchEnd}>Search</button>
+                  {/* Destination: */}
+                <input className="input is-rounded is-expanded" onChange={this.handleChange} type="text" name="endPoint" placeholder="Add Destination" />
+                  <button className="button is-rounded is-small" onClick={this.searchEnd}>Search</button>
                   {this.state.END ? <AddressConfirm waypointName="END" hideOptions={this.hideAddressOptions} /> : ''}
                 </label>
 
-                <input className="button is-rounded is-small" className="landing-page-form-boxes" type="submit" value="Let's go!" />
+                {/* <div class="svg-wrapper">
+                <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+                <rect class="shape" height="60" width="320"/> */}
+                <input  className="lets-go-button button is-primary" type="submit" value="Let's go!" />
+                {/* </svg>
+                </div> */}
+                {/* Start / Destination Form */}
+
               </form>
+              </div>
+
             </div>
           </div>
         </>
