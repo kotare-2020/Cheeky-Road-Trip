@@ -75,7 +75,6 @@ class Mapbox extends React.Component {
       unit: 'metric',
       profile: 'mapbox/driving'
     })
-    console.log('dirs', directions)
 
     map.on('click', 'points', (e) => {
       // There's a few different ways data is layed out in the json because of differing sources.
