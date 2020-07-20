@@ -1,9 +1,9 @@
 import React from 'react'
 
 //Import components
-import LeafletMap from '../components/LeafletMap'
 import TripInfo from './TripInfo'
 import DirectionsList from './DirectionsList'
+import Mapbox from './Mapbox'
 
 
 
@@ -14,21 +14,19 @@ class Dashboard extends React.Component {
         this.props.showHome(true)
     }
 
-
-
     render() {
         return (
             <>
-            
+            <button id="home-button" onClick={this.handleClick} > Home </button>
             <div id="dashboard-container">
-            <button onClick={this.handleClick} > Home </button>
             <div className="column-left-dashboard">
             <TripInfo/>
             <DirectionsList/>
             </div>
 
             <div className="column-right-dashboard" >
-            <LeafletMap />
+                <Mapbox/>
+            {/* <LeafletMap /> */}
             </div>
             
             
