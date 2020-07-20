@@ -92,6 +92,7 @@ class HomePage extends React.Component {
 
     searchDestination = (event) => {
       event.preventDefault()
+      console.log(process.env)
       request.get("http://api.positionstack.com/v1/forward", {
         'access_key': process.env.POSITION_STACK_API_KEY,
         "country": "NZ",
@@ -174,8 +175,12 @@ class HomePage extends React.Component {
                   {this.state.END ? <AddressConfirm waypointName="END" hideOptions={this.hideAddressOptions} /> : ''}
                 </label>
 
+                {/* <div class="svg-wrapper">
+                <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+                <rect class="shape" height="60" width="320"/> */}
                 <input  className="lets-go-button button is-primary" type="submit" value="Let's go!" />
-
+                {/* </svg>
+                </div> */}
                 {/* Start / Destination Form */}
 
               </form>
