@@ -8,7 +8,7 @@
     "dev": "run-p watch:client watch:server",
     "watch:client": "webpack --watch",
     "watch:server": "nodemon --watch server",
-    "start": "node server",
+    "start": "node index",
     "test": "jest --noStackTrace --watchAll",
     "postinstall": "webpack",
     "h:deploy": "git push heroku master",
