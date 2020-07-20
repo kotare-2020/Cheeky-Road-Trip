@@ -92,6 +92,7 @@ class HomePage extends React.Component {
 
     searchDestination = (event) => {
       event.preventDefault()
+      console.log(process.env.POSITION_STACK_API_KEY)
       request.get("https://api.positionstack.com/v1/forward", {
         'access_key': process.env.POSITION_STACK_API_KEY,
         "country": "NZ",
