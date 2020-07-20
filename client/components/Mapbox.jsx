@@ -17,10 +17,6 @@ class Mapbox extends React.Component {
     currentMidPoints: this.props.currentTrip.MID.length,
   }
 
-  dostuff = () => {
-    console.log('hello')
-  }
-
   componentDidMount() {
     this.renderMap()
   }
@@ -80,7 +76,6 @@ class Mapbox extends React.Component {
       unit: 'metric',
       profile: 'mapbox/driving'
     })
-    console.log('dirs', directions)
 
     map.on('click', 'points', (e) => {
       // There's a few different ways data is layed out in the json because of differing sources.
@@ -95,10 +90,19 @@ class Mapbox extends React.Component {
       const dataStructureType3 = {
         description: "<strong>Toilets :)</strong> <p>No extra information :(</p>"
       }
+      
+      const setName = () => {if (dataStructureType1.name != undefined) {
+        return dataStructureType1.name
+      } else if (dataStructureType2.name != undefined){
+        return dataStructureType2.name
+      } else {
+        return "Toilets :)"
+      }}
 
       const addToWaypointsNoArgs = () => {
+        const nameOfToilet = setName()        
         const midpoint = {
-          buildingName: capitalize(dataStructureType2.name),
+          buildingName: capitalize(nameOfToilet),
           label: "label",
           latitude: coordinates[1],
           longitude: coordinates[0],
@@ -109,23 +113,17 @@ class Mapbox extends React.Component {
       }
 
       const coordinates = e.features[0].geometry.coordinates.slice()
-      let setToiletDescription = (descOne, descTwo, descThree) => {
+      const setToiletDescription = (descOne, descTwo, descThree) => {
+        window.addToWaypoints = addToWaypointsNoArgs
+        // ^--- See page buttom for explanation and tips
         if (descOne.name != undefined) {
-          return `<strong>${descOne.name}</strong>`
+          return (
+            `<strong>${descOne.name}</strong>
+            <br>
+            <button onClick='window.addToWaypoints()'>Add stop to trip</button>`
+            )
         }
         else if (descOne.name == undefined && descTwo.description != "null" && descTwo.description != undefined && descTwo.openTimes != "null" && descTwo.openTimes != undefined) {
-
-          // window.dostuff = this.dostuff
-          // ^--- to make a function as global as possible.
-          // <button onClick='window.dostuff()'>hi</button>
-          // ^--- for below HTML
-
-          // window.addToWaypoints = this.addToWaypoints(coordinates, descTwo.name)
-          // ^--- can't use arguments?
-          window.addToWaypoints = addToWaypointsNoArgs // <--- use this one
-          // ^--- defined above in current scope (map on click) to keep variables
-          // because we can't use arguments (I think).
-
           descTwo.name = capitalize(descTwo.name)
           return (
             `<strong>${descTwo.name}</strong>
@@ -138,11 +136,15 @@ class Mapbox extends React.Component {
           return (
             `<strong>${capitalize(descTwo.name)}</strong>
             <strong>Toilets</strong>
-            <p>No extra information :(</p>`
+            <p>No extra information :(</p>
+            <button onClick='window.addToWaypoints()'>Add stop to trip</button>`
           )
         }
         else {
-          return descThree.description
+          return (
+            `${descThree.description}
+            <button onClick='window.addToWaypoints()'>Add stop to trip</button>`
+          )
         }
       }
       let description = setToiletDescription(dataStructureType1, dataStructureType2, dataStructureType3)
@@ -242,3 +244,17 @@ const mapStateToProps = ({ currentTrip }) => {
 
 export default connect(mapStateToProps)(Mapbox)
 
+
+// dostuff = () => {
+//   console.log('hello')
+// }
+
+// window.dostuff = this.dostuff
+// ^--- to make a function as global as possible.
+// <button onClick='window.dostuff()'>hi</button>
+// ^--- for below HTML in if statements
+// window.addToWaypoints = this.addToWaypoints(coordinates, descTwo.name)
+// ^--- can't use arguments?
+// window.addToWaypoints = addToWaypointsNoArgs // <--- use this one (shown in above code)
+// ^--- defined above in current scope (map on click) to keep variables
+// because we can't use arguments (I think).
