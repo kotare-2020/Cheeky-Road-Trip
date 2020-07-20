@@ -141,5 +141,10 @@ height: 800px;
     width: 600px;
 }
 
-.landing-form-elements {
+/* .landing-form-elements {
+} */
+
+.directions-list {
+    overflow:scroll;
+    height: 250px;
 }

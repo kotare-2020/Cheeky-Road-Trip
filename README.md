@@ -10,19 +10,15 @@ Run the following commands in your terminal:
 
 ```sh
 npm install
+cp .env.example .env
 ```
+Input API keys into .env
 
-When we have stretch:
+When we have stretch/use db:
 
 ```sh
 npx knex migrate:latest
 npx knex seed:run
-```
-
-make sure you have in your .env:
-
-```sh
-JWT_SECRET="<the special password we put in here ;)>"
 ```
 
 To run in development: (make sure you have a .env file)
@@ -35,18 +31,30 @@ To run in production:
 npm start
 ```
 
+## User Stories
+### MVP
+* I want to be able to establish my road trip with a title, and start/end waypoints
+* I want to see a map that shows me the route between my waypoints
+* I want to see all the public bathrooms near my route
+* I want to see direction instructions
 
+### Stretch
+* I want to log in
+* I want to be able to leave ratings of bathrooms and see the average rating 
+* I want to be able to see other neat stops besides public bathrooms (e.g. swimming spots, cafe's) 
+* I want to be able to select these stops on the map to add them as waypoints
+* I want to be able to save my road trip as a img or text file to refer to later
 
 ## Wireframes
 
-##### Landing Page
+##### Homepage
 
-<img src="readme-images/landing-page.jpg" width="500">
+<img src="readme-images/update-landing-page.jpg" width="500">
 
 
-##### Inital Map Page / Roadtrip Page
+##### Dashboard
 
-<img src="readme-images/initial-map-page.jpg" width="500">
+<img src="readme-images/update-dashboard.jpg" width="500">
 
 ## New Tech
 
@@ -61,6 +69,15 @@ Used to convert street addresses into GPS coordinates for our user start/end poi
 
 * Something to filter out markers that aren't close to our route
 To be researched and implemented.
+
+## Views
+| name | purpose |
+| --- | --- |
+| Login | View for user to enter their login credentials | 
+| Register | View for user to sign up for the App |
+| Homepage | Establish details of trip |
+| Dashboard | Shows the map, route, directions and relevant stops |
+
 
 ## Database
 
@@ -85,6 +102,7 @@ Rough outline of projected database tables (Subject to change):
  | latitude | decimal | GPS latitude of bathroom |
  | longitude | decimal | GPS longitude of bathroom |
  | rating | integer/decimal | rating out of 5 for this bathroom |
+ | accessibility | boolean | whether the bathroom has disability access |
  
  
 
@@ -105,26 +123,14 @@ currently some overlap in action/reducer as work on this develops, will reconven
   | ADD_WAYPOINT | coordinates | For adding waypoints to the map |
   | ADD_NEW_TRIP | coordinates/name | For establishing the details of the new trip |
   
-  
-## Useful boilerplate stuff that was removed
+## API (Client - Server)
 
-* FoundForm
-* LostForm
+| Method | Endpoint | Protected | Usage | Response |
+| --- | --- | --- | --- | --- |
+| Post | /api/auth/login | Yes | Log In a User | The Users JWT Token |
+| Post | /api/auth/register | Yes | Register a User | The Users JWT Token |
+| Get | /api/bathrooms | No | Get the list of bathrooms | Array of Objects (object = bathroom) |
 
-#### App 
-Renders Homepage - on button click renders Dashboard
-
-#### Homepage 
-Lets user enter a start point and an end point for roadtrip. 
-On form submit *Homepage* renders *Dashboard* component
-
-#### Dashboard
-
-This component will display the map. With route overlaid. 
-Dashboard will render these components:
-* Map
-* Directions - step by step instructions created by Leaflet
-* Trip Info - Display start and end point + list of bathrooms near route
 
 ## Heroku!!!
 
@@ -140,6 +146,8 @@ You can check that this was successful by running `heroku apps` to view a list o
 Add postgresql (hobby dev) to your app at `https://dashboard.heroku.com/apps/[APP NAME HERE]/resources`
 
 Check that pg has been added by running `heroku addons` to ensure the postgresql db is on your app
+
+
 
 
 ### Deploying!
