@@ -20,7 +20,6 @@ class TripInfo extends React.Component {
         <h3>To: {this.props.currentTrip.endWaypoint.buildingName}</h3>
         {/* replace big number with duration from redux state when hooked up */}
         {/* <h3>Duration: {this.timeDisplay(12542)}</h3> */}
-
       </div>
 
     )

@@ -8615,6 +8615,210 @@
                     -40.371963196733894
                 ]
             }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 1699,
+                "TOILET_NAME": "Tower Junction Customer Toilets",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": "9am-5:30pm",
+                "DESCRIPTION": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    172.606051,
+                    -43.537976
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 1700,
+                "TOILET_NAME": "Invercargill City Public Toilet",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": "8am-8pm",
+                "DESCRIPTION": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    168.346827,
+                    -46.411640
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 1701,
+                "TOILET_NAME": "Green Island Public Toilet",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": null,
+                "DESCRIPTION": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    170.430752,
+                    -45.901468
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 1702,
+                "TOILET_NAME": "Earnslaw Park Public Toilet",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": "24h",
+                "DESCRIPTION": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    168.659025,
+                    -45.032476
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 1703,
+                "TOILET_NAME": "Hokitika Public Toilet",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": "24h",
+                "DESCRIPTION": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    170.961058,
+                    -42.718794
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 1704,
+                "TOILET_NAME": "Fiordland Town Public Toilet",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": null,
+                "DESCRIPTION": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    167.716313,
+                    -45.415203
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 1705,
+                "TOILET_NAME": "Knights Point Public Toilets",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": "24h",
+                "DESCRIPTION": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    169.225898,
+                    -43.714728
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 1706,
+                "TOILET_NAME": "Karamea Public Toilets",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": null,
+                "DESCRIPTION": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    172.129087,
+                    -41.251507
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 1707,
+                "TOILET_NAME": "Whakatane Gardens Public Toilets",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": null,
+                "DESCRIPTION": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    176.987259,
+                    -37.949371
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 1708,
+                "TOILET_NAME": "Yandle Park Public Toilets",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": null,
+                "DESCRIPTION": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    174.389985,
+                    -38.995340
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 1709,
+                "TOILET_NAME": "Opunake Lake Public Toilets",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": "24h",
+                "DESCRIPTION": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    173.860287,
+                    -39.458183
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 1710,
+                "TOILET_NAME": "Dargaville Public Toilets",
+                "CLASS_DESCR": "GENERAL PUBLIC",
+                "USE_RESTRICTIONS": null,
+                "DESCRIPTION": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    173.871583,
+                    -35.940979
+                ]
+            }
         }
     ]
 }

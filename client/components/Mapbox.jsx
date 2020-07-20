@@ -128,7 +128,7 @@ class Mapbox extends React.Component {
           coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
       }
       */
-      let popup = new mapboxgl.Popup({ closeOnClick: false })
+      let popup = new mapboxgl.Popup()
         .setLngLat(coordinates)
         .setHTML(description)
         .addTo(map)
