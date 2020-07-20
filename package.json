@@ -5,6 +5,7 @@
   "repository": "https://github.com/dev-academy-challenges/lost-and-found.git",
   "main": "server/index.js",
   "scripts": {
+    "deploy": "git add . && git commit -m 'deploy' && git push heroku heroku-deploy:master",
     "dev": "run-p watch:client watch:server",
     "watch:client": "webpack --watch",
     "watch:server": "nodemon --watch server",

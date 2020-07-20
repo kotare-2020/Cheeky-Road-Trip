@@ -24,6 +24,7 @@ class Mapbox extends React.Component {
 
   componentDidMount() {
     this.renderMap()
+    console.log(process.env.POSITION_STACK_API_KEY)
   }
   componentDidUpdate(prevProps) {
     if (prevProps.currentTrip.inbetweenWaypoints.length != this.props.currentTrip.inbetweenWaypoints.length) {
