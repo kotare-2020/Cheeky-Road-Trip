@@ -89,6 +89,9 @@ p {
 
 .lets-go-button {
     margin-top: 10px;
+    background-color:bisque;
+    border: none;
+    color: black;
 }
 
 .mapbox-directions-instructions-wrapper {
@@ -99,6 +102,7 @@ p {
     position: absolute;
     margin-left: 22px;
     margin-top: 12px;
+    background-color: #73c1d8;
 }
 
 .background-div {

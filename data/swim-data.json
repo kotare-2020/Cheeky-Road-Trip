@@ -39,6 +39,38 @@
                     -36.882268
                 ]
             }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 3,
+                "NAME": "Meeting of the Waters Scenic Reserve",
+                "USE_RESTRICTIONS": "24hr",
+                "DESCRIPTION": "A quaint wee lull in an otherwise busy river, where relaxing floatation awaits. A rope swing and large tree caters for the thrill seekers"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    174.115956,
+                    -39.102684
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 4,
+                "NAME": "Browns Bay Beach",
+                "USE_RESTRICTIONS": "24hr",
+                "DESCRIPTION": "Wide beach for walks and swimming. Resturants and parks nearby"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    174.749994,
+                    -36.714208
+                ]
+            }
         }
     ]}
     
