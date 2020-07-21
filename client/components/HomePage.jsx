@@ -40,9 +40,9 @@ class HomePage extends React.Component {
     event.preventDefault()
     this.props.showHome(false)
   }
-  
+
   renderMipInputs
-  
+
   submitName = (e) => {
     e.preventDefault()
     this.props.dispatch(addTripName(this.state.tripName))
@@ -136,7 +136,7 @@ class HomePage extends React.Component {
                   {/* Trip Name */}
                   <input id="trip-name-input" className="input is-rounded is-expanded" onChange={this.handleChange} type="text" placeholder="Name Your Roadtrip!" name="tripName" />
                   <button onClick={this.submitName} className="button is-rounded is-small">Submit</button>
-                  {this.props.currentTrip.tripName == '' ? <img src="/images/null-icon.png" className="icon"/> : <img src="/images/tick-icon.png" className="icon"/>}
+                  {this.props.currentTrip.tripName == '' ? <img src="/images/null-icon.png" className="icon" /> : <img src="/images/tick-icon.png" className="icon" />}
                 </label>
 
 
@@ -144,7 +144,7 @@ class HomePage extends React.Component {
                   {/* Start-Point: */}
                   <input id="START-input" className="input is-rounded is-expanded" onChange={this.handleChange} type="text" name="startPoint" placeholder="Add Start Point" />
                   <button className="button is-rounded is-small" onClick={this.searchStart}>Search</button>
-                  {this.props.currentTrip.START == '' ? <img src="/images/x-icon.png" className="icon"/> : <img src="/images/tick-icon.png" className="icon"/>}
+                  {this.props.currentTrip.START == '' ? <img src="/images/x-icon.png" className="icon" /> : <img src="/images/tick-icon.png" className="icon" />}
                   {this.state.START ? <AddressConfirm waypointName="START" hideOptions={this.hideAddressOptions} /> : ''}
                 </label>
 
@@ -152,7 +152,7 @@ class HomePage extends React.Component {
                 <label className="landing-page-form-boxes" >
                   <input id="MID-input" className="input is-rounded is-expanded" onChange={this.handleChange} type="text" name="midPoint" placeholder="Add Stop Over" />
                   <button className="button is-rounded is-small" onClick={this.searchMid}>Search</button>
-                  {this.props.currentTrip.MID.length == 0 ? <img src="/images/null-icon.png" className="icon"/> : <img src="/images/tick-icon.png" className="icon"/>}
+                  {this.props.currentTrip.MID.length == 0 ? <img src="/images/null-icon.png" className="icon" /> : <img src="/images/tick-icon.png" className="icon" />}
                   {this.state.MID ? <AddressConfirm waypointName="MID" hideOptions={this.hideAddressOptions} /> : ''}
                 </label>
 
@@ -160,7 +160,7 @@ class HomePage extends React.Component {
                   {/* Destination: */}
                   <input id="END-input" className="input is-rounded is-expanded" onChange={this.handleChange} type="text" name="endPoint" placeholder="Add Destination" />
                   <button className="button is-rounded is-small" onClick={this.searchEnd}>Search</button>
-                  {this.props.currentTrip.END == '' ? <img src="/images/x-icon.png" className="icon"/> : <img src="/images/tick-icon.png" className="icon"/>}
+                  {this.props.currentTrip.END == '' ? <img src="/images/x-icon.png" className="icon" /> : <img src="/images/tick-icon.png" className="icon" />}
                   {this.state.END ? <AddressConfirm waypointName="END" hideOptions={this.hideAddressOptions} /> : ''}
                 </label>
 
@@ -173,11 +173,11 @@ class HomePage extends React.Component {
                 {/* Start / Destination Form */}
 
               </form>
+              <Waypoints />
             </div>
 
           </div>
         </div>
-        <Waypoints/>
       </>
 
     )
