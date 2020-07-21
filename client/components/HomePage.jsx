@@ -38,10 +38,11 @@ class HomePage extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault()
-    this.props.showHome(false)
+    {this.props.currentTrip.START == '' || this.props.currentTrip.END == '' 
+    ? alert("You must enter a starting point and a destination for your road trip")
+    : this.props.showHome(false)}
   }
 
-  renderMipInputs
 
   submitName = (e) => {
     e.preventDefault()
