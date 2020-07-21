@@ -250,7 +250,7 @@ class Mapbox extends React.Component {
             'source': 'swim-points',
             'layout': {
               'icon-image': 'swim-marker',
-              'icon-size': 0.75,
+              'icon-size': 0.95,
               'text-offset': [0, 1.25],
               'text-anchor': 'top'
             }
