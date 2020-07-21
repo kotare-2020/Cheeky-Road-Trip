@@ -145,7 +145,9 @@ p {
 .address-confirm-list {
     font-size: 11px;
     color: black;
-    background-color: whitesmoke;
+    background-color: #fff8dc;
+    border: solid #fff8dc 2px;
+    border-radius: 15%;
     width: 300px;
     display: flex;
     position: absolute;
@@ -209,4 +211,23 @@ p {
 
 #landingpage-form-container {
     position: relative;
+}
+
+.icon {
+    height: 30px;
+    display: inline-block;
+}
+
+#waypoints-div {
+    position: absolute;
+    width: 300px;
+    max-height: 300px;
+    background: #fff8dc;
+    border: solid #fff8dc 2px;
+    border-radius: 15%;
+    overflow: auto;
+    padding: 20px;
+    opacity: 95%;
+    top: 59%;
+    left: 5%;
 }
