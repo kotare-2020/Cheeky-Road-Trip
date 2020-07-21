@@ -300,6 +300,7 @@ class Mapbox extends React.Component {
             'type': 'symbol',
             'source': 'food_points',
             'layout': {
+              'visibility': 'visible',
               'icon-image': 'food-marker',
               'icon-size': 0.65,
               'text-offset': [0, 1.25],
@@ -308,8 +309,6 @@ class Mapbox extends React.Component {
           })
         }
       )
-
-
 
     })
   }

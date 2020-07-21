@@ -49,8 +49,7 @@ h3 {
 }
 
 p {
-    font-size: 17px;
-    font-weight: 500;
+    font-size: 15px;
 }
 
 .italic-text {
@@ -190,12 +189,15 @@ font-size: 28px;
     margin-bottom: 25px;
     font-size: 21px;
     color: black;
-    font-weight: 700;
-
 }
 
 .address-confirm-item:hover {
  color: #969696;
+}
+
+.homepage-body-text {
+    font-size: 17px;
+    font-weight: 500;
 }
 
 
