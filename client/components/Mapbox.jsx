@@ -124,7 +124,7 @@ class Mapbox extends React.Component {
         if (descOne.name != undefined) {
           return (
             `<strong>${descOne.name}</strong>
-            <button class="popupbutton" onClick='window.addToWaypoints()'>Add stop to trip</button>`
+            <button class="popupbutton button is-small is-rounded" onClick='window.addToWaypoints()'>Add stop to trip</button>`
           )
         }
         else if (descOne.name == undefined && descTwo.description != "null" && descTwo.description != undefined && descTwo.openTimes != "null" && descTwo.openTimes != undefined) {
@@ -133,7 +133,7 @@ class Mapbox extends React.Component {
             `<strong>${descTwo.name}</strong>
             <p class="popupdesc">${descTwo.description}</p>
             <p class="popupdesc">Open: ${descTwo.openTimes}</p>
-            <button class="popupbutton" onClick='window.addToWaypoints()'>Add stop to trip</button>`
+            <button class="popupbutton button is-small is-rounded" onClick='window.addToWaypoints()'>Add stop to trip</button>`
           )
         }
         else if (descOne.name == undefined && descTwo.description == "null" || descTwo.openTimes == "null") {
@@ -141,13 +141,13 @@ class Mapbox extends React.Component {
             `<strong>${capitalize(descTwo.name)}</strong>
             <strong>Toilets</strong>
             <p class="popupdesc">No extra information :(</p>
-            <button class="popupbutton" onClick='window.addToWaypoints()'>Add stop to trip</button>`
+            <button class="popupbutton button is-small is-rounded" onClick='window.addToWaypoints()'>Add stop to trip</button>`
           )
         }
         else {
           return (
             `${descThree.description}
-            <button class="popupbutton" onClick='window.addToWaypoints()'>Add stop to trip</button>`
+            <button class="popupbutton button is-small is-rounded" onClick='window.addToWaypoints()'>Add stop to trip</button>`
           )
         }
       }
