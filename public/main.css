@@ -9,25 +9,25 @@
     width: 22%;
 }
      
-    .mapboxgl-ctrl-top-left {
-        font-size: 20px;
-    margin-left: 9px;
-    margin-top: 10px;
-    }
-    .mapbox-directions-component-keyline{
-        display: none;
-    }
-    .mapbox-directions-inputs {
-        display: none;
-    }
+.mapboxgl-ctrl-top-left {
+    font-size: 20px;
+margin-left: 9px;
+margin-top: 10px;
+}
+.mapbox-directions-component-keyline{
+    display: none;
+}
+.mapbox-directions-inputs {
+    display: none;
+}
 
-    .mapboxgl-canvas-container {
-        height: 100vh;
-    }
-    .mapContainer {
-        width: 77vw;
-        height: 100vh;
-        }
+.mapboxgl-canvas-container {
+    height: 100vh;
+}
+.mapContainer {
+    width: 77vw;
+    height: 100vh;
+}
 
 body {
     color: black;
@@ -89,7 +89,7 @@ p {
 
 .lets-go-button {
     margin-top: 10px;
-    background-color:bisque;
+    background-color: #f7f977;
     border: none;
     color: black;
 }
@@ -148,24 +148,19 @@ p {
     overflow: auto;
 }
 
-/* .column-left-dashboard {
-}
-
-.column-right-dashboard {
-} */
-
-
 .address-confirm-item {
-    margin-top: 4px;
+    margin-bottom: 25px;
+    font-size: 21px;
+    color: black;
+    font-weight: 700;
+
+}
+
+.address-confirm-item:hover {
+ color: wheat;
 }
 
 
-/* .landing-form-elements {
-} */
-
-/* .directions-list {
-    
-} */
 
 /*SVG BORDER ANIMATION BY ZACH SAUCIER CODEPEN  */ 
 .svg-wrapper {
@@ -205,11 +200,8 @@ p {
 }
 
 .address-confirm-list {
-    font-size: 11px;
-    color: black;
-    background-color: #fff8dc;
-    border: solid #fff8dc 2px;
-    border-radius: 15%;
+    background-color:white;
+    border-radius: 14px;
     width: 300px;
     display: flex;
     position: absolute;
@@ -242,10 +234,12 @@ p {
     width: 470px;
     max-height: 400px;
     color: black;
-    background-color: #fff8dc;
-    border: solid #fff8dc 2px;
-    border-radius: 15%;
+    background-color:white;
+    border-radius: 14px;
     overflow: auto;
     padding: 20px;
     opacity: 95%;
+    font-size: 21px;
+    color: black;
+    font-weight: 700;
 }
