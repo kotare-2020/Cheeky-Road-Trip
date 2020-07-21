@@ -29,8 +29,7 @@ class AddressConfirm extends React.Component {
                     {this.addressOptions.map((addressInfo, i) => {
                         return (
 
-                            <div key={i} className="address-confirm-item">
-                                <input onChange={() => this.handleSelect(addressInfo, this.props.waypointName)} type="checkbox" name="confirmAddress" ></input>
+                            <div key={i} className="address-confirm-item" onClick={() => this.handleSelect(addressInfo, this.props.waypointName)}>
                                 <p>{addressInfo.label}</p>
                                 <p>{addressInfo.region}</p>
                             </div>
