@@ -229,18 +229,19 @@ class Mapbox extends React.Component {
           if (error) throw error
           map.addImage('food-marker', image)
           // Add a GeoJSON source with 2 points
-          map.addSource('points', {
+          map.addSource('food_points', {
             'type': 'geojson',
             'data': food_data
           })
 
           //Add a symbol layer
           map.addLayer({
-            'id': 'points',
+            'id': 'food_points',
             'type': 'symbol',
-            'source': 'points',
+            'source': 'food_points',
             'layout': {
               'icon-image': 'food-marker',
+              'icon-size': 0.75,
               // get the title name from the source's "title" property ---V
               // 'text-field': ['get', 'Name'],
               // 'text-font': [

@@ -1,6 +1,6 @@
 {
     "type": "FeatureCollection",
-    "name": "Public_Toilet_Location",
+    "name": "Food_Data_By_George",
     "crs": {
         "type": "name",
         "properties": {
@@ -11,18 +11,226 @@
         {
             "type": "Feature",
             "properties": {
-                "OBJECTID": 39,
-                "TOILET_NAME": "VICTORIA ESPLANADE - MINIATURE RAILWAY",
-                "CLASS_DESCR": "GENERAL PUBLIC",
-                "USE_RESTRICTIONS": "7am-6pm",
-                "DESCRIPTION": "Public Toilets"
+                "OBJECTID": 1,
+                "NAME": "Soul Shack",
+                "USE_RESTRICTIONS": "11am-8pm",
+                "DESCRIPTION": "Fried chicken takeaway"
             },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    174.7760,
-                    -41.2950
+                    174.777579,
+                    -41.291235
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 2,
+                "NAME": "The Perching Parrot",
+                "USE_RESTRICTIONS": "8am-3pm",
+                "DESCRIPTION": "Cozy cafe in by the beach"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    174.777579,
+                    -41.291235
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 1,
+                "NAME": "Soul Shack",
+                "USE_RESTRICTIONS": "11am-8pm",
+                "DESCRIPTION": "Fried chicken takeaway"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    174.777579,
+                    -41.291235
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 1,
+                "NAME": "Soul Shack",
+                "USE_RESTRICTIONS": "11am-8pm",
+                "DESCRIPTION": "Fried chicken takeaway"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    174.777579,
+                    -41.291235
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 1,
+                "NAME": "Soul Shack",
+                "USE_RESTRICTIONS": "11am-8pm",
+                "DESCRIPTION": "Fried chicken takeaway"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    174.777579,
+                    -41.291235
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 1,
+                "NAME": "Soul Shack",
+                "USE_RESTRICTIONS": "11am-8pm",
+                "DESCRIPTION": "Fried chicken takeaway"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    174.777579,
+                    -41.291235
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 1,
+                "NAME": "Soul Shack",
+                "USE_RESTRICTIONS": "11am-8pm",
+                "DESCRIPTION": "Fried chicken takeaway"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    174.777579,
+                    -41.291235
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 1,
+                "NAME": "Soul Shack",
+                "USE_RESTRICTIONS": "11am-8pm",
+                "DESCRIPTION": "Fried chicken takeaway"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    174.777579,
+                    -41.291235
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 1,
+                "NAME": "Soul Shack",
+                "USE_RESTRICTIONS": "11am-8pm",
+                "DESCRIPTION": "Fried chicken takeaway"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    174.777579,
+                    -41.291235
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 1,
+                "NAME": "Soul Shack",
+                "USE_RESTRICTIONS": "11am-8pm",
+                "DESCRIPTION": "Fried chicken takeaway"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    174.777579,
+                    -41.291235
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 1,
+                "NAME": "Soul Shack",
+                "USE_RESTRICTIONS": "11am-8pm",
+                "DESCRIPTION": "Fried chicken takeaway"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    174.777579,
+                    -41.291235
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 1,
+                "NAME": "Soul Shack",
+                "USE_RESTRICTIONS": "11am-8pm",
+                "DESCRIPTION": "Fried chicken takeaway"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    174.777579,
+                    -41.291235
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 1,
+                "NAME": "Soul Shack",
+                "USE_RESTRICTIONS": "11am-8pm",
+                "DESCRIPTION": "Fried chicken takeaway"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    174.777579,
+                    -41.291235
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 1,
+                "NAME": "Soul Shack",
+                "USE_RESTRICTIONS": "11am-8pm",
+                "DESCRIPTION": "Fried chicken takeaway"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    174.777579,
+                    -41.291235
                 ]
             }
         }
     ]}
+    
