@@ -136,18 +136,29 @@ p {
     margin: 20px;
     width: 20vw;
     height: 400px;
-    border: black solid 3px;
+    border: #73c1d8 solid 5px;
     overflow: auto;
+    padding-left: 37px;
+    padding-top: 20px;
+    padding-right: 26px;
+    border-radius: 6px;
 }
 
 #trip-info-div{
     width: 20vw;
     height: 30vh;
-    border: black solid 3px;
+    border: #73c1d8 solid 5px;
     margin: 20px;
     overflow: auto;
+    padding: 16px;
+    border-radius: 6px;
 }
 
+.trip-title{
+font-weight: 900;
+font-size: 28px;
+    padding-bottom: 23px;
+}
 .address-confirm-item {
     margin-bottom: 25px;
     font-size: 21px;
