@@ -39,25 +39,6 @@ class Mapbox extends React.Component {
     currentMidPoints: this.props.currentTrip.MID.length,
   }
 
-  // pullMidpointData = (MID) => {
-  //   let arr = []
-  //   MID.map((element) => {
-  //     arr.push({
-  //       "type": "Feature",
-  //       "properties": {
-  //         "Name": `${element.label}`
-  //       },
-  //       "geometry": {
-  //         "type": "Point",
-  //         "coordinates": [
-  //           element.longitude,
-  //           element.latitude
-  //         ]
-  //       }
-  //     })
-  //   })
-  //   return arr
-  // }
 
   componentDidMount() {
     this.renderMap()
@@ -164,8 +145,7 @@ class Mapbox extends React.Component {
         if (descOne.name != undefined) {
           return (
             `<strong>${descOne.name}</strong>
-            <br>
-            <button onClick='window.addToWaypoints()'>Add stop to trip</button>`
+            <button class="popupbutton button is-small is-rounded" onClick='window.addToWaypoints()'>Add stop to trip</button>`
           )
         }
         else if (descOne.name == undefined && descTwo.description != "null" && descTwo.description != undefined && descTwo.openTimes != "null" && descTwo.openTimes != undefined) {
@@ -173,9 +153,8 @@ class Mapbox extends React.Component {
           return (
             `<strong>${descTwo.name}</strong>
             <p>${descTwo.description}</p>
-            <br>
-            <p>Open: ${descTwo.openTimes}</p>
-            <button onClick='window.addToWaypoints()'>Add stop to trip</button>`
+            <p class="popupdesc">Open: ${descTwo.openTimes}</p>
+            <button class="popupbutton button is-small is-rounded" onClick='window.addToWaypoints()'>Add stop to trip</button>`
           )
         }
         else if (descOne.name == undefined && descTwo.description == "null" || descTwo.openTimes == "null") {
@@ -183,13 +162,13 @@ class Mapbox extends React.Component {
             `<strong>${capitalize(descTwo.name)}</strong>
             <strong>Toilets</strong>
             <p>No extra information :(</p>
-            <button onClick='window.addToWaypoints()'>Add stop to trip</button>`
+            <button class="popupbutton button is-small is-rounded" onClick='window.addToWaypoints()'>Add stop to trip</button>`
           )
         }
         else {
           return (
             `${descThree.description}
-            <button onClick='window.addToWaypoints()'>Add stop to trip</button>`
+            <button class="popupbutton button is-small is-rounded" onClick='window.addToWaypoints()'>Add stop to trip</button>`
           )
         }
       }
@@ -330,7 +309,7 @@ class Mapbox extends React.Component {
             'source': 'swim-points',
             'layout': {
               'icon-image': 'swim-marker',
-              'icon-size': 0.95,
+              'icon-size': 0.70,
               'text-offset': [0, 1.25],
               'text-anchor': 'top'
             }
@@ -380,6 +359,7 @@ class Mapbox extends React.Component {
             'type': 'symbol',
             'source': 'food-points',
             'layout': {
+              'visibility': 'visible',
               'icon-image': 'food-marker',
               'icon-size': 0.65,
               'text-offset': [0, 1.25],
@@ -388,11 +368,6 @@ class Mapbox extends React.Component {
           })
         }
       )
-
-      
-      
-
-
     })
   }
 

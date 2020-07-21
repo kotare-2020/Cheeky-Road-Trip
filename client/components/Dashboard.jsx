@@ -26,10 +26,7 @@ class Dashboard extends React.Component {
 
             <div className="column-right-dashboard" >
                 <Mapbox/>
-            {/* <LeafletMap /> */}
             </div>
-            
-            
             </div>
             </>
         )
