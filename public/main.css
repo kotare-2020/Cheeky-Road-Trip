@@ -49,8 +49,15 @@ h3 {
 }
 
 p {
-    font-size: 15px;
+    font-size: 17px;
+    font-weight: 500;
 }
+
+.italic-text {
+    font-weight: 600;
+    color: #969696;
+}
+
 /*marker popups*/
 .popupdesc {
     margin-top: 0.5em;
@@ -171,6 +178,14 @@ font-weight: 900;
 font-size: 28px;
     padding-bottom: 23px;
 }
+
+.trip-title-preview{
+    font-weight: 600;
+    font-size: 25px;
+        padding-bottom: 13px;
+    }
+    
+
 .address-confirm-item {
     margin-bottom: 25px;
     font-size: 21px;
@@ -180,7 +195,7 @@ font-size: 28px;
 }
 
 .address-confirm-item:hover {
- color: wheat;
+ color: #969696;
 }
 
 
