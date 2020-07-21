@@ -12,11 +12,11 @@ class TripInfo extends React.Component {
     return (
       <div id="trip-info-div">
         <h2 className="trip-title">{this.props.currentTrip.tripName}</h2>
-        <h3>From: {this.props.currentTrip.START.buildingName}</h3>
+        <h3><b>From: </b> <br></br>{this.props.currentTrip.START.buildingName}</h3>
         {this.props.currentTrip.MID.map((element, i) => {
-          return <h3 key={i}>Stop In: {element.buildingName}</h3>
+          return <h3 key={i}><b>Stop In: </b>{element.buildingName}</h3>
         })}
-        <h3>To: {this.props.currentTrip.END.buildingName}</h3>
+        <h3><b>To:</b> <br></br> {this.props.currentTrip.END.buildingName}</h3>
         {/* replace big number with duration from redux state when hooked up */}
         {/* <h3>Duration: {this.timeDisplay(12542)}</h3> */}
       </div>
