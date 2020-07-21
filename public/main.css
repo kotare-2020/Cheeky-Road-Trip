@@ -51,6 +51,18 @@ h3 {
 p {
     font-size: 15px;
 }
+/*marker popups*/
+.popupdesc {
+    margin-top: 0.5em;
+}
+.popupbutton {
+    margin-top: 0.5em;
+    border-radius: 2px;
+    font-size: 0.75rem;
+    padding-left: calc(1em + 0.25em);
+    padding-right: calc(1em + 0.25em);
+}
+/*For Richard: p.popup styles a p whith the classname. p .popup (with a space) styles a classnamed thing that is a child of p*/
 
 .landing-page-content-div {
     height: 100vh;
