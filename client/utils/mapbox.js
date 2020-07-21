@@ -1,76 +1,4 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import { connect } from 'react-redux'
-import mapboxgl from 'mapbox-gl'
-import MapboxDirections from '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions'
-import bathroomData from '../../data/bathroom_data.json'
-import food_data from '../../data/food_data.json'
-import swim_data from '../../data/swim-data.json'
-import request from 'superagent'
-import { confirmAddress, eraseTrip, addTripInstructions } from '../actions/currentTrip'
-
-mapboxgl.accessToken = process.env.MAPBOX_API_KEY
-
-function pullMidpointData(MID) {
-  let arr = []
-    MID.map((element) => {
-      arr.push({
-        "type": "Feature",
-        "properties": {
-          "Name": `${element.label}`
-        },
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            element.longitude,
-            element.latitude
-          ]
-        }
-      })
-    })
-    return arr
-}
-
-class Mapbox extends React.Component {
-  state = {
-    lng: this.props.currentTrip.START.longitude,
-    lat: this.props.currentTrip.START.latitude,
-    zoom: 5.75,
-    currentMidPoints: this.props.currentTrip.MID.length,
-  }
-
-  // pullMidpointData = (MID) => {
-  //   let arr = []
-  //   MID.map((element) => {
-  //     arr.push({
-  //       "type": "Feature",
-  //       "properties": {
-  //         "Name": `${element.label}`
-  //       },
-  //       "geometry": {
-  //         "type": "Point",
-  //         "coordinates": [
-  //           element.longitude,
-  //           element.latitude
-  //         ]
-  //       }
-  //     })
-  //   })
-  //   return arr
-  // }
-
-  componentDidMount() {
-    this.renderMap()
-  }
-  reloadMap = () => {
-    this.renderMap()
-  }
-
-  componentWillUnmount() {
-    this.props.dispatch(eraseTrip())
-  }
-
-  renderMap = () => {
+export const renderMap = () => {
     let start = [
       this.props.currentTrip.START.longitude,
       this.props.currentTrip.START.latitude
@@ -119,7 +47,7 @@ class Mapbox extends React.Component {
       profile: 'mapbox/driving'
     })
 
-    const setPopups = (e) => {
+      const setPopups = (e) => {
       const popup = []
       // There's a few different ways data is layed out in the jsons because of differing sources.
       const dataStructureType1 = {
@@ -219,41 +147,40 @@ class Mapbox extends React.Component {
 
     map.on('click', 'points', (e) => {
       let marker = {
-        popup: {}
+        popup:{}
       }
       marker.popup = setPopups(e)
       new mapboxgl.Popup()
-        .setLngLat(marker.popup.coordinates)
-        .setHTML(marker.popup.description)
-        .addTo(marker.popup.map)
+      .setLngLat(marker.popup.coordinates)
+      .setHTML(marker.popup.description)
+      .addTo(marker.popup.map)
     })
     map.on('click', 'food_points', (e) => {
       let marker = {
-        popup: {}
+        popup:{}
       }
       marker.popup = setPopups(e)
       new mapboxgl.Popup()
-        .setLngLat(marker.popup.coordinates)
-        .setHTML(marker.popup.description)
-        .addTo(marker.popup.map)
+      .setLngLat(marker.popup.coordinates)
+      .setHTML(marker.popup.description)
+      .addTo(marker.popup.map)
     })
     map.on('click', 'swim-points', (e) => {
       let marker = {
-        popup: {}
+        popup:{}
       }
       marker.popup = setPopups(e)
       new mapboxgl.Popup()
-        .setLngLat(marker.popup.coordinates)
-        .setHTML(marker.popup.description)
-        .addTo(marker.popup.map)
+      .setLngLat(marker.popup.coordinates)
+      .setHTML(marker.popup.description)
+      .addTo(marker.popup.map)
     })
 
     directions.onClick = () => { }
     directions.onDragDown = () => { } // Stops user from moving waypoints because they don't set GS currently.
     map.addControl(directions, 'top-left')
-    
+
     map.on('load', () => {
-      directions.removeWaypoint(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24)
       directions.setOrigin([
         this.props.currentTrip.START.longitude,
         this.props.currentTrip.START.latitude,
@@ -270,45 +197,6 @@ class Mapbox extends React.Component {
         this.props.currentTrip.END.longitude,
         this.props.currentTrip.END.latitude,
       ])
-
-     //MIDPOINT MARKERS
-     let midpoints = this.props.currentTrip.MID
-     map.loadImage(
-       './images/stopover-icon.png',
-       function (error, image) {
-         if (error) throw error
-         map.addImage('stopover-marker', image)
-         // Add a GeoJSON source with 2 points
-         let data = {
-           "type": "FeatureCollection",
-           "name": "Midpoints",
-           "crs": {
-             "type": "midpoints",
-             "properties": {
-               "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
-             }
-           },
-           "features": pullMidpointData(midpoints)
-         }
-         map.addSource('stop-overs', {
-           'type': 'geojson',
-           'data': data
-         })
-
-         map.addLayer({
-           'id': 'stop-overs',
-           'type': 'symbol',
-           'source': 'stop-overs',
-           'layout': {
-             'icon-image': 'stopover-marker',
-             'icon-size': 0.60,
-             'text-offset': [0, 1.25],
-             'text-anchor': 'top'
-           }
-         })
-       }
-     )
-
 
 
 
@@ -370,15 +258,15 @@ class Mapbox extends React.Component {
           if (error) throw error
           map.addImage('food-marker', image)
           // Add a GeoJSON source with 2 points
-          map.addSource('food-points', {
+          map.addSource('food_points', {
             'type': 'geojson',
             'data': food_data
           })
 
           map.addLayer({
-            'id': 'food-points',
+            'id': 'food_points',
             'type': 'symbol',
-            'source': 'food-points',
+            'source': 'food_points',
             'layout': {
               'icon-image': 'food-marker',
               'icon-size': 0.65,
@@ -389,44 +277,7 @@ class Mapbox extends React.Component {
         }
       )
 
-      
-      
 
 
     })
   }
-
-  render() {
-    return (
-      <div>
-        <div className='sidebarStyle'>
-          <div>Longitude: {this.state.lng} | Latitude: {this.state.lat} | Zoom: {this.state.zoom}</div>
-        </div>
-        <div ref={el => this.mapContainer = el} className='mapContainer' />
-      </div>
-    )
-  }
-}
-
-const mapStateToProps = ({ currentTrip }) => {
-  return {
-    currentTrip,
-  }
-}
-
-export default connect(mapStateToProps)(Mapbox)
-
-
-// dostuff = () => {
-//   console.log('hello')
-// }
-
-// window.dostuff = this.dostuff
-// ^--- to make a function as global as possible.
-// <button onClick='window.dostuff()'>hi</button>
-// ^--- for below HTML in if statements
-// window.addToWaypoints = this.addToWaypoints(coordinates, descTwo.name)
-// ^--- can't use arguments?
-// window.addToWaypoints = addToWaypointsNoArgs // <--- use this one (shown in above code)
-// ^--- defined above in current scope (map on click) to keep variables
-// because we can't use arguments (I think).
