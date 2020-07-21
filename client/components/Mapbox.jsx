@@ -181,7 +181,6 @@ class Mapbox extends React.Component {
         popup:{}
       }
       marker.popup = setPopups(e)
-      console.log("loo", marker.popup.coordinates)
       new mapboxgl.Popup()
       .setLngLat(marker.popup.coordinates)
       .setHTML(marker.popup.description)
@@ -192,7 +191,6 @@ class Mapbox extends React.Component {
         popup:{}
       }
       marker.popup = setPopups(e)
-      console.log("Food", marker.popup.coordinates)
       new mapboxgl.Popup()
       .setLngLat(marker.popup.coordinates)
       .setHTML(marker.popup.description)
@@ -203,7 +201,6 @@ class Mapbox extends React.Component {
         popup:{}
       }
       marker.popup = setPopups(e)
-      console.log("swim", marker.popup.coordinates)
       new mapboxgl.Popup()
       .setLngLat(marker.popup.coordinates)
       .setHTML(marker.popup.description)
