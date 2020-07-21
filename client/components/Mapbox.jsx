@@ -80,12 +80,12 @@ class Mapbox extends React.Component {
     })
 
     map.on('click', 'points', (e) => {
-      // There's a few different ways data is layed out in the json because of differing sources.
+      // There's a few different ways data is layed out in the jsons because of differing sources.
       const dataStructureType1 = {
         name: e.features[0].properties.Name
       }
       const dataStructureType2 = {
-        name: e.features[0].properties.TOILET_NAME,
+        name: e.features[0].properties.NAME,
         description: e.features[0].properties.DESCRIPTION,
         openTimes: e.features[0].properties.USE_RESTRICTIONS,
       }
