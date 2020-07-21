@@ -4,6 +4,8 @@ import { connect } from 'react-redux'
 import mapboxgl from 'mapbox-gl'
 import MapboxDirections from '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions'
 import bathroomData from '../../data/bathroom_data.json'
+import food_data from '../../data/food_data.json'
+import swim_data from '../../data/swim-data.json'
 import request from 'superagent'
 import { confirmAddress, eraseTrip, addTripInstructions } from '../actions/currentTrip'
 
@@ -21,10 +23,10 @@ class Mapbox extends React.Component {
     this.renderMap()
   }
   reloadMap = () => {
-      this.renderMap()
+    this.renderMap()
   }
 
-  componentWillUnmount(){
+  componentWillUnmount() {
     this.props.dispatch(eraseTrip())
   }
 
@@ -77,7 +79,8 @@ class Mapbox extends React.Component {
       profile: 'mapbox/driving'
     })
 
-    map.on('click', 'points', (e) => {
+      const setPopups = (e) => {
+      const popup = []
       // There's a few different ways data is layed out in the jsons because of differing sources.
       const dataStructureType1 = {
         name: e.features[0].properties.Name
@@ -90,14 +93,16 @@ class Mapbox extends React.Component {
       const dataStructureType3 = {
         description: "<strong>Toilets :)</strong> <p>No extra information :(</p>"
       }
-      
-      const setName = () => {if (dataStructureType1.name != undefined) {
-        return dataStructureType1.name
-      } else if (dataStructureType2.name != undefined){
-        return dataStructureType2.name
-      } else {
-        return "Toilets :)"
-      }}
+
+      const setName = () => {
+        if (dataStructureType1.name != undefined) {
+          return dataStructureType1.name
+        } else if (dataStructureType2.name != undefined) {
+          return dataStructureType2.name
+        } else {
+          return "Toilets :)"
+        }
+      }
 
       const addToWaypointsNoArgs = () => {
         const nameOfStop = setName()        
@@ -121,7 +126,7 @@ class Mapbox extends React.Component {
             `<strong>${descOne.name}</strong>
             <br>
             <button onClick='window.addToWaypoints()'>Add stop to trip</button>`
-            )
+          )
         }
         else if (descOne.name == undefined && descTwo.description != "null" && descTwo.description != undefined && descTwo.openTimes != "null" && descTwo.openTimes != undefined) {
           descTwo.name = capitalize(descTwo.name)
@@ -161,15 +166,49 @@ class Mapbox extends React.Component {
         let capitalizedStr = capitalizedArray.join(' ')
         return (capitalizedStr)
       }
+      popup[0] = {
+        coordinates: coordinates,
+        description: description,
+        map: map
+      }
+      return (
+        popup[0]
+      )
+    }
 
+    map.on('click', 'points', (e) => {
+      let marker = {
+        popup:{}
+      }
+      marker.popup = setPopups(e)
       new mapboxgl.Popup()
-        .setLngLat(coordinates)
-        .setHTML(description)
-        .addTo(map)
+      .setLngLat(marker.popup.coordinates)
+      .setHTML(marker.popup.description)
+      .addTo(marker.popup.map)
+    })
+    map.on('click', 'food_points', (e) => {
+      let marker = {
+        popup:{}
+      }
+      marker.popup = setPopups(e)
+      new mapboxgl.Popup()
+      .setLngLat(marker.popup.coordinates)
+      .setHTML(marker.popup.description)
+      .addTo(marker.popup.map)
+    })
+    map.on('click', 'swim-points', (e) => {
+      let marker = {
+        popup:{}
+      }
+      marker.popup = setPopups(e)
+      new mapboxgl.Popup()
+      .setLngLat(marker.popup.coordinates)
+      .setHTML(marker.popup.description)
+      .addTo(marker.popup.map)
     })
 
-    directions.onClick = () => {}
-    directions.onDragDown = () => {} // Stops user from moving waypoints because they don't set GS currently.
+    directions.onClick = () => { }
+    directions.onDragDown = () => { } // Stops user from moving waypoints because they don't set GS currently.
     map.addControl(directions, 'top-left')
 
     map.on('load', () => {
@@ -191,6 +230,34 @@ class Mapbox extends React.Component {
       ])
 
 
+
+      // SWIM MARKERS
+      map.loadImage(
+        './images/swimming.png',
+        function (error, image) {
+          if (error) throw error
+          map.addImage('swim-marker', image)
+          // Add a GeoJSON source with 2 points
+          map.addSource('swim-points', {
+            'type': 'geojson',
+            'data': swim_data
+          })
+
+          map.addLayer({
+            'id': 'swim-points',
+            'type': 'symbol',
+            'source': 'swim-points',
+            'layout': {
+              'icon-image': 'swim-marker',
+              'icon-size': 0.75,
+              'text-offset': [0, 1.25],
+              'text-anchor': 'top'
+            }
+          })
+        }
+      )
+
+      // BATHROOM MARKERS
       map.loadImage(
         './images/toilet-icon.png',
         function (error, image) {
@@ -201,26 +268,48 @@ class Mapbox extends React.Component {
             'type': 'geojson',
             'data': bathroomData
           })
-
-          //Add a symbol layer
           map.addLayer({
             'id': 'points',
             'type': 'symbol',
             'source': 'points',
             'layout': {
               'icon-image': 'custom-marker',
-              // get the title name from the source's "title" property ---V
-              // 'text-field': ['get', 'Name'],
-              // 'text-font': [
-              //   'Open Sans Semibold',
-              //   'Arial Unicode MS Bold'
-              // ],
+              'icon-size': 0.95,
               'text-offset': [0, 1.25],
               'text-anchor': 'top'
             }
           })
         }
       )
+
+      // FOOD MARKERS
+      map.loadImage(
+        './images/food.png',
+        function (error, image) {
+          if (error) throw error
+          map.addImage('food-marker', image)
+          // Add a GeoJSON source with 2 points
+          map.addSource('food_points', {
+            'type': 'geojson',
+            'data': food_data
+          })
+
+          map.addLayer({
+            'id': 'food_points',
+            'type': 'symbol',
+            'source': 'food_points',
+            'layout': {
+              'icon-image': 'food-marker',
+              'icon-size': 0.65,
+              'text-offset': [0, 1.25],
+              'text-anchor': 'top'
+            }
+          })
+        }
+      )
+
+
+
     })
   }
 
