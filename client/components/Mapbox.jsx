@@ -124,32 +124,30 @@ class Mapbox extends React.Component {
         if (descOne.name != undefined) {
           return (
             `<strong>${descOne.name}</strong>
-            <br>
-            <button onClick='window.addToWaypoints()'>Add stop to trip</button>`
+            <button class="popupbutton button is-small is-rounded" onClick='window.addToWaypoints()'>Add stop to trip</button>`
           )
         }
         else if (descOne.name == undefined && descTwo.description != "null" && descTwo.description != undefined && descTwo.openTimes != "null" && descTwo.openTimes != undefined) {
           descTwo.name = capitalize(descTwo.name)
           return (
             `<strong>${descTwo.name}</strong>
-            <p>${descTwo.description}</p>
-            <br>
-            <p>Open: ${descTwo.openTimes}</p>
-            <button onClick='window.addToWaypoints()'>Add stop to trip</button>`
+            <p class="popupdesc">${descTwo.description}</p>
+            <p class="popupdesc">Open: ${descTwo.openTimes}</p>
+            <button class="popupbutton button is-small is-rounded" onClick='window.addToWaypoints()'>Add stop to trip</button>`
           )
         }
         else if (descOne.name == undefined && descTwo.description == "null" || descTwo.openTimes == "null") {
           return (
             `<strong>${capitalize(descTwo.name)}</strong>
             <strong>Toilets</strong>
-            <p>No extra information :(</p>
-            <button onClick='window.addToWaypoints()'>Add stop to trip</button>`
+            <p class="popupdesc">No extra information :(</p>
+            <button class="popupbutton button is-small is-rounded" onClick='window.addToWaypoints()'>Add stop to trip</button>`
           )
         }
         else {
           return (
             `${descThree.description}
-            <button onClick='window.addToWaypoints()'>Add stop to trip</button>`
+            <button class="popupbutton button is-small is-rounded" onClick='window.addToWaypoints()'>Add stop to trip</button>`
           )
         }
       }
@@ -250,7 +248,7 @@ class Mapbox extends React.Component {
             'source': 'swim-points',
             'layout': {
               'icon-image': 'swim-marker',
-              'icon-size': 0.95,
+              'icon-size': 0.70,
               'text-offset': [0, 1.25],
               'text-anchor': 'top'
             }
