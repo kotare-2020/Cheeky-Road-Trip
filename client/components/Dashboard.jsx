@@ -17,7 +17,7 @@ class Dashboard extends React.Component {
     render() {
         return (
             <>
-            <button id="home-button" onClick={this.handleClick} > Home </button>
+            <button id="home-button" className="button is-info is-small is-rounded" onClick={this.handleClick} > Home </button>
             <div id="dashboard-container">
             <div className="column-left-dashboard">
             <TripInfo/>

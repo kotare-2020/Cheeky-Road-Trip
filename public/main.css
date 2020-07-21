@@ -9,25 +9,25 @@
     width: 22%;
 }
      
-    .mapboxgl-ctrl-top-left {
-        font-size: 20px;
-    margin-left: 9px;
-    margin-top: 10px;
-    }
-    .mapbox-directions-component-keyline{
-        display: none;
-    }
-    .mapbox-directions-inputs {
-        display: none;
-    }
+.mapboxgl-ctrl-top-left {
+    font-size: 20px;
+margin-left: 9px;
+margin-top: 10px;
+}
+.mapbox-directions-component-keyline{
+    display: none;
+}
+.mapbox-directions-inputs {
+    display: none;
+}
 
-    .mapboxgl-canvas-container {
-        height: 100vh;
-    }
-    .mapContainer {
-        width: 77vw;
-        height: 100vh;
-        }
+.mapboxgl-canvas-container {
+    height: 100vh;
+}
+.mapContainer {
+    width: 77vw;
+    height: 100vh;
+}
 
 body {
     color: black;
@@ -51,6 +51,18 @@ h3 {
 p {
     font-size: 15px;
 }
+/*marker popups*/
+.popupdesc {
+    margin-top: 0.5em;
+}
+.popupbutton {
+    margin-top: 0.5em;
+    border-radius: 2px;
+    font-size: 0.75rem;
+    padding-left: calc(1em + 0.25em);
+    padding-right: calc(1em + 0.25em);
+}
+/*For Richard: p.popup styles a p whith the classname. p .popup (with a space) styles a classnamed thing that is a child of p*/
 
 .landing-page-content-div {
     height: 100vh;
@@ -89,6 +101,9 @@ p {
 
 .lets-go-button {
     margin-top: 10px;
+    background-color: #f7f977;
+    border: none;
+    color: black;
 }
 
 .mapbox-directions-instructions-wrapper {
@@ -99,6 +114,7 @@ p {
     position: absolute;
     margin-left: 22px;
     margin-top: 12px;
+    background-color: #73c1d8;
 }
 
 .background-div {
@@ -132,36 +148,42 @@ p {
     margin: 20px;
     width: 20vw;
     height: 400px;
-    border: black solid 3px;
+    border: #73c1d8 solid 5px;
     overflow: auto;
+    padding-left: 37px;
+    padding-top: 20px;
+    padding-right: 26px;
+    border-radius: 6px;
 }
 
 #trip-info-div{
     width: 20vw;
     height: 30vh;
-    border: black solid 3px;
+    border: #73c1d8 solid 5px;
     margin: 20px;
     overflow: auto;
+    padding: 16px;
+    border-radius: 6px;
 }
 
-/* .column-left-dashboard {
+.trip-title{
+font-weight: 900;
+font-size: 28px;
+    padding-bottom: 23px;
 }
-
-.column-right-dashboard {
-} */
-
-
 .address-confirm-item {
-    margin-top: 4px;
+    margin-bottom: 25px;
+    font-size: 21px;
+    color: black;
+    font-weight: 700;
+
+}
+
+.address-confirm-item:hover {
+ color: wheat;
 }
 
 
-/* .landing-form-elements {
-} */
-
-/* .directions-list {
-    
-} */
 
 /*SVG BORDER ANIMATION BY ZACH SAUCIER CODEPEN  */ 
 .svg-wrapper {
@@ -201,11 +223,8 @@ p {
 }
 
 .address-confirm-list {
-    font-size: 11px;
-    color: black;
-    background-color: #fff8dc;
-    border: solid #fff8dc 2px;
-    border-radius: 15%;
+    background-color:white;
+    border-radius: 14px;
     width: 300px;
     display: flex;
     position: absolute;
@@ -238,10 +257,12 @@ p {
     width: 470px;
     max-height: 400px;
     color: black;
-    background-color: #fff8dc;
-    border: solid #fff8dc 2px;
-    border-radius: 15%;
+    background-color:white;
+    border-radius: 14px;
     overflow: auto;
     padding: 20px;
     opacity: 95%;
+    font-size: 21px;
+    color: black;
+    font-weight: 700;
 }

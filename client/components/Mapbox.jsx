@@ -133,6 +133,7 @@ class Mapbox extends React.Component {
           return (
             `<strong>${descTwo.name}</strong>
             <p>${descTwo.description}</p>
+            <br>
             <p>Open: ${descTwo.openTimes}</p>
             <button onClick='window.addToWaypoints()'>Add stop to trip</button>`
           )
@@ -249,7 +250,7 @@ class Mapbox extends React.Component {
             'source': 'swim-points',
             'layout': {
               'icon-image': 'swim-marker',
-              'icon-size': 0.75,
+              'icon-size': 0.95,
               'text-offset': [0, 1.25],
               'text-anchor': 'top'
             }
