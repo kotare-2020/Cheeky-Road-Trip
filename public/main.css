@@ -150,31 +150,11 @@ p {
 .column-right-dashboard {
 } */
 
-.address-confirm-list {
-    font-size: 11px;
-    color: black;
-    background-color: whitesmoke;
-    width: 300px;
-    display: flex;
-    position: absolute;
-    padding: 26px;
-    z-index: 2;
-    top: -6px;
-    right: -161px;
-    overflow: auto;
-    height: 250px;
-}
 
 .address-confirm-item {
     margin-top: 4px;
 }
 
-.waypoints-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 600px;
-}
 
 /* .landing-form-elements {
 } */
@@ -185,15 +165,15 @@ p {
 
 /*SVG BORDER ANIMATION BY ZACH SAUCIER CODEPEN  */ 
 .svg-wrapper {
-  position: relative;
+    position: relative;
   top: 50%;
   transform: translateY(-50%);
-	  margin: 0 auto;
+  margin: 0 auto;
   width: 320px;  
 }
 .shape {
-  stroke-dasharray: 140 540;
-  stroke-dashoffset: -474;
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
   stroke-width: 8px;
   fill: transparent;
   stroke: #19f6e8;
@@ -210,11 +190,58 @@ p {
   position: relative;
 } */
 .svg-wrapper:hover .shape {
-  stroke-width: 2px;
+    stroke-width: 2px;
   stroke-dashoffset: 0;
   stroke-dasharray: 760;
 }
 
+.icon {
+    height: 30px;
+    display: inline-block;
+}
+
+.address-confirm-list {
+    font-size: 11px;
+    color: black;
+    background-color: #fff8dc;
+    border: solid #fff8dc 2px;
+    border-radius: 15%;
+    width: 300px;
+    display: flex;
+    position: absolute;
+    padding: 26px;
+    z-index: 2;
+    top: -6px;
+    right: -161px;
+    overflow: auto;
+    height: 250px;
+    order:1;
+}
+
 #landingpage-form-container {
     position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.waypoints-form {
+    display: flex;
+    order: 2;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+}
+
+#waypoints-div {
+    order: 1;
+    width: 470px;
+    max-height: 400px;
+    color: black;
+    background-color: #fff8dc;
+    border: solid #fff8dc 2px;
+    border-radius: 15%;
+    overflow: auto;
+    padding: 20px;
+    opacity: 95%;
 }

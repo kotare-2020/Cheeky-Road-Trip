@@ -17,6 +17,7 @@ class AddressConfirm extends React.Component {
             streetName: addressInfo.street,
         }
         this.props.dispatch(confirmAddress(waypoint, waypointName))
+        document.getElementById(`${waypointName}-input`).value = ''
         this.props.hideOptions(waypointName)
     }
 
