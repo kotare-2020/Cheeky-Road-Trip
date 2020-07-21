@@ -131,7 +131,7 @@ class Mapbox extends React.Component {
           descTwo.name = capitalize(descTwo.name)
           return (
             `<strong>${descTwo.name}</strong>
-            <p class="popupdesc">${descTwo.description}</p>
+            <p>${descTwo.description}</p>
             <p class="popupdesc">Open: ${descTwo.openTimes}</p>
             <button class="popupbutton button is-small is-rounded" onClick='window.addToWaypoints()'>Add stop to trip</button>`
           )
@@ -140,7 +140,7 @@ class Mapbox extends React.Component {
           return (
             `<strong>${capitalize(descTwo.name)}</strong>
             <strong>Toilets</strong>
-            <p class="popupdesc">No extra information :(</p>
+            <p>No extra information :(</p>
             <button class="popupbutton button is-small is-rounded" onClick='window.addToWaypoints()'>Add stop to trip</button>`
           )
         }
