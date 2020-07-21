@@ -105,7 +105,7 @@ class Mapbox extends React.Component {
       }
 
       const addToWaypointsNoArgs = () => {
-        const nameOfStop = setName()        
+        const nameOfStop = setName()
         const midpoint = {
           buildingName: capitalize(nameOfStop),
           label: "label",
