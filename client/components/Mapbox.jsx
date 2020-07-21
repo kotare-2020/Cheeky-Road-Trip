@@ -133,6 +133,7 @@ class Mapbox extends React.Component {
           return (
             `<strong>${descTwo.name}</strong>
             <p>${descTwo.description}</p>
+            <br>
             <p>Open: ${descTwo.openTimes}</p>
             <button onClick='window.addToWaypoints()'>Add stop to trip</button>`
           )
