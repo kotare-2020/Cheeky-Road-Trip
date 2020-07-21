@@ -3428,7 +3428,7 @@
             "type": "Feature",
             "properties": {
                 "FID": 1,
-                "name": "Hikuataia"
+                "Name": "Hikuataia"
             },
             "geometry": {
                 "type": "Point",
@@ -3442,7 +3442,7 @@
             "type": "Feature",
             "properties": {
                 "FID": 2,
-                "name": "Mangaiti"
+                "Name": "Mangaiti"
             },
             "geometry": {
                 "type": "Point",
@@ -3456,7 +3456,7 @@
             "type": "Feature",
             "properties": {
                 "FID": 3,
-                "name": "Paeroa"
+                "Name": "Paeroa"
             },
             "geometry": {
                 "type": "Point",
@@ -3470,7 +3470,7 @@
             "type": "Feature",
             "properties": {
                 "FID": 4,
-                "name": "Te Aroha"
+                "Name": "Te Aroha"
             },
             "geometry": {
                 "type": "Point",
@@ -3484,7 +3484,7 @@
             "type": "Feature",
             "properties": {
                 "FID": 5,
-                "name": "Tirohia"
+                "Name": "Tirohia"
             },
             "geometry": {
                 "type": "Point",
@@ -4545,11 +4545,11 @@
             "properties": {
                 "FID": 1,
                 "ADDRESS": "1994 East Cape Road",
-                "NAME": "East Cape",
+                "TOILET_NAME": "East Cape",
                 "COMMENTS": " ",
                 "LOCATION": "East Cape Light House",
-                "Type": "Mens & Womens Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Mens & Womens Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -4564,11 +4564,11 @@
             "properties": {
                 "FID": 2,
                 "ADDRESS": "42 Wharf Road",
-                "NAME": "Hicks Bay",
+                "TOILET_NAME": "Hicks Bay",
                 "COMMENTS": " ",
                 "LOCATION": "Wharekahika School Grounds",
-                "Type": "Mens & Womens Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Mens & Womens Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -4583,11 +4583,11 @@
             "properties": {
                 "FID": 3,
                 "ADDRESS": "439 Lottin Point Road",
-                "NAME": "Lottin Point",
+                "TOILET_NAME": "Lottin Point",
                 "COMMENTS": " ",
                 "LOCATION": "Lottin Point",
-                "Type": "Single Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Single Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -4602,11 +4602,11 @@
             "properties": {
                 "FID": 4,
                 "ADDRESS": "2 Matakaoa Road",
-                "NAME": "Hicks Bay",
+                "TOILET_NAME": "Hicks Bay",
                 "COMMENTS": " ",
                 "LOCATION": "Adj Hicks Bay Wharf",
-                "Type": "Pit toilet",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Pit toilet",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -4621,11 +4621,11 @@
             "properties": {
                 "FID": 5,
                 "ADDRESS": "139A Onepoto Road",
-                "NAME": "Onepoto Bay",
+                "TOILET_NAME": "Onepoto Bay",
                 "COMMENTS": " ",
                 "LOCATION": "Onepoto Hicks Bay",
-                "Type": "Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -4640,11 +4640,11 @@
             "properties": {
                 "FID": 6,
                 "ADDRESS": "25 Moana Parade",
-                "NAME": "Te Araroa",
+                "TOILET_NAME": "Te Araroa",
                 "COMMENTS": " ",
                 "LOCATION": "Te Araroa",
-                "Type": "Mens & Womens Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Mens & Womens Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -4659,11 +4659,11 @@
             "properties": {
                 "FID": 7,
                 "ADDRESS": "3 Hall Street",
-                "NAME": "Te Puia Springs",
+                "TOILET_NAME": "Te Puia Springs",
                 "COMMENTS": " ",
                 "LOCATION": "Te Puia Springs",
-                "Type": "Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -4678,11 +4678,11 @@
             "properties": {
                 "FID": 8,
                 "ADDRESS": "23 Marae Road",
-                "NAME": "Waipiro Bay",
+                "TOILET_NAME": "Waipiro Bay",
                 "COMMENTS": " ",
                 "LOCATION": "Waipiro Bay Adj Iritekura Marae",
-                "Type": "Pit toilet",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Pit toilet",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -4697,11 +4697,11 @@
             "properties": {
                 "FID": 9,
                 "ADDRESS": "110 Mcilroy Road",
-                "NAME": "Waipiro Bay",
+                "TOILET_NAME": "Waipiro Bay",
                 "COMMENTS": " ",
                 "LOCATION": "Waipiro Bay",
-                "Type": "Pit toilet",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Pit toilet",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -4716,11 +4716,11 @@
             "properties": {
                 "FID": 10,
                 "ADDRESS": "1866 Te Araroa Road",
-                "NAME": "Tikitiki",
+                "TOILET_NAME": "Tikitiki",
                 "COMMENTS": " ",
                 "LOCATION": "Tikitiki",
-                "Type": "Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -4735,11 +4735,11 @@
             "properties": {
                 "FID": 11,
                 "ADDRESS": "10 Beach Road",
-                "NAME": "Tokomaru Bay",
+                "TOILET_NAME": "Tokomaru Bay",
                 "COMMENTS": " ",
                 "LOCATION": "Tokomaru Bay",
-                "Type": "Mens & Womens Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Mens & Womens Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -4754,11 +4754,11 @@
             "properties": {
                 "FID": 12,
                 "ADDRESS": "61 Cliff Road",
-                "NAME": "Te Karaka",
+                "TOILET_NAME": "Te Karaka",
                 "COMMENTS": " ",
                 "LOCATION": "Te Karaka",
-                "Type": "Mens & Womens Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Mens & Womens Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -4773,11 +4773,11 @@
             "properties": {
                 "FID": 13,
                 "ADDRESS": "29 Cook Street",
-                "NAME": "Tolaga Bay",
+                "TOILET_NAME": "Tolaga Bay",
                 "COMMENTS": " ",
                 "LOCATION": "Tolaga Bay Township",
-                "Type": "Mens & Womens Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Mens & Womens Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -4792,11 +4792,11 @@
             "properties": {
                 "FID": 14,
                 "ADDRESS": "5 Ferneaux Street",
-                "NAME": "Blue Waters",
+                "TOILET_NAME": "Blue Waters",
                 "COMMENTS": " ",
                 "LOCATION": "Blue Waters Tolaga Bay",
-                "Type": "Mens & Womens Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Mens & Womens Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -4811,11 +4811,11 @@
             "properties": {
                 "FID": 15,
                 "ADDRESS": "6529 Matawai Road",
-                "NAME": "Matawai",
+                "TOILET_NAME": "Matawai",
                 "COMMENTS": " ",
                 "LOCATION": "Matawai Township",
-                "Type": "Mens & Womens Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Mens & Womens Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -4830,11 +4830,11 @@
             "properties": {
                 "FID": 16,
                 "ADDRESS": "166 Onslow Road",
-                "NAME": "Patutahi",
+                "TOILET_NAME": "Patutahi",
                 "COMMENTS": " ",
                 "LOCATION": "Patutahi Reserve",
-                "Type": "Mens & Womens Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Mens & Womens Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -4849,11 +4849,11 @@
             "properties": {
                 "FID": 17,
                 "ADDRESS": "209 Grey Street",
-                "NAME": "Visitor Information Centre",
+                "TOILET_NAME": "Visitor Information Centre",
                 "COMMENTS": " ",
                 "LOCATION": "Gisborne City",
-                "Type": "Toilet",
-                "Opening_Hours": "6am - 9:30pm"
+                "DESCRIPTION": "Toilet",
+                "USE_RESTRICTIONS": "6am - 9:30pm"
             },
             "geometry": {
                 "type": "Point",
@@ -4868,11 +4868,11 @@
             "properties": {
                 "FID": 18,
                 "ADDRESS": "58 Lytton Road",
-                "NAME": "Bmx",
+                "TOILET_NAME": "Bmx",
                 "COMMENTS": " ",
                 "LOCATION": "Lytton Park",
-                "Type": "Toilet",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Toilet",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -4887,11 +4887,11 @@
             "properties": {
                 "FID": 19,
                 "ADDRESS": "150 Sponge Bay Road",
-                "NAME": "Sponge Bay",
+                "TOILET_NAME": "Sponge Bay",
                 "COMMENTS": " ",
                 "LOCATION": "Sponge Bay Car Park",
-                "Type": "Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -4906,11 +4906,11 @@
             "properties": {
                 "FID": 20,
                 "ADDRESS": "7 Ferneaux Street",
-                "NAME": "Tolaga Bay",
+                "TOILET_NAME": "Tolaga Bay",
                 "COMMENTS": " ",
                 "LOCATION": "Tolaga Bay Beach Front",
-                "Type": "Mens & Womens Accessible Flushing",
-                "Opening_Hours": "24 Hours - during summer months"
+                "DESCRIPTION": "Mens & Womens Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours - during summer months"
             },
             "geometry": {
                 "type": "Point",
@@ -4925,11 +4925,11 @@
             "properties": {
                 "FID": 21,
                 "ADDRESS": "11 Moana Road",
-                "NAME": "Lysnar Reserve",
+                "TOILET_NAME": "Lysnar Reserve",
                 "COMMENTS": " ",
                 "LOCATION": "Wainui Surf Club",
-                "Type": "Mens & Womens Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Mens & Womens Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -4944,11 +4944,11 @@
             "properties": {
                 "FID": 22,
                 "ADDRESS": "158 Waiomatatini Road",
-                "NAME": "Ruatoria",
+                "TOILET_NAME": "Ruatoria",
                 "COMMENTS": " ",
                 "LOCATION": "Ruatoria",
-                "Type": "Mens & Womens Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Mens & Womens Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -4963,11 +4963,11 @@
             "properties": {
                 "FID": 23,
                 "ADDRESS": "40 Centennial Marine Drive",
-                "NAME": "Midway Beach",
+                "TOILET_NAME": "Midway Beach",
                 "COMMENTS": " ",
                 "LOCATION": "Midway Beach Surf Club Bldg",
-                "Type": "Mens & Womens Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Mens & Womens Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -4982,11 +4982,11 @@
             "properties": {
                 "FID": 24,
                 "ADDRESS": "73 Centennial Marine Drive",
-                "NAME": "Adventure Playground",
+                "TOILET_NAME": "Adventure Playground",
                 "COMMENTS": " ",
                 "LOCATION": "Adventure Playground",
-                "Type": "Mens & Womens Accessible Flushing",
-                "Opening_Hours": "6am - 9:30pm"
+                "DESCRIPTION": "Mens & Womens Accessible Flushing",
+                "USE_RESTRICTIONS": "6am - 9:30pm"
             },
             "geometry": {
                 "type": "Point",
@@ -5001,11 +5001,11 @@
             "properties": {
                 "FID": 26,
                 "ADDRESS": "24 Hospital Road",
-                "NAME": "Mangapapa Reserve",
+                "TOILET_NAME": "Mangapapa Reserve",
                 "COMMENTS": " ",
                 "LOCATION": "Mangapapa Reserve",
-                "Type": "Mens & Womens Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Mens & Womens Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5020,11 +5020,11 @@
             "properties": {
                 "FID": 27,
                 "ADDRESS": "116 Roebuck Road",
-                "NAME": "Childers Road Reserve",
+                "TOILET_NAME": "Childers Road Reserve",
                 "COMMENTS": " ",
                 "LOCATION": "Childers Road Reserve",
-                "Type": "Mens & Womens Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Mens & Womens Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5039,11 +5039,11 @@
             "properties": {
                 "FID": 28,
                 "ADDRESS": "100 Salisbury Road",
-                "NAME": "Churchill Park",
+                "TOILET_NAME": "Churchill Park",
                 "COMMENTS": " ",
                 "LOCATION": "Churchill Park",
-                "Type": "Toilet",
-                "Opening_Hours": "Only Open for Events"
+                "DESCRIPTION": "Toilet",
+                "USE_RESTRICTIONS": "Only Open for Events"
             },
             "geometry": {
                 "type": "Point",
@@ -5058,11 +5058,11 @@
             "properties": {
                 "FID": 29,
                 "ADDRESS": "80 Wairere Road",
-                "NAME": "Wainui Reserve",
+                "TOILET_NAME": "Wainui Reserve",
                 "COMMENTS": " ",
                 "LOCATION": "Wainui Reserve",
-                "Type": "Toilet",
-                "Opening_Hours": "Only open during sports times"
+                "DESCRIPTION": "Toilet",
+                "USE_RESTRICTIONS": "Only open during sports times"
             },
             "geometry": {
                 "type": "Point",
@@ -5077,11 +5077,11 @@
             "properties": {
                 "FID": 30,
                 "ADDRESS": "33 Bright Street",
-                "NAME": "Bright Street",
+                "TOILET_NAME": "Bright Street",
                 "COMMENTS": " ",
                 "LOCATION": "Gisborne City",
-                "Type": "Toilets & Showers",
-                "Opening_Hours": "Mon - Fri 8:30am - 5pm, Sat 9am - 1pm"
+                "DESCRIPTION": "Toilets & Showers",
+                "USE_RESTRICTIONS": "Mon - Fri 8:30am - 5pm, Sat 9am - 1pm"
             },
             "geometry": {
                 "type": "Point",
@@ -5096,11 +5096,11 @@
             "properties": {
                 "FID": 31,
                 "ADDRESS": "60 Station Road",
-                "NAME": "Te Karaka",
+                "TOILET_NAME": "Te Karaka",
                 "COMMENTS": " ",
                 "LOCATION": "Te Karaka Reserve",
-                "Type": "Toilet",
-                "Opening_Hours": "Only open during sports times"
+                "DESCRIPTION": "Toilet",
+                "USE_RESTRICTIONS": "Only open during sports times"
             },
             "geometry": {
                 "type": "Point",
@@ -5115,11 +5115,11 @@
             "properties": {
                 "FID": 33,
                 "ADDRESS": "41 Ballance Street",
-                "NAME": "Ballance Street Village",
+                "TOILET_NAME": "Ballance Street Village",
                 "COMMENTS": " ",
                 "LOCATION": "Ormond Road Adj Ballance Street Village",
-                "Type": "Exeloo Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Exeloo Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5134,11 +5134,11 @@
             "properties": {
                 "FID": 34,
                 "ADDRESS": "390 Nelson Road",
-                "NAME": "Nelson Park",
+                "TOILET_NAME": "Nelson Park",
                 "COMMENTS": " ",
                 "LOCATION": "Nelson Park",
-                "Type": "Toilet",
-                "Opening_Hours": "Only open during sports times"
+                "DESCRIPTION": "Toilet",
+                "USE_RESTRICTIONS": "Only open during sports times"
             },
             "geometry": {
                 "type": "Point",
@@ -5153,11 +5153,11 @@
             "properties": {
                 "FID": 35,
                 "ADDRESS": "121 Lytton Road",
-                "NAME": "Harry Barker Reserve",
+                "TOILET_NAME": "Harry Barker Reserve",
                 "COMMENTS": " ",
                 "LOCATION": "Harry Barker Reserve",
-                "Type": "Toilet",
-                "Opening_Hours": "Only open during sports times"
+                "DESCRIPTION": "Toilet",
+                "USE_RESTRICTIONS": "Only open during sports times"
             },
             "geometry": {
                 "type": "Point",
@@ -5172,11 +5172,11 @@
             "properties": {
                 "FID": 36,
                 "ADDRESS": "498A Wainui Road",
-                "NAME": "Kaiti Mall",
+                "TOILET_NAME": "Kaiti Mall",
                 "COMMENTS": " ",
                 "LOCATION": "Kaiti Mall",
-                "Type": "Mens & Womens Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Mens & Womens Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5191,11 +5191,11 @@
             "properties": {
                 "FID": 37,
                 "ADDRESS": "89 Kaiti Beach Road",
-                "NAME": "Kaiti Beach",
+                "TOILET_NAME": "Kaiti Beach",
                 "COMMENTS": " ",
                 "LOCATION": "Kaiti Beach Adj Yacht Club",
-                "Type": "Exeloo Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Exeloo Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5210,11 +5210,11 @@
             "properties": {
                 "FID": 38,
                 "ADDRESS": "9 Vogel Street",
-                "NAME": "Vogel Street",
+                "TOILET_NAME": "Vogel Street",
                 "COMMENTS": " ",
                 "LOCATION": "Marina Park",
-                "Type": "Mens & Womens Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Mens & Womens Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5229,11 +5229,11 @@
             "properties": {
                 "FID": 39,
                 "ADDRESS": "391 Aberdeen Road",
-                "NAME": "Botanical Garden",
+                "TOILET_NAME": "Botanical Garden",
                 "COMMENTS": " ",
                 "LOCATION": "Botanical Gardens",
-                "Type": "Mens & Womens Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Mens & Womens Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5248,11 +5248,11 @@
             "properties": {
                 "FID": 40,
                 "ADDRESS": "32 Stanley Road",
-                "NAME": "Barry Park",
+                "TOILET_NAME": "Barry Park",
                 "COMMENTS": " ",
                 "LOCATION": "Barry Park",
-                "Type": "Toilet",
-                "Opening_Hours": "Only open during sports times"
+                "DESCRIPTION": "Toilet",
+                "USE_RESTRICTIONS": "Only open during sports times"
             },
             "geometry": {
                 "type": "Point",
@@ -5267,11 +5267,11 @@
             "properties": {
                 "FID": 41,
                 "ADDRESS": "87 Centennial Marine Drive",
-                "NAME": "Gisborne Outdoor Theatre",
+                "TOILET_NAME": "Gisborne Outdoor Theatre",
                 "COMMENTS": " ",
                 "LOCATION": "Gisborne Outdoor Theatre",
-                "Type": "Toilet",
-                "Opening_Hours": "Only open during sports times or event"
+                "DESCRIPTION": "Toilet",
+                "USE_RESTRICTIONS": "Only open during sports times or event"
             },
             "geometry": {
                 "type": "Point",
@@ -5286,11 +5286,11 @@
             "properties": {
                 "FID": 42,
                 "ADDRESS": "16 Potae Avenue",
-                "NAME": "Lytton West",
+                "TOILET_NAME": "Lytton West",
                 "COMMENTS": " ",
                 "LOCATION": "Lytton West Village",
-                "Type": "Exeloo Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Exeloo Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5305,11 +5305,11 @@
             "properties": {
                 "FID": 43,
                 "ADDRESS": "50 Peel Street",
-                "NAME": "Peel Street",
+                "TOILET_NAME": "Peel Street",
                 "COMMENTS": " ",
                 "LOCATION": "Gisborne City",
-                "Type": "Toilet",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Toilet",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5324,11 +5324,11 @@
             "properties": {
                 "FID": 44,
                 "ADDRESS": "744 Whangara Road",
-                "NAME": "Turihaua",
+                "TOILET_NAME": "Turihaua",
                 "COMMENTS": " ",
                 "LOCATION": "Turihaua",
-                "Type": "Mens & Womens Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Mens & Womens Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5343,11 +5343,11 @@
             "properties": {
                 "FID": 45,
                 "ADDRESS": "1 Motu Falls Road",
-                "NAME": "Motu",
+                "TOILET_NAME": "Motu",
                 "COMMENTS": " ",
                 "LOCATION": "Motu",
-                "Type": "Mens & Womens Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Mens & Womens Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5362,11 +5362,11 @@
             "properties": {
                 "FID": 46,
                 "ADDRESS": "137 Waima Road",
-                "NAME": "Tokomaru Bay Wharf",
+                "TOILET_NAME": "Tokomaru Bay Wharf",
                 "COMMENTS": " ",
                 "LOCATION": "Tokomaru Bay",
-                "Type": "Mens & Womens Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Mens & Womens Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5381,11 +5381,11 @@
             "properties": {
                 "FID": 47,
                 "ADDRESS": "168 Wharf Road",
-                "NAME": "Tolaga Bay Wharf",
+                "TOILET_NAME": "Tolaga Bay Wharf",
                 "COMMENTS": " ",
                 "LOCATION": "Tolaga Bay Wharf",
-                "Type": "Mens & Womens Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Mens & Womens Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5400,11 +5400,11 @@
             "properties": {
                 "FID": 49,
                 "ADDRESS": "578 Kaiaua Road",
-                "NAME": "Kaiaua Beach South",
+                "TOILET_NAME": "Kaiaua Beach South",
                 "COMMENTS": " ",
                 "LOCATION": "Kaiaua Beach",
-                "Type": "Single Flushing & Holding tank",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Single Flushing & Holding tank",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5419,11 +5419,11 @@
             "properties": {
                 "FID": 50,
                 "ADDRESS": "602 Waihau Road",
-                "NAME": "Loisels Beach South",
+                "TOILET_NAME": "Loisels Beach South",
                 "COMMENTS": " ",
                 "LOCATION": "Waihau Bay",
-                "Type": "Single Flushing & Holding tank",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Single Flushing & Holding tank",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5438,11 +5438,11 @@
             "properties": {
                 "FID": 51,
                 "ADDRESS": "609 Waihau Road",
-                "NAME": "Loisels Beach North",
+                "TOILET_NAME": "Loisels Beach North",
                 "COMMENTS": " ",
                 "LOCATION": "Waihau Bay",
-                "Type": "Toilet",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Toilet",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5457,11 +5457,11 @@
             "properties": {
                 "FID": 53,
                 "ADDRESS": "1028 Whangara Road",
-                "NAME": "Pouawa",
+                "TOILET_NAME": "Pouawa",
                 "COMMENTS": " ",
                 "LOCATION": "Pouawa Beach",
-                "Type": "Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5476,11 +5476,11 @@
             "properties": {
                 "FID": 54,
                 "ADDRESS": "2A Oneroa Road",
-                "NAME": "Wainui",
+                "TOILET_NAME": "Wainui",
                 "COMMENTS": " ",
                 "LOCATION": "Stock Route Wainui",
-                "Type": "Mens & Womens Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Mens & Womens Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5495,11 +5495,11 @@
             "properties": {
                 "FID": 55,
                 "ADDRESS": "129 Tyndall Road",
-                "NAME": "Waikirikiri Reserve",
+                "TOILET_NAME": "Waikirikiri Reserve",
                 "COMMENTS": " ",
                 "LOCATION": "Waikirikiri Reserve",
-                "Type": "Toilet",
-                "Opening_Hours": "Only open during sports times"
+                "DESCRIPTION": "Toilet",
+                "USE_RESTRICTIONS": "Only open during sports times"
             },
             "geometry": {
                 "type": "Point",
@@ -5514,11 +5514,11 @@
             "properties": {
                 "FID": 56,
                 "ADDRESS": "11 Worsley Street",
-                "NAME": "Heath Johnston Park",
+                "TOILET_NAME": "Heath Johnston Park",
                 "COMMENTS": " ",
                 "LOCATION": "Heath Johnston Park",
-                "Type": "Toilet",
-                "Opening_Hours": "Only open during sports times"
+                "DESCRIPTION": "Toilet",
+                "USE_RESTRICTIONS": "Only open during sports times"
             },
             "geometry": {
                 "type": "Point",
@@ -5533,11 +5533,11 @@
             "properties": {
                 "FID": 57,
                 "ADDRESS": "11 Score Road",
-                "NAME": "Anzac Park",
+                "TOILET_NAME": "Anzac Park",
                 "COMMENTS": " ",
                 "LOCATION": "Anzac Park",
-                "Type": "Mens & Womens Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Mens & Womens Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5552,11 +5552,11 @@
             "properties": {
                 "FID": 58,
                 "ADDRESS": "689A Childers Road",
-                "NAME": "Elgin",
+                "TOILET_NAME": "Elgin",
                 "COMMENTS": " ",
                 "LOCATION": "Elgin Shops",
-                "Type": "Exeloo Accessible Flushing",
-                "Opening_Hours": "6am - 9:30pm"
+                "DESCRIPTION": "Exeloo Accessible Flushing",
+                "USE_RESTRICTIONS": "6am - 9:30pm"
             },
             "geometry": {
                 "type": "Point",
@@ -5571,11 +5571,11 @@
             "properties": {
                 "FID": 59,
                 "ADDRESS": "2A Cook Street",
-                "NAME": "Uawa Domain",
+                "TOILET_NAME": "Uawa Domain",
                 "COMMENTS": " ",
                 "LOCATION": "Uawa Rugby Union & Sports Club",
-                "Type": "Toilet",
-                "Opening_Hours": "Only open during sports times"
+                "DESCRIPTION": "Toilet",
+                "USE_RESTRICTIONS": "Only open during sports times"
             },
             "geometry": {
                 "type": "Point",
@@ -5590,11 +5590,11 @@
             "properties": {
                 "FID": 60,
                 "ADDRESS": "3 Mangahauini Street",
-                "NAME": "Hatea-A-Rangi Memorial Park",
+                "TOILET_NAME": "Hatea-A-Rangi Memorial Park",
                 "COMMENTS": " ",
                 "LOCATION": "Tokomaru Bay",
-                "Type": "Toilet",
-                "Opening_Hours": "Only open during sports times"
+                "DESCRIPTION": "Toilet",
+                "USE_RESTRICTIONS": "Only open during sports times"
             },
             "geometry": {
                 "type": "Point",
@@ -5609,11 +5609,11 @@
             "properties": {
                 "FID": 62,
                 "ADDRESS": "156 Stanley Road",
-                "NAME": "Oval Reserve",
+                "TOILET_NAME": "Oval Reserve",
                 "COMMENTS": " ",
                 "LOCATION": "Oval Reserve",
-                "Type": "Toilet",
-                "Opening_Hours": "Only open during sports times"
+                "DESCRIPTION": "Toilet",
+                "USE_RESTRICTIONS": "Only open during sports times"
             },
             "geometry": {
                 "type": "Point",
@@ -5628,11 +5628,11 @@
             "properties": {
                 "FID": 63,
                 "ADDRESS": "141A Derby Street",
-                "NAME": "Derby Street",
+                "TOILET_NAME": "Derby Street",
                 "COMMENTS": null,
                 "LOCATION": "Gisborne City",
-                "Type": "Exeloo Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Exeloo Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5647,11 +5647,11 @@
             "properties": {
                 "FID": 64,
                 "ADDRESS": "170 Whangara Road",
-                "NAME": "Makorori Point",
+                "TOILET_NAME": "Makorori Point",
                 "COMMENTS": null,
                 "LOCATION": "Makorori Point Car Park",
-                "Type": "Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5666,11 +5666,11 @@
             "properties": {
                 "FID": 65,
                 "ADDRESS": "70A Moana Road",
-                "NAME": "Lysnar Reserve",
+                "TOILET_NAME": "Lysnar Reserve",
                 "COMMENTS": null,
                 "LOCATION": "Lysnar Reserve - Adj Chalet Car Park",
-                "Type": "Mens & Womens Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Mens & Womens Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5685,11 +5685,11 @@
             "properties": {
                 "FID": 66,
                 "ADDRESS": "12 Whangara Road",
-                "NAME": "Lysnar Reserve",
+                "TOILET_NAME": "Lysnar Reserve",
                 "COMMENTS": null,
                 "LOCATION": "Lysnar Reserve Northern Car Park",
-                "Type": "Toilet",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Toilet",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5704,11 +5704,11 @@
             "properties": {
                 "FID": 67,
                 "ADDRESS": "1976 Ruakaka Road",
-                "NAME": "Doneraile Park",
+                "TOILET_NAME": "Doneraile Park",
                 "COMMENTS": null,
                 "LOCATION": "Hangaroa",
-                "Type": "Toilet",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Toilet",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5723,11 +5723,11 @@
             "properties": {
                 "FID": 68,
                 "ADDRESS": "322 Whangara Road",
-                "NAME": "Makorori",
+                "TOILET_NAME": "Makorori",
                 "COMMENTS": null,
                 "LOCATION": "Makorori Layby",
-                "Type": "Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5742,11 +5742,11 @@
             "properties": {
                 "FID": 70,
                 "ADDRESS": "3607 Wharekopae Road",
-                "NAME": "Rere Falls",
+                "TOILET_NAME": "Rere Falls",
                 "COMMENTS": null,
                 "LOCATION": "Adj Rere Falls",
-                "Type": "Mens & Womens Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Mens & Womens Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5761,11 +5761,11 @@
             "properties": {
                 "FID": 71,
                 "ADDRESS": "3844 Wharekopae Road",
-                "NAME": "Rere Rockslide",
+                "TOILET_NAME": "Rere Rockslide",
                 "COMMENTS": null,
                 "LOCATION": "Rere",
-                "Type": "Mens & Womens Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Mens & Womens Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5780,11 +5780,11 @@
             "properties": {
                 "FID": 72,
                 "ADDRESS": "204 Grey Street",
-                "NAME": "Skate Park",
+                "TOILET_NAME": "Skate Park",
                 "COMMENTS": " ",
                 "LOCATION": "Gisborne City",
-                "Type": "Toilet",
-                "Opening_Hours": "Only Open when Supervised"
+                "DESCRIPTION": "Toilet",
+                "USE_RESTRICTIONS": "Only Open when Supervised"
             },
             "geometry": {
                 "type": "Point",
@@ -5799,11 +5799,11 @@
             "properties": {
                 "FID": 73,
                 "ADDRESS": "78 Pouawa Road",
-                "NAME": "Pouawa",
+                "TOILET_NAME": "Pouawa",
                 "COMMENTS": " ",
                 "LOCATION": "Pouawa Beach",
-                "Type": "Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5818,11 +5818,11 @@
             "properties": {
                 "FID": 74,
                 "ADDRESS": "10A Pohutu Road",
-                "NAME": "Te Araroa Domain",
+                "TOILET_NAME": "Te Araroa Domain",
                 "COMMENTS": " ",
                 "LOCATION": "Te Araroa",
-                "Type": "Mens & Womens Accessible Flushing",
-                "Opening_Hours": "Only open during sports times"
+                "DESCRIPTION": "Mens & Womens Accessible Flushing",
+                "USE_RESTRICTIONS": "Only open during sports times"
             },
             "geometry": {
                 "type": "Point",
@@ -5837,11 +5837,11 @@
             "properties": {
                 "FID": 75,
                 "ADDRESS": "4819 Tiniroto Road",
-                "NAME": "Tiniroto",
+                "TOILET_NAME": "Tiniroto",
                 "COMMENTS": null,
                 "LOCATION": "Tiniroto",
-                "Type": "Mens & Womens Flushing & Holding tank",
-                "Opening_Hours": "Only Open for Events"
+                "DESCRIPTION": "Mens & Womens Flushing & Holding tank",
+                "USE_RESTRICTIONS": "Only Open for Events"
             },
             "geometry": {
                 "type": "Point",
@@ -5856,11 +5856,11 @@
             "properties": {
                 "FID": 76,
                 "ADDRESS": "8 Uawa Parade",
-                "NAME": "Uawa Boat Ramp",
+                "TOILET_NAME": "Uawa Boat Ramp",
                 "COMMENTS": " ",
                 "LOCATION": "Tolaga Bay",
-                "Type": "Toilet",
-                "Opening_Hours": "Not in Use"
+                "DESCRIPTION": "Toilet",
+                "USE_RESTRICTIONS": "Not in Use"
             },
             "geometry": {
                 "type": "Point",
@@ -5875,11 +5875,11 @@
             "properties": {
                 "FID": 77,
                 "ADDRESS": "876 Tuparoa Road",
-                "NAME": "Tuparoa",
+                "TOILET_NAME": "Tuparoa",
                 "COMMENTS": " ",
                 "LOCATION": "Tuparoa Beach",
-                "Type": "Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5894,11 +5894,11 @@
             "properties": {
                 "FID": 78,
                 "ADDRESS": "135 Centennial Marine Drive",
-                "NAME": "Watson Park",
+                "TOILET_NAME": "Watson Park",
                 "COMMENTS": " ",
                 "LOCATION": "Watson Park",
-                "Type": "Toilet",
-                "Opening_Hours": "Only open during sports times"
+                "DESCRIPTION": "Toilet",
+                "USE_RESTRICTIONS": "Only open during sports times"
             },
             "geometry": {
                 "type": "Point",
@@ -5913,11 +5913,11 @@
             "properties": {
                 "FID": 79,
                 "ADDRESS": "116A Roebuck Road",
-                "NAME": "Childers Road Reserve Grandstand",
+                "TOILET_NAME": "Childers Road Reserve Grandstand",
                 "COMMENTS": " ",
                 "LOCATION": "Childers Road Reserve Grandstand",
-                "Type": "Toilet",
-                "Opening_Hours": "Only open during sports times"
+                "DESCRIPTION": "Toilet",
+                "USE_RESTRICTIONS": "Only open during sports times"
             },
             "geometry": {
                 "type": "Point",
@@ -5932,11 +5932,11 @@
             "properties": {
                 "FID": 80,
                 "ADDRESS": "10 Pohutu Road",
-                "NAME": "Te Araroa Domain",
+                "TOILET_NAME": "Te Araroa Domain",
                 "COMMENTS": " ",
                 "LOCATION": "Te Araroa",
-                "Type": "Toilet",
-                "Opening_Hours": "Only open during sports times"
+                "DESCRIPTION": "Toilet",
+                "USE_RESTRICTIONS": "Only open during sports times"
             },
             "geometry": {
                 "type": "Point",
@@ -5951,11 +5951,11 @@
             "properties": {
                 "FID": 81,
                 "ADDRESS": "135A Centennial Marine Drive",
-                "NAME": "Watson Park Train Station",
+                "TOILET_NAME": "Watson Park Train Station",
                 "COMMENTS": " ",
                 "LOCATION": "Watson Park Train Station",
-                "Type": "Toilet",
-                "Opening_Hours": "Only open during sports times"
+                "DESCRIPTION": "Toilet",
+                "USE_RESTRICTIONS": "Only open during sports times"
             },
             "geometry": {
                 "type": "Point",
@@ -5970,11 +5970,11 @@
             "properties": {
                 "FID": 82,
                 "ADDRESS": "112 Waihirere Domain Road",
-                "NAME": "Waihirere Domain",
+                "TOILET_NAME": "Waihirere Domain",
                 "COMMENTS": " ",
                 "LOCATION": "Waihirere Domain",
-                "Type": "Mens & Womens Accessible Flushing",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Mens & Womens Accessible Flushing",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -5989,11 +5989,11 @@
             "properties": {
                 "FID": 83,
                 "ADDRESS": "284 Grey Street",
-                "NAME": "Waikanae",
+                "TOILET_NAME": "Waikanae",
                 "COMMENTS": null,
                 "LOCATION": "Surf Club",
-                "Type": "Mens & Womens Accessible Flushing",
-                "Opening_Hours": "6:00am - 7:30pm"
+                "DESCRIPTION": "Mens & Womens Accessible Flushing",
+                "USE_RESTRICTIONS": "6:00am - 7:30pm"
             },
             "geometry": {
                 "type": "Point",
@@ -6008,11 +6008,11 @@
             "properties": {
                 "FID": 84,
                 "ADDRESS": "654 Kaiaua Road",
-                "NAME": "Kaiaua Beach North",
+                "TOILET_NAME": "Kaiaua Beach North",
                 "COMMENTS": " ",
                 "LOCATION": "Kaiaua Beach",
-                "Type": "Single Flushing & Holding tank",
-                "Opening_Hours": "24 Hours"
+                "DESCRIPTION": "Single Flushing & Holding tank",
+                "USE_RESTRICTIONS": "24 Hours"
             },
             "geometry": {
                 "type": "Point",
@@ -6026,10 +6026,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 463,
-                "Name": "A&P Park",
+                "TOILET_NAME": "A&P Park",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/a-and-p-park",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/a-and-p-park",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/C5039B20-2E08-4782-8D66-9796C495135F\/A%26P%20320x240.png"
             },
             "geometry": {
@@ -6044,10 +6045,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 464,
-                "Name": "Alfred Stream Reserve",
+                "TOILET_NAME": "Alfred Stream Reserve",
                 "DisabledAccess": "No",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/alfred-stream-reserve",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/alfred-stream-reserve",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/1C365DC8-49FB-43D2-BC33-3953E9391643\/Alfred%20Stream%20public%20toilet%20320x240.png"
             },
             "geometry": {
@@ -6062,9 +6064,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 465,
-                "Name": "Alfred Street Carpark Building",
+                "TOILET_NAME": "Alfred Street Carpark Building",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "6am - 6pm",
+                "USE_RESTRICTIONS": "6am - 6pm",
+                "DESCRIPTION": "Public Toilets",
                 "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--alfred-street-carpark",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/168A398C-3648-48A1-ACEC-9A7A3E67D647\/Alfred%20Street%20Carpark%20925x694.png"
             },
@@ -6080,10 +6083,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 466,
-                "Name": "Anakiwa",
+                "TOILET_NAME": "Anakiwa",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--anakiwa",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--anakiwa",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/57C54CFD-0332-4DA3-85F8-6E14480196E9\/Anakiwa%20320x240.png"
             },
             "geometry": {
@@ -6098,10 +6102,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 467,
-                "Name": "Auckland Street Reserve",
+                "TOILET_NAME": "Auckland Street Reserve",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/auckland-street-reserve",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/auckland-street-reserve",
                 "ImageURL": "https:\/\/dds-cdn.datascape.cloud\/public\/marlborough\/d311788e-bbd2-42ca-8ca0-c8df0aa82653"
             },
             "geometry": {
@@ -6116,10 +6121,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 468,
-                "Name": "Blarich Reserve",
+                "TOILET_NAME": "Blarich Reserve",
                 "DisabledAccess": "No",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/blairich-recreation-reserve",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/blairich-recreation-reserve",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/1D7F8BFD-0BEB-46E4-AD8E-8CB14EC724E7\/Blairich%20Recreation%20Reserve%20%20Toilets%20320x240.png"
             },
             "geometry": {
@@ -6134,10 +6140,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 469,
-                "Name": "Blenheim Railway Station",
+                "TOILET_NAME": "Blenheim Railway Station",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "6am - 9pm",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--blenheim-railway-station",
+                "USE_RESTRICTIONS": "6am - 9pm",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--blenheim-railway-station",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/1C77B775-9818-4385-8F17-3EF24D821E9D\/Blenheim%20Railway%20Station%20320x240.png"
             },
             "geometry": {
@@ -6152,10 +6159,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 470,
-                "Name": "Blenheim Skate Park",
+                "TOILET_NAME": "Blenheim Skate Park",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/blenheim-skate-park",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/blenheim-skate-park",
                 "ImageURL": null
             },
             "geometry": {
@@ -6170,10 +6178,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 471,
-                "Name": "Bob's Bay Reserve",
+                "TOILET_NAME": "Bob's Bay Reserve",
                 "DisabledAccess": "No",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/bob%27s-bay-reserve",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/bob%27s-bay-reserve",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/FB76D79F-365A-400B-A72A-7CB5212A3D89\/Bobs%20Bay%20toilet%20320x240.png"
             },
             "geometry": {
@@ -6188,10 +6197,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 472,
-                "Name": "Brown River Reserve",
+                "TOILET_NAME": "Brown River Reserve",
                 "DisabledAccess": "No",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/brown-river-reserve",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/brown-river-reserve",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/82CB974E-F6BA-440D-9A07-C2962EBAA482\/Brown%20River%20Reserve%20Toilet%20320x240.png"
             },
             "geometry": {
@@ -6206,10 +6216,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 473,
-                "Name": "Canvastown",
+                "TOILET_NAME": "Canvastown",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--canvastown",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--canvastown",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/1B035CB1-E9FD-4834-8B3A-D171A9987636\/Canvastown%20320x240.png"
             },
             "geometry": {
@@ -6224,10 +6235,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 474,
-                "Name": "Collins Memorial Reserve",
+                "TOILET_NAME": "Collins Memorial Reserve",
                 "DisabledAccess": "No",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/collins-memorial-reserve",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/collins-memorial-reserve",
                 "ImageURL": null
             },
             "geometry": {
@@ -6242,10 +6254,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 475,
-                "Name": "Countdown Carpark",
+                "TOILET_NAME": "Countdown Carpark",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--countdown-carkpark",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--countdown-carkpark",
                 "ImageURL": null
             },
             "geometry": {
@@ -6260,10 +6273,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 476,
-                "Name": "Double Bay Reserve",
+                "TOILET_NAME": "Double Bay Reserve",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/double-bay-reserve",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/double-bay-reserve",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/4CF558E2-AC4B-4DA8-A93D-C3F0FC4F60C2\/Double%20Bay%20Reserve%20Toilets%20320x240.png"
             },
             "geometry": {
@@ -6278,10 +6292,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 477,
-                "Name": "Elterwater Reserve",
+                "TOILET_NAME": "Elterwater Reserve",
                 "DisabledAccess": "No",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/elterwater-reserve",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/elterwater-reserve",
                 "ImageURL": null
             },
             "geometry": {
@@ -6296,10 +6311,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 478,
-                "Name": "Endeavour Park",
+                "TOILET_NAME": "Endeavour Park",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/endeavour-park",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/endeavour-park",
                 "ImageURL": "https:\/\/dds-cdn.datascape.cloud\/public\/marlborough\/ac2c8159-e7a0-45e5-9a3d-e80dbcbbc54e"
             },
             "geometry": {
@@ -6314,10 +6330,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 479,
-                "Name": "Fairhall Cemetery",
+                "TOILET_NAME": "Fairhall Cemetery",
                 "DisabledAccess": "No",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/www.marlborough.govt.nz\/services\/cemeteries\/fairhall",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/www.marlborough.govt.nz\/services\/cemeteries\/fairhall",
                 "ImageURL": null
             },
             "geometry": {
@@ -6332,10 +6349,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 480,
-                "Name": "French Pass Hall",
+                "TOILET_NAME": "French Pass Hall",
                 "DisabledAccess": "No",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--french-pass-hall",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--french-pass-hall",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/94B522FE-9D42-4A10-B5A4-3197F9EE45C6\/French%20Pass%20Hall%20320x240.png"
             },
             "geometry": {
@@ -6350,10 +6368,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 481,
-                "Name": "Harling Park",
+                "TOILET_NAME": "Harling Park",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/harling-park",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/harling-park",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/3E1DACE1-004F-42E5-B667-2AEDE0F54622\/Harling%20Park%20320x240.png"
             },
             "geometry": {
@@ -6368,10 +6387,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 482,
-                "Name": "Havelock Memorial Park",
+                "TOILET_NAME": "Havelock Memorial Park",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/havelock-war-memorial-park",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/havelock-war-memorial-park",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/1EEBF3BA-E3BF-43D7-ADC8-4B76C4B3D9FE\/Toilet%20320x240.png"
             },
             "geometry": {
@@ -6386,10 +6406,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 483,
-                "Name": "Havelock Township",
+                "TOILET_NAME": "Havelock Township",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--havelock-township",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--havelock-township",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/DCB58464-BFFE-4B36-A7A9-51B99B52C5C0\/Havelock%20Township%20320x240.png"
             },
             "geometry": {
@@ -6404,10 +6425,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 484,
-                "Name": "High Street Carpark, Blenheim",
+                "TOILET_NAME": "High Street Carpark, Blenheim",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--high-street-carpark-blenheim",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--high-street-carpark-blenheim",
                 "ImageURL": "https:\/\/dds-cdn.datascape.cloud\/public\/marlborough\/199647a8-91b4-4c6b-b29d-60c410022381"
             },
             "geometry": {
@@ -6422,10 +6444,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 485,
-                "Name": "High Street, Picton",
+                "TOILET_NAME": "High Street, Picton",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--high-street%2c-picton",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--high-street%2c-picton",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/DC58DA74-5F9F-4178-88E9-B5D4FA5C0AE4\/High%20Street%20Picton%20320x240.png"
             },
             "geometry": {
@@ -6440,10 +6463,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 486,
-                "Name": "High Street, Picton",
+                "TOILET_NAME": "High Street, Picton",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--high-street%2c-picton",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--high-street%2c-picton",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/DC58DA74-5F9F-4178-88E9-B5D4FA5C0AE4\/High%20Street%20Picton%20320x240.png"
             },
             "geometry": {
@@ -6458,10 +6482,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 487,
-                "Name": "Hodder River",
+                "TOILET_NAME": "Hodder River",
                 "DisabledAccess": "No",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--hodder-river",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--hodder-river",
                 "ImageURL": null
             },
             "geometry": {
@@ -6476,10 +6501,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 488,
-                "Name": "Horton Park",
+                "TOILET_NAME": "Horton Park",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/horton-park",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/horton-park",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/2B486054-9F33-43F7-B425-823446A557ED\/Horton%20Park%20320x240.png"
             },
             "geometry": {
@@ -6494,10 +6520,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 489,
-                "Name": "Kinross Street Carpark",
+                "TOILET_NAME": "Kinross Street Carpark",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--kinross-street",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--kinross-street",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/463D3353-6A6F-450A-9E06-2D1DC7E5F130\/Kinross%20320x240.png"
             },
             "geometry": {
@@ -6512,10 +6539,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 490,
-                "Name": "Lansdowne Park",
+                "TOILET_NAME": "Lansdowne Park",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/lansdowne-park",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/lansdowne-park",
                 "ImageURL": "https:\/\/dds-cdn.datascape.cloud\/public\/marlborough\/2b6615e4-99f0-44d0-b3a4-8757614a25b0"
             },
             "geometry": {
@@ -6530,10 +6558,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 491,
-                "Name": "Lansdowne Park",
+                "TOILET_NAME": "Lansdowne Park",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/lansdowne-park",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/lansdowne-park",
                 "ImageURL": "https:\/\/dds-cdn.datascape.cloud\/public\/marlborough\/2b6615e4-99f0-44d0-b3a4-8757614a25b0"
             },
             "geometry": {
@@ -6548,10 +6577,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 492,
-                "Name": "Lansdowne Park",
+                "TOILET_NAME": "Lansdowne Park",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/lansdowne-park",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/lansdowne-park",
                 "ImageURL": "https:\/\/dds-cdn.datascape.cloud\/public\/marlborough\/2b6615e4-99f0-44d0-b3a4-8757614a25b0"
             },
             "geometry": {
@@ -6566,10 +6596,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 493,
-                "Name": "Liz Davidson Place",
+                "TOILET_NAME": "Liz Davidson Place",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/liz-davidson-place",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/liz-davidson-place",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/38E4C187-7D8C-4CE6-8EF8-A3200427ACFB\/Liz%20Davidson%20Place%20320x240.png"
             },
             "geometry": {
@@ -6584,10 +6615,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 494,
-                "Name": "London Quay",
+                "TOILET_NAME": "London Quay",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/london-quay",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/london-quay",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/3CC05369-A660-45AA-BE89-6AB2C0421E83\/Toilets%20320x240.png"
             },
             "geometry": {
@@ -6602,10 +6634,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 495,
-                "Name": "Ohingaroa Reserve",
+                "TOILET_NAME": "Ohingaroa Reserve",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/ohingaroa-reserve",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/ohingaroa-reserve",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/AE47AC5A-E802-466C-B6F8-C04BE37C0142\/Public%20Toilet%20320x240.png"
             },
             "geometry": {
@@ -6620,10 +6653,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 496,
-                "Name": "Picton Foreshore",
+                "TOILET_NAME": "Picton Foreshore",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "6am - 8pm",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/picton-foreshore",
+                "USE_RESTRICTIONS": "6am - 8pm",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/picton-foreshore",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/80B0D387-B5D9-4964-A640-4B599E460D1E\/Public%20Toilet%20320x240.png"
             },
             "geometry": {
@@ -6638,10 +6672,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 497,
-                "Name": "Pollard Park",
+                "TOILET_NAME": "Pollard Park",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "7am - 8pm",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/pollard-park",
+                "USE_RESTRICTIONS": "7am - 8pm",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/pollard-park",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/4127F2E6-28EF-4E95-A8A1-717C165BA400\/Pollard%20Park%20320x240.png"
             },
             "geometry": {
@@ -6656,10 +6691,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 498,
-                "Name": "Quail Stream",
+                "TOILET_NAME": "Quail Stream",
                 "DisabledAccess": "No",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/wither-hills-farm-park",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/wither-hills-farm-park",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/B2E2A039-547F-48DA-876C-483404079997\/Toilet%20320x240.png"
             },
             "geometry": {
@@ -6674,10 +6710,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 499,
-                "Name": "Quail Stream Carpark",
+                "TOILET_NAME": "Quail Stream Carpark",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/wither-hills-farm-park",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/wither-hills-farm-park",
                 "ImageURL": "https:\/\/dds-cdn.datascape.cloud\/public\/marlborough\/df250dee-6f11-40ae-816f-cedfbfba8c9e"
             },
             "geometry": {
@@ -6692,10 +6729,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 500,
-                "Name": "Rai Valley Township",
+                "TOILET_NAME": "Rai Valley Township",
                 "DisabledAccess": "No",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--rai-valley",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--rai-valley",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/F27BBC5E-FD02-4FB8-8F85-ACA5978777AE\/Rai%20Valley%20320x240.png"
             },
             "geometry": {
@@ -6710,10 +6748,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 501,
-                "Name": "Red Cross Building",
+                "TOILET_NAME": "Red Cross Building",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--red-cross-building%2c-picton",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--red-cross-building%2c-picton",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/3EB67CCA-48A3-4738-B840-1BB869F98BE6\/Redcross%20320x240.png"
             },
             "geometry": {
@@ -6728,10 +6767,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 502,
-                "Name": "Redwoodtown Carpark",
+                "TOILET_NAME": "Redwoodtown Carpark",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--redwoodtown-carpark",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--redwoodtown-carpark",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/6A541C35-8FE5-4E70-BCAB-09201DECB850\/Redwood%20toilets%20925x694.png"
             },
             "geometry": {
@@ -6746,10 +6786,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 503,
-                "Name": "Redwoodtown Hall",
+                "TOILET_NAME": "Redwoodtown Hall",
                 "DisabledAccess": "No",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--redwoodtown-hall",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--redwoodtown-hall",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/DA6DA66C-C747-4324-BB7A-BE99D04E541D\/Redwood%20Town%20Hall%20925x694.png"
             },
             "geometry": {
@@ -6764,10 +6805,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 504,
-                "Name": "Renwick Domain",
+                "TOILET_NAME": "Renwick Domain",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/renwick-domain",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/renwick-domain",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/31B0F38E-B104-481F-B561-73D0EC5C9E11\/Public%20Toilets%20320x240.png"
             },
             "geometry": {
@@ -6782,10 +6824,10 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 505,
-                "Name": "Renwick Township Toilet",
+                "TOILET_NAME": "Renwick Township Toilet",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": null,
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": null,
                 "ImageURL": null
             },
             "geometry": {
@@ -6800,10 +6842,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 506,
-                "Name": "Rifle Range Carpark",
+                "TOILET_NAME": "Rifle Range Carpark",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/wither-hills-farm-park",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/wither-hills-farm-park",
                 "ImageURL": null
             },
             "geometry": {
@@ -6818,10 +6861,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 507,
-                "Name": "Seddon Domain",
+                "TOILET_NAME": "Seddon Domain",
                 "DisabledAccess": "No",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/seddon-domain",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/seddon-domain",
                 "ImageURL": null
             },
             "geometry": {
@@ -6836,10 +6880,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 508,
-                "Name": "Seddon Toilet",
+                "TOILET_NAME": "Seddon Toilet",
                 "DisabledAccess": "No",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--seddon",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--seddon",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/BE4FD4A5-E2A5-468F-85A1-4F19399C170E\/Seddon%20Toilets%20320x240.png"
             },
             "geometry": {
@@ -6854,10 +6899,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 509,
-                "Name": "Seymour Square",
+                "TOILET_NAME": "Seymour Square",
                 "DisabledAccess": "No",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/seymour-square",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/seymour-square",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/B48E2563-512F-4973-8DA4-6426613A0BB3\/Seymour%20Square%20320x240.png"
             },
             "geometry": {
@@ -6872,10 +6918,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 510,
-                "Name": "Shelley Beach",
+                "TOILET_NAME": "Shelley Beach",
                 "DisabledAccess": "No",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/shelley-beach-reserve",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/shelley-beach-reserve",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/1DDA5A73-84F5-4F53-BA74-B20282DCDF71\/Public%20Toilet%20320x240.png"
             },
             "geometry": {
@@ -6890,10 +6937,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 511,
-                "Name": "Sheps' Park",
+                "TOILET_NAME": "Sheps' Park",
                 "DisabledAccess": "No",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/sheps%27-park",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/sheps%27-park",
                 "ImageURL": "https:\/\/dds-cdn.datascape.cloud\/public\/marlborough\/e4ac8bea-6da8-4fab-a31d-a0dd97d06812"
             },
             "geometry": {
@@ -6908,10 +6956,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 512,
-                "Name": "Sutherland Stream",
+                "TOILET_NAME": "Sutherland Stream",
                 "DisabledAccess": "No",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/wither-hills-farm-park",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/wither-hills-farm-park",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/D28DC6B7-4835-42B9-85CE-DC9C487ADFB0\/Toilet%20320x240.png"
             },
             "geometry": {
@@ -6926,10 +6975,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 513,
-                "Name": "Taylor Dam",
+                "TOILET_NAME": "Taylor Dam",
                 "DisabledAccess": "No",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/taylor-dam",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/taylor-dam",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/03582AF5-FC51-4A8C-A0CB-5ACB24EF856D\/Taylor%20Dam%20320x240.png"
             },
             "geometry": {
@@ -6944,10 +6994,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 514,
-                "Name": "Taylor River Reserve",
+                "TOILET_NAME": "Taylor River Reserve",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/taylor-river-reserve",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/taylor-river-reserve",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/D8666109-2AD2-408F-8C19-D4B72346CAAB\/Toilet%20320x240.png"
             },
             "geometry": {
@@ -6962,10 +7013,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 515,
-                "Name": "Te Mahia",
+                "TOILET_NAME": "Te Mahia",
                 "DisabledAccess": "No",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--te-mahia",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--te-mahia",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/4BCFE9DD-2E18-4BC2-B97D-91AC0F4A4ACF\/Te%20Mahia%20320x240.png"
             },
             "geometry": {
@@ -6980,10 +7032,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 516,
-                "Name": "The Snout Walkway",
+                "TOILET_NAME": "The Snout Walkway",
                 "DisabledAccess": "No",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/victoria-domain",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/victoria-domain",
                 "ImageURL": null
             },
             "geometry": {
@@ -6998,10 +7051,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 517,
-                "Name": "Tunnicliff Reserve",
+                "TOILET_NAME": "Tunnicliff Reserve",
                 "DisabledAccess": "No",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/tunnicliff-reserve",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/tunnicliff-reserve",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/2D9C002E-B327-40E4-8945-97F6F24C9A2F\/Public%20Toilet%20320x240.png"
             },
             "geometry": {
@@ -7016,10 +7070,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 518,
-                "Name": "Waikawa Foreshore",
+                "TOILET_NAME": "Waikawa Foreshore",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/waikawa-foreshore-reserve",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/waikawa-foreshore-reserve",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/7D062ADB-5B41-482A-ACA5-84910B13F886\/Waikawa%20Toilets%20320x240.png"
             },
             "geometry": {
@@ -7034,10 +7089,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 519,
-                "Name": "Wairau Diversion",
+                "TOILET_NAME": "Wairau Diversion",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/wairau-diversion-reserve",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/wairau-diversion-reserve",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/47046136-7469-4FB1-816B-6E031AB61F1C\/Toilet%20320x240.png"
             },
             "geometry": {
@@ -7052,10 +7108,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 520,
-                "Name": "Wairau Valley Church",
+                "TOILET_NAME": "Wairau Valley Church",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--wairau-valley-church",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--wairau-valley-church",
                 "ImageURL": "https:\/\/dds-cdn.datascape.cloud\/public\/marlborough\/63c9c650-fb79-4f1c-9298-1854a0598231"
             },
             "geometry": {
@@ -7070,10 +7127,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 521,
-                "Name": "Waitaria Bay Hall",
+                "TOILET_NAME": "Waitaria Bay Hall",
                 "DisabledAccess": "No",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--waitaria-bay",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/public-toilet--waitaria-bay",
                 "ImageURL": null
             },
             "geometry": {
@@ -7088,10 +7146,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 522,
-                "Name": "Ward Beach",
+                "TOILET_NAME": "Ward Beach",
                 "DisabledAccess": "No",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/ward-beach-reserve",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/ward-beach-reserve",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/25AD7256-A793-4E49-8F18-B016FC2F0B7C\/Ward%20Beach%20Reserve%20toilet%20320x240.png"
             },
             "geometry": {
@@ -7106,10 +7165,11 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 523,
-                "Name": "Ward Domain",
+                "TOILET_NAME": "Ward Domain",
                 "DisabledAccess": "Yes",
-                "OperatingHours": "24 hours",
-                "Hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/ward-domain",
+                "USE_RESTRICTIONS": "24 hours",
+                "DESCRIPTION": "Public Toilets",
+                "hyperlink": "https:\/\/eservices.marlborough.govt.nz\/facilities\/facility\/ward-domain",
                 "ImageURL": "https:\/\/contentapi.datacomsphere.com.au\/v1\/h%3Amarlborough\/repository\/libraries\/id:1rici7olo17q9ssuyt5j\/hierarchy\/Online%20Services\/32971AF9-8F0E-4FF0-8953-936A61E61C66\/Toilets%20320x240.png"
             },
             "geometry": {
