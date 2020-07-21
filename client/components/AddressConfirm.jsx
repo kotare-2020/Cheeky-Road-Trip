@@ -30,8 +30,8 @@ class AddressConfirm extends React.Component {
                         return (
 
                             <div key={i} className="address-confirm-item" onClick={() => this.handleSelect(addressInfo, this.props.waypointName)}>
-                                <p>{addressInfo.label}</p>
-                                <p>{addressInfo.region}</p>
+                                <p className="homepage-body-text">{addressInfo.label}</p>
+                                <p className="homepage-body-text">{addressInfo.region}</p>
                             </div>
 
                         )
