@@ -59,6 +59,7 @@ p {
     justify-content: center;
     align-items: center;
     color: white;
+    zoom: 85%;
 
 }
 
@@ -101,7 +102,9 @@ p {
 }
 
 .background-div {
-    background-image: url('Images/rd-trip-background.jpg');
+    background-image: url('Images/lake-tekapo.jpg');
+    background-repeat: no-repeat;
+    background-size: auto;
     position:absolute;
     top:0;
     left:0;
@@ -109,6 +112,11 @@ p {
     right:0;
     height:100%;
     width:100%;
+      -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
 }
 
 
