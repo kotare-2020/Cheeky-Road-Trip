@@ -79,7 +79,8 @@ class Mapbox extends React.Component {
       profile: 'mapbox/driving'
     })
 
-    map.on('click', 'points', (e) => {
+      const setPopups = (e) => {
+      const popup = []
       // There's a few different ways data is layed out in the jsons because of differing sources.
       const dataStructureType1 = {
         name: e.features[0].properties.Name
@@ -165,11 +166,45 @@ class Mapbox extends React.Component {
         let capitalizedStr = capitalizedArray.join(' ')
         return (capitalizedStr)
       }
+      popup[0] = {
+        coordinates: coordinates,
+        description: description,
+        map: map
+      }
+      return (
+        popup[0]
+      )
+    }
 
+    map.on('click', 'points', (e) => {
+      let marker = {
+        popup:{}
+      }
+      marker.popup = setPopups(e)
       new mapboxgl.Popup()
-        .setLngLat(coordinates)
-        .setHTML(description)
-        .addTo(map)
+      .setLngLat(marker.popup.coordinates)
+      .setHTML(marker.popup.description)
+      .addTo(marker.popup.map)
+    })
+    map.on('click', 'food_points', (e) => {
+      let marker = {
+        popup:{}
+      }
+      marker.popup = setPopups(e)
+      new mapboxgl.Popup()
+      .setLngLat(marker.popup.coordinates)
+      .setHTML(marker.popup.description)
+      .addTo(marker.popup.map)
+    })
+    map.on('click', 'swim-points', (e) => {
+      let marker = {
+        popup:{}
+      }
+      marker.popup = setPopups(e)
+      new mapboxgl.Popup()
+      .setLngLat(marker.popup.coordinates)
+      .setHTML(marker.popup.description)
+      .addTo(marker.popup.map)
     })
 
     directions.onClick = () => { }
