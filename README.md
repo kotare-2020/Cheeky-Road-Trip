@@ -120,8 +120,8 @@ currently some overlap in action/reducer as work on this develops, will reconven
 
 | type | data | purpose |
   | --- | --- | --- |
-  | ADD_WAYPOINT | coordinates | For adding waypoints to the map |
-  | ADD_NEW_TRIP | coordinates/name | For establishing the details of the new trip |
+  | ADD_TRIP | object | For saving the details of a trip (start/end points, name) |
+  | ADD_INSTRUCTIONS | array of strings | For saving the directions of the trip |
   
 ## API (Client - Server)
 

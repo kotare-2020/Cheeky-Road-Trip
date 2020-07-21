@@ -59,6 +59,7 @@ p {
     justify-content: center;
     align-items: center;
     color: white;
+    zoom: 85%;
 
 }
 
@@ -101,7 +102,9 @@ p {
 }
 
 .background-div {
-    background-image: url('Images/rd-trip-background.jpg');
+    background-image: url('https://images.squarespace-cdn.com/content/57b88db03e00be38aec142b0/1536893659317-LJQ7IJAYZWMSMW3N600H/0004_New+Zealand+Road+Trip+%7C+Two+Week+Itinerary+%7C+Part+1-+North+Island+%7C+HandZaround.jpg?format=1500w&content-type=image%2Fjpeg');
+    background-repeat: no-repeat;
+    background-size: auto;
     position:absolute;
     top:0;
     left:0;
@@ -109,6 +112,11 @@ p {
     right:0;
     height:100%;
     width:100%;
+      -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
 }
 
 
