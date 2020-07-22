@@ -33,7 +33,7 @@ export function setDataInJsonFormat(dataForMarkers){
     return jsonData
 }
 
-export function setMarkers(map, jsonData, iconSizePercent, imageName, imageLink, sourceName, toggleName, booleanFromState, whenDoneFunction){
+export function setMarkers(map, jsonData, iconSizePercent, imageName, imageLink, sourceName, toggleName, visBoolean, whenDoneFunction){
   map.loadImage(
     imageLink,
     (error, image) => {
@@ -57,13 +57,14 @@ export function setMarkers(map, jsonData, iconSizePercent, imageName, imageLink,
         }
       })
       if (toggleName != undefined ){
-        document.getElementById(`${toggleName}-toggle`).addEventListener('click', (e) => {
+        document.getElementById(`${toggleName}-toggle`).addEventListener('click', e => {
           map.setLayoutProperty(
-            `${toggleName}-points`,
+            sourceName,
             'visibility',
-            booleanFromState ? 'none' : 'visible'
+            visBoolean ? 'none' : 'visible'
           )
-          whenDoneFunction()
+          console.log(visBoolean)
+          whenDoneFunction(visBoolean, toggleName)
         })
       }
     }

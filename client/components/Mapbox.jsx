@@ -14,6 +14,7 @@ import { confirmAddress, eraseTrip, addTripInstructions } from '../actions/curre
 
 //Import Functions
 import { getMidpointDataInJsonFormat, setMarkers, setDataInJsonFormat } from '../utils/mapboxFunctions'
+import { TRUE } from 'node-sass'
 
 mapboxgl.accessToken = process.env.MAPBOX_API_KEY
 
@@ -241,10 +242,33 @@ class Mapbox extends React.Component {
 
 
       //MARKERS
-      const whenDone = () => {
-        this.setState({
-          swimVis: !this.state.swimVis
-        })
+
+      let isSwimVis = true
+      let isBRoomVis = true
+      let isEatVis = true
+
+      const whenDone = (visBoolean, toggleName) => {
+        if (toggleName == 'swim') {
+          if (visBoolean) {
+            isSwimVis = false
+          } else {
+            isSwimVis = true
+          }
+        }
+        else if (toggleName == 'bathroom') {
+          if (visBoolean) {
+            isBRoomVis = false
+          } else {
+            isBRoomVis = true
+          }
+        }
+        else if (toggleName == 'food') {
+          if (visBoolean) {
+            isEatVis = false
+          } else {
+            isEatVis = true
+          }
+        }
       }
 
       //MIDPOINT MARKERS
@@ -253,13 +277,13 @@ class Mapbox extends React.Component {
       setMarkers(map, midpointData, 0.60, 'stopover-marker', './images/stopover-icon.png', 'stop-overs')
 
       // SWIM MARKERS
-      setMarkers(map, swim_data, 0.70, 'swim-marker', './images/swimming.png', 'swim-points', 'swim', this.state.swimVis, whenDone)
+      setMarkers(map, swim_data, 0.70, 'swim-marker', './images/swimming.png', 'swim-points', 'swim', isSwimVis, whenDone)
 
       // BATHROOM MARKERS
-      setMarkers(map, bathroomData, 0.95, 'custom-marker', './images/toilet-icon.png', 'points', 'bathroom-toggle', this.state.bRoomVis, whenDone)
+      setMarkers(map, bathroomData, 0.95, 'custom-marker', './images/toilet-icon.png', 'points', 'bathroom', isBRoomVis, whenDone)
 
       // FOOD MARKERS
-      setMarkers(map, food_data, 0.65, 'food-marker', './images/food.png', 'food-points', 'food-toggle', this.state.foodVis, whenDone)
+      setMarkers(map, food_data, 0.65, 'food-marker', './images/food.png', 'food-points', 'food', isEatVis, whenDone)
 
     })
   }
@@ -270,7 +294,7 @@ class Mapbox extends React.Component {
         <div id="toggle-map-layers" className="toggle-map-layers" >
           <button id='bathroom-toggle' className="toggle-map-layers-buttons"> Bathrooms </button>
           <button id='food-toggle' className="toggle-map-layers-buttons">Eating</button>
-          <button id='swimming-toggle' className="toggle-map-layers-buttons">Swimming</button>
+          <button id='swim-toggle' className="toggle-map-layers-buttons">Swimming</button>
         </div>
         <div className='sidebarStyle'>
           <div>Longitude: {this.state.lng} | Latitude: {this.state.lat} | Zoom: {this.state.zoom}</div>
