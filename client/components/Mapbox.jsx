@@ -14,6 +14,25 @@ import { handleClick } from '../utils/mapbox_functions'
 
 mapboxgl.accessToken = process.env.MAPBOX_API_KEY
 
+function pullMidpointData(MID) {
+  let arr = []
+    MID.map((element) => {
+      arr.push({
+        "type": "Feature",
+        "properties": {
+          "Name": `${element.label}`
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            element.longitude,
+            element.latitude
+          ]
+        }
+      })
+    })
+    return arr
+}
 
 class Mapbox extends React.Component {
   state = {
@@ -101,7 +120,7 @@ class Mapbox extends React.Component {
         openTimes: e.features[0].properties.USE_RESTRICTIONS,
       }
       const dataStructureType3 = {
-        description: "<strong>Toilets :)</strong> <p>No extra information :(</p>"
+        description: '<p class="popuptitle">Toilets :)</p> <p>No extra information :(</p>'
       }
 
       const setName = () => {
@@ -133,24 +152,24 @@ class Mapbox extends React.Component {
         // ^--- See page buttom for explanation and tips
         if (descOne.name != undefined) {
           return (
-            `<strong>${descOne.name}</strong>
+            `<p class="popuptitle">${descOne.name}</p>
             <button class="popupbutton button is-small is-rounded" onClick='window.addToWaypoints()'>Add stop to trip</button>`
           )
         }
         else if (descOne.name == undefined && descTwo.description != "null" && descTwo.description != undefined && descTwo.openTimes != "null" && descTwo.openTimes != undefined) {
           descTwo.name = capitalize(descTwo.name)
           return (
-            `<strong>${descTwo.name}</strong>
-            <p class="popupdesc">${descTwo.description}</p>
+            `<p class="popuptitle">${descTwo.name}</p>
+            <p>${descTwo.description}</p>
             <p class="popupdesc">Open: ${descTwo.openTimes}</p>
             <button class="popupbutton button is-small is-rounded" onClick='window.addToWaypoints()'>Add stop to trip</button>`
           )
         }
         else if (descOne.name == undefined && descTwo.description == "null" || descTwo.openTimes == "null") {
           return (
-            `<strong>${capitalize(descTwo.name)}</strong>
-            <strong>Toilets</strong>
-            <p class="popupdesc">No extra information :(</p>
+            `<p class="popuptitle">${capitalize(descTwo.name)}</p>
+            <p class="popuptitle">Toilets</p>
+            <p>No extra information :(</p>
             <button class="popupbutton button is-small is-rounded" onClick='window.addToWaypoints()'>Add stop to trip</button>`
           )
         }
@@ -195,7 +214,7 @@ class Mapbox extends React.Component {
         .setHTML(marker.popup.description)
         .addTo(marker.popup.map)
     })
-    map.on('click', 'food_points', (e) => {
+    map.on('click', 'food-points', (e) => {
       let marker = {
         popup: {}
       }
@@ -219,8 +238,9 @@ class Mapbox extends React.Component {
     directions.onClick = () => { }
     directions.onDragDown = () => { } // Stops user from moving waypoints because they don't set GS currently.
     map.addControl(directions, 'top-left')
-
+    
     map.on('load', () => {
+      directions.removeWaypoint(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24)
       directions.setOrigin([
         this.props.currentTrip.START.longitude,
         this.props.currentTrip.START.latitude,
@@ -237,6 +257,47 @@ class Mapbox extends React.Component {
         this.props.currentTrip.END.longitude,
         this.props.currentTrip.END.latitude,
       ])
+
+     //MIDPOINT MARKERS
+     let midpoints = this.props.currentTrip.MID
+     map.loadImage(
+       './images/stopover-icon.png',
+       function (error, image) {
+         if (error) throw error
+         map.addImage('stopover-marker', image)
+         // Add a GeoJSON source with 2 points
+         let data = {
+           "type": "FeatureCollection",
+           "name": "Midpoints",
+           "crs": {
+             "type": "midpoints",
+             "properties": {
+               "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+             }
+           },
+           "features": pullMidpointData(midpoints)
+         }
+         map.addSource('stop-overs', {
+           'type': 'geojson',
+           'data': data
+         })
+
+         map.addLayer({
+           'id': 'stop-overs',
+           'type': 'symbol',
+           'source': 'stop-overs',
+           'layout': {
+             'icon-image': 'stopover-marker',
+             'icon-size': 0.60,
+             'text-offset': [0, 1.25],
+             'text-anchor': 'top'
+           }
+         })
+       }
+     )
+
+
+
 
       // SWIM MARKERS
       map.loadImage(
@@ -318,15 +379,15 @@ class Mapbox extends React.Component {
           if (error) throw error
           map.addImage('food-marker', image)
           // Add a GeoJSON source with 2 points
-          map.addSource('food_points', {
+          map.addSource('food-points', {
             'type': 'geojson',
             'data': food_data
           })
 
           map.addLayer({
-            'id': 'food_points',
+            'id': 'food-points',
             'type': 'symbol',
-            'source': 'food_points',
+            'source': 'food-points',
             'layout': {
               'visibility': 'visible',
               'icon-image': 'food-marker',
@@ -337,7 +398,7 @@ class Mapbox extends React.Component {
           })
           document.getElementById('food-toggle').addEventListener('click', (e) => {
             map.setLayoutProperty(
-              'food_points',
+              'food-points',
               'visibility',
               this.state.foodVis ? 'none' : 'visible'
             )

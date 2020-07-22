@@ -38,10 +38,11 @@ class HomePage extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault()
-    this.props.showHome(false)
+    {this.props.currentTrip.START == '' || this.props.currentTrip.END == '' 
+    ? alert("You must enter a starting point and a destination for your road trip")
+    : this.props.showHome(false)}
   }
 
-  renderMipInputs
 
   submitName = (e) => {
     e.preventDefault()
@@ -79,7 +80,6 @@ class HomePage extends React.Component {
       "country": "NZ",
       '& query': this.state.startPoint,
     }).then(res => {
-      console.log(res.body)
       this.props.dispatch(searchAddress(res.body.data))
     }).then(res => {
       this.setState({
@@ -105,7 +105,6 @@ class HomePage extends React.Component {
 
   searchEnd = (event) => {
     event.preventDefault()
-    console.log(process.env)
     request.get("http://api.positionstack.com/v1/forward", {
       'access_key': process.env.POSITION_STACK_API_KEY,
       "country": "NZ",
