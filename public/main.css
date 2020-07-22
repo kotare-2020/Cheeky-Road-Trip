@@ -58,6 +58,9 @@ p {
 }
 
 /*marker popups*/
+.popuptitle {
+    font-weight: 600;
+}
 .popupdesc {
     margin-top: 0.5em;
     margin-right: 0.05em;
