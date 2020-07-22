@@ -11,8 +11,8 @@
      
 .mapboxgl-ctrl-top-left {
     font-size: 20px;
-margin-left: 9px;
-margin-top: 10px;
+margin-left: 30px;
+margin-top: 14px;
 }
 .mapbox-directions-component-keyline{
     display: none;
@@ -159,9 +159,9 @@ p {
     height: 400px;
     border: #73c1d8 solid 5px;
     overflow: auto;
-    padding-left: 37px;
-    padding-top: 20px;
-    padding-right: 26px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-right: 20px;
     border-radius: 6px;
 }
 
@@ -171,14 +171,13 @@ p {
     border: #73c1d8 solid 5px;
     margin: 20px;
     overflow: auto;
-    padding: 16px;
+    padding: 5px 16px;
     border-radius: 6px;
 }
 
 .trip-title{
 font-weight: 900;
 font-size: 28px;
-    padding-bottom: 23px;
 }
 
 .trip-title-preview{
@@ -222,15 +221,7 @@ font-size: 28px;
   border-bottom: 5px solid black;
   transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
 }
-/* .text {
-  font-family: 'Roboto Condensed';
-  font-size: 22px;
-  line-height: 32px;
-  letter-spacing: 8px;
-  color: #fff;
-  top: -48px;
-  position: relative;
-} */
+
 .svg-wrapper:hover .shape {
     stroke-width: 2px;
   stroke-dashoffset: 0;
@@ -286,3 +277,27 @@ font-size: 28px;
     color: black;
     font-weight: 700;
 }
+
+.toggle-map-layers{
+    position: absolute;
+    z-index: 1;
+    width: 120px;
+    color: #000;
+    margin-left: 33px;
+    margin-top: 95px;
+}
+
+.toggle-map-layers-buttons {
+    height: 32px;
+    width: 95px;
+    background-color: whitesmoke;
+    border: 1px solid whitesmoke;
+    border-radius: 6px;
+    margin-bottom: 9px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+    outline-color: rgb(250, 185, 162)
+}
+
+
