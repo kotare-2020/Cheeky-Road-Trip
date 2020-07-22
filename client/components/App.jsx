@@ -1,7 +1,6 @@
 import React from 'react'
-import { HashRouter as Router, Route, Link } from 'react-router-dom'
-import { connect } from 'react-redux'
-// import { checkAuth } from '../actions/auth'
+
+//Component imports
 import HomePage from './HomePage'
 import Dashboard from './Dashboard'
 
@@ -30,10 +29,5 @@ class App extends React.Component {
   }
 }
 
-const mapStateToProps = ({ auth }) => {
-  return {
-    auth,
-  }
-}
 
-export default connect(mapStateToProps)(App)
+export default App

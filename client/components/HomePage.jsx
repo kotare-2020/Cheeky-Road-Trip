@@ -38,9 +38,11 @@ class HomePage extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault()
-    {this.props.currentTrip.START == '' || this.props.currentTrip.END == '' 
-    ? alert("You must enter a starting point and a destination for your road trip")
-    : this.props.showHome(false)}
+    {
+      this.props.currentTrip.START == '' || this.props.currentTrip.END == ''
+      ? alert("You must enter a starting point and a destination for your road trip")
+      : this.props.showHome(false)
+    }
   }
 
 
@@ -48,30 +50,7 @@ class HomePage extends React.Component {
     e.preventDefault()
     this.props.dispatch(addTripName(this.state.tripName))
     document.getElementById('trip-name-input').value = ''
-
-
   }
-
-  // options = {
-  //   enableHighAccuracy: true,
-  //   timeout: 5000,
-  //   maximumAge: 0
-  // };
-
-  // success = (pos) => {
-  //   var crd = pos.coords;
-  //   console.log('Your current position: ');
-  //   console.log (`Latitude' : ${crd.latitude}`);
-  //   console.log (`Longitude : ${crd.longitude}`);
-  //   console.log(`More or less ${crd.accuracy} metres. `);
-  // }
-
-  // errorr = (err) => {
-  //   console.warn(`ERROR(${err.code}): ${err.message}`);
-  // }
-
-  // navigator.geolocation.getCurrentPosition(success, error, options);
-
 
   searchStart = (event) => {
     event.preventDefault()

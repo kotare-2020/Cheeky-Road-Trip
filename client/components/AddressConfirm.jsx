@@ -8,7 +8,7 @@ class AddressConfirm extends React.Component {
 
     addressOptions = this.props.waypointConfirmation.waypointsArray
 
-    handleSelect = (addressInfo , waypointName) => {
+    handleSelect = (addressInfo, waypointName) => {
         let waypoint = {
             buildingName: addressInfo.name,
             label: addressInfo.label,
