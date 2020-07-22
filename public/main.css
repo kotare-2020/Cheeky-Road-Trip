@@ -284,3 +284,22 @@ font-size: 28px;
     color: black;
     font-weight: 700;
 }
+
+.toggle-map-layers{
+    position: absolute;
+    top: 86px;
+    left: 363px;
+    z-index: 1;
+    width: 120px;
+    color: #000;
+}
+
+.toggle-map-layers-buttons {
+    height: 32px;
+    width: 95px;
+    background-color: whitesmoke;
+    border: 1px solid whitesmoke;
+    border-radius: 6px;
+    margin-bottom: 9px;
+    text-align: center;
+}

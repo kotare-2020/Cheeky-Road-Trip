@@ -9,7 +9,11 @@ import swim_data from '../../data/swim-data.json'
 import request from 'superagent'
 import { confirmAddress, eraseTrip, addTripInstructions } from '../actions/currentTrip'
 
+//import functions from mapbox_functions folder
+import {handleClick} from '../utils/mapbox_functions'
+
 mapboxgl.accessToken = process.env.MAPBOX_API_KEY
+
 
 class Mapbox extends React.Component {
   state = {
@@ -17,7 +21,10 @@ class Mapbox extends React.Component {
     lat: this.props.currentTrip.START.latitude,
     zoom: 5.75,
     currentMidPoints: this.props.currentTrip.MID.length,
+    bRoomVis: true,
   }
+
+
 
   componentDidMount() {
     this.renderMap()
@@ -29,6 +36,12 @@ class Mapbox extends React.Component {
   componentWillUnmount() {
     this.props.dispatch(eraseTrip())
   }
+
+  toggleBathrooms = (e) => {
+    e.preventDefault()
+    console.log('click new!b')
+    
+    }
 
   renderMap = () => {
     let start = [
@@ -79,7 +92,7 @@ class Mapbox extends React.Component {
       profile: 'mapbox/driving'
     })
 
-      const setPopups = (e) => {
+    const setPopups = (e) => {
       const popup = []
       // There's a few different ways data is layed out in the jsons because of differing sources.
       const dataStructureType1 = {
@@ -177,33 +190,33 @@ class Mapbox extends React.Component {
 
     map.on('click', 'points', (e) => {
       let marker = {
-        popup:{}
+        popup: {}
       }
       marker.popup = setPopups(e)
       new mapboxgl.Popup()
-      .setLngLat(marker.popup.coordinates)
-      .setHTML(marker.popup.description)
-      .addTo(marker.popup.map)
+        .setLngLat(marker.popup.coordinates)
+        .setHTML(marker.popup.description)
+        .addTo(marker.popup.map)
     })
     map.on('click', 'food_points', (e) => {
       let marker = {
-        popup:{}
+        popup: {}
       }
       marker.popup = setPopups(e)
       new mapboxgl.Popup()
-      .setLngLat(marker.popup.coordinates)
-      .setHTML(marker.popup.description)
-      .addTo(marker.popup.map)
+        .setLngLat(marker.popup.coordinates)
+        .setHTML(marker.popup.description)
+        .addTo(marker.popup.map)
     })
     map.on('click', 'swim-points', (e) => {
       let marker = {
-        popup:{}
+        popup: {}
       }
       marker.popup = setPopups(e)
       new mapboxgl.Popup()
-      .setLngLat(marker.popup.coordinates)
-      .setHTML(marker.popup.description)
-      .addTo(marker.popup.map)
+        .setLngLat(marker.popup.coordinates)
+        .setHTML(marker.popup.description)
+        .addTo(marker.popup.map)
     })
 
     directions.onClick = () => { }
@@ -228,8 +241,6 @@ class Mapbox extends React.Component {
         this.props.currentTrip.END.latitude,
       ])
 
-
-
       // SWIM MARKERS
       map.loadImage(
         './images/swimming.png',
@@ -253,13 +264,20 @@ class Mapbox extends React.Component {
               'text-anchor': 'top'
             }
           })
+
+          // map.setLayoutProperty(
+          //   'swim-points',
+          //   'visibility',
+          //   'none'
+          // );
         }
       )
+
 
       // BATHROOM MARKERS
       map.loadImage(
         './images/toilet-icon.png',
-        function (error, image) {
+        (error, image) => {
           if (error) throw error
           map.addImage('custom-marker', image)
           // Add a GeoJSON source with 2 points
@@ -275,8 +293,19 @@ class Mapbox extends React.Component {
               'icon-image': 'custom-marker',
               'icon-size': 0.95,
               'text-offset': [0, 1.25],
-              'text-anchor': 'top'
+              'text-anchor': 'top',
+              'visibility': 'visible'
             }
+          })
+          document.getElementById('bathroom-toggle').addEventListener('click', (e) => {
+            map.setLayoutProperty(
+            'points',
+            'visibility',
+            this.state.bRoomVis ? 'none' : 'visible'
+            )
+            this.setState({
+              bRoomVis: !this.state.bRoomVis
+            })
           })
         }
       )
@@ -307,13 +336,17 @@ class Mapbox extends React.Component {
           })
         }
       )
-
     })
   }
 
   render() {
     return (
       <div>
+        <div id="toggle-map-layers" className="toggle-map-layers" >
+          <button id='bathroom-toggle' onClick={this.toggleBathrooms}className="toggle-map-layers-buttons"> Bathrooms </button>
+          <nav className="toggle-map-layers-buttons">Eating</nav>
+          <nav className="toggle-map-layers-buttons">Swimming</nav>
+        </div>
         <div className='sidebarStyle'>
           <div>Longitude: {this.state.lng} | Latitude: {this.state.lat} | Zoom: {this.state.zoom}</div>
         </div>
