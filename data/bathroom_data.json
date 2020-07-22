@@ -11309,6 +11309,36 @@
           -41.293995428531581
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "Jayden's House",
+        "USE_RESTRICTIONS": "9am-5pm",
+        "DESCRIPTION": "Jayden... He Is My Son. He is all that is pure, He is all that is me. He is the joy, He is the happiness, He is the sun, He is the moon"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.824300,
+          -41.227800
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "Rubin's House",
+        "USE_RESTRICTIONS": "8am-10pm",
+        "DESCRIPTION": "Five score years ago, a great American, in whose symbolic shadow we stand today, signed the Emancipation Proclamation. This momentous decree came as a great beacon light of hope to millions of Negro slaves who had been seared in the flames of withering injustice. It came as a joyous daybreak to end the long night of their captivity."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.790300,
+          -41.322800
+        ]
+      }
     }
   ]
 }
