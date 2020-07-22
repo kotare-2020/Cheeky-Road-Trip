@@ -14,7 +14,6 @@ import { confirmAddress, eraseTrip, addTripInstructions } from '../actions/curre
 
 //Import Functions
 import { getMidpointDataInJsonFormat, setMarkers, setDataInJsonFormat } from '../utils/mapboxFunctions'
-import { TRUE } from 'node-sass'
 
 mapboxgl.accessToken = process.env.MAPBOX_API_KEY
 
@@ -242,32 +241,22 @@ class Mapbox extends React.Component {
 
 
       //MARKERS
-
-      let isSwimVis = true
-      let isBRoomVis = true
-      let isEatVis = true
-
-      const whenDone = (visBoolean, toggleName) => {
-        if (toggleName == 'swim') {
-          if (visBoolean) {
-            isSwimVis = false
-          } else {
-            isSwimVis = true
-          }
+      const whenDone = (booleanFromState, toggleName) => {
+        if (toggleName == 'swim'){
+          console.log('swim')
+          this.setState({
+            swimVis: !booleanFromState
+          })
         }
-        else if (toggleName == 'bathroom') {
-          if (visBoolean) {
-            isBRoomVis = false
-          } else {
-            isBRoomVis = true
-          }
+        else if (toggleName == 'bathroom'){
+          this.setState({
+            bRoomVis: !booleanFromState
+          })
         }
-        else if (toggleName == 'food') {
-          if (visBoolean) {
-            isEatVis = false
-          } else {
-            isEatVis = true
-          }
+        else if (toggleName == 'food'){
+          this.setState({
+            eatVis: !booleanFromState
+          })
         }
       }
 
@@ -277,13 +266,13 @@ class Mapbox extends React.Component {
       setMarkers(map, midpointData, 0.60, 'stopover-marker', './images/stopover-icon.png', 'stop-overs')
 
       // SWIM MARKERS
-      setMarkers(map, swim_data, 0.70, 'swim-marker', './images/swimming.png', 'swim-points', 'swim', isSwimVis, whenDone)
+      setMarkers(map, swim_data, 0.70, 'swim-marker', './images/swimming.png', 'swim-points', 'swim', this.state.swimVis, whenDone)
 
       // BATHROOM MARKERS
-      setMarkers(map, bathroomData, 0.95, 'custom-marker', './images/toilet-icon.png', 'points', 'bathroom', isBRoomVis, whenDone)
+      setMarkers(map, bathroomData, 0.95, 'custom-marker', './images/toilet-icon.png', 'points', 'bathroom', this.state.bRoomVis, whenDone)
 
       // FOOD MARKERS
-      setMarkers(map, food_data, 0.65, 'food-marker', './images/food.png', 'food-points', 'food', isEatVis, whenDone)
+      setMarkers(map, food_data, 0.65, 'food-marker', './images/food.png', 'food-points', 'food', this.state.eatVis, whenDone)
 
     })
   }
