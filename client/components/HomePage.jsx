@@ -38,9 +38,11 @@ class HomePage extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault()
-    {this.props.currentTrip.START == '' || this.props.currentTrip.END == '' 
-    ? alert("You must enter a starting point and a destination for your road trip")
-    : this.props.showHome(false)}
+    {
+      this.props.currentTrip.START == '' || this.props.currentTrip.END == ''
+      ? alert("You must enter a starting point and a destination for your road trip")
+      : this.props.showHome(false)
+    }
   }
 
 
@@ -48,30 +50,7 @@ class HomePage extends React.Component {
     e.preventDefault()
     this.props.dispatch(addTripName(this.state.tripName))
     document.getElementById('trip-name-input').value = ''
-
-
   }
-
-  // options = {
-  //   enableHighAccuracy: true,
-  //   timeout: 5000,
-  //   maximumAge: 0
-  // };
-
-  // success = (pos) => {
-  //   var crd = pos.coords;
-  //   console.log('Your current position: ');
-  //   console.log (`Latitude' : ${crd.latitude}`);
-  //   console.log (`Longitude : ${crd.longitude}`);
-  //   console.log(`More or less ${crd.accuracy} metres. `);
-  // }
-
-  // errorr = (err) => {
-  //   console.warn(`ERROR(${err.code}): ${err.message}`);
-  // }
-
-  // navigator.geolocation.getCurrentPosition(success, error, options);
-
 
   searchStart = (event) => {
     event.preventDefault()
@@ -124,8 +103,9 @@ class HomePage extends React.Component {
         <div className="background-div" >
           <div className='landing-page-content-div'>
             <div className="animate__animated animate__bounceInLeft" id="landing-page-title-container">
-              <h1 className='landing-page-title'>Cheeky Road Trip</h1>
-              <h3 className='landing-page-subtitle' >Tell us where you're going!</h3>
+              {/* <h1 className='landing-page-title'>Cheeky Road Trip</h1> */}
+              <img id="logo-image" src="/Images/logo.png" alt=""/>
+              <h3 className='landing-page-subtitle' >Never miss the essentials of a roadtrip!</h3>
             </div>
 
             <div id="landingpage-form-container">
@@ -133,32 +113,32 @@ class HomePage extends React.Component {
 
                 <label className="landing-page-form-boxes">
                   {/* Trip Name */}
-                  <input id="trip-name-input" className="input is-rounded is-expanded" onChange={this.handleChange} type="text" placeholder="Name Your Roadtrip!" name="tripName" />
-                  <button onClick={this.submitName} className="button is-rounded is-small">Submit</button>
+                  <input id="trip-name-input" className="input is-rounded is-expanded box-landing" onChange={this.handleChange} type="text" placeholder="Name Your Roadtrip!" name="tripName" />
+                  <button onClick={this.submitName} className="button is-rounded is-small box-landing">Submit</button>
                   {this.props.currentTrip.tripName == '' ? <img src="/images/null-icon.png" className="icon" /> : <img src="/images/tick-icon.png" className="icon" />}
                 </label>
 
 
                 <label className="landing-page-form-boxes" >
                   {/* Start-Point: */}
-                  <input id="START-input" className="input is-rounded is-expanded" onChange={this.handleChange} type="text" name="startPoint" placeholder="Add Start Point" />
-                  <button className="button is-rounded is-small" onClick={this.searchStart}>Search</button>
+                  <input id="START-input" className="input is-rounded is-expanded box-landing" onChange={this.handleChange} type="text" name="startPoint" placeholder="Add Start Point" />
+                  <button className="button is-rounded is-small box-landing" onClick={this.searchStart}>Search</button>
                   {this.props.currentTrip.START == '' ? <img src="/images/x-icon.png" className="icon" /> : <img src="/images/tick-icon.png" className="icon" />}
                   {this.state.START ? <AddressConfirm waypointName="START" hideOptions={this.hideAddressOptions} /> : ''}
                 </label>
 
                 {/* <button className="plus-icon" onClick={this.addMidpointInput} src='/images/plus-icon.png'>Yeah</button> */}
                 <label className="landing-page-form-boxes" >
-                  <input id="MID-input" className="input is-rounded is-expanded" onChange={this.handleChange} type="text" name="midPoint" placeholder="Add Stop Over" />
-                  <button className="button is-rounded is-small" onClick={this.searchMid}>Search</button>
+                  <input id="MID-input" className="input is-rounded is-expanded box-landing" onChange={this.handleChange} type="text" name="midPoint" placeholder="Add Stop Over" />
+                  <button className="button is-rounded is-small box-landing" onClick={this.searchMid}>Search</button>
                   {this.props.currentTrip.MID.length == 0 ? <img src="/images/null-icon.png" className="icon" /> : <img src="/images/tick-icon.png" className="icon" />}
                   {this.state.MID ? <AddressConfirm waypointName="MID" hideOptions={this.hideAddressOptions} /> : ''}
                 </label>
 
                 <label className="landing-page-form-boxes">
                   {/* Destination: */}
-                  <input id="END-input" className="input is-rounded is-expanded" onChange={this.handleChange} type="text" name="endPoint" placeholder="Add Destination" />
-                  <button className="button is-rounded is-small" onClick={this.searchEnd}>Search</button>
+                  <input id="END-input" className="input is-rounded is-expanded box-landing" onChange={this.handleChange} type="text" name="endPoint" placeholder="Add Destination" />
+                  <button className="button is-rounded is-small box-landing" onClick={this.searchEnd}>Search</button>
                   {this.props.currentTrip.END == '' ? <img src="/images/x-icon.png" className="icon" /> : <img src="/images/tick-icon.png" className="icon" />}
                   {this.state.END ? <AddressConfirm waypointName="END" hideOptions={this.hideAddressOptions} /> : ''}
                 </label>

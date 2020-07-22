@@ -9,7 +9,7 @@ import Mapbox from './Mapbox'
 
 
 class Dashboard extends React.Component {
-    
+
     handleClick = () => {
         this.props.showHome(true)
     }
@@ -17,17 +17,18 @@ class Dashboard extends React.Component {
     render() {
         return (
             <>
-            <button id="home-button" className="button is-info is-small is-rounded" onClick={this.handleClick} > Home </button>
-            <div id="dashboard-container">
-            <div className="column-left-dashboard">
-            <TripInfo/>
-            <DirectionsList/>
-            </div>
+                <div id="dashboard-container">
+                    <div className="column-left-dashboard">
+                        <img id="dashboard-logo" src="Images/logo_single.png" alt="" />
+                        <button id="home-button" className="button is-info is-small is-rounded" onClick={this.handleClick} > Home </button>
+                        <TripInfo />
+                        <DirectionsList />
+                    </div>
 
-            <div className="column-right-dashboard" >
-                <Mapbox/>
-            </div>
-            </div>
+                    <div className="column-right-dashboard" >
+                        <Mapbox />
+                    </div>
+                </div>
             </>
         )
     }
