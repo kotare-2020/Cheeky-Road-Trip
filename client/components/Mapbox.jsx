@@ -10,7 +10,6 @@ import request from 'superagent'
 import { confirmAddress, eraseTrip, addTripInstructions } from '../actions/currentTrip'
 
 //import functions from mapbox_functions folder
-import { handleClick } from '../utils/mapbox_functions'
 
 mapboxgl.accessToken = process.env.MAPBOX_API_KEY
 
