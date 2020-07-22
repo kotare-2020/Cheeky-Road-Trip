@@ -10,7 +10,7 @@ export function addTripInstructions(instructions) {
     }
 }
 
-export function confirmAddress (addressInfo, waypointName) {
+export function confirmAddress(addressInfo, waypointName) {
     return {
         type: CONFIRM_ADDRESS,
         addressInfo: addressInfo,
@@ -18,7 +18,7 @@ export function confirmAddress (addressInfo, waypointName) {
     }
 }
 
-export function addTripName (tripName) {
+export function addTripName(tripName) {
     return {
         type: ADD_TRIP_NAME,
         tripName: tripName,
