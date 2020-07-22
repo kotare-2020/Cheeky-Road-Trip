@@ -9,6 +9,7 @@ import swim_data from '../../data/swim-data.json'
 import request from 'superagent'
 import { confirmAddress, eraseTrip, addTripInstructions } from '../actions/currentTrip'
 
+
 mapboxgl.accessToken = process.env.MAPBOX_API_KEY
 
 function pullMidpointData(MID) {
@@ -37,7 +38,11 @@ class Mapbox extends React.Component {
     lat: this.props.currentTrip.START.latitude,
     zoom: 5.75,
     currentMidPoints: this.props.currentTrip.MID.length,
+    bRoomVis: true,
+    swimVis: true,
+    eatVis: true
   }
+
 
 
   componentDidMount() {
@@ -50,6 +55,7 @@ class Mapbox extends React.Component {
   componentWillUnmount() {
     this.props.dispatch(eraseTrip())
   }
+
 
   renderMap = () => {
     let start = [
@@ -294,7 +300,7 @@ class Mapbox extends React.Component {
       // SWIM MARKERS
       map.loadImage(
         './images/swimming.png',
-        function (error, image) {
+       (error, image) => {
           if (error) throw error
           map.addImage('swim-marker', image)
           // Add a GeoJSON source with 2 points
@@ -314,13 +320,24 @@ class Mapbox extends React.Component {
               'text-anchor': 'top'
             }
           })
+          document.getElementById('swimming-toggle').addEventListener('click', (e) => {
+            map.setLayoutProperty(
+              'swim-points',
+              'visibility',
+              this.state.swimVis ? 'none' : 'visible'
+            )
+            this.setState({
+              swimVis: !this.state.swimVis
+            })
+          })
         }
       )
+
 
       // BATHROOM MARKERS
       map.loadImage(
         './images/toilet-icon.png',
-        function (error, image) {
+        (error, image) => {
           if (error) throw error
           map.addImage('custom-marker', image)
           // Add a GeoJSON source with 2 points
@@ -336,8 +353,19 @@ class Mapbox extends React.Component {
               'icon-image': 'custom-marker',
               'icon-size': 0.95,
               'text-offset': [0, 1.25],
-              'text-anchor': 'top'
+              'text-anchor': 'top',
+              'visibility': 'visible'
             }
+          })
+          document.getElementById('bathroom-toggle').addEventListener('click', (e) => {
+            map.setLayoutProperty(
+              'points',
+              'visibility',
+              this.state.bRoomVis ? 'none' : 'visible'
+            )
+            this.setState({
+              bRoomVis: !this.state.bRoomVis
+            })
           })
         }
       )
@@ -345,7 +373,7 @@ class Mapbox extends React.Component {
       // FOOD MARKERS
       map.loadImage(
         './images/food.png',
-        function (error, image) {
+        (error, image) => {
           if (error) throw error
           map.addImage('food-marker', image)
           // Add a GeoJSON source with 2 points
@@ -366,6 +394,16 @@ class Mapbox extends React.Component {
               'text-anchor': 'top'
             }
           })
+          document.getElementById('food-toggle').addEventListener('click', (e) => {
+            map.setLayoutProperty(
+              'food-points',
+              'visibility',
+              this.state.foodVis ? 'none' : 'visible'
+            )
+            this.setState({
+              foodVis: !this.state.foodVis
+            })
+          })
         }
       )
     })
@@ -374,6 +412,11 @@ class Mapbox extends React.Component {
   render() {
     return (
       <div>
+        <div id="toggle-map-layers" className="toggle-map-layers" >
+          <button id='bathroom-toggle' className="toggle-map-layers-buttons"> Bathrooms </button>
+          <button id='food-toggle' className="toggle-map-layers-buttons">Eating</button>
+          <button id='swimming-toggle' className="toggle-map-layers-buttons">Swimming</button>
+        </div>
         <div className='sidebarStyle'>
           <div>Longitude: {this.state.lng} | Latitude: {this.state.lat} | Zoom: {this.state.zoom}</div>
         </div>
