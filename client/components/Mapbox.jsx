@@ -9,7 +9,6 @@ import swim_data from '../../data/swim-data.json'
 import request from 'superagent'
 import { confirmAddress, eraseTrip, addTripInstructions } from '../actions/currentTrip'
 
-//import functions from mapbox_functions folder
 
 mapboxgl.accessToken = process.env.MAPBOX_API_KEY
 
