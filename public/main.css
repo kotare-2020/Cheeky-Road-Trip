@@ -80,7 +80,8 @@ p {
     justify-content: center;
     align-items: center;
     color: white;
-    zoom: 85%;
+    zoom: 88%;
+    margin-top: -18px;
 
 }
 
@@ -97,9 +98,12 @@ p {
 
 .landing-page-subtitle {
     font-family: 'Quicksand', sans-serif;
-    font-weight: 300;
-    font-size: 35px;
+    font-weight: 900;
+    font-size: 31px;
     padding-bottom: 28px;
+    padding-right: 31px;
+    padding-top: 15px;
+    color: #FFFBED;
 }
 
 .landing-page-form-boxes{
@@ -265,7 +269,7 @@ font-size: 28px;
 
 #waypoints-div {
     order: 1;
-    width: 470px;
+    width: 320px;
     max-height: 400px;
     color: black;
     background-color:white;
@@ -301,3 +305,6 @@ font-size: 28px;
 }
 
 
+#logo-image{
+    max-width: 81%;
+}

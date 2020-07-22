@@ -103,8 +103,9 @@ class HomePage extends React.Component {
         <div className="background-div" >
           <div className='landing-page-content-div'>
             <div className="animate__animated animate__bounceInLeft" id="landing-page-title-container">
-              <h1 className='landing-page-title'>Cheeky Road Trip</h1>
-              <h3 className='landing-page-subtitle' >Tell us where you're going!</h3>
+              {/* <h1 className='landing-page-title'>Cheeky Road Trip</h1> */}
+              <img id="logo-image" src="/Images/logo.png" alt=""/>
+              <h3 className='landing-page-subtitle' >Never miss the essentials of a roadtrip!</h3>
             </div>
 
             <div id="landingpage-form-container">
