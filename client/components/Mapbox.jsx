@@ -12,7 +12,9 @@ import swim_data from '../../data/swim-data.json'
 //Action imports
 import { confirmAddress, eraseTrip, addTripInstructions } from '../actions/currentTrip'
 
+
 mapboxgl.accessToken = process.env.MAPBOX_API_KEY
+
 
 
 class Mapbox extends React.Component {
@@ -20,7 +22,9 @@ class Mapbox extends React.Component {
     lng: this.props.currentTrip.START.longitude,
     lat: this.props.currentTrip.START.latitude,
     zoom: 5.75,
-    currentMidPoints: this.props.currentTrip.MID.length,
+    bRoomVis: true,
+    swimVis: true,
+    eatVis: true
   }
 
   pullMidpointData = () => {
@@ -42,7 +46,6 @@ class Mapbox extends React.Component {
     })
     return arr
   }
-
 
   componentDidMount() {
     this.renderMap()
@@ -116,7 +119,7 @@ class Mapbox extends React.Component {
         openTimes: e.features[0].properties.USE_RESTRICTIONS,
       }
       const dataStructureType3 = {
-        description: "<strong>Toilets :)</strong> <p>No extra information :(</p>"
+        description: '<p class="popuptitle">Toilets :)</p> <p>No extra information :(</p>'
       }
 
       const setName = () => {
@@ -148,14 +151,14 @@ class Mapbox extends React.Component {
         // ^--- See page buttom for explanation and tips
         if (descOne.name != undefined) {
           return (
-            `<strong>${descOne.name}</strong>
+            `<p class="popuptitle">${descOne.name}</p>
             <button class="popupbutton button is-small is-rounded" onClick='window.addToWaypoints()'>Add stop to trip</button>`
           )
         }
         else if (descOne.name == undefined && descTwo.description != "null" && descTwo.description != undefined && descTwo.openTimes != "null" && descTwo.openTimes != undefined) {
           descTwo.name = capitalize(descTwo.name)
           return (
-            `<strong>${descTwo.name}</strong>
+            `<p class="popuptitle">${descTwo.name}</p>
             <p>${descTwo.description}</p>
             <p class="popupdesc">Open: ${descTwo.openTimes}</p>
             <button class="popupbutton button is-small is-rounded" onClick='window.addToWaypoints()'>Add stop to trip</button>`
@@ -163,8 +166,8 @@ class Mapbox extends React.Component {
         }
         else if (descOne.name == undefined && descTwo.description == "null" || descTwo.openTimes == "null") {
           return (
-            `<strong>${capitalize(descTwo.name)}</strong>
-            <strong>Toilets</strong>
+            `<p class="popuptitle">${capitalize(descTwo.name)}</p>
+            <p class="popuptitle">Toilets</p>
             <p>No extra information :(</p>
             <button class="popupbutton button is-small is-rounded" onClick='window.addToWaypoints()'>Add stop to trip</button>`
           )
@@ -210,7 +213,7 @@ class Mapbox extends React.Component {
         .setHTML(marker.popup.description)
         .addTo(marker.popup.map)
     })
-    map.on('click', 'food_points', (e) => {
+    map.on('click', 'food-points', (e) => {
       let marker = {
         popup: {}
       }
@@ -298,7 +301,7 @@ class Mapbox extends React.Component {
       // SWIM MARKERS
       map.loadImage(
         './images/swimming.png',
-        function (error, image) {
+        (error, image) => {
           if (error) throw error
           map.addImage('swim-marker', image)
           // Add a GeoJSON source with 2 points
@@ -318,13 +321,24 @@ class Mapbox extends React.Component {
               'text-anchor': 'top'
             }
           })
+          document.getElementById('swimming-toggle').addEventListener('click', (e) => {
+            map.setLayoutProperty(
+              'swim-points',
+              'visibility',
+              this.state.swimVis ? 'none' : 'visible'
+            )
+            this.setState({
+              swimVis: !this.state.swimVis
+            })
+          })
         }
       )
+
 
       // BATHROOM MARKERS
       map.loadImage(
         './images/toilet-icon.png',
-        function (error, image) {
+        (error, image) => {
           if (error) throw error
           map.addImage('custom-marker', image)
           // Add a GeoJSON source with 2 points
@@ -340,8 +354,19 @@ class Mapbox extends React.Component {
               'icon-image': 'custom-marker',
               'icon-size': 0.95,
               'text-offset': [0, 1.25],
-              'text-anchor': 'top'
+              'text-anchor': 'top',
+              'visibility': 'visible'
             }
+          })
+          document.getElementById('bathroom-toggle').addEventListener('click', (e) => {
+            map.setLayoutProperty(
+              'points',
+              'visibility',
+              this.state.bRoomVis ? 'none' : 'visible'
+            )
+            this.setState({
+              bRoomVis: !this.state.bRoomVis
+            })
           })
         }
       )
@@ -349,7 +374,7 @@ class Mapbox extends React.Component {
       // FOOD MARKERS
       map.loadImage(
         './images/food.png',
-        function (error, image) {
+        (error, image) => {
           if (error) throw error
           map.addImage('food-marker', image)
           // Add a GeoJSON source with 2 points
@@ -370,6 +395,16 @@ class Mapbox extends React.Component {
               'text-anchor': 'top'
             }
           })
+          document.getElementById('food-toggle').addEventListener('click', (e) => {
+            map.setLayoutProperty(
+              'food-points',
+              'visibility',
+              this.state.foodVis ? 'none' : 'visible'
+            )
+            this.setState({
+              foodVis: !this.state.foodVis
+            })
+          })
         }
       )
     })
@@ -378,6 +413,11 @@ class Mapbox extends React.Component {
   render() {
     return (
       <div>
+        <div id="toggle-map-layers" className="toggle-map-layers" >
+          <button id='bathroom-toggle' className="toggle-map-layers-buttons"> Bathrooms </button>
+          <button id='food-toggle' className="toggle-map-layers-buttons">Eating</button>
+          <button id='swimming-toggle' className="toggle-map-layers-buttons">Swimming</button>
+        </div>
         <div className='sidebarStyle'>
           <div>Longitude: {this.state.lng} | Latitude: {this.state.lat} | Zoom: {this.state.zoom}</div>
         </div>
