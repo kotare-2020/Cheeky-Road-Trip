@@ -114,7 +114,7 @@ p {
 
 .lets-go-button {
     margin-top: 10px;
-    background-color: #f7f977;
+    background-color: #73c1d8;
     border: none;
     color: black;
 }
@@ -126,8 +126,15 @@ p {
 #home-button {
     position: absolute;
     margin-left: 22px;
-    margin-top: 12px;
+    margin-top: -67px;
     background-color: #73c1d8;
+}
+
+#dashboard-logo {
+    position: absolute;
+    margin-left: 120px;
+    margin-top: -71px;
+    max-width: 8%;
 }
 
 .background-div {
@@ -307,4 +314,13 @@ font-size: 28px;
 
 #logo-image{
     max-width: 81%;
+}
+
+.box-landing{
+    margin-right: 5px
+}
+
+.column-left-dashboard{
+    display: flex;
+    flex-direction: column;
 }
