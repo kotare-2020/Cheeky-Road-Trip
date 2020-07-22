@@ -53,6 +53,7 @@ class HomePage extends React.Component {
   }
 
   searchStart = (event) => {
+    console.log(process.env.POSITION_STACK_API_KEY)
     event.preventDefault()
     request.get("https://api.positionstack.com/v1/forward", {
       'access_key': process.env.POSITION_STACK_API_KEY,
