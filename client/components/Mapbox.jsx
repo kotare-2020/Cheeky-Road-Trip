@@ -12,6 +12,8 @@ import swim_data from '../../data/swim-data.json'
 //Action imports
 import { confirmAddress, eraseTrip, addTripInstructions } from '../actions/currentTrip'
 
+//Import Functions
+import { getMidpointDataInJsonFormat, setMidPointMarkers } from '../utils/mapboxFunctions'
 
 mapboxgl.accessToken = process.env.MAPBOX_API_KEY
 
@@ -25,26 +27,6 @@ class Mapbox extends React.Component {
     bRoomVis: true,
     swimVis: true,
     eatVis: true
-  }
-
-  pullMidpointData = () => {
-    let arr = []
-    this.props.currentTrip.MID.map((element) => {
-      arr.push({
-        "type": "Feature",
-        "properties": {
-          "Name": `${element.label}`
-        },
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            element.longitude,
-            element.latitude
-          ]
-        }
-      })
-    })
-    return arr
   }
 
   componentDidMount() {
@@ -258,45 +240,8 @@ class Mapbox extends React.Component {
       ])
 
       //MIDPOINT MARKERS
-      let midpoints = this.props.currentTrip.MID
-      map.loadImage(
-        './images/stopover-icon.png',
-        (error, image) => {
-          if (error) throw error
-          map.addImage('stopover-marker', image)
-          // Add a GeoJSON source with 2 points
-          let data = {
-            "type": "FeatureCollection",
-            "name": "Midpoints",
-            "crs": {
-              "type": "midpoints",
-              "properties": {
-                "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
-              }
-            },
-            "features": this.pullMidpointData(midpoints)
-          }
-          map.addSource('stop-overs', {
-            'type': 'geojson',
-            'data': data
-          })
-
-          map.addLayer({
-            'id': 'stop-overs',
-            'type': 'symbol',
-            'source': 'stop-overs',
-            'layout': {
-              'icon-image': 'stopover-marker',
-              'icon-size': 0.60,
-              'text-offset': [0, 1.25],
-              'text-anchor': 'top'
-            }
-          })
-        }
-      )
-
-
-
+      let midpoints = getMidpointDataInJsonFormat(this.props.currentTrip.MID)
+      setMidPointMarkers(map, midpoints)
 
       // SWIM MARKERS
       map.loadImage(
