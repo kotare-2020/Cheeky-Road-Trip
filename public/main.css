@@ -80,7 +80,8 @@ p {
     justify-content: center;
     align-items: center;
     color: white;
-    zoom: 85%;
+    zoom: 88%;
+    margin-top: -18px;
 
 }
 
@@ -97,9 +98,12 @@ p {
 
 .landing-page-subtitle {
     font-family: 'Quicksand', sans-serif;
-    font-weight: 300;
-    font-size: 35px;
+    font-weight: 900;
+    font-size: 31px;
     padding-bottom: 28px;
+    padding-right: 31px;
+    padding-top: 15px;
+    color: #FFFBED;
 }
 
 .landing-page-form-boxes{
@@ -110,7 +114,7 @@ p {
 
 .lets-go-button {
     margin-top: 10px;
-    background-color: #f7f977;
+    background-color: #73c1d8;
     border: none;
     color: black;
 }
@@ -122,8 +126,15 @@ p {
 #home-button {
     position: absolute;
     margin-left: 22px;
-    margin-top: 12px;
+    margin-top: -67px;
     background-color: #73c1d8;
+}
+
+#dashboard-logo {
+    position: absolute;
+    margin-left: 120px;
+    margin-top: -71px;
+    max-width: 8%;
 }
 
 .background-div {
@@ -265,7 +276,7 @@ font-size: 28px;
 
 #waypoints-div {
     order: 1;
-    width: 470px;
+    width: 320px;
     max-height: 400px;
     color: black;
     background-color:white;
@@ -301,3 +312,15 @@ font-size: 28px;
 }
 
 
+#logo-image{
+    max-width: 81%;
+}
+
+.box-landing{
+    margin-right: 5px
+}
+
+.column-left-dashboard{
+    display: flex;
+    flex-direction: column;
+}
