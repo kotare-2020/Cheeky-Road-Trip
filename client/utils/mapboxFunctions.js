@@ -18,40 +18,55 @@ export const getMidpointDataInJsonFormat = (midpointData) => {
   return arr
 }
 
-export function setMidPointMarkers(map, dataForMarkers){
+export function setDataInJsonFormat(dataForMarkers){
+  const jsonData = {
+      "type": "FeatureCollection",
+      "name": "Midpoints",
+      "crs": {
+        "type": "midpoints",
+        "properties": {
+          "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+        }
+      },
+      "features": dataForMarkers
+    }
+    return jsonData
+}
+
+export function setMarkers(map, jsonData, iconSizePercent, imageName, imageLink, sourceName, toggleName, booleanFromState, whenDoneFunction){
   map.loadImage(
-    './images/stopover-icon.png',
+    imageLink,
     (error, image) => {
       if (error) throw error
-      map.addImage('stopover-marker', image)
+      map.addImage(imageName, image)
       // Add a GeoJSON source with 2 points
-      let data = {
-        "type": "FeatureCollection",
-        "name": "Midpoints",
-        "crs": {
-          "type": "midpoints",
-          "properties": {
-            "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
-          }
-        },
-        "features": dataForMarkers
-      }
-      map.addSource('stop-overs', {
+      map.addSource(sourceName, {
         'type': 'geojson',
-        'data': data
+        'data': jsonData
       })
 
       map.addLayer({
-        'id': 'stop-overs',
+        'id': sourceName,
         'type': 'symbol',
-        'source': 'stop-overs',
+        'source': sourceName,
         'layout': {
-          'icon-image': 'stopover-marker',
-          'icon-size': 0.60,
+          'icon-image': imageName,
+          'icon-size': iconSizePercent,
           'text-offset': [0, 1.25],
           'text-anchor': 'top'
         }
       })
+      if (toggleName != undefined ){
+        document.getElementById(`${toggleName}-toggle`).addEventListener('click', (e) => {
+          map.setLayoutProperty(
+            `${toggleName}-points`,
+            'visibility',
+            booleanFromState ? 'none' : 'visible'
+          )
+          whenDoneFunction()
+        })
+      }
     }
   )
 }
+

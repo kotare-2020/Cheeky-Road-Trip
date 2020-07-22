@@ -13,7 +13,7 @@ import swim_data from '../../data/swim-data.json'
 import { confirmAddress, eraseTrip, addTripInstructions } from '../actions/currentTrip'
 
 //Import Functions
-import { getMidpointDataInJsonFormat, setMidPointMarkers } from '../utils/mapboxFunctions'
+import { getMidpointDataInJsonFormat, setMarkers, setDataInJsonFormat } from '../utils/mapboxFunctions'
 
 mapboxgl.accessToken = process.env.MAPBOX_API_KEY
 
@@ -239,119 +239,28 @@ class Mapbox extends React.Component {
         this.props.currentTrip.END.latitude,
       ])
 
+
+      //MARKERS
+      const whenDone = () => {
+        this.setState({
+          swimVis: !this.state.swimVis
+        })
+      }
+
       //MIDPOINT MARKERS
-      let midpoints = getMidpointDataInJsonFormat(this.props.currentTrip.MID)
-      setMidPointMarkers(map, midpoints)
+      let midpointData = setDataInJsonFormat(getMidpointDataInJsonFormat(this.props.currentTrip.MID))
+
+      setMarkers(map, midpointData, 0.60, 'stopover-marker', './images/stopover-icon.png', 'stop-overs')
 
       // SWIM MARKERS
-      map.loadImage(
-        './images/swimming.png',
-        (error, image) => {
-          if (error) throw error
-          map.addImage('swim-marker', image)
-          // Add a GeoJSON source with 2 points
-          map.addSource('swim-points', {
-            'type': 'geojson',
-            'data': swim_data
-          })
-
-          map.addLayer({
-            'id': 'swim-points',
-            'type': 'symbol',
-            'source': 'swim-points',
-            'layout': {
-              'icon-image': 'swim-marker',
-              'icon-size': 0.70,
-              'text-offset': [0, 1.25],
-              'text-anchor': 'top'
-            }
-          })
-          document.getElementById('swimming-toggle').addEventListener('click', (e) => {
-            map.setLayoutProperty(
-              'swim-points',
-              'visibility',
-              this.state.swimVis ? 'none' : 'visible'
-            )
-            this.setState({
-              swimVis: !this.state.swimVis
-            })
-          })
-        }
-      )
-
+      setMarkers(map, swim_data, 0.70, 'swim-marker', './images/swimming.png', 'swim-points', 'swim', this.state.swimVis, whenDone)
 
       // BATHROOM MARKERS
-      map.loadImage(
-        './images/toilet-icon.png',
-        (error, image) => {
-          if (error) throw error
-          map.addImage('custom-marker', image)
-          // Add a GeoJSON source with 2 points
-          map.addSource('points', {
-            'type': 'geojson',
-            'data': bathroomData
-          })
-          map.addLayer({
-            'id': 'points',
-            'type': 'symbol',
-            'source': 'points',
-            'layout': {
-              'icon-image': 'custom-marker',
-              'icon-size': 0.95,
-              'text-offset': [0, 1.25],
-              'text-anchor': 'top',
-              'visibility': 'visible'
-            }
-          })
-          document.getElementById('bathroom-toggle').addEventListener('click', (e) => {
-            map.setLayoutProperty(
-              'points',
-              'visibility',
-              this.state.bRoomVis ? 'none' : 'visible'
-            )
-            this.setState({
-              bRoomVis: !this.state.bRoomVis
-            })
-          })
-        }
-      )
+      setMarkers(map, bathroomData, 0.95, 'custom-marker', './images/toilet-icon.png', 'points', 'bathroom-toggle', this.state.bRoomVis, whenDone)
 
       // FOOD MARKERS
-      map.loadImage(
-        './images/food.png',
-        (error, image) => {
-          if (error) throw error
-          map.addImage('food-marker', image)
-          // Add a GeoJSON source with 2 points
-          map.addSource('food-points', {
-            'type': 'geojson',
-            'data': food_data
-          })
+      setMarkers(map, food_data, 0.65, 'food-marker', './images/food.png', 'food-points', 'food-toggle', this.state.foodVis, whenDone)
 
-          map.addLayer({
-            'id': 'food-points',
-            'type': 'symbol',
-            'source': 'food-points',
-            'layout': {
-              'visibility': 'visible',
-              'icon-image': 'food-marker',
-              'icon-size': 0.65,
-              'text-offset': [0, 1.25],
-              'text-anchor': 'top'
-            }
-          })
-          document.getElementById('food-toggle').addEventListener('click', (e) => {
-            map.setLayoutProperty(
-              'food-points',
-              'visibility',
-              this.state.foodVis ? 'none' : 'visible'
-            )
-            this.setState({
-              foodVis: !this.state.foodVis
-            })
-          })
-        }
-      )
     })
   }
 
