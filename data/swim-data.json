@@ -71,6 +71,105 @@
                     -36.714208
                 ]
             }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 5,
+                "NAME": "Taupo Swimming Beach",
+                "USE_RESTRICTIONS": "24hr",
+                "DESCRIPTION": "Great lake Taupo, picnic on the grass, lake front. Safe swimming for the grand kids."
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    176.081610,
+                    -38.697479
+                ]
+            }   
+        },
+
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 6,
+                "NAME": "Taupiri Bay",
+                "USE_RESTRICTIONS": "24hr",
+                "DESCRIPTION": "Hidden away beach is never too busy. Steep slope to access beach so take care."
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    174.293312,
+                    -35.280152
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 7,
+                "NAME": "Cleopatra's Pool",
+                "USE_RESTRICTIONS": "24hr",
+                "DESCRIPTION": "Beautiful natural flume and waterfall. Fun to slide down and swim. Beware eels."
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    173.037073,
+                    -40.956284
+                ]
+            }
+        },
+
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 8,
+                "NAME": "Te Hoiere / Pelorus River",
+                "USE_RESTRICTIONS": "24hr",
+                "DESCRIPTION": "A super river, very picturesque and some cool places to safely jump in. Hobbits were here."
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    173.464083,
+                    -41.348724
+                ]
+            }
+        },
+
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 9,
+                "NAME": "Lake Rotoiti",
+                "USE_RESTRICTIONS": "24hr",
+                "DESCRIPTION": ""
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    174.293312,
+                    -35.280152
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 9,
+                "NAME": "Green Lake",
+                "USE_RESTRICTIONS": "24hr",
+                "DESCRIPTION": ""
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    167.407971,
+                    -45.792672
+                ]
+            }
         }
     ]}
     
