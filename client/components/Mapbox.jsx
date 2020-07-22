@@ -39,11 +39,6 @@ class Mapbox extends React.Component {
     this.props.dispatch(eraseTrip())
   }
 
-  toggleBathrooms = (e) => {
-    e.preventDefault()
-    console.log('click new!b')
-
-  }
 
   renderMap = () => {
     let start = [
@@ -359,7 +354,7 @@ class Mapbox extends React.Component {
     return (
       <div>
         <div id="toggle-map-layers" className="toggle-map-layers" >
-          <button id='bathroom-toggle' onClick={this.toggleBathrooms} className="toggle-map-layers-buttons"> Bathrooms </button>
+          <button id='bathroom-toggle' className="toggle-map-layers-buttons"> Bathrooms </button>
           <button id='food-toggle' className="toggle-map-layers-buttons">Eating</button>
           <button id='swimming-toggle' className="toggle-map-layers-buttons">Swimming</button>
         </div>

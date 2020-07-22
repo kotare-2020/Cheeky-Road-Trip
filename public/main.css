@@ -11,8 +11,8 @@
      
 .mapboxgl-ctrl-top-left {
     font-size: 20px;
-margin-left: 9px;
-margin-top: 10px;
+margin-left: 30px;
+margin-top: 14px;
 }
 .mapbox-directions-component-keyline{
     display: none;
@@ -287,11 +287,11 @@ font-size: 28px;
 
 .toggle-map-layers{
     position: absolute;
-    top: 86px;
-    left: 363px;
     z-index: 1;
     width: 120px;
     color: #000;
+    margin-left: 33px;
+    margin-top: 95px;
 }
 
 .toggle-map-layers-buttons {
@@ -302,4 +302,9 @@ font-size: 28px;
     border-radius: 6px;
     margin-bottom: 9px;
     text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+    outline-color: rgb(250, 185, 162)
 }
+
+
