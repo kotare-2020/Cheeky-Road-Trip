@@ -112,7 +112,7 @@ class Mapbox extends React.Component {
         openTimes: e.features[0].properties.USE_RESTRICTIONS,
       }
       const dataStructureType3 = {
-        description: "<strong>Toilets :)</strong> <p>No extra information :(</p>"
+        description: '<p class="popuptitle">Toilets :)</p> <p>No extra information :(</p>'
       }
 
       const setName = () => {
@@ -144,14 +144,14 @@ class Mapbox extends React.Component {
         // ^--- See page buttom for explanation and tips
         if (descOne.name != undefined) {
           return (
-            `<strong>${descOne.name}</strong>
+            `<p class="popuptitle">${descOne.name}</p>
             <button class="popupbutton button is-small is-rounded" onClick='window.addToWaypoints()'>Add stop to trip</button>`
           )
         }
         else if (descOne.name == undefined && descTwo.description != "null" && descTwo.description != undefined && descTwo.openTimes != "null" && descTwo.openTimes != undefined) {
           descTwo.name = capitalize(descTwo.name)
           return (
-            `<strong>${descTwo.name}</strong>
+            `<p class="popuptitle">${descTwo.name}</p>
             <p>${descTwo.description}</p>
             <p class="popupdesc">Open: ${descTwo.openTimes}</p>
             <button class="popupbutton button is-small is-rounded" onClick='window.addToWaypoints()'>Add stop to trip</button>`
@@ -159,8 +159,8 @@ class Mapbox extends React.Component {
         }
         else if (descOne.name == undefined && descTwo.description == "null" || descTwo.openTimes == "null") {
           return (
-            `<strong>${capitalize(descTwo.name)}</strong>
-            <strong>Toilets</strong>
+            `<p class="popuptitle">${capitalize(descTwo.name)}</p>
+            <p class="popuptitle">Toilets</p>
             <p>No extra information :(</p>
             <button class="popupbutton button is-small is-rounded" onClick='window.addToWaypoints()'>Add stop to trip</button>`
           )
@@ -206,7 +206,7 @@ class Mapbox extends React.Component {
         .setHTML(marker.popup.description)
         .addTo(marker.popup.map)
     })
-    map.on('click', 'food_points', (e) => {
+    map.on('click', 'food-points', (e) => {
       let marker = {
         popup: {}
       }
