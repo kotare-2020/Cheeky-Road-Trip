@@ -3,9 +3,9 @@ import { ADD_INSTRUCTIONS, CONFIRM_ADDRESS, ADD_TRIP_NAME, ERASE_TRIP } from '..
 
 const initialState = {
   tripName: '',
-  START: {},
+  START: '',
   MID: [],
-  END: {},
+  END: '',
   tripInstructions: [],
   confirmedWaypoint: {}
 }
@@ -38,9 +38,9 @@ const reducer = (state = initialState, action) => {
     case ERASE_TRIP:
       return {
         tripName: '',
-        START: {},
+        START: '',
         MID: [],
-        END: {},
+        END: '',
         tripInstructions: [],
         confirmedWaypoint: {}
       }

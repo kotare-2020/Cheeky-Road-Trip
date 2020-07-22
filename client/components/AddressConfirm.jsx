@@ -17,6 +17,7 @@ class AddressConfirm extends React.Component {
             streetName: addressInfo.street,
         }
         this.props.dispatch(confirmAddress(waypoint, waypointName))
+        document.getElementById(`${waypointName}-input`).value = ''
         this.props.hideOptions(waypointName)
     }
 
@@ -28,10 +29,9 @@ class AddressConfirm extends React.Component {
                     {this.addressOptions.map((addressInfo, i) => {
                         return (
 
-                            <div key={i} className="address-confirm-item">
-                                <input onChange={() => this.handleSelect(addressInfo, this.props.waypointName)} type="checkbox" name="confirmAddress" ></input>
-                                <p>{addressInfo.label}</p>
-                                <p>{addressInfo.region}</p>
+                            <div key={i} className="address-confirm-item" onClick={() => this.handleSelect(addressInfo, this.props.waypointName)}>
+                                <p className="homepage-body-text">{addressInfo.label}</p>
+                                <p className="homepage-body-text">{addressInfo.region}</p>
                             </div>
 
                         )

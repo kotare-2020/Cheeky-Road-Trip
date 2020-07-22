@@ -9,25 +9,25 @@
     width: 22%;
 }
      
-    .mapboxgl-ctrl-top-left {
-        font-size: 20px;
-    margin-left: 9px;
-    margin-top: 10px;
-    }
-    .mapbox-directions-component-keyline{
-        display: none;
-    }
-    .mapbox-directions-inputs {
-        display: none;
-    }
+.mapboxgl-ctrl-top-left {
+    font-size: 20px;
+margin-left: 30px;
+margin-top: 14px;
+}
+.mapbox-directions-component-keyline{
+    display: none;
+}
+.mapbox-directions-inputs {
+    display: none;
+}
 
-    .mapboxgl-canvas-container {
-        height: 100vh;
-    }
-    .mapContainer {
-        width: 77vw;
-        height: 100vh;
-        }
+.mapboxgl-canvas-container {
+    height: 100vh;
+}
+.mapContainer {
+    width: 77vw;
+    height: 100vh;
+}
 
 body {
     color: black;
@@ -52,6 +52,27 @@ p {
     font-size: 15px;
 }
 
+.italic-text {
+    font-weight: 600;
+    color: #969696;
+}
+
+/*marker popups*/
+.popuptitle {
+    font-weight: 600;
+}
+.popupdesc {
+    margin-top: 0.5em;
+    margin-right: 0.05em;
+}
+.popupbutton {
+    margin-top: 0.5em;
+    background-color: #73c1d8;
+    border-color: transparent;
+    color: #fff;
+}
+/*For Richard: p.popup styles a p whith the classname. p .popup (with a space) styles a classnamed thing that is a child of p*/
+
 .landing-page-content-div {
     height: 100vh;
     display: flex;
@@ -59,6 +80,7 @@ p {
     justify-content: center;
     align-items: center;
     color: white;
+    zoom: 85%;
 
 }
 
@@ -88,6 +110,9 @@ p {
 
 .lets-go-button {
     margin-top: 10px;
+    background-color: #f7f977;
+    border: none;
+    color: black;
 }
 
 .mapbox-directions-instructions-wrapper {
@@ -98,10 +123,11 @@ p {
     position: absolute;
     margin-left: 22px;
     margin-top: 12px;
+    background-color: #73c1d8;
 }
 
 .background-div {
-    background-image: url('Images/lake-tekapo.jpg');
+    background-image: url('https://images.squarespace-cdn.com/content/57b88db03e00be38aec142b0/1536893659317-LJQ7IJAYZWMSMW3N600H/0004_New+Zealand+Road+Trip+%7C+Two+Week+Itinerary+%7C+Part+1-+North+Island+%7C+HandZaround.jpg?format=1500w&content-type=image%2Fjpeg');
     background-repeat: no-repeat;
     background-size: auto;
     position:absolute;
@@ -111,10 +137,10 @@ p {
     right:0;
     height:100%;
     width:100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+      -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 
 }
 
@@ -131,68 +157,64 @@ p {
     margin: 20px;
     width: 20vw;
     height: 400px;
-    border: black solid 3px;
+    border: #73c1d8 solid 5px;
     overflow: auto;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-right: 20px;
+    border-radius: 6px;
 }
 
 #trip-info-div{
     width: 20vw;
     height: 30vh;
-    border: black solid 3px;
+    border: #73c1d8 solid 5px;
     margin: 20px;
     overflow: auto;
+    padding: 5px 16px;
+    border-radius: 6px;
 }
 
-/* .column-left-dashboard {
+.trip-title{
+font-weight: 900;
+font-size: 28px;
 }
 
-.column-right-dashboard {
-} */
-
-.address-confirm-list {
-    font-size: 11px;
-    color: black;
-    background-color: whitesmoke;
-    width: 300px;
-    display: flex;
-    position: absolute;
-    padding: 26px;
-    z-index: 2;
-    top: -6px;
-    right: -161px;
-    overflow: auto;
-    height: 250px;
-}
+.trip-title-preview{
+    font-weight: 600;
+    font-size: 25px;
+        padding-bottom: 13px;
+    }
+    
 
 .address-confirm-item {
-    margin-top: 4px;
+    margin-bottom: 25px;
+    font-size: 21px;
+    color: black;
 }
 
-.waypoints-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 600px;
+.address-confirm-item:hover {
+ color: #969696;
 }
 
-/* .landing-form-elements {
-} */
+.homepage-body-text {
+    font-size: 17px;
+    font-weight: 500;
+}
 
-/* .directions-list {
-    
-} */
+
 
 /*SVG BORDER ANIMATION BY ZACH SAUCIER CODEPEN  */ 
 .svg-wrapper {
-  position: relative;
+    position: relative;
   top: 50%;
   transform: translateY(-50%);
-	  margin: 0 auto;
+  margin: 0 auto;
   width: 320px;  
 }
 .shape {
-  stroke-dasharray: 140 540;
-  stroke-dashoffset: -474;
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
   stroke-width: 8px;
   fill: transparent;
   stroke: #19f6e8;
@@ -209,11 +231,81 @@ p {
   position: relative;
 } */
 .svg-wrapper:hover .shape {
-  stroke-width: 2px;
+    stroke-width: 2px;
   stroke-dashoffset: 0;
   stroke-dasharray: 760;
 }
 
+.icon {
+    height: 30px;
+    display: inline-block;
+}
+
+.address-confirm-list {
+    background-color:white;
+    border-radius: 14px;
+    width: 300px;
+    display: flex;
+    position: absolute;
+    padding: 26px;
+    z-index: 2;
+    top: -6px;
+    right: -161px;
+    overflow: auto;
+    height: 250px;
+    order:1;
+}
+
 #landingpage-form-container {
     position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
+
+.waypoints-form {
+    display: flex;
+    order: 2;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+}
+
+#waypoints-div {
+    order: 1;
+    width: 470px;
+    max-height: 400px;
+    color: black;
+    background-color:white;
+    border-radius: 14px;
+    overflow: auto;
+    padding: 20px;
+    opacity: 95%;
+    font-size: 21px;
+    color: black;
+    font-weight: 700;
+}
+
+.toggle-map-layers{
+    position: absolute;
+    z-index: 1;
+    width: 120px;
+    color: #000;
+    margin-left: 33px;
+    margin-top: 95px;
+}
+
+.toggle-map-layers-buttons {
+    height: 32px;
+    width: 95px;
+    background-color: whitesmoke;
+    border: 1px solid whitesmoke;
+    border-radius: 6px;
+    margin-bottom: 9px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+    outline-color: rgb(250, 185, 162)
+}
+
+
